@@ -1,0 +1,55 @@
+Protocol,Run_ID,Response_ID,Model,Provider,Task,Split,Instruction,Item,Condition,Repeat,Paraphrase,Block_ID,Generation_Seed,Request_Order,Schedule_Seed,Seed_Sent,Temperature,Max_Tokens,Extra_Body_JSON,Timestamp_UTC,Prompt,Response,Status,Error,Finish_Reason,Returned_Model,System_Fingerprint,Usage_JSON,Source_File,Parsed_Words,Valid_Word_Count,List_Count,Scorable,Validation,DAT_GloVe_Score,DAT_MPNet_Proxy,Rarity_Score,Frequency_Coverage
+creativity-v2,20260923T100330_28be7b16,20260923T100330_28be7b16:0,openai/gpt-oss-20b,groq,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Effective,0,0,|p0|r0,421779131,0,42,False,0.7,4096,{},2026-09-23T10:03:30.339771+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be effective.","1. Penguin  
+2. Symphony  
+3. Cactus  
+4. Quark  
+5. Whale  
+6. Marble  
+7. Rainbow  
+8. Eclipse  
+9. Guitar  
+10. Sphinx",ok,,stop,openai/gpt-oss-20b,fp_a4315eb300,"{""completion_tokens"": 400, ""prompt_tokens"": 117, ""total_tokens"": 517, ""completion_tokens_details"": {""accepted_prediction_tokens"": null, ""audio_tokens"": null, ""reasoning_tokens"": 349, ""rejected_prediction_tokens"": null}, ""prompt_tokens_details"": null, ""queue_time"": 0.046508377, ""prompt_time"": 0.007407362, ""completion_time"": 0.479273026, ""total_time"": 0.486680388}",C:\Users\julio\Documents\Research Master\Thesis\outputs\gpt-oss-20b\results_divergent_association_task_20260923T100330_28be7b16.csv,"['penguin', 'symphony', 'cactus', 'quark', 'whale', 'marble', 'rainbow', 'eclipse', 'guitar', 'sphinx']",10,10,True,dictionary,78.53672790527344,,,0.0
+creativity-v2,20260923T100330_28be7b16,20260923T100330_28be7b16:1,openai/gpt-oss-20b,groq,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Conventional,0,0,|p0|r0,421779131,1,42,False,0.7,4096,{},2026-09-23T10:03:31.968401+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be conventional.","1. Elephant  
+2. Mountain  
+3. Ocean  
+4. Telescope  
+5. Guitar  
+6. Clock  
+7. Paperclip  
+8. Cactus  
+9. Volcano  
+10. Rainbow",ok,,stop,openai/gpt-oss-20b,fp_8e23cedc90,"{""completion_tokens"": 466, ""prompt_tokens"": 117, ""total_tokens"": 583, ""completion_tokens_details"": {""accepted_prediction_tokens"": null, ""audio_tokens"": null, ""reasoning_tokens"": 416, ""rejected_prediction_tokens"": null}, ""prompt_tokens_details"": null, ""queue_time"": 0.154847874, ""prompt_time"": 0.00567676, ""completion_time"": 0.539699667, ""total_time"": 0.545376427}",C:\Users\julio\Documents\Research Master\Thesis\outputs\gpt-oss-20b\results_divergent_association_task_20260923T100330_28be7b16.csv,"['elephant', 'mountain', 'ocean', 'telescope', 'guitar', 'clock', 'paperclip', 'cactus', 'volcano', 'rainbow']",10,10,True,dictionary,83.13983154296875,,,0.0
+creativity-v2,20260923T100330_28be7b16,20260923T100330_28be7b16:2,openai/gpt-oss-20b,groq,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Creative,0,0,|p0|r0,421779131,2,42,False,0.7,4096,{},2026-09-23T10:03:32.720549+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.","1. cactus  
+2. violin  
+3. volcano  
+4. sapphire  
+5. kaleidoscope  
+6. telescope  
+7. pyramid  
+8. marshmallow  
+9. quasar  
+10. giraffe",ok,,stop,openai/gpt-oss-20b,fp_228717f27c,"{""completion_tokens"": 1024, ""prompt_tokens"": 117, ""total_tokens"": 1141, ""completion_tokens_details"": {""accepted_prediction_tokens"": null, ""audio_tokens"": null, ""reasoning_tokens"": 971, ""rejected_prediction_tokens"": null}, ""prompt_tokens_details"": null, ""queue_time"": 0.155912343, ""prompt_time"": 0.005568787, ""completion_time"": 1.202906172, ""total_time"": 1.208474959}",C:\Users\julio\Documents\Research Master\Thesis\outputs\gpt-oss-20b\results_divergent_association_task_20260923T100330_28be7b16.csv,"['cactus', 'violin', 'volcano', 'sapphire', 'kaleidoscope', 'telescope', 'pyramid', 'marshmallow', 'quasar', 'giraffe']",10,10,True,dictionary,80.06721496582031,,,0.0
+creativity-v2,20260923T100330_28be7b16,20260923T100330_28be7b16:3,openai/gpt-oss-20b,groq,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Boring,0,0,|p0|r0,421779131,3,42,False,0.7,4096,{},2026-09-23T10:03:34.131108+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be boring.","1. apple  
+2. mountain  
+3. telephone  
+4. rain  
+5. chair  
+6. butterfly  
+7. tide  
+8. pen  
+9. city  
+10. star",ok,,stop,openai/gpt-oss-20b,fp_75c733514d,"{""completion_tokens"": 598, ""prompt_tokens"": 117, ""total_tokens"": 715, ""completion_tokens_details"": {""accepted_prediction_tokens"": null, ""audio_tokens"": null, ""reasoning_tokens"": 550, ""rejected_prediction_tokens"": null}, ""prompt_tokens_details"": null, ""queue_time"": 0.293777018, ""prompt_time"": 0.006621302, ""completion_time"": 0.647778592, ""total_time"": 0.654399894}",C:\Users\julio\Documents\Research Master\Thesis\outputs\gpt-oss-20b\results_divergent_association_task_20260923T100330_28be7b16.csv,"['apple', 'mountain', 'telephone', 'rain', 'chair', 'butterfly', 'tide', 'pen', 'city', 'star']",10,10,True,dictionary,78.72796630859375,,,0.0
+creativity-v2,20260923T100330_28be7b16,20260923T100330_28be7b16:4,openai/gpt-oss-20b,groq,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Standard,0,0,|p0|r0,421779131,4,42,False,0.7,4096,{},2026-09-23T10:03:35.124269+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","1. planet  
+2. violin  
+3. cactus  
+4. philosopher  
+5. telescope  
+6. suitcase  
+7. river  
+8. giraffe  
+9. volcano  
+10. microwave",ok,,stop,openai/gpt-oss-20b,fp_5979a0e1b7,"{""completion_tokens"": 743, ""prompt_tokens"": 114, ""total_tokens"": 857, ""completion_tokens_details"": {""accepted_prediction_tokens"": null, ""audio_tokens"": null, ""reasoning_tokens"": 694, ""rejected_prediction_tokens"": null}, ""prompt_tokens_details"": null, ""queue_time"": 0.209440677, ""prompt_time"": 0.006345608, ""completion_time"": 0.802137604, ""total_time"": 0.808483212}",C:\Users\julio\Documents\Research Master\Thesis\outputs\gpt-oss-20b\results_divergent_association_task_20260923T100330_28be7b16.csv,"['planet', 'violin', 'cactus', 'philosopher', 'telescope', 'suitcase', 'river', 'giraffe', 'volcano', 'microwave']",10,10,True,dictionary,86.13119506835938,,,0.0

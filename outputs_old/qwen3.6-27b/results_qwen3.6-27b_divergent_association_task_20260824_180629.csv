@@ -1,0 +1,326 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Task:** Name 10 single words that are as semantically unrelated and distant from each other as possible.
+   - **Format:** Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+   - **Target:** Generate 10 unrelated words
+   - **Condition:** Provide standard, practical responses. Do not include introductory or concluding conversational text.
+
+2.  **Identify Key Constraints:**
+   - Exactly 10 words
+   - Single words only
+   - Numbered list 1-10
+   - Semantically unrelated/distant from each other
+   - No explanations, sentences, categories
+   - No intro/outro text
+   - Standard, practical words (common English words)
+
+3.  **Brainstorming Semantically Distant Words:**
+   I need to pick words from vastly different semantic fields/domains. Let's list potential domains:
+   - Astronomy/Space
+   - Culinary/Food
+   - Mathematics/Logic
+   - Emotions/Psychology
+   - Animals/Biology
+   - Tools/Technology
+   - Weather/Nature
+   - Music/Art
+   - Law/Government
+   - Anatomy/Health
+   - Geography/Landscape
+   - Abstract Concepts
+
+   Now, pick one common word from each, ensuring they don't overlap in meaning, association, or etymology:
+   1. Nebula (astronomy)
+   2. Saffron (food/spice)
+   3. Algorithm (math/CS)
+   4. Melancholy (emotion)
+   5. Octopus (animal)
+   6. Wrench (tool)
+   7. Hurricane (weather)
+   8. Clarinet (music)
+   9. Jurisdiction (law)
+   10. Mitochondria (biology)
+
+   Let's check semantic distance:
+   - Nebula: space/cloud of gas
+   - Saffron: spice/color
+   - Algorithm: step-by-step procedure
+   - Melancholy: mood/state
+   - Octopus: sea creature
+   - Wrench: hand tool
+   - Hurricane: storm
+   - Clarinet: wind instrument
+   - Jurisdiction: legal authority
+   - Mitochondria: cell organelle
+
+   These span completely different domains. They are all standard, practical English words. No obvious semantic links. All single words. Exactly 10. Numbered 1-10. No extra text.
+
+   Let's verify constraints:
+   - ""Name 10 single words"" -> Yes
+   - ""as semantically unrelated and distant from each other as possible"" -> Yes, chosen from disparate fields
+   - ""Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories."" -> Strictly followed
+   - ""Provide standard, practical responses."" -> All are common/standard words
+   - ""Do not include introductory or concluding conversational text."" -> Will output only the list.
+
+   One minor check: Are any of these too obscure? ""Mitochondria"" and ""Jurisdiction"" are standard but slightly academic/legal. That's fine. I could swap to simpler ones if needed, but they're still standard. Let's keep them. Actually, let's pick slightly more everyday words to be safe on ""standard, practical"": 
+   1. Telescope
+   2. Pancake
+   3. Equation
+   4. Grief
+   5. Dolphin
+   6. Hammer
+   7. Blizzard
+   8. Trumpet
+   9. Contract"
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","<think>
+Thinking Process:
+
+1.  **Deconstruct the Request:**
+    *   Goal: 10 single words.
+    *   Constraint: Semantically unrelated and distant from each other as possible.
+    *   Format: Numbered list (1-10), single words only. No explanations, sentences, categories, intro, or outro.
+    *   Style: Creative, original, imaginative.
+
+2.  **Brainstorming Strategy for ""Semantic Distance"":**
+    *   To maximize distance, I need to pick words from vastly different semantic fields.
+    *   Fields to consider: Abstract concepts, concrete objects, actions, sounds, emotions, scientific terms, archaic words, nonsense words (though ""nonsense"" might violate ""single words"" if interpreted as existing vocabulary, usually ""words"" implies dictionary entries, so I'll stick to real words but obscure ones to ensure distance), sensory descriptors, temporal/spatial concepts.
+    *   *Key technique:* Avoid common associations. If I pick ""Apple"", I can't pick ""Red"", ""Fruit"", ""Tree"", ""Eat"", ""Sweet"", ""Pie"", ""Newton"", ""Computer"", ""Technology"".
+    *   *Key technique:* Use words that evoke distinct mental models. A word about quantum physics vs. a word about baking vs. a word about a specific emotion vs. a word about a geological formation.
+
+3.  **Generating Candidate Words (Iterative Selection with Conflict Check):**
+    *   *Word 1:* Let's start with something highly abstract and mathematical. ""Topology""? No, too common. ""Isomorphism""? Good. ""Quiddity""? Good, philosophical. Let's go with **Quiddity**. (Meaning: The essential nature of something. Abstract, philosophical.)
+    *   *Word 2:* Need something concrete, sensory, maybe auditory or tactile, but unrelated to philosophy. ""Gossamer""? Too poetic/texture. ""Squelch""? Sound/Action. ""Xylophone""? Object. Let's try a specific, uncommon concrete noun. **Mellifluous**? No, that's an adjective describing sound. Adjectives can be tricky because they modify nouns. Better to mix parts of speech? The prompt doesn't forbid parts of speech, but mixing them helps distance. However, ""semantically unrelated"" often benefits from distinct categories. Let's try a distinct concrete object. **Ziggurat**? Ancient structure. Is it related to Quiddity? No. Okay. **Ziggurat**.
+    *   *Word 3:* Need something biological or chemical, but not structural. ""Mitochondria""? Too science-class common. ""Phlogiston""? Archaic science. ""Suppurate""? Medical action. Let's go with **Suppurate**. (Meaning: To form or discharge pus. Visceral, biological, gross.) Distance from Quiddity (abstract/philosophical) and Ziggurat (architecture/history)? High.
+    *   *Word 4:* Need something emotional or psychological, but not abstract in the same way as Quiddity. ""Melancholy""? Too common. ""Schadenfreude""? Too common loanword. ""Hiraeth""? Welsh word for longing. Good, but maybe too poetic. Let's try a specific emotion that is hard to link to pus or temples. **Saudade**? Similar to Hiraeth. Let's try **Limerence**. (Obsessive desire for another person). Distance from Suppurate? High. From Ziggurat? High. From Quiddity? Moderate (both mental), but Quiddity is ontological, Limerence is affective. I think it passes.
+    *   *Word 5:* Need something temporal or spatial, or a unit. ""Epoch""? Common."
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Task:** Name 10 single words that are as semantically unrelated and distant from each other as possible.
+   - **Format:** Provide only a numbered list (1-10) of single words.
+   - **Constraints:** No explanations, sentences, or categories. No introductory or concluding conversational text.
+   - **Target:** Generate 10 unrelated words.
+   - **Condition:** Be as effective, logical, and practical as possible.
+
+2.  **Deconstruct Requirements:**
+   - Exactly 10 words.
+   - Single words only.
+   - Numbered list 1-10.
+   - Semantically as distant/unrelated as possible (different domains, parts of speech, conceptual fields, linguistic origins if possible, but primarily meaning).
+   - Strict formatting: ONLY the numbered list. No extra text.
+
+3.  **Brainstorming - Semantic Distance:**
+   To maximize semantic distance, I should pick words from vastly different conceptual domains:
+   - Physics/Astronomy
+   - Biology/Zoology
+   - Mathematics/Abstract
+   - Culinary/Food
+   - Emotion/Psychology
+   - Music/Art
+   - Technology/Computing
+   - Geography/Geology
+   - Law/Politics
+   - Everyday object/Tool
+   Let's pick one from each, ensuring minimal overlap in meaning, usage, or connotation.
+
+   Candidates:
+   1. Quasar (astronomy/physics)
+   2. Mustard (food/condiment)
+   3. Algorithm (math/computing)
+   4. Grief (emotion/psychology)
+   5. Cello (music/instrument)
+   6. Granite (geology/material)
+   7. Jurisdiction (law/politics)
+   8. Pterodactyl (paleontology/biology)
+   9. Whimsy (abstract concept/mood)
+   10. Sprocket (mechanics/engineering)
+
+   Let's check semantic distance:
+   - Quasar: astronomical object
+   - Mustard: plant-based condiment
+   - Algorithm: computational procedure
+   - Grief: emotional state
+   - Cello: string instrument
+   - Granite: igneous rock
+   - Jurisdiction: legal authority
+   - Pterodactyl: extinct reptile
+   - Whimsy: playful unpredictability
+   - Sprocket: mechanical gear
+
+   These span completely different domains: cosmos, food, math/logic, emotion, music, geology, law, paleontology, psychology/aesthetic, mechanics. Very distant semantically.
+
+   Check constraints:
+   - 10 single words? Yes.
+   - Numbered 1-10? Yes.
+   - No explanations/sentences/categories? Yes.
+   - No intro/conclusion? Yes.
+   - Semantically distant? Yes.
+
+   Let's verify each word is a single word and fits the format exactly:
+   1. Quasar
+   2. Mustard
+   3. Algorithm
+   4. Grief
+   5. Cello
+   6. Granite
+   7. Jurisdiction
+   8. Pterodactyl
+   9. Whimsy
+   10. Sprocket
+
+   All good. I will output exactly this list. No extra text. Strict compliance.✅
+   One minor check: ""Pterodactyl"" is sometimes considered a common noun, but it's fine. All are standard English words. Semantic distance is maximized by domain separation. Format"
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Task:** Name 10 single words that are as semantically unrelated and distant from each other as possible.
+   - **Format:** Only a numbered list (1-10) of single words. No explanations, sentences, or categories.
+   - **Target:** Generate 10 unrelated words.
+   - **Condition:** Be as boring, mundane, and uninteresting as possible.
+   - **Constraint:** Do not include introductory or concluding conversational text.
+
+2.  **Deconstruct Constraints:**
+   - 10 words
+   - Single words only
+   - Numbered list 1-10
+   - Semantically unrelated/distant
+   - Boring/mundane/uninteresting
+   - NO extra text whatsoever
+
+3.  **Brainstorming Words (aiming for semantic distance + mundane):**
+   Need words from completely different domains: household objects, abstract concepts, materials, actions, measurements, nature, etc. But keep them extremely boring.
+   Let's pick:
+   1. Stapler (office supply)
+   2. Tuesday (day of week)
+   3. Gravel (material)
+   4. Receipt (document)
+   5. Beige (color)
+   6. Filing (action/process)
+   7. Concrete (material) - wait, too similar to gravel? Let's change to ""Lumber"" or ""Cardboard"". Let's go with ""Cardboard"".
+   8. Thursday (day) - too similar to Tuesday. Change to ""Invoice"" (document) - similar to receipt. Need more distance.
+   Let's systematically pick from distinct semantic fields:
+   - Office/Household: Stapler
+   - Time/Calendar: Tuesday
+   - Raw Material: Gravel
+   - Financial/Admin: Receipt
+   - Color: Beige
+   - Action/Process: Filing
+   - Measurement/Unit: Gram
+   - Furniture: Drawer
+   - Weather/Atmosphere: Overcast
+   - Tool/Implement: Pliers
+   Wait, some are still somewhat related (receipt/filing, gravel/cardboard/concrete). Let's maximize distance.
+   I need 10 words from completely different semantic categories, all mundane.
+   Categories to pick from:
+   1. Office supply: Stapler
+   2. Day of week: Thursday
+   3. Color: Beige
+   4. Measurement: Meter
+   5. Household item: Drawer
+   6. Material: Cardboard
+   7. Administrative document: Receipt
+   8. Weather condition: Overcast
+   9. Tool: Pliers
+   10. Food ingredient: Salt
+   Let's check semantic distance: These are from very different domains. All are extremely mundane/boring.
+   Are they single words? Yes.
+   Numbered 1-10? Yes.
+   No extra text? I will output exactly that.
+   Let's verify the ""boring/mundane"" condition: Stapler, Thursday, Beige, Meter, Drawer, Cardboard, Receipt, Overcast, Pliers, Salt. All very ordinary, uninteresting words.
+   Could I make them even more mundane? Maybe: Clipboard, Tuesday, Taupe, Ounce, Shelf, Envelope, Invoice, Hazy, Wrench, Flour. Still good.
+   Let's stick with the first set but ensure maximum semantic distance. Actually, ""Meter"" and ""Ounce"" are both measurements. Let's change one to a completely different category like ""Button"" (clothing) or ""Screw"" (hardware). Let's use ""S"
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","<think>
+Here's a thinking process:
+
+1.  **Analyze User Input:**
+   - **Task:** Name 10 single words that are as semantically unrelated and distant from each other as possible.
+   - **Format:** Only a numbered list (1-10) of single words. No explanations, sentences, or categories.
+   - **Target:** Generate 10 unrelated words.
+   - **Condition:** Be as conventional, typical, and standard as possible.
+   - **Constraint:** Do not include introductory or concluding conversational text.
+
+2.  **Deconstruct Constraints:**
+   - Must be exactly 10 words.
+   - Each must be a single word.
+   - Words must be semantically distant/unrelated (different domains, concepts, parts of speech if possible, but all standard/common words).
+   - Format: Strictly numbered 1-10, just the words.
+   - No extra text whatsoever.
+   - Words should be conventional/standard (common vocabulary, not obscure or technical jargon).
+
+3.  **Brainstorming - Semantic Distance:**
+   I need words from completely different conceptual domains:
+   - Physical object (common)
+   - Abstract concept
+   - Living thing (animal/plant)
+   - Action/verb
+   - Location
+   - Time/measure
+   - Color/sensory
+   - Emotion/state
+   - Tool/instrument
+   - Natural phenomenon
+
+   Let's pick standard, common words for each:
+   1. Chair (furniture/object)
+   2. Freedom (abstract concept)
+   3. Penguin (animal)
+   4. Whisper (action/verb)
+   5. Desert (location/geography)
+   6. Tuesday (time)
+   7. Crimson (color)
+   8. Grief (emotion)
+   9. Telescope (tool)
+   10. Thunder (natural phenomenon)
+
+   Check semantic distance: These span completely different categories (furniture, abstract idea, animal, verb, place, day, color, emotion, instrument, weather). They are all standard, conventional English words. They share no obvious semantic overlap.
+
+   Let's verify constraints:
+   - 10 single words? Yes.
+   - Numbered 1-10? Yes.
+   - No explanations/sentences/categories? Yes.
+   - Conventional/typical/standard? Yes, all common words.
+   - No intro/outro? I will output only the list.
+
+   One minor adjustment: ""Tuesday"" might be considered too specific. Maybe ""Monday"" or just ""Hour""? Actually, days are fine. Let's stick with common nouns/verbs/adjectives. Maybe replace ""Tuesday"" with ""Bridge"" (structure) or ""Ocean"" (body of water). Actually, ""Tuesday"" is fine, but let's ensure maximum distance. Let's use:
+   1. Chair
+   2. Freedom
+   3. Penguin
+   4. Whisper
+   5. Desert
+   6. Tuesday
+   7. Crimson
+   8. Grief
+   9. Telescope
+   10. Thunder
+
+   Wait, let's check if any share roots or semantic fields. They don't. They cover: concrete object, abstract noun, animal, verb, geographic feature, temporal unit, color, emotion, scientific instrument, atmospheric event. All highly standard.
+
+   Let's double-check the exact formatting requirement: ""Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories."" and ""Do not include introductory or concluding conversational text.""
+
+   I will output exactly:
+   1. Chair"

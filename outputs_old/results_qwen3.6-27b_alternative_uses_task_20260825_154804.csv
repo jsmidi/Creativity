@@ -1,0 +1,321 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book","
+1. Weighted doorstop
+2. Temporary stepping stool
+3. Coaster for hot mugs
+4. Backrest for sitting on the floor
+5. Camera tripod base
+6. Plant support stake
+7. Wedge to keep a drawer open
+8. Leveling block for wobbly furniture
+9. Screen shade for laptop glare
+10. Makeshift fan"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be creative.","
+1. Doorstop for heavy wooden doors
+2. Stepping stone for reaching high shelves
+3. Weight for holding down loose papers in wind
+4. Makeshift paint palette for small art projects
+5. Coaster for hot mugs to protect table surfaces
+6. Barrier to keep cats off countertops
+7. Base for stabilizing wobbly chairs
+8. Scratch pad for quick notes or doodles
+9. Insulator for protecting delicate items during moving
+10. Anchor for light decorations on walls"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be effective.","
+1. Doorstop
+2. Cat scratching post
+3. Camera tripod
+4. Fireplace fire starter
+5. Laptop stand
+6. Plant support stake
+7. Shoe tree
+8. Weight for paper weights
+9. Firewood
+10. Pillow"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be boring.","
+1. Doorstop
+2. Table leg stabilizer
+3. Mouse pad
+4. Coaster
+5. Window weight
+6. Floor mat
+7. Pillow
+8. Steam iron rest
+9. Plant pot saucer
+10. Paperweight"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be conventional.","
+1. Doorstop
+2. Coaster
+3. Plant saucer
+4. Paperweight
+5. Step stool
+6. Pillow wedge
+7. Cat scratching post base
+8. Laptop riser
+9. Heat shield for hot dishes
+10. Measuring tool for couch length"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork","
+1. Guitar string cleaner
+2. Meat tenderizer
+3. Ice cream scoop
+4. Plant aerator
+5. Paint brush cleaner
+6. Candle wick trimmer
+7. Jewelry cleaner
+8. Screen door latch
+9. Garlic press handle
+10. Nail polish remover applicator"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be creative.","
+1. Temporarily straightening a tangled earring chain
+2. Prying open a stubborn paint can lid
+3. Creating a makeshift whisk for small batches of batter
+4. Extinguishing a small candle flame by pinching the wick
+5. Guiding a loose strand of hair into a ponytail
+6. Holding a damp paper towel in place to clean tight corners
+7. Acting as a spacer to align stacked plates for storage
+8. Releasing trapped air from a vacuum-sealed food bag
+9. Holding a hot jar lid steady while unscrewing it
+10. Tamping down coffee grounds in a makeshift press"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be effective.","
+1. Loosen compacted soil in small potted plants
+2. Scrape dried paint or glue from surfaces
+3. Create a makeshift whisk for small quantities of batter
+4. Pick up small screws or nails without bending down
+5. Remove burrs from clothing or upholstery
+6. Scrub grime out of textured tile grout
+7. Unclog hair from sink drains
+8. Create decorative patterns in frosting or clay
+9. Separate tangled jewelry chains
+10. Test the doneness of baked goods by inserting and checking for residue"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be boring.","
+1. A tool for stirring cold oatmeal.
+2. A device for checking if ground meat is cooked through.
+3. A utensil for eating plain pasta.
+4. An implement for picking up broccoli florets.
+5. A method for cutting a small piece of bread.
+6. A way to separate scrambled eggs in a bowl.
+7. A tool for spreading jam on toast.
+8. A utensil for eating salad leaves.
+9. A device for stirring sugar into hot tea.
+10. A tool for lifting a potato from a plate."
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be conventional.","
+1. Eating food
+2. Mixing ingredients in a bowl
+3. Whisking eggs
+4. Mashing potatoes
+5. Flipping food in a pan
+6. Holding a piece of food while cutting it
+7. Poking holes in meat to tenderize or season it
+8. Separating yarn strands
+9. Testing if baked goods are done
+10. Scraping residue from a plate"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip","
+1. Reset button for electronic devices
+2. Unpickling loose threads in clothing
+3. Temporary lock for a laptop or briefcase
+4. Cleaning out grime from keyboard keys
+5. Straightening bent earring posts
+6. Removing stickers without leaving residue
+7. Securing a curtain rod in a pinch
+8. Cleaning out clogged spray nozzles
+9. Acting as a makeshift screwdriver for tiny screws
+10. Tying small bundles of wires together"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be creative.","
+1. Emergency SIM card removal tool
+2. Makeshift lock pick for simple pin tumbler locks
+3. Improvised hook for retrieving small objects from tight spaces
+4. Temporary zipper pull replacement
+5. Craft wire for assembling small origami or beadwork
+6. DIY curling iron for very short strands of hair
+7. Mechanical keyboard keycap removal tool
+8. Soldering flux remover for fine electronic components
+9. Improvised sewing needle for delicate fabrics
+10. Weighted line sinker for fishing in shallow water"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be effective.","
+1. Emergency reset pin for electronic devices
+2. Improvised lock pick for simple pin tumbler locks
+3. Temporary replacement for a broken zipper pull
+4. Small screwdriver for tight spaces when bent and flattened
+5. Cleaning tool for removing lint from keyboard keys
+6. Darning needle substitute for sewing thick fabrics
+7. Tensioner for holding headphones in place during exercise
+8. Scraper for removing gum from hair or fabric
+9. Improvised hook for retrieving items from narrow openings
+10. Weighted marker for holding down maps or blueprints"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be boring.","
+1. Holding a stack of receipts together.
+2. Securing a notepad.
+3. Marking a page in a book.
+4. Keeping a bundle of wires together.
+5. Holding a label in place.
+6. Organizing a set of keys.
+7. Clipping a document to a binder.
+8. Keeping a napkin folded.
+9. Holding a ticket stub.
+10. Securing a name tag."
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be conventional.","
+1. Resetting electronic devices
+2. Removing splinters
+3. Unzipping stuck zippers
+4. Cleaning small crevices
+5. Acting as a makeshift screwdriver
+6. Tying small bundles
+7. Holding rubber bands together
+8. Marking pages in books
+9. Serving as a lock pick for simple padlocks
+10. Repairing torn pant hangers"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel","
+1. Emergency sled for sliding down snow
+2. Improvised parachute for slowing descent
+3. Sound dampening material for recording studios
+4. Friction aid for rock climbing holds
+5. Cold compress for fever reduction
+6. Protective wrap for fragile glassware during transport
+7. Temporary bandage for deep wounds
+8. Non-slip surface for yoga blocks
+9. Dusting cloth for delicate electronics
+10. Makeshift pillow for long flights"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be creative.","
+1. Improvised windshield scraper in freezing weather
+2. Silent floor padding for moving heavy furniture
+3. DIY lens cloth for cleaning camera glass
+4. Temporary sound dampener on a noisy door frame
+5. Protective wrap for fragile items during transit
+6. Makeshift tourniquet in emergency situations
+7. Dust cover for outdoor electronics
+8. Gentle exfoliant for removing dead skin
+9. Heat shield for handling hot cookware
+10. Absorbent barrier for catching pet spills"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be effective.","
+1. Emergency windshield scraper for ice removal
+2. Padding for lifting heavy or awkward objects
+3. Improvised sling for a broken arm
+4. Lens cleaning cloth for delicate camera optics
+5. Sound dampening material for recording spaces
+6. Protective layer when moving fragile furniture
+7. Makeshift pot holder for hot cookware
+8. Dusting mitt for high shelves and ceilings
+9. Traction aid for slipping on wet surfaces
+10. Insulating wrap for pipes during freezing temperatures"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be boring.","
+1. Wiping dust off a shelf
+2. Drying hands after washing
+3. Covering a chair for guests
+4. Absorbing a small water spill
+5. Wiping feet after a shower
+6. Padding a fragile item in a box
+7. Drying dishes by hand
+8. Covering a mirror to prevent glare
+9. Wiping sweat from a forehead
+10. Drying a wet floor"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be conventional.","
+1. Wiping sweat from the face during exercise
+2. Drying hands after washing
+3. Drying hair after a shower
+4. Covering a sun lounger at the beach
+5. Wrapping around the body after bathing
+6. Polishing silverware with a microfiber towel
+7. Drying dishes after handwashing
+8. Using as a makeshift bandage for minor cuts
+9. Wiping down furniture dust
+10. Insulating a hot pan handle"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can","
+1. Improvised musical percussion instrument
+2. Emergency water storage container
+3. Vertical garden planter for herbs
+4. DIY candle holder base
+5. Carabiner substitute for light loads
+6. Paint mixing vessel
+7. Ice pack container for cooling beverages
+8. Protective casing for small electronics
+9. Bird feeder platform
+10. Target for archery practice"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be creative.","
+1. Portable bird feeder
+2. Rain gauge
+3. DIY candle holder
+4. Seedling starter pot
+5. Paint mixing cup
+6. Fishing bobber
+7. Temporary flower vase
+8. Crayon storage vessel
+9. Ice cube mold
+10. Bookend"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be effective.","
+1. Seed starter pot
+2. Portable candle holder
+3. Paint mixing cup
+4. Drain strainer
+5. Small plant support stake
+6. Fire starter container
+7. Ink wash basin
+8. Glue brush holder
+9. Miniature greenhouse dome
+10. Sound damping box for electronics"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be boring.","
+1. Doorstop
+2. Cup holder
+3. Piggy bank
+4. Paperweight
+5. Plant pot
+6. Candle holder
+7. Utensil holder
+8. Measuring cup
+9. Ice bucket
+10. Trash can"
+qwen/qwen3.6-27b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be conventional.","
+1. Planting pot for small herbs
+2. DIY candle holder
+3. Paint can for storing leftover paint
+4. Storage container for dry goods
+5. Decorative vase for flowers
+6. Whistle for signaling
+7. Weight for holding down tarps
+8. Drum for percussion music
+9. Cup for drinking water
+10. Tool for measuring small amounts of liquid"

@@ -1,0 +1,315 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Doorstop  
+2. Paperweight  
+3. Weight for a canvas or frame  
+4. Base for a small plant or succulent  
+5. Mold for homemade soap or candles  
+6. Template for cutting shapes in paper or fabric  
+7. Component in a DIY wind chime  
+8. Soundproofing filler in a wall cavity  
+9. Protective cover for a fragile item during transport  
+10. Decorative element in a photo frame or collage"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Temporary wind turbine blade  
+2. Portable seed bank for future agriculture  
+3. Soundproofing panel for underground studios  
+4. Solar-powered lantern when wired to a battery  
+5. Hidden compartment for emergency tools  
+6. DIY weather station data recorder  
+7. Seedling starter for vertical gardens  
+8. Emergency beacon signal reflector  
+9. Artistic kinetic sculpture base  
+10. Miniature time capsule for future generations"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.",
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Doorstop  
+2. Paperweight  
+3. Coaster  
+4. Makeshift bookmark  
+5. Weight for a stack of papers  
+6. Temporary bookend  
+7. Shelving support  
+8. Filler for a bookcase  
+9. Weight for a picture frame  
+10. Simple thickness measuring tool"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Bookmark  
+2. Paperweight  
+3. Doorstop  
+4. Bookend  
+5. Coaster  
+6. Decorative display  
+7. Makeshift candle holder  
+8. Weight for a paper bag  
+9. DIY paper shredder template  
+10. Recycled material for art projects"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Stir small amounts of powdered sugar or spice blends in a bowl.  
+2. Hold a single key or small set of keys when hanging them on a hook.  
+3. Use the tines as a makeshift toothpick for gentle oral hygiene.  
+4. Gently poke soil in a seedling pot to check moisture and aeration.  
+5. Serve as a small lever to pry open a tightly sealed jar lid.  
+6. Test the firmness of fruit or vegetables by applying light pressure.  
+7. Hold a thin candle wick while trimming or securing it.  
+8. Keep a single paperclip or small metal fastener from falling off a surface.  
+9. Separate an egg yolk from its white by sliding the fork between them.  
+10. Measure small quantities of dry ingredients by filling the tines and leveling the top."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Use as a miniature sculpting tool for carving soft clay.  
+2. Use as a micro-needle for tattooing tiny patterns.  
+3. Use as a DIY snowflake cutter by shaping snow into intricate designs.  
+4. Use as a lever to pry open a jammed drawer or door.  
+5. Attach a small weight to the tines and use as a makeshift fishing lure.  
+6. Fold into a simple compass for navigation in the wilderness.  
+7. Slip into a pocket to hold keys or small tools.  
+8. Use to clean dust from tiny electronics and keyboards.  
+9. Incorporate into a paper lantern as a decorative frame.  
+10. Hang from a string to create a minimalist wind chime."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.",
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Stir a single grain of rice in a bowl.  
+2. Pick up a loose nail from a wooden floor.  
+3. Hold a small screw while drilling.  
+4. Mark a line on a sheet of paper.  
+5. Pry open a sealed envelope.  
+6. Test the temperature of a liquid by dipping the tines.  
+7. Keep a small plant pot upright in a potting mix.  
+8. Hold a loose tooth in a dental setting.  
+9. Lift a single piece of fruit from a cutting board.  
+10. Use as a makeshift paperclip for two sheets."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Stir soup or stew  
+2. Open a bottle cap  
+3. Pick up hot skewers or grill items  
+4. Press a seed into soil  
+5. Remove burrs from a garden  
+6. Hold a piece of bread while buttering  
+7. Measure sugar or flour  
+8. Hold a candle in a holder  
+9. Stir coffee or tea  
+10. Use as tongs to pick up small items like crabs"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Makeshift keychain  
+2. DIY bookmark  
+3. Miniature lock picker  
+4. Temporary jewelry clasp  
+5. Tiny wire organizer  
+6. Emergency hook for hanging items  
+7. Simple paperweight  
+8. Miniature paper fastener for art projects  
+9. Tool for tightening loose screws in tight spaces  
+10. Quick fix for a broken zipper pull"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Mini lock pick for a small padlock  
+2. Tiny armature for micro‑3D printed sculptures  
+3. Emergency earring replacement during a wedding  
+4. Mini trellis to support a single succulent  
+5. Magnet fishing lure for metal coins in a pond  
+6. Cable organizer for tangled headphones  
+7. DIY keychain with a built‑in hook for keys  
+8. Prying lever to open a stuck jar lid  
+9. Quick fix for a broken zipper pull  
+10. Makeshift paperclip bow for a paper airplane"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. DIY lock pick tool  
+2. Reset button for small electronics  
+3. Miniature jewelry clasp or earring back  
+4. Bookmark for books  
+5. Temporary cable organizer  
+6. Small hook for hanging lightweight items  
+7. Quick fix for a broken zipper pull  
+8. Unclog small drain holes  
+9. Create a makeshift ruler by marking distances  
+10. Retrieve small metal objects from tight spaces"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Bookmark in a novel  
+2. Hairpin to hold a strand of hair  
+3. Clamp to keep a stack of receipts together  
+4. Keychain to hold a spare key  
+5. Tool to open a small bottle cap  
+6. Weight to stabilize a paper airplane  
+7. Small screwdriver for tiny screws on a watch  
+8. Tool to pry off a sticker  
+9. Hook to hang a small note on a refrigerator  
+10. Alignment aid for a picture frame"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Bookmark  
+2. Keychain  
+3. Reset pin for electronics  
+4. Jewelry (necklace chain)  
+5. Hair accessory (hair pin)  
+6. Temporary fix for a broken zipper pull  
+7. DIY small screwdriver handle  
+8. Stacking tool for organizing small items  
+9. Miniature clamp for holding paper  
+10. Simple pendulum for physics experiments"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.",
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. A makeshift parachute for a small drone  
+2. An improvised sail for a floating raft in a kiddie pool  
+3. A lightweight wind chime when hung from a string of beads  
+4. A temporary solar panel cover to keep dust off during repairs  
+5. A quiet, dampening pad to cushion a dropped smartphone  
+6. A simple, breathable hammock for two people in a backyard  
+7. A protective shield to shield seedlings from sudden rain  
+8. A quick, reusable microphone stand for live-streaming  
+9. A firestarter wrap to keep a campfire fed with wet wood  
+10. A decorative, water‑resistant backdrop for indoor photo shoots"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Wrap a small potted plant to retain moisture during travel.  
+2. Use as a protective sleeve for a smartphone when carrying it in a bag.  
+3. Fold into a small blanket for a pet to stay warm on a couch.  
+4. Serve as a quick dusting cloth for electronics like keyboards.  
+5. Wrap around a minor wrist injury to provide compression.  
+6. Use as a temporary patch over a leaking garden hose by wrapping tightly.  
+7. Lay over a pot on a grill to act as a heat shield.  
+8. Place inside a damp basement to absorb excess moisture.  
+9. Create a makeshift sunshade by folding over a picnic blanket.  
+10. Use as a lightweight packing aid to fill gaps in luggage."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Using a towel as a makeshift napkin at a picnic.  
+2. Using a towel to absorb a small spill on a tabletop.  
+3. Using a towel as a lightweight bag to hold small tools while working on a hobby.  
+4. Using a towel as a protective cover for a delicate plant pot during transport.  
+5. Using a towel to wrap a fragile gift before mailing.  
+6. Using a towel as a makeshift curtain to block light in a small room.  
+7. Using a towel to line a small storage box to keep contents dry.  
+8. Using a towel to wipe the inside of a car window.  
+9. Using a towel as a soft pad to protect a tablet during travel.  
+10. Using a towel as a temporary floor mat for a pet's litter box."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Use as a makeshift pillow for traveling.  
+2. Use as a protective cover for a car’s paint during a paint job.  
+3. Use as a cleaning cloth for delicate electronics.  
+4. Use as a face mask to protect against dust while working.  
+5. Use as a wrap to keep a hot pot warm.  
+6. Use as a drying mat for small kitchen items.  
+7. Use as a protective layer when storing fragile items in a suitcase.  
+8. Use as a makeshift towel for a pet after a bath.  
+9. Use as a small tent or shelter for a child in a backyard.  
+10. Use as a wrap to keep a gift presentation neat."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Wrap a small broken limb to create a makeshift splint  
+2. Fold into a windbreak to protect seedlings in a greenhouse  
+3. Construct a simple kite by folding and attaching a string  
+4. Use as a light‑filter screen for a camera or smartphone photo  
+5. Lay flat to dry delicate dishes or cookware when no paper towels are available  
+6. Place over fragile items to cushion them during transport  
+7. Roll into a pad to clean up small liquid spills on a hard surface  
+8. Fold into a paper shelter to shield a tiny plant from rain  
+9. Cut strips to create a temporary fishing line holder for small streams  
+10. Shape into a paper lantern to add ambient lighting for a party or dinner."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.",
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Folded as a quick disposable paper towel for spills.  
+2. Layered between fragile objects and boxes to cushion during shipping.  
+3. Rolled into small tubes to start seedlings in pots.  
+4. Crumpled and used as tinder for campfires.  
+5. Wrapped around books to protect covers during travel.  
+6. Cut into shapes and glued to create paper‑mâché molds for art projects.  
+7. Spread on a flat surface as a cheap, disposable placemat for meals.  
+8. Taped to a face as a simple dust mask during home renovations.  
+9. Wrapped around exposed pipe sections to provide temporary insulation against freezing.  
+10. Rolled into a straight strip and used as a makeshift ruler for measuring small lengths."
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Use as a makeshift paperweight  
+2. Use to wipe fingerprints from a glass surface  
+3. Use as a temporary bookmark  
+4. Use to line a shallow tray to catch crumbs  
+5. Use to dampen a small spill on carpet  
+6. Use to cover a small pothole in a driveway  
+7. Use as a disposable face mask for dust protection  
+8. Use as a paper towel substitute for cleaning a small spill  
+9. Use as a temporary seal for a broken bottle cap  
+10. Use to cover a loose zipper to keep it from snagging"
+openai/gpt-oss-20b,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Protecting furniture during a move  
+2. Wrapping fragile items for shipping  
+3. Covering a table to keep it clean before a meal  
+4. Cleaning windows with a dampened sheet  
+5. Polishing leather shoes with a folded piece  
+6. Insulating a small pot of soup on a stove  
+7. Wrapping a plant pot to keep soil in place  
+8. Serving as a temporary fire starter in a fireplace  
+9. Using as a scratch pad for quick notes  
+10. Creating a simple paper lantern for decoration"

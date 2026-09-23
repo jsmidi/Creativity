@@ -1,0 +1,9 @@
+Task,Condition,Originality_Score,Rarity_Score
+Alternative Uses Task,Creative,0.5480133,0.9471293016747562
+Alternative Uses Task,Standard,0.5299425,0.9440486047043424
+Divergent Association Task,Creative,0.7534527,0.9399999999999998
+Divergent Association Task,Standard,0.76789045,0.9400000000000001
+Metaphor Generation,Creative,0.33357263,0.2
+Metaphor Generation,Standard,0.31059855,0.2
+Scientific Hypothesis Generation,Creative,0.36852288,0.2
+Scientific Hypothesis Generation,Standard,0.31710777,0.2

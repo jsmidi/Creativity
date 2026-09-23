@@ -1,0 +1,71 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Quartz
+2. Nostalgia
+3. Sneeze
+4. Algorithm
+5. Puddle
+6. Democracy
+7. Velvet
+8. Orbit
+9. Garlic
+10. Paradox"
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Quartz
+2. Giggles
+3. Axiom
+4. Spleen
+5. Velocity
+6. Mustard
+7. Zenith
+8. Puddle
+9. Syntax
+10. Origami"
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Quartz
+2. Justice
+3. Sneeze
+4. Nebula
+5. Garlic
+6. Axiom
+7. Velvet
+8. Rhythm
+9. Piston
+10. Zeal"
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Staple
+2. Beige
+3. Humidity
+4. Plywood
+5. Tepid
+6. Lint
+7. Gasket
+8. Beige
+9. Folder
+10. Curb"
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Cloud
+2. Justice
+3. Spoon
+4. Velocity
+5. Green
+6. Rhythm
+7. Brick
+8. Logic
+9. Sneeze
+10. Orbit"

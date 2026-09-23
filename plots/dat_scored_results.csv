@@ -1,0 +1,252 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response,Short_Model,Parsed_Words,Originality_Score,Rarity_Score
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words","
+1. Quartz
+2. Ephemeral
+3. Sneeze
+4. Algorithm
+5. Velvet
+6. Paradox
+7. Gherkin
+8. Zenith
+9. Humidity
+10. Chorus",gemma-4-31b-it,"['quartz', 'ephemeral', 'sneeze', 'algorithm', 'velvet', 'paradox', 'gherkin', 'zenith', 'humidity', 'chorus']",83.02059,0.0
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be creative.","
+1. Quartz
+2. Nostalgia
+3. Sneeze
+4. Algorithm
+5. Velvet
+6. Paradox
+7. Gherkin
+8. Zenith
+9. Humidity
+10. Syntax",gemma-4-31b-it,"['quartz', 'nostalgia', 'sneeze', 'algorithm', 'velvet', 'paradox', 'gherkin', 'zenith', 'humidity', 'syntax']",82.77593,0.0
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be effective.","
+1. Quark
+2. Spleen
+3. Glazier
+4. Zenith
+5. Oatmeal
+6. Paradox
+7. Humidity
+8. Suede
+9. Algorithm
+10. Gasket",gemma-4-31b-it,"['quark', 'spleen', 'glazier', 'zenith', 'oatmeal', 'paradox', 'humidity', 'suede', 'algorithm', 'gasket']",82.00252,0.0
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be boring.","
+1. Staple
+2. Cloud
+3. Zinc
+4. Verb
+5. Sand
+6. Elbow
+7. Prism
+8. Yeast
+9. Curb
+10. Gland",gemma-4-31b-it,"['staple', 'cloud', 'zinc', 'verb', 'sand', 'elbow', 'prism', 'yeast', 'curb', 'gland']",77.695564,0.0
+google/gemma-4-31b-it,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be conventional.","
+1. Quartz
+2. Nostalgia
+3. Sneeze
+4. Triangle
+5. Velvet
+6. Orbit
+7. Garlic
+8. Justice
+9. Puddle
+10. Rhythm",gemma-4-31b-it,"['quartz', 'nostalgia', 'sneeze', 'triangle', 'velvet', 'orbit', 'garlic', 'justice', 'puddle', 'rhythm']",79.2367,0.0
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words","
+1. Nebula  
+2. Saffron  
+3. Chlorophyll  
+4. Habeas  
+5. Crescendo  
+6. Javelin  
+7. Quantum  
+8. Renaissance  
+9. Plateau  
+10. Existential",gpt-oss-20b,"['nebula', 'saffron', 'chlorophyll', 'habeas', 'crescendo', 'javelin', 'quantum', 'renaissance', 'plateau', 'existential']",81.56792,0.0
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be creative.","
+1. quasar  
+2. bamboo  
+3. sapphire  
+4. algorithm  
+5. marshmallow  
+6. volcano  
+7. telescope  
+8. octopus  
+9. carnival  
+10. silhouette",gpt-oss-20b,"['quasar', 'bamboo', 'sapphire', 'algorithm', 'marshmallow', 'volcano', 'telescope', 'octopus', 'carnival', 'silhouette']",75.49739,0.0
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be effective.","
+1. Astronaut  
+2. Butterfly  
+3. Cobblestone  
+4. Saxophone  
+5. Pyramid  
+6. Giraffe  
+7. Volcano  
+8. Silk  
+9. Quartz  
+10. Nebula",gpt-oss-20b,"['astronaut', 'butterfly', 'cobblestone', 'saxophone', 'pyramid', 'giraffe', 'volcano', 'silk', 'quartz', 'nebula']",72.0528,0.0
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be boring.","
+1. chair  
+2. banana  
+3. sky  
+4. algorithm  
+5. mountain  
+6. river  
+7. candle  
+8. telephone  
+9. pencil  
+10. snow",gpt-oss-20b,"['chair', 'banana', 'sky', 'algorithm', 'mountain', 'river', 'candle', 'telephone', 'pencil', 'snow']",74.81433,0.0
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be conventional.","
+1. apple  
+2. gravity  
+3. telescope  
+4. silhouette  
+5. bicycle  
+6. philosophy  
+7. cactus  
+8. quark  
+9. ocean  
+10. melody",gpt-oss-20b,"['apple', 'gravity', 'telescope', 'silhouette', 'bicycle', 'philosophy', 'cactus', 'quark', 'ocean', 'melody']",76.64956,0.0
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words","1. Space
+2. Sushi
+3. Guitar
+4. Snowflake
+5. Perfume
+6. Llama
+7. Submarine
+8. Piano
+9. Starfish
+10. Caramel",Llama-3.3-70B-Instruct-Turbo,"['space', 'sushi', 'guitar', 'snowflake', 'perfume', 'llama', 'submarine', 'piano', 'starfish', 'caramel']",79.12102,0.0
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be creative.","1. Fjord
+2. Quokka
+3. Salsa
+4. Nebula
+5. Submarine
+6. Kimono
+7. Fiddle
+8. Glacier
+9. Saffron
+10. Microchip",Llama-3.3-70B-Instruct-Turbo,"['fjord', 'quokka', 'salsa', 'nebula', 'submarine', 'kimono', 'fiddle', 'glacier', 'saffron', 'microchip']",78.0235,0.0
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be effective.","1. Fjord
+2. Quokka
+3. Saffron
+4. Submarine
+5. Glacier
+6. Harmonica
+7. Starfish
+8. Perfume
+9. Llama
+10. Microchip",Llama-3.3-70B-Instruct-Turbo,"['fjord', 'quokka', 'saffron', 'submarine', 'glacier', 'harmonica', 'starfish', 'perfume', 'llama', 'microchip']",71.89402,0.0
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be boring.","1. Fjord
+2. Quiche
+3. Submarine
+4. Perfume
+5. Glacier
+6. Salsa
+7. Llama
+8. Microchip
+9. Harmonica
+10. Saffron",Llama-3.3-70B-Instruct-Turbo,"['fjord', 'quiche', 'submarine', 'perfume', 'glacier', 'salsa', 'llama', 'microchip', 'harmonica', 'saffron']",72.95435,0.0
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be conventional.","1. Space
+2. Sushi
+3. Guitar
+4. Snowflake
+5. Perfume
+6. Submarine
+7. Bicycle
+8. Pineapple
+9. Fountain
+10. Microchip",Llama-3.3-70B-Instruct-Turbo,"['space', 'sushi', 'guitar', 'snowflake', 'perfume', 'submarine', 'bicycle', 'pineapple', 'fountain', 'microchip']",77.43056,0.0
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words","
+1. Quasar
+2. Moccasin
+3. Algorithm
+4. Ferret
+5. Gargle
+6. Tectonic
+7. Whimsy
+8. Sulfur
+9. Bureaucrat
+10. Zephyr",qwen3.6-27b,"['quasar', 'moccasin', 'algorithm', 'ferret', 'gargle', 'tectonic', 'whimsy', 'sulfur', 'bureaucrat', 'zephyr']",80.61135,0.0
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be creative.","
+1. Quasar
+2. Mustard
+3. Gossamer
+4. Algorithm
+5. Lichen
+6. Symphony
+7. Tectonic
+8. Whisper
+9. Neon
+10. Fossil",qwen3.6-27b,"['quasar', 'mustard', 'gossamer', 'algorithm', 'lichen', 'symphony', 'tectonic', 'whisper', 'neon', 'fossil']",81.53057,0.0
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be effective.","
+1. Quantum
+2. Zucchini
+3. Despair
+4. Algorithm
+5. Velvet
+6. Tsunami
+7. Philosophy
+8. Kitten
+9. Irony
+10. Galaxy",qwen3.6-27b,"['quantum', 'zucchini', 'despair', 'algorithm', 'velvet', 'tsunami', 'philosophy', 'kitten', 'irony', 'galaxy']",77.37367,0.0
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be boring.","
+1. Stapler
+2. Beige
+3. Tuesday
+4. Concrete
+5. Spreadsheet
+6. Waiting
+7. Gray
+8. Inventory
+9. Filing
+10. Pause",qwen3.6-27b,"['stapler', 'beige', 'tuesday', 'concrete', 'spreadsheet', 'waiting', 'gray', 'inventory', 'filing', 'pause']",74.707115,0.0
+qwen/qwen3.6-27b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+Condition: Be conventional.","
+1. Quasar
+2. Marmalade
+3. Algorithm
+4. Velvet
+5. Tectonic
+6. Whisper
+7. Chromium
+8. Labyrinth
+9. Zephyr
+10. Oblivion",qwen3.6-27b,"['quasar', 'marmalade', 'algorithm', 'velvet', 'tectonic', 'whisper', 'chromium', 'labyrinth', 'zephyr', 'oblivion']",81.988144,0.0

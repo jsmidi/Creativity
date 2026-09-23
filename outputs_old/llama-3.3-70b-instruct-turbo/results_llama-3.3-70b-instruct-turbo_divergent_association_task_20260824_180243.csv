@@ -1,0 +1,71 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Space
+2. Sushi
+3. Guitar
+4. Snowflake
+5. Perfume
+6. Submarine
+7. Bicycle
+8. Pineapple
+9. Llama
+10. Microchip"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Glacier
+2. Saffron
+3. Submarine
+4. Quokka
+5. Fjord
+6. Harmonica
+7. Starfish
+8. Perfume
+9. Llama
+10. Microchip"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Space
+2. Sushi
+3. Guitar
+4. Snowflake
+5. Perfume
+6. Llama
+7. Submarine
+8. Piano
+9. Fungus
+10. Bicycle"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Carpet
+2. Sock
+3. Filing
+4. Cabbage
+5. Pencil
+6. Suburb
+7. Paving
+8. Toaster
+9. Folder
+10. Mortgage"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Cloud
+2. Fiddle
+3. Sushi
+4. Submarine
+5. Perfume
+6. Glacier
+7. Bicycle
+8. Piano
+9. Llama
+10. Microchip"

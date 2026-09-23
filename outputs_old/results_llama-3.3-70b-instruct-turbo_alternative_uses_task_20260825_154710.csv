@@ -1,0 +1,321 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book","
+1. Doorstop
+2. Pressing flowers
+3. Bookend alternative
+4. Weight for a DIY photography reflector
+5. Footrest
+6. Paperweight
+7. Kindling for a fire
+8. Decorative wall arrangement
+9. Base for a handmade lamp
+10. Prop for a still life art piece"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be creative.","
+1. Doorstop
+2. Paperweight
+3. Plant press
+4. DIY birdhouse material
+5. Gift wrapping decoration
+6. Shelf divider
+7. Table centerpiece
+8. Prop for photography
+9. Fire starter
+10. Wall decoration mosaic"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be effective.","
+1. Doorstop
+2. Paperweight
+3. Table leg leveler
+4. Plant press
+5. DIY birdhouse material
+6. Fire starter
+7. Bookmark for large documents
+8. Shelf filler
+9. Prop for photography
+10. Barrier for pet containment"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be boring.","
+1. Doorstop
+2. Paperweight
+3. Dust collector
+4. Shelf filler
+5. Floor propper
+6. Wall support
+7. Table stabilizer
+8. Drawer divider
+9. Closet organizer
+10. Box filler"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+Condition: Be conventional.","
+1. Doorstop
+2. Paperweight
+3. Gift wrap decoration
+4. Centerpiece
+5. Bookend
+6. Pressing flowers
+7. Creating a fort
+8. Weighing down a trash bag
+9. Blocking a draft
+10. Leveling a table"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork","
+1. Plant marker
+2. DIY wind chime
+3. Cable organizer
+4. Picture hanger
+5. Mini sculpture tool
+6. Garden weeder
+7. Impromptu microphone stand
+8. Jewelry maker's tool
+9. Embellishment for crafts
+10. Hair styling tool"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be creative.","
+1. Plant marker
+2. DIY wind chime component
+3. Miniature sculpture tool
+4. Hair styling aid
+5. Precision painting instrument
+6. Guitar slide
+7. Geometric drawing guide
+8. Miniature gardening cultivator
+9. Embellishment for jewelry making
+10. Impromptu microphone stand"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be effective.","
+1. Plant label
+2. DIY wind chime
+3. Sculpting tool
+4. Hair pick
+5. Miniature painting tool
+6. Garden weeder
+7. Jewelry maker
+8. bookmark
+9. Embellishment for craft projects
+10. Precision scraper"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be boring.","
+1. Plant label
+2. DIY wind chime
+3. Pencil holder
+4. Cable organizer
+5. Bookmark
+6. Zipper pull
+7. Photo display
+8. Bag clip
+9. Cord manager
+10. Desk paperweight"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+Condition: Be conventional.","
+1. Plant marker
+2. DIY wind chime
+3. Cable organizer
+4. Picture hanger
+5. Mini sculpture tool
+6. Guitar slide
+7. Herb press
+8. Bookmark
+9. Embellishment for craft projects
+10. Zipper pull"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip","
+1. Plant marker
+2. DIY wind chime
+3. Zipper pull
+4. Cord organizer
+5. Emergency fishing hook
+6. Picture hanger
+7. Bag seal
+8. Temporary fix for a broken zipper
+9. Plant stake
+10. Guitar slide"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be creative.","
+1. Zipper pull
+2. Plant marker
+3. DIY wind chime component
+4. Temporary fix for a broken zipper
+5. Bag seal
+6. Cord organizer
+7. Photo display holder
+8. Emergency fishing hook
+9. Science experiment material
+10. Impromptu lock pick"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be effective.","
+1. Plant marker
+2. DIY zipper pull
+3. Temporary fix for a broken zipper
+4. Cable organizer
+5. Emergency sewing needle
+6. Picture hanger
+7. Bag seal
+8. Cord manager
+9. Wind chime component
+10. Geometric sculpture material"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be boring.","
+1. Plant marker
+2. Zipper pull
+3. Cord organizer
+4. DIY wind chime component
+5. Photo display holder
+6. Bag seal
+7. Temporary fix for a broken zipper
+8. Plant stake
+9. Bookmark
+10. Cable management device"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+Condition: Be conventional.","
+1. Plant marker
+2. DIY zipper pull
+3. Temporary fix for a broken zipper
+4. Bag seal
+5. Cable organizer
+6. Picture hanger
+7. Emergency sewing needle
+8. Wind chime component
+9. Bookmark
+10. Bag clip"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel","
+1. Drop cloth for painting
+2. Photography prop
+3. Plant covering for frost protection
+4. Impromptu picnic blanket
+5. Polishing cloth for jewelry
+6. Dust cover for furniture
+7. DIY puppet material
+8. Sound dampener for home recording
+9. Protective wrap for fragile items
+10. Macrame craft material"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be creative.","
+1. Photography prop
+2. Drop cloth for painting
+3. Picnic blanket
+4. Impromptu costume piece
+5. Plant cover for frost protection
+6. DIY puppet material
+7. Sound dampener for home recording
+8. Polishing cloth for metal surfaces
+9. Macrame craft material
+10. Improvised signal flag"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be effective.","
+1. Drop cloth for painting
+2. Polishing cloth for mirrors
+3. Dusting aid for blinds
+4. Pet blanket
+5. Seat cover for outdoor furniture
+6. Temporary curtain
+7. Picnic blanket
+8. Photography prop
+9. Weed barrier for gardening
+10. Sound dampener for home recording"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be boring.","
+1. Drop cloth
+2. Polishing cloth
+3. Dusting aid
+4. Cleaning rag
+5. Spill absorber
+6. Window cleaner
+7. Blind cleaner
+8. Furniture duster
+9. Carpet stain remover
+10. Floor wipe"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+Condition: Be conventional.","
+1. Picnic blanket
+2. Drop cloth
+3. Table runner
+4. Photo studio prop
+5. Impromptu curtain
+6. Polishing cloth
+7. Dusting aid
+8. Plant cover
+9. Seat protector
+10. Crafting material"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can","
+1. Wind chime
+2. Pen holder
+3. Vase
+4. Bird feeder
+5. Science experiment container
+6. Drum
+7. Planter
+8. Lamp base
+9. Robot body
+10. Sculpture material"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be creative.","
+1. Drum set component
+2. Bird feeder
+3. DIY wind ch!me
+4. Science experiment container
+5. Pen holder
+6. Mini greenhouse
+7. Pencil case
+8. Craft project material
+9. Improvised shovel
+10. Robot body prototype"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be effective.","
+1. Drum set component
+2. Birdhouse
+3. DIY wind chime
+4. Pen holder
+5. Science experiment container
+6. Gift container
+7. Planter
+8. Robot body
+9. Marble run tunnel
+10. Geocache container"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be boring.","
+1. Doorstop
+2. Pen holder
+3. Desk organizer
+4. Bookend
+5. Vase
+6. Pencil container
+7. Shelf ornament
+8. Paperweight
+9. Cord manager
+10. Draft blocker"
+meta-llama/Llama-3.3-70B-Instruct-Turbo,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Can,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Can
+Condition: Be conventional.","
+1. Drum set component
+2. Birdhouse
+3. Pencil holder
+4. DIY lamp shade
+5. Herb planter
+6. Science experiment container
+7. Gift container
+8. Desk organizer
+9. Wind chime material
+10. Robot craft project"

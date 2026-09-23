@@ -1,0 +1,62 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Standard,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.",
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Creative,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Quasar  
+2. Marmot  
+3. Kaleidoscope  
+4. Nebula  
+5. Saffron  
+6. Tesseract  
+7. Cobalt  
+8. Pomegranate  
+9. Echo  
+10. Obsidian"
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Effective,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Ocean  
+2. Quantum  
+3. Cabbage  
+4. Sapphire  
+5. Tornado  
+6. Algorithm  
+7. Nebula  
+8. Skeleton  
+9. Candle  
+10. Pyramid"
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Boring,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. chair  
+2. rain  
+3. paper  
+4. clock  
+5. sock  
+6. bottle  
+7. garden  
+8. lamp  
+9. stone  
+10. train"
+openai/gpt-oss-20b,Divergent Association Task,"Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",Generate 10 unrelated words,Conventional,"Task: Name 10 single words that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Target: Generate 10 unrelated words
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. apple  
+2. galaxy  
+3. symphony  
+4. quantum  
+5. castle  
+6. ocean  
+7. bicycle  
+8. honey  
+9. algorithm  
+10. butterfly"

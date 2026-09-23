@@ -1,0 +1,351 @@
+Model,Task,Instruction,Item,Condition,Prompt,Response
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Doorstop
+2. Press for drying flowers
+3. Shelf riser
+4. Leveling shim for furniture
+5. Weight for holding down fabric
+6. Temporary tablet stand
+7. Protective surface for painting
+8. Improvised step stool
+9. Screen for a candle
+10. Spacer for organizing drawers"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Doorstop
+2. Press for dried flowers
+3. Improvised step stool
+4. Secret hollowed-out safe
+5. Leveling shim for furniture
+6. Canvas for a 3D mixed-media sculpture
+7. Heat diffuser for a candle
+8. Temporary laptop riser
+9. Weight for homemade pasta
+10. Birdhouse foundation"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Doorstop
+2. Press for drying flowers
+3. Laptop riser
+4. Leveling shim for furniture
+5. Temporary shelf support
+6. Weight for holding down tarps
+7. Improvised step stool
+8. Protective surface for painting
+9. Phone stand
+10. Hidden storage compartment"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Doorstop
+2. Paperweight
+3. Shelf spacer
+4. Leveling shim
+5. Table riser
+6. Dust collector
+7. Box filler
+8. Coaster
+9. Screen prop
+10. Wedge"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Book,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Book
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Doorstop
+2. Press for drying flowers
+3. Shelf riser
+4. Paperweight
+5. Pillow substitute
+6. Leveling shim for furniture
+7. Decorative centerpiece
+8. Hidden storage compartment
+9. Handrest for writing
+10. Screen protector for small electronics"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Garden trowel
+2. Hair styling tool
+3. Cake server
+4. Pasta portion measurer
+5. Fabric scratcher
+6. Meat tenderizer
+7. Paint stirrer
+8. Soap carving tool
+9. Decorative plant support
+10. Letter opener"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Garden seed row marker
+2. Miniature harp for a dollhouse
+3. Texture stamp for pottery clay
+4. Improvised hair clip for updos
+5. Solder holding jig
+6. Pasta portion measuring tool
+7. Finger-paint scraping tool
+8. Temporary door wedge
+9. Bubble-wrap popping device
+10. DIY whisk for small amounts of egg"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Garden trowel for small seedlings
+2. Pasta portion measuring tool
+3. Temporary clothing fastener
+4. Texture tool for pottery or clay
+5. Hair styling pick
+6. Sieve for straining small items from liquid
+7. Scraping tool for ice or wax
+8. Improvised screwdriver for large screws
+9. Guide for straight-line scoring in crafts
+10. Support stake for small indoor plants"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Holding a piece of paper
+2. Poking a hole in plastic
+3. Scraping a surface
+4. Holding a garment
+5. Moving a small object
+6. Marking a spot in dirt
+7. Stirring a liquid
+8. Aligning a fabric edge
+9. Pressing a button
+10. Holding a rubber band"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Fork,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Fork
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Hair comb
+2. Garden trowel
+3. Pasta tester
+4. Meat tenderizer
+5. Cake server
+6. Ice cube picker
+7. Sieve
+8. Scraping tool
+9. Holding a phone
+10. Cleaning small crevices"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. SIM card ejector tool
+2. Reset button pusher
+3. Temporary zipper pull
+4. Hem clip for sewing
+5. Tape end marker
+6. Ornament hanger
+7. Cleaning narrow nozzles
+8. Emergency eyeglass screw replacement
+9. Letter opener
+10. Cable organizer"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Emergency eyeglass frame screw replacement
+2. Miniature sculpture armature
+3. Reset button actuator for electronics
+4. DIY cherry pitter
+5. Temporary zipper pull tab
+6. Improvised lock picking tool
+7. Seed starter depth gauge
+8. Tiny cleaning brush for keyboard crevices
+9. Miniature easel for business cards
+10. Homemade bubble wand for tiny bubbles"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. SIM card tray ejector
+2. Reset button activator
+3. Temporary zipper pull replacement
+4. Hem clip for sewing
+5. Tape roll end marker
+6. Miniature screwdriver for eyeglass screws
+7. Cleaning tool for narrow nozzles
+8. Emergency lock pick
+9. Ornament hanger
+10. Phone stand support"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Holding two pieces of paper together
+2. Clearing a small hole
+3. Marking a page in a book
+4. Holding a small piece of string
+5. Keeping a packet closed
+6. Poking a reset button
+7. Holding a fabric scrap
+8. Securing a thin wire
+9. Holding a business card
+10. Keeping a folder closed"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Paperclip,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Paperclip
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Reset button pusher
+2. SIM card ejector
+3. Temporary zipper pull
+4. Emergency earring back
+5. Tape end marker
+6. Tiny screwdriver
+7. Hair pin
+8. Ornament hanger
+9. Cleaning a narrow nozzle
+10. Bookmarker"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Picnic blanket
+2. Window shade
+3. Furniture cover
+4. Door draft stopper
+5. Improvised pillow
+6. Packing material for fragile items
+7. Floor mat
+8. Kneeling pad
+9. Pet bed
+10. Tablecloth"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Improvised baby hammock
+2. Emergency window blackout curtain
+3. Makeshift picnic table cover
+4. Protective padding for shipping fragile art
+5. DIY weighted shoulder wrap (when filled with rice)
+6. Temporary pet drying station for muddy paws
+7. Low-cost soundproofing panel for recording
+8. Emergency signal flag for rescue
+9. Protective barrier for painting furniture
+10. Improvised head-wrap for heatstroke cooling"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Improvised picnic blanket
+2. Window insulation draft stopper
+3. Protective surface for painting
+4. Emergency baby swaddle
+5. Furniture dust cover
+6. Kneeling pad for gardening
+7. Sound-dampening wall hanging
+8. Temporary pet bed
+9. Spill containment barrier
+10. Cold compress wrap"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Covering a surface
+2. Placing on a chair
+3. Spreading on a floor
+4. Wrapping an object
+5. Lining a shelf
+6. Layering over a table
+7. Placing under a pot
+8. Covering a window
+9. Padding a corner
+10. Laying on a bench"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Towel,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Towel
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Drying hands
+2. Drying hair
+3. Drying the body
+4. Drying dishes
+5. Wiping a spill
+6. Cleaning a surface
+7. Drying a pet
+8. Covering a baby
+9. Drying a car
+10. Wiping a window"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Standard,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Provide standard, practical responses.
+Do not include introductory or concluding conversational text.","1. Window cleaner
+2. Garden weed barrier
+3. Shoe deodorizer
+4. Ripening fruit accelerator
+5. Packing material for fragile items
+6. Oil spill absorbent
+7. Pet cage liner
+8. Fire starter
+9. Gift wrap
+10. Compost additive"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Creative,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as creative, original, and imaginative as possible.
+Do not include introductory or concluding conversational text.","1. Biodegradable seed-starter pots
+2. Grease-absorbent fry station liner
+3. Window-streak removing polish
+4. Temporary shoe-shaping inserts
+5. Low-cost sound-dampening wall panels
+6. Protective furniture wrap for painting
+7. DIY papier-mâché sculpture armature
+8. Ripening chamber for unripe avocados
+9. Emergency insulating blanket for pets
+10. Compostable weed barrier for garden beds"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Effective,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as effective, logical, and practical as possible.
+Do not include introductory or concluding conversational text.","1. Window cleaning rags
+2. Ripening fruit accelerator
+3. Shoe deodorizer and moisture absorber
+4. Weed barrier for garden beds
+5. Packing material for fragile items
+6. Oil spill absorbent for garages
+7. Compost brown matter
+8. Fire starter for campfires
+9. Odor absorber for refrigerators
+10. Protective floor covering for painting"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Boring,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as boring, mundane, and uninteresting as possible.
+Do not include introductory or concluding conversational text.","1. Floor covering
+2. Window cleaning cloth
+3. Trash can liner
+4. Packing material
+5. Shoe deodorizer
+6. Weed barrier
+7. Shelf liner
+8. Table protector
+9. Pet cage lining
+10. Oil absorbent"
+google/gemma-4-31b-it,Alternative Uses Task,"List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.",Newspaper,Conventional,"Task: List exactly 10 alternative, uncommon uses for the following object. Provide only a numbered list (1-10), with one use per line and no explanations.
+Target: Newspaper
+
+Condition: Be as conventional, typical, and standard as possible.
+Do not include introductory or concluding conversational text.","1. Window cleaning
+2. Ripening fruit
+3. Packing fragile items
+4. Lining birdcages
+5. Drying wet shoes
+6. Weed barrier in gardens
+7. Fire starter
+8. Cleaning glass surfaces
+9. Wrapping fish and chips
+10. Absorbing spills"
