@@ -5,7 +5,9 @@ import argparse
 from pathlib import Path
 
 # 1. Map each model ID to its provider ('together', 'groq', 'openrouter')
-MODELS_CONFIG = {
+MODELS_CONFIG = {"models/Llama-3.1-8B-Instruct": "local"}
+
+API_MODELS_CONFIG = {
     # Together AI
     # "meta-llama/Llama-3.2-3B-Instruct-Turbo": "together",
     # "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo": "together",
@@ -35,11 +37,12 @@ TASKS_TO_RUN = [
 def main():
     parser = argparse.ArgumentParser(description="Run configured model/task pilots; extra arguments go to generate.py.")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--api-models", action="store_true", help="Use the API model registry instead of the default local Llama")
     args, extra = parser.parse_known_args()
     failed = []
     print("Starting creativity pilot pipeline...\n")
     
-    for model, provider in MODELS_CONFIG.items():
+    for model, provider in (API_MODELS_CONFIG if args.api_models else MODELS_CONFIG).items():
         print(f"\n{'='*60}\nStarting test suite for Model: {model}\n{'='*60}")
         
         for task in TASKS_TO_RUN:
@@ -65,7 +68,7 @@ def main():
             
             # Provider-conscious sleep to respect rate limits
             sleep_time = 4 if provider == "openrouter" else 2
-            if not args.dry_run:
+            if not args.dry_run and provider != "local":
                 time.sleep(sleep_time)
 
     print(f"\nPipeline finished; {len(failed)} failed model/task runs.")

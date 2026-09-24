@@ -1,4 +1,4 @@
-"""Repeated, logged behavioral API generations with optional randomization."""
+"""Repeated, logged behavioral API or local generations with optional randomization."""
 import argparse
 import csv
 from datetime import datetime, timezone
@@ -41,9 +41,9 @@ def query_model(client, prompt, model_id, provider="together", max_retries=5,
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", default="meta-llama/Llama-3.3-70B-Instruct-Turbo")
+    parser.add_argument("--model", default="models/Llama-3.1-8B-Instruct")
     parser.add_argument("--task", choices=list(get_task_config()), default="Alternative Uses Task")
-    parser.add_argument("--provider", choices=["together", "groq", "openrouter"], default="together")
+    parser.add_argument("--provider", choices=["together", "groq", "openrouter", "local"], default="local")
     parser.add_argument("--repeats", type=int, default=10, help="Pilot setting, not a power calculation")
     parser.add_argument("--conditions", nargs="+", choices=list(CONDITION_TEXT), default=list(CONDITION_TEXT))
     parser.add_argument("--randomize", action="store_true", help="Shuffle requests instead of using the fixed condition order")
@@ -70,14 +70,21 @@ def main():
     if args.dry_run:
         print(build_prompt(config["instruction"], trials[0]["Item"], trials[0]["Condition"], trials[0]["Paraphrase"]))
         return
-    from dotenv import load_dotenv
-    from openai import OpenAI
-    load_dotenv(Path(__file__).with_name("ATT05522.env"))
-    urls = {"together": "https://api.together.xyz/v1", "groq": "https://api.groq.com/openai/v1", "openrouter": "https://openrouter.ai/api/v1"}
-    key = os.getenv(f"{args.provider.upper()}_API_KEY")
-    if not key:
-        parser.error(f"Missing {args.provider.upper()}_API_KEY")
-    client = OpenAI(base_url=urls[args.provider], api_key=key)
+    if args.provider == "local":
+        if args.extra_body:
+            parser.error("--extra-body applies only to API providers.")
+        from interventions import load_engine
+        print(f"Loading {args.model} locally...", flush=True)
+        engine = load_engine(args.model)
+    else:
+        from dotenv import load_dotenv
+        from openai import OpenAI
+        load_dotenv(Path(__file__).with_name("ATT05522.env"))
+        urls = {"together": "https://api.together.xyz/v1", "groq": "https://api.groq.com/openai/v1", "openrouter": "https://openrouter.ai/api/v1"}
+        key = os.getenv(f"{args.provider.upper()}_API_KEY")
+        if not key:
+            parser.error(f"Missing {args.provider.upper()}_API_KEY")
+        client = OpenAI(base_url=urls[args.provider], api_key=key)
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S") + "_" + uuid.uuid4().hex[:8]
     directory = args.output_root / args.model.split("/")[-1].replace(":", "_")
     directory.mkdir(parents=True, exist_ok=True)
@@ -90,12 +97,18 @@ def main():
             row = dict(Protocol=PROTOCOL_VERSION, Run_ID=run_id, Response_ID=f"{run_id}:{order}",
                        Model=args.model, Provider=args.provider, Task=args.task, Split=args.split,
                        Instruction=config["instruction"], **trial, Request_Order=order,
-                       Schedule_Seed=args.seed, Seed_Sent=args.send_seed,
+                       Schedule_Seed=args.seed, Seed_Sent=args.send_seed or args.provider == "local",
                        Request_Ordering="randomized" if args.randomize else "fixed",
                        Temperature=args.temperature, Max_Tokens=args.max_tokens,
                        Extra_Body_JSON=json.dumps(args.extra_body, sort_keys=True),
                        Timestamp_UTC=datetime.now(timezone.utc).isoformat(), Prompt=prompt)
-            row.update(query_model(client, prompt, args.model, args.provider,
+            if args.provider == "local":
+                result = engine.generate(prompt, seed=trial["Generation_Seed"],
+                                         temperature=args.temperature, max_tokens=args.max_tokens)
+                row.update(result, Status="ok" if result["Response"] else "empty", Error="",
+                           Top_P=1.0, Top_K=0, Model_Dtype=str(engine.model.dtype))
+            else:
+                row.update(query_model(client, prompt, args.model, args.provider,
                                    temperature=args.temperature, max_tokens=args.max_tokens,
                                    seed=trial["Generation_Seed"] if args.send_seed else None,
                                    extra_body=args.extra_body))

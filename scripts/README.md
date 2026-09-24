@@ -31,12 +31,16 @@ replace `python` with `.venv/Scripts/python.exe` if it is not activated):
 
 ```powershell
 python scripts/run_all.py --dry-run --repeats 10
+python scripts/generate.py --task "Alternative Uses Task" --repeats 5
 python scripts/generate.py --model meta-llama/Llama-3.3-70B-Instruct-Turbo --provider together --task "Alternative Uses Task" --repeats 10 --paraphrases 0 1 --split pilot
 ```
 
-`--dry-run` makes no requests. Removing it incurs provider usage. Ten repeats is
-a pilot default, not a justified final sample size. `run_all.py` retains your
-model/provider registry, which has not been checked for current availability.
+`generate.py` and `run_all.py` default to the local model at
+`models/Llama-3.1-8B-Instruct`; no API key is needed. `run_all.py` runs both AUT
+and DAT. `--dry-run` skips model loading and generation. Ten repeats is a pilot
+default, not a justified final sample size. For API generation, explicitly pass
+both `--provider` and `--model`. `run_all.py --api-models` selects the previous
+API registry (availability unverified) and incurs provider usage unless dry-run.
 API key loading still uses the existing local environment file.
 
 ## Local causal experiment
@@ -177,3 +181,30 @@ use a larger, frozen test set for confirmatory inference.
 `evaluate.py`, `evaluate_musescorer.py`, `generate_responses.py`, and
 `agc-scorer.py` are older prototypes, not the validated v2 pipeline. Do not use
 their old zero fallbacks/aggregate metrics for the final study.
+# Snellius local behavioral run
+
+From the project root on Snellius (Bash), create a separate Linux environment:
+
+```bash
+uv venv --python 3.11 .venv-snellius
+uv pip install --python .venv-snellius/bin/python torch transformers accelerate
+sbatch scripts/snellius_behavioral.sh
+```
+
+The Slurm script requests one A100 and runs the downloaded
+`models/Llama-3.1-8B-Instruct` on DAT and AUT with five repeats and the five
+conditions in fixed order (25 DAT and 125 AUT responses). Submit from the project
+root; add `--account=YOUR_ACCOUNT` to `sbatch` if your allocation requires it.
+For a shorter pilot use `REPEATS=1 sbatch scripts/snellius_behavioral.sh`.
+Monitor with `squeue -u "$USER"` and `tail -f creativity-JOBID.log`.
+The one-hour wall time is an initial allocation, not a measured runtime.
+
+Local generation uses the tokenizer chat template, paired generation seeds,
+top_p=1 and top_k=0, and writes evaluator-compatible creativity-v2 CSVs under
+`outputs/Llama-3.1-8B-Instruct/`. No API key is needed. The model loads once per
+task. Existing API generation remains available. GPU inference must run inside
+the Slurm allocation. A dry run needs no model or GPU:
+
+```bash
+.venv-snellius/bin/python scripts/generate.py --provider local --model models/Llama-3.1-8B-Instruct --task "Divergent Association Task" --repeats 5 --dry-run
+```
