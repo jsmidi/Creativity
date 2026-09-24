@@ -2,3 +2,5 @@ scripts/*.env
 scripts/*.env
 outputs/
 databases/*.txt
+models/
+*__pycache__/
