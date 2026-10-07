@@ -39,7 +39,7 @@ def score(task, inputs, output):
         run(f'evaluate_{task}.py', '--inputs', inputs, '--output-dir', output, *extra)
 
 
-def summarize(task, raw_root, scored_root, output):
+def summarize(task, scored_root, output):
     """Export response uniqueness, paired effects and validity; do not infer independent greedy samples."""
     metric = METRICS[task]
     effects, audit = [], []
@@ -84,8 +84,8 @@ def summarize(task, raw_root, scored_root, output):
         + 'These exploratory tests do not establish a creativity-specific mechanism.\n')
 
 
-def main():
-    """Execute all stages in one GPU allocation; --dry-run prints design without loading models."""
+def parse_args():
+    """Validate task, model, output directories and behavioral/intervention repeats."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--task', choices=NAMES, required=True)
     parser.add_argument('--model', default='models/Llama-3.1-8B-Instruct')
@@ -97,6 +97,11 @@ def main():
     args = parser.parse_args()
     if args.repeats < 1 or args.mi_repeats < 1:
         parser.error('Repeat counts must be positive')
+    return args
+
+
+def build_plan(args):
+    """Describe the greedy protocol and its held-out vector discovery split."""
     task = NAMES[args.task]
     concept_task = 'aut' if args.task == 'dat' else args.task
     items = get_task_config(task)['items']
@@ -109,16 +114,19 @@ def main():
                 concept_audit=AUDIT[concept_task], extraction_wordings=[1,2], evaluation_wording=0,
                 layer=16, alpha=1, scope='prefill', random_vectors=2,
                 interpretation='exploratory greedy interventions; repeats are determinism checks')
-    print(json.dumps(plan, indent=2), flush=True)
-    if args.dry_run:
-        return
-    args.run_dir.mkdir(parents=True, exist_ok=True)
-    args.analysis_dir.mkdir(parents=True, exist_ok=False)
-    (args.run_dir/'plan.json').write_text(json.dumps(plan, indent=2)+'\n')
+    return plan, task, items, concept_task
+
+
+def generate_behavioral(args, task):
+    """Generate and score unsteered greedy condition baselines."""
     run('generate.py', '--task', task, '--model', args.model, '--provider', 'local',
         '--repeats', args.repeats, '--temperature', 0, '--top-p', 1, '--top-k', 0,
         '--paraphrases', 0, '--randomize', '--output-root', args.run_dir/'behavioral')
     score(args.task, args.run_dir/'behavioral', args.analysis_dir/'behavioral')
+
+
+def extract_vectors(args, task, concept_task):
+    """Extract the task residual and select/audit concept heads."""
     residual = args.run_dir/'residual.pt'
     run('activation_steer.py', 'extract', '--model', args.model, '--artifact', residual,
         '--tasks', task, '--items', *DISCOVERY[args.task], '--paraphrases', 1, 2, '--baseline', 'Standard', '--layer', 16)
@@ -126,6 +134,11 @@ def main():
     run('concept_vectors.py', '--model', args.model, '--task', NAMES[concept_task], '--output-dir', discovery,
         '--items', *DISCOVERY[concept_task], '--audit-items', *AUDIT[concept_task],
         '--paraphrases', 1, 2, '--audit-paraphrase', 0, '--top-k', 5, '--layer', 16, '--permutations', 199)
+    return residual, discovery
+
+
+def run_interventions(args, task, items, residual, discovery):
+    """Generate and score residual, composite and individual-head candidates."""
     with (discovery/'head_ranking.csv').open() as handle:
         top = next(csv.DictReader(handle))
     head = f"head_l{top['Layer']}_h{top['Head']}"
@@ -138,7 +151,22 @@ def main():
             '--alphas', 1, '--random-vectors', 2, '--scope', 'prefill', '--max-tokens', 800,
             '--output-dir', output)
         score(args.task, output, args.analysis_dir/candidate)
-    summarize(args.task, args.run_dir, args.analysis_dir, args.analysis_dir)
+
+
+def main():
+    """Run the greedy behavioral and mechanistic stages in one GPU allocation."""
+    args = parse_args()
+    plan, task, items, concept_task = build_plan(args)
+    print(json.dumps(plan, indent=2), flush=True)
+    if args.dry_run:
+        return
+    args.run_dir.mkdir(parents=True, exist_ok=True)
+    args.analysis_dir.mkdir(parents=True, exist_ok=False)
+    (args.run_dir/'plan.json').write_text(json.dumps(plan, indent=2)+'\n')
+    generate_behavioral(args, task)
+    residual, discovery = extract_vectors(args, task, concept_task)
+    run_interventions(args, task, items, residual, discovery)
+    summarize(args.task, args.analysis_dir, args.analysis_dir)
     print(f'All stages complete: {args.analysis_dir}', flush=True)
 
 

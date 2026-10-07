@@ -1,0 +1,19 @@
+Model,Task,Temperature,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed,Analysis_Status
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Standard,-0.00043703649165065527,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Effective,0.014896233998919239,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Conventional,0.017775909863450436,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Boring,0.017164740375845523,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_add_1,Standard,0.006201758156101689,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_subtract_1,Creative,-0.0002723762668949581,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_suppress,Creative,-0.0065669123433258255,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_suppress,Standard,-0.010234731314686395,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_patch_creative,Standard,-0.011151137843862947,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_patch_standard,Creative,-0.010473421312685338,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_random0_1,Standard,-0.010986912874099608,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_random_suppress0,Creative,0.007843063431294307,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_add_1,Standard_random0_1,0.017188671030201295,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_suppress,Creative_random_suppress0,-0.014409975774620132,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_random1_1,Standard,-0.014721198417942661,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_random_suppress1,Creative,0.0058948096913418405,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_add_1,Standard_random1_1,0.02092295657404435,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_suppress,Creative_random_suppress1,-0.012461722034667666,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok

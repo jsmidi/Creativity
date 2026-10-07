@@ -14,12 +14,14 @@ def final_answer(raw):
 
 class GptOssEngine:
     def __init__(self, model, tokenizer, reasoning_effort):
+        """Store an evaluation-mode GPT-OSS model, tokenizer and requested reasoning effort."""
         self.model = model.eval()
         self.tokenizer = tokenizer
         self.reasoning_effort = reasoning_effort
 
     @torch.inference_mode()
     def generate(self, prompt, seed=42, temperature=0.7, max_tokens=800, top_p=1.0, top_k=0):
+        """Seed generation and return the final answer separately from raw reasoning and token counts."""
         inputs = self.tokenizer.apply_chat_template(
             [{"role": "user", "content": prompt}], reasoning_effort=self.reasoning_effort,
             add_generation_prompt=True, return_tensors="pt", return_dict=True,
@@ -59,6 +61,7 @@ def gpt_oss_memory_budget():
 
 
 def load_behavioral_engine(model_id, reasoning_effort="low"):
+    """Load the local behavioral backend; GPT-OSS uses BF16 memory checks and final-channel parsing."""
     from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, Mxfp4Config
     config = AutoConfig.from_pretrained(model_id)
     if config.model_type != "gpt_oss":

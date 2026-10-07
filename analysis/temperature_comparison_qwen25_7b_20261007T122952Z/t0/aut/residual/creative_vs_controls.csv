@@ -1,0 +1,5 @@
+Model,Task,Temperature,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed,Analysis_Status
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Standard,-0.00043703649165065527,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Effective,0.014896233998919239,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Conventional,0.017775909863450436,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Boring,0.017164740375845523,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok

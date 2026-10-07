@@ -8,6 +8,7 @@ from scoring_common import load_responses, parse_dat_words, parse_numbered_list,
 
 
 def load_dat_frequency_database(filepath):
+    """Read word probabilities in [0, 1]; missing resources leave lexical rarity unavailable."""
     if filepath is None or not Path(filepath).exists():
         return None
     frame = pd.read_csv(filepath)
@@ -18,6 +19,9 @@ def load_dat_frequency_database(filepath):
 
 
 def evaluate_dat_metrics(df, emb_model=None, dat_db=None, official_model=None):
+    """Score the first seven qualifying unique words with official GloVe or an explicit MPNet proxy.
+
+    Unscorable lists have missing scores, and parsing/validation audits are retained per response."""
     records = []
     for _, row in df.iterrows():
         words = list(dict.fromkeys(parse_dat_words(row["Response"])))
@@ -47,6 +51,7 @@ def evaluate_dat_metrics(df, emb_model=None, dat_db=None, official_model=None):
 
 
 def main():
+    """Load a requested DAT scorer, export response scores, and plot descriptive condition spread."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--inputs", type=Path, nargs="+", default=[Path("outputs")])
     parser.add_argument("--output-dir", type=Path, default=Path("analysis/dat_v2"))

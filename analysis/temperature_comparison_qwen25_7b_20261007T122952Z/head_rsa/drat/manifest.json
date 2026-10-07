@@ -1,0 +1,8 @@
+{
+  "discovery_directory": "outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/artifacts/drat/concept_discovery",
+  "figure": "pilot discovery Cross_RSA heatmap and fixed-head Audit_RSA comparison",
+  "source_sha256": {
+    "outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/artifacts/drat/concept_discovery/head_ranking.csv": "b19f227011a04f6f5b5a44e2c0c04eab16d9d535f9ac682c5515eabaeef00b7e",
+    "outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/artifacts/drat/concept_discovery/selected_heads_audit.csv": "8a30a401291019d65ebd7ee2e8b60d147adb162319827d5b369d29d80a963590"
+  }
+}

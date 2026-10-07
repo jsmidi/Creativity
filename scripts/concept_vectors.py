@@ -54,18 +54,18 @@ def capture_heads(engine, inputs):
     """Capture all pre-o_proj head outputs in one prompt forward pass.
 
     Args:
-        engine: ActivationEngine wrapping the tested Llama architecture.
+        engine: ActivationEngine wrapping a tested Llama or Qwen2 architecture.
         inputs: Tokenized input mapping for one unpadded prompt.
     Returns:
         Detached CPU float32 tensor [layers, query_heads, head_dim] at the final
         prompt token. Query-head counts, not KV-head counts, support Llama GQA.
     Raises:
-        ValueError: For a non-Llama model or batch size other than one.
+        ValueError: For an unsupported model type or batch size other than one.
     Notes:
         All projection hooks are removed even on failure; no answer is generated.
     """
-    if engine.model.config.model_type != 'llama':
-        raise ValueError('Only the tested Llama adapter is supported.')
+    if engine.model.config.model_type not in ('llama', 'qwen2'):
+        raise ValueError('Only the tested Llama and Qwen2 adapters are supported.')
     captured, handles = {}, []
     n_heads = engine.model.config.num_attention_heads
     def hook_for(layer):
@@ -118,6 +118,12 @@ def collect(engine, examples):
         values.append(capture_heads(engine, inputs))
         print(f'Captured {i + 1}/{len(examples)} prompts', flush=True)
     return torch.stack(values)
+
+
+def residual_center(engine, examples, layer):
+    """Mean Standard post-block state in the coordinates used for suppression."""
+    return torch.stack([engine.capture(engine.inputs(row['Prompt']), layer)
+                        for row in examples]).mean(0)
 
 
 def centered_ranks(values):
@@ -311,23 +317,8 @@ def save_artifact(path, metadata, vector, center):
     path.with_suffix('.json').write_text(json.dumps(dict(**metadata, vector_norm=vector.norm().item()), indent=2))
 
 
-def main():
-    """Run concept-head discovery, frozen-head audit, and vector export.
-
-    Args:
-        None. Parses sys.argv: model/revision select the checkpoint; output-dir is
-        a new directory; items/audit-items must be distinct; top-k chooses the head
-        count; layer sets composite residual injection location; permutations/seed
-        configure the null; paraphrases/audit-paraphrase set disjoint wording
-        indices; dry-run prints counts without model loading.
-    Returns:
-        None. Exports rankings, audit scores, prompt tables, activation tensors,
-        combined Creative mean/contrast vectors, and individual-head contrasts.
-    Notes:
-        Defaults use 48 discovery, 12 audit, and 16 Standard baseline prompts.
-        Audit data never re-rank heads. This function does not generate or score
-        behavioral answers; snellius_concept.sh schedules those separate stages.
-    """
+def parse_args():
+    """Validate disjoint discovery/audit items, wording splits and vector parameters."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--model', default='models/Llama-3.1-8B-Instruct')
     parser.add_argument('--revision')
@@ -353,39 +344,52 @@ def main():
         parser.error('Discovery and audit objects must be disjoint.')
     if len(set(args.paraphrases)) != 2 or len(args.paraphrases) != 2 or args.audit_paraphrase in args.paraphrases:
         parser.error('Use two distinct discovery paraphrases and a separate audit paraphrase.')
+    return args
+
+
+def build_stimuli(args):
+    """Build discovery, held-out audit and Standard calibration prompts."""
     discovery = stimuli(args.items, args.paraphrases, task=args.task)
     # Audit uses new objects and new Creative/Conventional/Effective suffixes.
     # Both formats retained; one wording means cross-wording masking is omitted
     # in the audit via an explicitly separate pair construction below.
     audit = stimuli(args.audit_items, [args.audit_paraphrase], task=args.task)
     baseline = stimuli(args.items, args.paraphrases, ['Standard'], task=args.task)
-    print(f'{len(discovery)} discovery + {len(audit)} audit + {len(baseline)} baseline forward passes; top {args.top_k} heads.')
-    if args.dry_run:
-        return
-    args.output_dir.mkdir(parents=True, exist_ok=False)
-    engine = load_engine(args.model, args.revision)
-    engine.target(args.layer)
-    if args.top_k > len(engine.model.model.layers) * engine.model.config.num_attention_heads:
-        raise ValueError('top-k exceeds the number of heads.')
-    dev = collect(engine, discovery)
-    ranking = rank_heads(dev.numpy(), discovery, args.permutations, args.seed)
+    return discovery, audit, baseline
+
+
+def select_heads(engine, args, discovery):
+    """Rank discovery heads and freeze the top defined cross-pair RSA scores."""
+    discovery_activations = collect(engine, discovery)
+    ranking = rank_heads(discovery_activations.numpy(), discovery, args.permutations, args.seed)
     selected = [r for r in ranking if np.isfinite(r['Cross_RSA'])][:args.top_k]
     if len(selected) < args.top_k:
         raise ValueError('Not enough heads with defined RSA.')
     write_csv(args.output_dir / 'head_ranking.csv', ranking)
     print('Selected heads:', selected, flush=True)
-    heldout = collect(engine, audit)
+    return discovery_activations, selected
+
+
+def audit_heads(engine, args, audit, discovery_activations, selected):
+    """Evaluate the frozen selection on new items and wording without re-ranking."""
+    audit_activations = collect(engine, audit)
     # All audit prompts use the held-out wording; exclude same-item/same-format pairs.
-    audit_features, audit_valid, i, j = rsa_features(heldout.numpy(), audit, cross_wording=False)
+    audit_features, audit_valid, i, j = rsa_features(audit_activations.numpy(), audit, cross_wording=False)
     audit_scores = rsa_scores(audit_features, [e['Condition'] for e in audit], i, j)
-    n_heads = dev.shape[2]
+    n_heads = discovery_activations.shape[2]
     audit_rows = [dict(**r, Audit_RSA=float(audit_scores[r['Layer']*n_heads+r['Head']])
                        if audit_valid[r['Layer']*n_heads+r['Head']] else float('nan')) for r in selected]
     write_csv(args.output_dir / 'selected_heads_audit.csv', audit_rows)
+    return audit_activations
+
+
+def export_vectors(engine, args, discovery, audit, baseline, discovery_activations, audit_activations, selected):
+    """Save composite residual vectors, correctly centered suppression and direct-head contrasts."""
     standard = collect(engine, baseline).mean(0)
-    creative = dev[[i for i,e in enumerate(discovery) if e['Condition']=='Creative']].mean(0)
+    creative = discovery_activations[[i for i,e in enumerate(discovery) if e['Condition']=='Creative']].mean(0)
     positive = project_heads(engine, creative, selected)
     negative = project_heads(engine, standard, selected)
+    center = residual_center(engine, baseline, args.layer)
     meta = dict(protocol=PROTOCOL_VERSION, **provenance(engine, args), layer=args.layer,
                 head=None, baseline='Standard', examples=[dict(Task=args.task, Item=i, Paraphrase=p)
                 for i in args.items for p in args.paraphrases],
@@ -396,8 +400,10 @@ def main():
                 selection='cross-item/cross-format/cross-wording Spearman RSA on instruction condition',
                 permutation_seed=args.seed, permutations=args.permutations,
                 scaling='sum of W_O-projected selected-head means; no unit normalization')
-    save_artifact(args.output_dir/'contrast.pt', dict(meta, vector_kind='selected_head_creative_minus_standard'), positive-negative, negative)
-    save_artifact(args.output_dir/'creative_mean.pt', dict(meta, vector_kind='selected_head_creative_mean'), positive, negative)
+    save_artifact(args.output_dir/'contrast.pt', dict(meta, vector_kind='selected_head_creative_minus_standard',
+                  center_kind='full_standard_post_block_residual_mean'), positive-negative, center)
+    save_artifact(args.output_dir/'creative_mean.pt', dict(meta, vector_kind='selected_head_creative_mean',
+                  center_kind='full_standard_post_block_residual_mean'), positive, center)
     # Individual artifacts permit direct pre-o_proj head interventions using the
     # existing causal runner; head coordinates from different layers are never added.
     for r in selected:
@@ -409,8 +415,25 @@ def main():
     write_csv(args.output_dir/'discovery_prompts.csv', discovery)
     write_csv(args.output_dir/'audit_prompts.csv', audit)
     write_csv(args.output_dir/'baseline_prompts.csv', baseline)
-    torch.save(dict(discovery=dev, audit=heldout), args.output_dir/'head_activations.pt')
+    torch.save(dict(discovery=discovery_activations, audit=audit_activations), args.output_dir/'head_activations.pt')
     print(f'Saved rankings, held-out audit, composite vectors and head contrasts in {args.output_dir}')
+
+
+def main():
+    """Discover condition geometry, audit fixed heads, and export intervention vectors."""
+    args = parse_args()
+    discovery, audit, baseline = build_stimuli(args)
+    print(f'{len(discovery)} discovery + {len(audit)} audit + {len(baseline)} baseline forward passes; top {args.top_k} heads.')
+    if args.dry_run:
+        return
+    args.output_dir.mkdir(parents=True, exist_ok=False)
+    engine = load_engine(args.model, args.revision)
+    engine.target(args.layer)
+    if args.top_k > len(engine.model.model.layers) * engine.model.config.num_attention_heads:
+        raise ValueError('top-k exceeds the number of heads.')
+    discovery_activations, selected = select_heads(engine, args, discovery)
+    audit_activations = audit_heads(engine, args, audit, discovery_activations, selected)
+    export_vectors(engine, args, discovery, audit, baseline, discovery_activations, audit_activations, selected)
 
 
 if __name__ == '__main__':

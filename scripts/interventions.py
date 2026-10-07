@@ -76,7 +76,7 @@ class ActivationEngine:
         """Wrap an evaluation-mode decoder for local capture and intervention.
 
         Args:
-            model: Loaded causal language model exposing model.layers; Llama is tested.
+            model: Loaded causal language model exposing model.layers; Llama and Qwen2 are tested.
             tokenizer: Optional chat tokenizer, required for prompt-based generation.
         Raises:
             ValueError: If the decoder does not expose the expected layer structure.
@@ -316,7 +316,7 @@ def load_engine(model_id, revision=None):
     Returns:
         ActivationEngine with automatic device placement and model dtype.
     Notes:
-        Remote identifiers can trigger downloads. This is the Llama-style
+        Remote identifiers can trigger downloads. This is the Llama/Qwen2-style
         intervention loader, not the separate GPT-OSS behavioral loader.
     """
     from transformers import AutoModelForCausalLM, AutoTokenizer

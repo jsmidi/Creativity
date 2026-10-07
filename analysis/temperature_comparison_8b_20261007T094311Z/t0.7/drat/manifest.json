@@ -1,0 +1,25 @@
+{
+  "inputs": [
+    "outputs/temperature_comparison_8b_20261007T094311Z/t0/drat"
+  ],
+  "task": "drat",
+  "noun_vocabulary": "databases/association/nouns.txt",
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "device": "cuda",
+  "pool_size": 5000,
+  "baseline_draws": 500,
+  "seed": 42,
+  "output_dir": "analysis/temperature_comparison_8b_20261007T094311Z/t0/drat",
+  "protocol": "association-exploratory-v1",
+  "noun_sha256": "e8b9babcb49ff797f771ef43fd330a79944184592f386179cce4dc13b31d47f3",
+  "source_sha256": "b482610ad03ab0ace01c923e5b0180e573b3b959d40b75dd866923cf4b026d00",
+  "embedding_sha256": "c039e9e270ba9dc3863673d67adb621e2324aeae8b256216f8fc652c9b1efc61",
+  "raw_files": {
+    "/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_8b_20261007T094311Z/t0/drat/Llama-3.1-8B-Instruct/results_divergent_remote_association_test_20261007T103453_2c5534ce.csv": "3dbc5763b652b420d60dd9182910c0d0fbf4badeba2d9ee6107a2a71bcc2ceae"
+  },
+  "drat_quantile": 0.9,
+  "drat_minimum": 3,
+  "cdat_minimum": 7,
+  "validity": "WordNet noun-lemma whitelist; no POS tagger; first ten entries only",
+  "cdat_gate": "Welch on cue means versus random lists, BH within temperature, alpha .001"
+}

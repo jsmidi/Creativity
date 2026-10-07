@@ -1,0 +1,47 @@
+{
+  "aut": {
+    "source_directory": "analysis/greedy_aut_27552571/behavioral",
+    "files_sha256": {
+      "aut_results.png": "4917a229b74d96abfeb37b23a7feae6ffe1b64506ccecf473f980a05e6ce3670",
+      "aut_rating_key_private.csv": "f8cd33a7567902fa170701b7f9c19c329176edf89e0b712c9e0307159e91c681",
+      "aut_responses.csv": "58b0600f3662c1fb4b2dfb3f7fca900f58b0db8bb4a28279e2bf1366b2a49a9f",
+      "aut_blinded_ratings.csv": "a1e815d3eed66b133a06d975b9ccbc460b5d3830081cd183aa548d71ccdf040b",
+      "aut_ideas.csv": "ac56abf1667f7aecfa2a243a1e563ea6ac1ddadcf64084edb18508121734e70e"
+    },
+    "current_directory": "analysis/temperature_comparison_8b_20261007T094311Z/t0/aut",
+    "original_directory_removed": true
+  },
+  "dat": {
+    "source_directory": "analysis/greedy_dat_27552572/behavioral",
+    "files_sha256": {
+      "dat_responses.csv": "28c22001327e2f973ef8d227453e7a565b2f52cca60fc6ad7bb5915b0f2c54cc",
+      "dat_results.png": "e35684575690097b0b848fea39147ff0f57113323e6941fb8740f954cd1be98e"
+    },
+    "current_directory": "analysis/temperature_comparison_8b_20261007T094311Z/t0/dat",
+    "original_directory_removed": true
+  },
+  "cdat": {
+    "source_directory": "analysis/greedy_cdat_27552573/behavioral",
+    "files_sha256": {
+      "random_baseline.csv": "4888518199163ee762d1364157acaec77dc775cadddcf0ef33b39489ab73c551",
+      "scoring_embeddings.npz": "bdc71e7baed4a82fab2020d22e82bd4cab9d55c6bb4e17f62ff911566fbec255",
+      "cdat_gates.csv": "1e629222dd5e73347936c249ea75231e51da530d41de5d2da895f5d21b7ae669",
+      "calibration_nouns.txt": "390bb5a9e03091965f370803832aa96b59518ba994d9cea771b77d8d3d5cb310",
+      "manifest.json": "6cfbd4c8b6959966e0749ede643ea9fc3b933c21c27a8b2f8b49eab5833ed48e",
+      "cdat_responses.csv": "dfcfc2f43ad5b31f289218dd5a8706b09a3558c5d5389bd80f781579f484dfd8"
+    },
+    "current_directory": "analysis/temperature_comparison_8b_20261007T094311Z/t0/cdat",
+    "original_directory_removed": true
+  },
+  "drat": {
+    "source_directory": "analysis/greedy_drat_27552574/behavioral",
+    "files_sha256": {
+      "drat_responses.csv": "9ff6713c8abb32006a660788f55b2166a00cf82f09e2755057fe91ed84bb3ab1",
+      "scoring_embeddings.npz": "ae83141bbd59ef5cecf3bc9c4bee91ee6743091142d9a09d272b5aa12bbbcf7c",
+      "calibration_nouns.txt": "390bb5a9e03091965f370803832aa96b59518ba994d9cea771b77d8d3d5cb310",
+      "manifest.json": "ca03a3dd6a81eca9b6ba7e24666df75629181eaa148af0c967977a024e4dbc6b"
+    },
+    "current_directory": "analysis/temperature_comparison_8b_20261007T094311Z/t0/drat",
+    "original_directory_removed": true
+  }
+}

@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=concept-heads
-#SBATCH --partition=gpu_a100
+#SBATCH --partition=gpu_h100
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=18
-#SBATCH --gpus=1
+#SBATCH --gpus=4
 #SBATCH --time=02:00:00
 #SBATCH --output=logs/concept-%j.log
 
@@ -19,7 +19,7 @@ export OPENBLAS_NUM_THREADS=4
 PYTHON="${PYTHON:-.venv/bin/python}"
 MODEL="${1:-llama}"
 if (( $# > 1 )); then echo 'Expected one model argument.' >&2; exit 1; fi
-if [[ "$MODEL" == llama ]]; then MODEL=models/Llama-3.1-8B-Instruct; fi
+if [[ "$MODEL" == llama ]]; then MODEL=/scratch-shared/jsmidi/models/Llama-3.1-70B-Instruct; fi
 RUN_DIR="${RUN_DIR:-outputs/concept_pilot_${SLURM_JOB_ID}}"
 ANALYSIS_DIR="${ANALYSIS_DIR:-analysis/concept_pilot_${SLURM_JOB_ID}}"
 "$PYTHON" -c 'import torch; assert torch.cuda.is_available(), "CUDA unavailable"; print(torch.cuda.get_device_name(0))'

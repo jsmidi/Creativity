@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Standard,-14.774582438677461,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Effective,-13.772938570047202,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Conventional,0.9547389055507667,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Boring,-14.39817355947945,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42

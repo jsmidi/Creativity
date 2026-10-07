@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from scipy.stats import ttest_ind
-from scoring_common import load_responses, parse_dat_words, parse_numbered_list
+from scoring_common import load_responses, parse_dat_words, parse_numbered_list, descriptive_plot
 
 CDAT = 'Conditional Divergent Association Task'
 DRAT = 'Divergent Remote Association Test'
@@ -81,8 +81,8 @@ def cdat_gates(frame, baseline):
     return result
 
 
-def main():
-    """Score raw task CSVs and save response audits, calibration and a manifest."""
+def parse_args():
+    """Validate input resources and choose a new calibration directory."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--inputs', nargs='+', type=Path, required=True)
     parser.add_argument('--task', choices=['cdat', 'drat'], required=True)
@@ -101,39 +101,60 @@ def main():
     vocabulary = sorted(set(args.noun_vocabulary.read_text().splitlines()))
     if not 10 <= args.pool_size <= len(vocabulary) or args.baseline_draws < 100:
         parser.error('Require 10 <= pool-size <= vocabulary size and baseline-draws >= 100')
-    frame = load_responses(args.inputs, CDAT if args.task == 'cdat' else DRAT)
-    rng = np.random.default_rng(args.seed)
-    pool_words = rng.choice(vocabulary, args.pool_size, replace=False).tolist()
-    allowed = set(vocabulary)
+    return args, vocabulary
+
+
+def parse_nouns(responses, allowed):
+    """Keep unique whitelisted nouns from the first ten numbered entries."""
     parsed = []
-    for text in frame.Response:
+    for text in responses:
         entries = parse_numbered_list(text)[:10]
         # Reconstruct only first ten entries before lexical validation; no cherry-picking later words.
         words = parse_dat_words('\n'.join(f'{i+1}. {word}' for i, word in enumerate(entries)))
         parsed.append(list(dict.fromkeys(w for w in words if w in allowed)))
+    return parsed
+
+
+def parse_anchors(frame, task):
+    """Read one CDAT cue or multiple DRAT anchors per item."""
     anchors = {item: [w.strip() for w in item.split('|')] for item in frame.Item.unique()}
-    if any(not all(words) or (len(words) != 1 if args.task == 'cdat' else len(words) < 2)
+    if any(not all(words) or (len(words) != 1 if task == 'cdat' else len(words) < 2)
            for words in anchors.values()):
-        parser.error('CDAT needs one cue; DRAT needs pipe-separated anchors')
+        raise ValueError('CDAT needs one cue; DRAT needs pipe-separated anchors')
+    return anchors
+
+
+def embed_vocabulary(args, pool_words, parsed, anchors):
+    """Embed the sorted union of calibration nouns, response nouns and task anchors."""
     texts = sorted(set(pool_words + [w for row in parsed for w in row] + [w for row in anchors.values() for w in row]))
     from sentence_transformers import SentenceTransformer
     model = SentenceTransformer(args.embedding_model, device=args.device)
     vectors = normalized(model.encode(texts, convert_to_numpy=True, show_progress_bar=True))
     lookup = dict(zip(texts, vectors))
     pool = np.stack([lookup[w] for w in pool_words])
+    return texts, vectors, lookup, pool
+
+
+def random_baseline(task, draws, anchors, lookup, pool, rng):
+    """Draw fixed seven-noun CDAT lists using the run RNG; DRAT has no list baseline."""
     baseline_rows = []
-    if args.task == 'cdat':
+    if task == 'cdat':
         for item, cue in anchors.items():
             similarities = np.clip(pool @ lookup[cue[0]], -1, 1)
-            for draw in range(args.baseline_draws):
+            for draw in range(draws):
                 selected = rng.choice(len(pool), 7, replace=False)
                 baseline_rows.append(dict(Item=item, Draw=draw, Appropriateness=float(100*(1+similarities[selected]).mean())))
+    return baseline_rows
+
+
+def score_responses(task, frame, parsed, anchors, lookup, pool):
+    """Score each response, retaining format audits and missing scores for failed requests."""
     scores = []
     for row, words in zip(frame.to_dict('records'), parsed):
         record = dict(Parsed_Words=json.dumps(words), Valid_Nouns=len(words),
                       Format_Valid=len(parse_numbered_list(row['Response'])) == 10 and len(words) == 10)
         valid = row['Status'] == 'ok'
-        if args.task == 'cdat':
+        if task == 'cdat':
             record.update(CDAT_Novelty=np.nan, CDAT_Appropriateness=np.nan)
             if valid and len(words) >= 7:
                 values = np.stack([lookup[w] for w in words[:7]])
@@ -146,6 +167,11 @@ def main():
                           Survivors=survivors, Utilities=json.dumps(utilities.tolist()))
         scores.append(record)
     result = pd.concat([frame.reset_index(drop=True), pd.DataFrame(scores)], axis=1)
+    return result
+
+
+def save_results(args, frame, result, baseline_rows, texts, vectors, pool_words):
+    """Save score CSVs, calibration, source hashes, CDAT gates and descriptive plots."""
     args.output_dir.mkdir(parents=True)
     result.to_csv(args.output_dir/f'{args.task}_responses.csv', index=False)
     if baseline_rows:
@@ -163,7 +189,25 @@ def main():
                     validity='WordNet noun-lemma whitelist; no POS tagger; first ten entries only',
                     cdat_gate='Welch on cue means versus random lists, BH within temperature, alpha .001')
     (args.output_dir/'manifest.json').write_text(json.dumps(manifest, indent=2, default=str)+'\n')
+    metrics = ({'CDAT_Novelty': 'CDAT novelty (before condition appropriateness gate)',
+                'CDAT_Appropriateness': 'CDAT appropriateness'} if args.task == 'cdat'
+               else {'DRAT_Score': 'DRAT score'})
+    descriptive_plot(result, metrics, args.output_dir/f'{args.task}_results.png')
     print(f'Saved {len(result)} scored responses to {args.output_dir}')
+
+
+def main():
+    """Run lexical validation, frozen calibration, response scoring and export."""
+    args, vocabulary = parse_args()
+    frame = load_responses(args.inputs, CDAT if args.task == 'cdat' else DRAT)
+    rng = np.random.default_rng(args.seed)
+    pool_words = rng.choice(vocabulary, args.pool_size, replace=False).tolist()
+    parsed = parse_nouns(frame.Response, set(vocabulary))
+    anchors = parse_anchors(frame, args.task)
+    texts, vectors, lookup, pool = embed_vocabulary(args, pool_words, parsed, anchors)
+    baseline = random_baseline(args.task, args.baseline_draws, anchors, lookup, pool, rng)
+    result = score_responses(args.task, frame, parsed, anchors, lookup, pool)
+    save_results(args, frame, result, baseline, texts, vectors, pool_words)
 
 
 if __name__ == '__main__':

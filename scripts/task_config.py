@@ -1,13 +1,14 @@
 """Pilot tasks; these are not a verified reproduction of AGC-Bench items."""
 def get_task_config(task_name=None):
+    """Return the complete task registry or one task definition containing instructions and pilot items."""
     tasks = {
         "Alternative Uses Task": {
             "instruction": "List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",
             "items": [
-                "book", 
-                "fork", 
-                "paperclip", 
-                "towel", 
+                "book",
+                "fork",
+                "paperclip",
+                "towel",
                 "can"
             ]
         },
@@ -52,7 +53,7 @@ def get_task_config(task_name=None):
             ]
         }
     }
-    
+
     if task_name is None:
         return tasks
     return tasks.get(task_name)

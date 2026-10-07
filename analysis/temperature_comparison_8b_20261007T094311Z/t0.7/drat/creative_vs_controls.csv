@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Standard,0.29522343175650956,-2.5280483267695435,3.7287493848218385,300,0,5,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Effective,-1.9742121521817784,-5.802340418512755,0.5903614421000654,300,0,5,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Conventional,-1.600161978887267,-4.922943389688858,0.8202178403284076,300,0,5,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Boring,-2.7484693603023787,-7.291795794666138,0.20087447591964377,300,0,5,item and paired-generation bootstrap,2000,42

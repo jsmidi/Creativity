@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Standard,0.015048330430190849,0.00405922376752114,0.026381724798857167,293,7,5,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Effective,0.012507655425590994,-0.0005275248159486478,0.024768755688472015,293,7,5,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Conventional,0.02938508251837373,0.008068237644600814,0.05387061718159971,292,8,5,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Boring,0.03260549536103359,0.016675033707938595,0.05107370168355557,293,7,5,item and paired-generation bootstrap,2000,42

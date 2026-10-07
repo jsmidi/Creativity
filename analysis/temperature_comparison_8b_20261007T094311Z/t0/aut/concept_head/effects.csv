@@ -1,0 +1,19 @@
+Model,Task,Temperature,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed,Analysis_Status
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Standard,-0.013575618124277877,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Effective,-0.006728732480927868,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Conventional,0.0025880034373511494,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Boring,-0.010971651636844127,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_add_1,Standard,0.0004784683862654626,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_subtract_1,Creative,-0.006439032727831129,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_suppress,Creative,-0.004325847776161939,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_suppress,Standard,-0.002164665163945889,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_patch_creative,Standard,-0.0011098163719267973,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_patch_standard,Creative,-0.0021924239676418544,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_random0_1,Standard,-0.0004896442190303718,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_random_suppress0,Creative,-0.006205016778343508,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_add_1,Standard_random0_1,0.0009681126052958344,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_suppress,Creative_random_suppress0,0.0018791690021815687,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_random1_1,Standard,0.004923214074459859,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_random_suppress1,Creative,-0.005020765568445551,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Standard_add_1,Standard_random1_1,-0.0044447456881943955,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative_suppress,Creative_random_suppress1,0.0006949177922836114,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok

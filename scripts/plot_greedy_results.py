@@ -14,6 +14,7 @@ BASE = ['Standard', 'Creative', 'Effective', 'Conventional', 'Boring']
 
 
 def heatmap(frame, title, subtitle, destination, diverging=False, percent=False):
+    """Save a labelled score matrix, masking missing cells and optionally centering its colors at zero."""
     frame = frame.dropna(axis=0, how='all').dropna(axis=1, how='all')
     if frame.empty:
         return
@@ -46,6 +47,7 @@ def heatmap(frame, title, subtitle, destination, diverging=False, percent=False)
 
 
 def plot_run(root):
+    """Export candidate score matrices, paired effects and validity audits for one greedy result directory."""
     task = root.name.split('_')[1]
     metric = METRICS[task]
     out = root/'plots'

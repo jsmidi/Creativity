@@ -1,0 +1,55 @@
+Protocol,Run_ID,Response_ID,Model,Provider,Task,Split,Instruction,Item,Condition,Repeat,Paraphrase,Block_ID,Generation_Seed,Request_Order,Schedule_Seed,Seed_Sent,Request_Ordering,Temperature,Max_Tokens,Top_P,Top_K,Decoding,Sampling_Filters_Active,Extra_Body_JSON,Timestamp_UTC,Prompt,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Error,Model_Dtype,Source_File,Parsed_Words,Valid_Word_Count,List_Count,Scorable,Validation,DAT_GloVe_Score,DAT_MPNet_Proxy,Rarity_Score,Frequency_Coverage
+creativity-v2,20261007T123146_5a51df1c,20261007T123146_5a51df1c:0,models/Qwen2.5-7B-Instruct,local,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Boring,0,0,|p0|r0,421779131,0,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:31:46.834344+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be boring.","1. Apple
+2. Elephant
+3. Symphony
+4. Nail
+5. Quasar
+6. Umbrella
+7. Tango
+8. Oxygen
+9. Zebra
+10. Iota",45,stop,77,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/dat/Qwen2.5-7B-Instruct/results_divergent_association_task_20261007T123146_5a51df1c.csv,"['apple', 'elephant', 'symphony', 'nail', 'quasar', 'umbrella', 'tango', 'oxygen', 'zebra', 'iota']",10,10,True,dictionary,83.93877410888672,,,0.0
+creativity-v2,20261007T123146_5a51df1c,20261007T123146_5a51df1c:1,models/Qwen2.5-7B-Instruct,local,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Conventional,0,0,|p0|r0,421779131,1,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:31:49.227542+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be conventional.","1. Apple
+2. Elephant
+3. Symphony
+4. Nail
+5. Quasar
+6. Umbrella
+7. Tango
+8. Oxygen
+9. Zebra
+10. Iota",45,stop,77,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/dat/Qwen2.5-7B-Instruct/results_divergent_association_task_20261007T123146_5a51df1c.csv,"['apple', 'elephant', 'symphony', 'nail', 'quasar', 'umbrella', 'tango', 'oxygen', 'zebra', 'iota']",10,10,True,dictionary,83.93877410888672,,,0.0
+creativity-v2,20261007T123146_5a51df1c,20261007T123146_5a51df1c:2,models/Qwen2.5-7B-Instruct,local,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Effective,0,0,|p0|r0,421779131,2,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:31:50.264418+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be effective.","1. Apple
+2. Elephant
+3. Symphony
+4. Nail
+5. Quasar
+6. Umbrella
+7. Tango
+8. Oxygen
+9. Zebra
+10. Iota",45,stop,77,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/dat/Qwen2.5-7B-Instruct/results_divergent_association_task_20261007T123146_5a51df1c.csv,"['apple', 'elephant', 'symphony', 'nail', 'quasar', 'umbrella', 'tango', 'oxygen', 'zebra', 'iota']",10,10,True,dictionary,83.93877410888672,,,0.0
+creativity-v2,20261007T123146_5a51df1c,20261007T123146_5a51df1c:3,models/Qwen2.5-7B-Instruct,local,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Creative,0,0,|p0|r0,421779131,3,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:31:51.301603+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.","1. Atom
+2. Elephant
+3. Symphony
+4. Comet
+5. Umbrella
+6. Zest
+7. Quark
+8. Ballet
+9. Nectar
+10. Wristwatch",47,stop,77,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/dat/Qwen2.5-7B-Instruct/results_divergent_association_task_20261007T123146_5a51df1c.csv,"['atom', 'elephant', 'symphony', 'comet', 'umbrella', 'zest', 'quark', 'ballet', 'nectar', 'wristwatch']",10,10,True,dictionary,84.03760528564453,,,0.0
+creativity-v2,20261007T123146_5a51df1c,20261007T123146_5a51df1c:4,models/Qwen2.5-7B-Instruct,local,Divergent Association Task,pilot,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",,Standard,0,0,|p0|r0,421779131,4,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:31:52.384514+00:00,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","1. Apple
+2. Elephant
+3. Symphony
+4. Nail
+5. Quasar
+6. Umbrella
+7. Tango
+8. Oxygen
+9. Zucchini
+10. Iguana",46,stop,74,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/dat/Qwen2.5-7B-Instruct/results_divergent_association_task_20261007T123146_5a51df1c.csv,"['apple', 'elephant', 'symphony', 'nail', 'quasar', 'umbrella', 'tango', 'oxygen', 'zucchini', 'iguana']",10,10,True,dictionary,83.93877410888672,,,0.0

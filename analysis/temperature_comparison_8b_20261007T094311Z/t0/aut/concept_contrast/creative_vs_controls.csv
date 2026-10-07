@@ -1,0 +1,5 @@
+Model,Task,Temperature,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed,Analysis_Status
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Standard,-0.013575612894641575,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Effective,-0.006728725767727784,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Conventional,0.002588010938463103,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,0,Semantic_Distance_Proxy,Creative,Boring,-0.010971647701312471,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42,ok

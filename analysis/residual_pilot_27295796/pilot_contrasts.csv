@@ -1,8 +1,0 @@
-Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
-Semantic_Distance_Proxy,Creative,Standard,0.10132285950530652,0.012795083814240216,0.22525038926010887,6,0,2,item and paired-generation bootstrap,2000,42
-Semantic_Distance_Proxy,Standard_add_1,Standard,-0.0023844046306655082,-0.010097030076228697,0.003925081119187546,6,0,2,item and paired-generation bootstrap,2000,42
-Semantic_Distance_Proxy,Standard_add_1,Standard_random0_1,-0.015772312237221066,-0.04689507098201796,0.001962540023405679,6,0,2,item and paired-generation bootstrap,2000,42
-Semantic_Distance_Proxy,Standard_add_1,Standard_random1_1,-0.003369189133279012,-0.012066595212401296,0.0029403838199196907,6,0,2,item and paired-generation bootstrap,2000,42
-Semantic_Distance_Proxy,Creative_suppress,Creative,0.003220830001793074,-0.012542044683847639,0.019069024517463562,6,0,2,item and paired-generation bootstrap,2000,42
-Semantic_Distance_Proxy,Creative_subtract_1,Creative,0.004694943152592075,-0.013379718417379413,0.02746455030074374,6,0,2,item and paired-generation bootstrap,2000,42
-Semantic_Distance_Proxy,Standard_patch_creative,Standard,0.019022811887931278,-4.658304704937185e-09,0.057068440847062196,6,0,2,item and paired-generation bootstrap,2000,42

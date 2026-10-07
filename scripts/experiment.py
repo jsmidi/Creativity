@@ -14,23 +14,29 @@ CONDITION_TEXT = {
 
 
 def canonical_item(item):
+    """Normalize case, whitespace and leading articles so equivalent item labels share a key."""
     key = re.sub(r"\s+", " ", str(item).lower().strip())
     key = re.sub(r"^(?:a|an|the)\s+", "", key)
     return {"tin can": "can"}.get(key, key)
 
 
 def build_prompt(instruction, item, condition, paraphrase=0):
+    """Fill the task item and append the selected instruction suffix; Standard has no suffix."""
     base = instruction.replace("{item}", str(item))
     suffix = CONDITION_TEXT[condition][paraphrase]
     return f"{base}\n{suffix}" if suffix else base
 
 
 def stable_seed(*parts):
+    """Derive a process-independent 31-bit seed from the SHA-256 hash of the supplied identifiers."""
     value = "|".join(map(str, parts)).encode()
     return int.from_bytes(hashlib.sha256(value).digest()[:4], "big") % (2**31)
 
 
 def trial_schedule(items, conditions, repeats, paraphrases, seed, randomize=False):
+    """Build item/wording/repetition blocks with a shared seed across conditions; optionally shuffle execution.
+
+    Conditions follow protocol order before shuffling, regardless of the order supplied by the caller."""
     if repeats < 1 or not items or not conditions or not paraphrases:
         raise ValueError("Items, conditions, paraphrases and repeats must be nonempty.")
     if len(set(conditions)) != len(conditions) or len(set(paraphrases)) != len(paraphrases):

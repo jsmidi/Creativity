@@ -17,6 +17,7 @@ from sampling import sampling_kwargs
 
 def query_model(client, prompt, model_id, provider="together", max_retries=5,
                 temperature=0.7, max_tokens=800, seed=None, extra_body=None, top_p=1.0):
+    """Request one API completion, retry transient server errors, and return logged status fields."""
     kwargs = dict(model=model_id, messages=[{"role": "user", "content": prompt}],
                   temperature=temperature, max_tokens=max_tokens, top_p=top_p)
     if seed is not None:
@@ -43,7 +44,8 @@ def query_model(client, prompt, model_id, provider="together", max_retries=5,
                         Returned_Model="", System_Fingerprint="", Usage_JSON="{}")
 
 
-def main():
+def parse_args():
+    """Parse and validate decoding options; build the paired trial schedule."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", default="models/Llama-3.1-8B-Instruct")
     parser.add_argument("--task", choices=list(get_task_config()), default="Alternative Uses Task")
@@ -82,13 +84,15 @@ def main():
                                 args.repeats, args.paraphrases, args.seed, randomize=args.randomize)
     except ValueError as exc:
         parser.error(str(exc))
-    print(f"{len(trials)} requests planned for {args.model}; protocol {PROTOCOL_VERSION}.")
-    if args.dry_run:
-        print(build_prompt(config["instruction"], trials[0]["Item"], trials[0]["Condition"], trials[0]["Paraphrase"]))
-        return
+    return args, config, trials
+
+
+def load_backend(args):
+    """Load one local engine or configure the requested API client."""
+    engine, client = None, None
     if args.provider == "local":
         if args.extra_body:
-            parser.error("--extra-body applies only to API providers.")
+            raise ValueError("--extra-body applies only to API providers.")
         from local_generation import load_behavioral_engine
         print(f"Loading {args.model} locally...", flush=True)
         engine = load_behavioral_engine(args.model, args.reasoning_effort)
@@ -99,8 +103,13 @@ def main():
         urls = {"together": "https://api.together.xyz/v1", "groq": "https://api.groq.com/openai/v1", "openrouter": "https://openrouter.ai/api/v1"}
         key = os.getenv(f"{args.provider.upper()}_API_KEY")
         if not key:
-            parser.error(f"Missing {args.provider.upper()}_API_KEY")
+            raise ValueError(f"Missing {args.provider.upper()}_API_KEY")
         client = OpenAI(base_url=urls[args.provider], api_key=key)
+    return engine, client
+
+
+def prepare_output(args, config, engine, planned_responses):
+    """Create a unique run directory and save source, model and sampling provenance."""
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S") + "_" + uuid.uuid4().hex[:8]
     directory = args.output_root / args.model.split("/")[-1].replace(":", "_")
     directory.mkdir(parents=True, exist_ok=True)
@@ -108,7 +117,7 @@ def main():
     revision = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     manifest = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
     manifest.update(run_id=run_id, protocol=PROTOCOL_VERSION, git_commit=revision,
-                    task_config=config, planned_responses=len(trials),
+                    task_config=config, planned_responses=planned_responses,
                     source_sha256={name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
                                    for name in ["generate.py", "sampling.py", "interventions.py", "local_generation.py", "experiment.py", "task_config.py"]})
     source_dir = directory / f"sources_{run_id}"
@@ -128,33 +137,44 @@ def main():
                         chat_template_sha256=hashlib.sha256(str(engine.tokenizer.chat_template).encode()).hexdigest(),
                         versions={name: importlib.metadata.version(name) for name in ["torch", "transformers", "accelerate"]})
     path.with_suffix(".json").write_text(json.dumps(manifest, indent=2, default=str)+"\n")
+    return run_id, path
+
+
+def response_row(args, config, trial, run_id, order, engine, client):
+    """Generate one response and attach the protocol, seed, settings and status fields."""
+    prompt = build_prompt(config["instruction"], trial["Item"], trial["Condition"], trial["Paraphrase"])
+    row = dict(Protocol=PROTOCOL_VERSION, Run_ID=run_id, Response_ID=f"{run_id}:{order}",
+               Model=args.model, Provider=args.provider, Task=args.task, Split=args.split,
+               Instruction=config["instruction"], **trial, Request_Order=order,
+               Schedule_Seed=args.seed, Seed_Sent=args.send_seed or args.provider == "local",
+               Request_Ordering="randomized" if args.randomize else "fixed",
+               Temperature=args.temperature, Max_Tokens=args.max_tokens,
+               Top_P=args.top_p, Top_K=args.top_k if args.provider == "local" else "provider_default_unknown",
+               Decoding="greedy" if args.temperature == 0 and args.provider == "local" else "sampling",
+               Sampling_Filters_Active=args.temperature > 0,
+               Extra_Body_JSON=json.dumps(args.extra_body, sort_keys=True),
+               Timestamp_UTC=datetime.now(timezone.utc).isoformat(), Prompt=prompt)
+    if args.provider == "local":
+        result = engine.generate(prompt, seed=trial["Generation_Seed"],
+                                 temperature=args.temperature, max_tokens=args.max_tokens,
+                                 top_p=args.top_p, top_k=args.top_k)
+        row.update(result, Status="ok" if result["Response"] else "empty", Error="",
+                   Model_Dtype=str(engine.model.dtype))
+    else:
+        row.update(query_model(client, prompt, args.model, args.provider,
+                           temperature=args.temperature, max_tokens=args.max_tokens,
+                           seed=trial["Generation_Seed"] if args.send_seed else None,
+                           extra_body=args.extra_body, top_p=args.top_p))
+    return row
+
+
+def write_responses(args, config, trials, run_id, path, engine, client):
+    """Stream scheduled responses to CSV; retain failures and flush after every request."""
     failures = 0
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = None
         for order, trial in enumerate(trials):
-            prompt = build_prompt(config["instruction"], trial["Item"], trial["Condition"], trial["Paraphrase"])
-            row = dict(Protocol=PROTOCOL_VERSION, Run_ID=run_id, Response_ID=f"{run_id}:{order}",
-                       Model=args.model, Provider=args.provider, Task=args.task, Split=args.split,
-                       Instruction=config["instruction"], **trial, Request_Order=order,
-                       Schedule_Seed=args.seed, Seed_Sent=args.send_seed or args.provider == "local",
-                       Request_Ordering="randomized" if args.randomize else "fixed",
-                       Temperature=args.temperature, Max_Tokens=args.max_tokens,
-                       Top_P=args.top_p, Top_K=args.top_k if args.provider == "local" else "provider_default_unknown",
-                       Decoding="greedy" if args.temperature == 0 and args.provider == "local" else "sampling",
-                       Sampling_Filters_Active=args.temperature > 0,
-                       Extra_Body_JSON=json.dumps(args.extra_body, sort_keys=True),
-                       Timestamp_UTC=datetime.now(timezone.utc).isoformat(), Prompt=prompt)
-            if args.provider == "local":
-                result = engine.generate(prompt, seed=trial["Generation_Seed"],
-                                         temperature=args.temperature, max_tokens=args.max_tokens,
-                                         top_p=args.top_p, top_k=args.top_k)
-                row.update(result, Status="ok" if result["Response"] else "empty", Error="",
-                           Model_Dtype=str(engine.model.dtype))
-            else:
-                row.update(query_model(client, prompt, args.model, args.provider,
-                                   temperature=args.temperature, max_tokens=args.max_tokens,
-                                   seed=trial["Generation_Seed"] if args.send_seed else None,
-                                   extra_body=args.extra_body, top_p=args.top_p))
+            row = response_row(args, config, trial, run_id, order, engine, client)
             if writer is None:
                 writer = csv.DictWriter(handle, fieldnames=list(row))
                 writer.writeheader()
@@ -168,6 +188,21 @@ def main():
     print(f"Saved {path}; {failures} failed/empty requests retained in log.")
     if failures:
         raise SystemExit(1)
+
+
+def main():
+    """Plan a behavioral run, initialize its backend, then stream logged responses."""
+    args, config, trials = parse_args()
+    print(f"{len(trials)} requests planned for {args.model}; protocol {PROTOCOL_VERSION}.")
+    if args.dry_run:
+        print(build_prompt(config["instruction"], trials[0]["Item"], trials[0]["Condition"], trials[0]["Paraphrase"]))
+        return
+    try:
+        engine, client = load_backend(args)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+    run_id, path = prepare_output(args, config, engine, len(trials))
+    write_responses(args, config, trials, run_id, path, engine, client)
 
 
 if __name__ == "__main__":

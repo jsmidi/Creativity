@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Standard,1.1504823377117797,0.44280708676302594,1.7923689562248617,598,2,10,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Effective,1.1663896760002967,0.4239737030461375,1.9285220612734226,597,3,10,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Conventional,1.9746488459287608,0.974931202729634,2.9517206825406355,597,3,10,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Boring,1.3548583487854717,0.24629195460811484,2.6561296792597835,599,1,10,item and paired-generation bootstrap,2000,42

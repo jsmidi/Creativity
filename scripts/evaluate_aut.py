@@ -11,11 +11,13 @@ parse_aut_list = parse_numbered_list
 
 
 def normalize(embeddings):
+    """Convert embedding rows to unit vectors, keeping zero rows finite."""
     array = np.asarray(embeddings, dtype=float)
     return array / np.maximum(np.linalg.norm(array, axis=1, keepdims=True), 1e-12)
 
 
 def load_aut_normative_database(filepath, model):
+    """Embed per-item reference uses and retain their response-frequency weights; missing norms return an empty mapping."""
     if not Path(filepath).exists():
         print("Normative database unavailable; rarity will be missing.")
         return {}
@@ -31,8 +33,36 @@ def load_aut_normative_database(filepath, model):
     return database
 
 
-def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps=0.35):
+def database_rarities(frame, formatted_emb, aut_db, threshold):
+    """Return frequency-weighted rarity for each reference-formatted idea; unmatched items stay missing."""
+    rarities = []
+    for i, item in enumerate(frame["Item_Key"]):
+        db = aut_db.get(item) if aut_db else None
+        if db is None:
+            rarities.append(np.nan)
+        else:
+            matched = (db["embeddings"] @ formatted_emb[i]) >= threshold
+            rarities.append(1 - db["counts"][matched].sum() / db["total_responses"])
+    return rarities
+
+
+def add_cluster_novelty(frame, ideas, cluster_eps):
+    """Assign within-item ICF novelty from cosine DBSCAN clusters fitted to this sample."""
     from sklearn.cluster import DBSCAN
+    frame["Relative_Novelty_ICF"] = np.nan
+    # Descriptive, sample-dependent: do not treat as a fixed external novelty measure.
+    for _, group in frame.groupby("Item_Key"):
+        indices = group.index.to_numpy()
+        labels = DBSCAN(eps=cluster_eps, min_samples=1, metric="cosine").fit_predict(ideas[indices])
+        _, inverse, counts = np.unique(labels, return_inverse=True, return_counts=True)
+        frame.loc[indices, "Relative_Novelty_ICF"] = np.log(len(labels) / counts[inverse])
+    return frame
+
+
+def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps=0.35):
+    """Score ideas by item distance, frequency-weighted database rarity and within-item cluster rarity.
+
+    ICF is log(total ideas / cluster size), fitted to this scoring sample; it is not an external novelty norm."""
     frame = eval_df.reset_index(drop=True).copy()
     if frame.empty:
         for column in ["Semantic_Distance_Proxy", "DB_Rarity_Score", "Relative_Novelty_ICF"]:
@@ -44,28 +74,16 @@ def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps
     formatted = [f"use {item} as {idea.lower()}" for item, idea in zip(frame["Item_Key"], frame["Parsed_Ideas"])]
     formatted_emb = normalize(emb_model.encode(formatted))
     frame["Semantic_Distance_Proxy"] = 1 - np.sum(items * ideas, axis=1)
-    rarities = []
-    for i, item in enumerate(frame["Item_Key"]):
-        db = aut_db.get(item) if aut_db else None
-        if db is None:
-            rarities.append(np.nan)
-        else:
-            matched = (db["embeddings"] @ formatted_emb[i]) >= threshold
-            rarities.append(1 - db["counts"][matched].sum() / db["total_responses"])
+    rarities = database_rarities(frame, formatted_emb, aut_db, threshold)
     frame["DB_Rarity_Score"] = rarities
-    frame["Relative_Novelty_ICF"] = np.nan
-    # Descriptive, sample-dependent: do not treat as a fixed external novelty measure.
-    for _, group in frame.groupby("Item_Key"):
-        indices = group.index.to_numpy()
-        labels = DBSCAN(eps=cluster_eps, min_samples=1, metric="cosine").fit_predict(ideas[indices])
-        _, inverse, counts = np.unique(labels, return_inverse=True, return_counts=True)
-        frame.loc[indices, "Relative_Novelty_ICF"] = np.log(len(labels) / counts[inverse])
+    frame = add_cluster_novelty(frame, ideas, cluster_eps)
     frame["DB_Match_Threshold"] = threshold
     frame["DBSCAN_Eps"] = cluster_eps
     return frame
 
 
 def prepare_ideas(responses):
+    """Return response audits and one row per parsed idea; retain malformed lists for explicit format review."""
     frame = responses.copy()
     frame["Parsed_Ideas"] = frame["Response"].apply(parse_aut_list)
     frame["Idea_Count"] = frame["Parsed_Ideas"].map(len)
@@ -77,6 +95,7 @@ def prepare_ideas(responses):
 
 
 def export_ratings(ideas, output_dir, seed=42):
+    """Write shuffled blinded rating rows and a separate private key linking them to conditions."""
     frame = ideas.copy()
     frame["Rating_ID"] = [hashlib.sha256(f"{rid}:{index}".encode()).hexdigest()[:20]
                           for rid, index in zip(frame["Response_ID"], frame["Idea_Index"])]
@@ -88,6 +107,7 @@ def export_ratings(ideas, output_dir, seed=42):
 
 
 def main():
+    """Score AUT ideas, average metrics within each response, and save audits, ratings and plots."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--inputs", type=Path, nargs="+", default=[Path("outputs")])
     parser.add_argument("--output-dir", type=Path, default=Path("analysis/aut_v2"))

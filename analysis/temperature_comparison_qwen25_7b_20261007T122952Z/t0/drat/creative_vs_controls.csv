@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Standard,0.2898116825275906,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Effective,-0.12033342447691667,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Conventional,0.33866389085181936,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Boring,-0.9998964337016532,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42

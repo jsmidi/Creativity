@@ -5,10 +5,10 @@ import unittest
 import numpy as np
 import torch
 from scipy.stats import spearmanr
-from transformers import LlamaConfig, LlamaForCausalLM
+from transformers import LlamaConfig, LlamaForCausalLM, Qwen2Config, Qwen2ForCausalLM
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from concept_vectors import capture_heads, project_heads, rank_heads, rsa_features, rsa_scores, stimuli
-from interventions import ActivationEngine
+from concept_vectors import capture_heads, project_heads, rank_heads, rsa_features, rsa_scores, stimuli, residual_center
+from interventions import ActivationEngine, changed_activation
 from activation_steer import validate_holdout
 
 
@@ -64,6 +64,29 @@ class ConceptVectorTests(unittest.TestCase):
                   'audit_examples':[{'Task':'Alternative Uses Task','Item':'shoe','Paraphrase':2}]}
         with self.assertRaises(ValueError):
             validate_holdout(artifact,'Alternative Uses Task',['shoe'],[1],'validation')
+
+    def test_qwen_capture_projection_and_residual_center(self):
+        model = Qwen2ForCausalLM(Qwen2Config(vocab_size=32, hidden_size=16,
+            intermediate_size=32, num_hidden_layers=2, num_attention_heads=4,
+            num_key_value_heads=2)).eval()
+        engine = ActivationEngine(model)
+        inputs = {'input_ids': torch.tensor([[1, 2, 3]])}
+        heads = capture_heads(engine, inputs)
+        self.assertEqual(tuple(heads.shape), (2, 4, 4))
+        torch.testing.assert_close(heads[0, 2], engine.capture(inputs, 0, 2))
+        projected = project_heads(engine, heads, [{'Layer': 0, 'Head': 2}])
+        masked = torch.zeros(16)
+        masked[8:12] = heads[0, 2]
+        torch.testing.assert_close(projected, model.model.layers[0].self_attn.o_proj.weight.detach() @ masked)
+        token_inputs = [inputs, {'input_ids': torch.tensor([[3, 2, 1]])}]
+        engine.inputs = lambda prompt: token_inputs[prompt]
+        center = residual_center(engine, [{'Prompt': 0}, {'Prompt': 1}], 1)
+        expected = torch.stack([engine.capture(x, 1) for x in token_inputs]).mean(0)
+        torch.testing.assert_close(center, expected)
+        suppressed = changed_activation(center.reshape(1, 1, -1), projected, 'suppress', 1, center)
+        torch.testing.assert_close(suppressed.reshape(-1), center)
+        self.assertTrue(all(not layer._forward_hooks and not layer.self_attn.o_proj._forward_pre_hooks
+                            for layer in model.model.layers))
 
 
 if __name__=='__main__': unittest.main()

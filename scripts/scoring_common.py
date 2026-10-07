@@ -6,6 +6,7 @@ from experiment import PROTOCOL_VERSION, CONDITION_TEXT
 
 
 def parse_numbered_list(text):
+    """Extract newline-delimited numbered entries, allowing optional Markdown bold markers."""
     if not isinstance(text, str):
         return []
     entries = re.findall(r"(?:^|\n)\s*(?:\*\*)?(\d+)[.)](?:\*\*)?\s+([^\n]+)", text)
@@ -14,11 +15,15 @@ def parse_numbered_list(text):
 
 def parse_dat_words(text):
     # A phrase is invalid, not silently converted to its first word.
+    """Return lowercase single-word entries; reject phrases instead of taking their first word."""
     return [word.lower() for word in parse_numbered_list(text)
             if re.fullmatch(r"[A-Za-z]+(?:-[A-Za-z]+)*", word)]
 
 
 def load_responses(input_paths, task, include_legacy=False):
+    """Read raw task CSVs, exclude scored exports, validate protocol and reject duplicate response IDs.
+
+    Legacy inputs require explicit opt-in; raw source paths and failure status are retained."""
     files = sorted({file.resolve() for path in input_paths
                     for file in (path.rglob("*.csv") if path.is_dir() else [path])})
     frames = []

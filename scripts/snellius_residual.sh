@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=residual-pilot
-#SBATCH --partition=gpu_a100
+#SBATCH --partition=gpu_h100
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=18
-#SBATCH --gpus=1
+#SBATCH --gpus=4
 #SBATCH --time=02:00:00
 #SBATCH --output=logs/residual-%j.log
 
@@ -22,7 +22,7 @@ export TOKENIZERS_PARALLELISM=false
 export MPLBACKEND=Agg
 PYTHON="${PYTHON:-.venv/bin/python}"
 MODEL="${1:-llama}"
-if [[ "$MODEL" == llama ]]; then MODEL=models/Llama-3.1-8B-Instruct; fi
+if [[ "$MODEL" == llama ]]; then MODEL=/scratch-shared/jsmidi/models/Llama-3.1-70B-Instruct; fi
 LAYER="${LAYER:-16}"
 ALPHA="${ALPHA:-1}"
 ALPHA_LABEL=$("$PYTHON" -c 'import sys; print(format(float(sys.argv[1]), "g"))' "$ALPHA")

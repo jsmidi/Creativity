@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Qwen2.5-7B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Standard,0.956730735247541,0.05476220300111971,1.9075845149949633,576,24,10,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Effective,0.39130138269654796,-0.5111419266708426,1.21866219232345,576,24,10,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Conventional,0.9418104375354742,-0.022286407933440864,1.8637228455935715,581,19,10,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Boring,0.5798722562223966,-0.5763697041609455,2.242089836696437,577,23,10,item and paired-generation bootstrap,2000,42

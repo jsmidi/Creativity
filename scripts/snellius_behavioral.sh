@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=creativity
-#SBATCH --partition=gpu_a100
+#SBATCH --partition=gpu_h100
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=18
-#SBATCH --gpus=1
+#SBATCH --gpus=4
 #SBATCH --time=04:00:00
 #SBATCH --array=0-3
 #SBATCH --output=logs/creativity-%A_%a.log
@@ -22,7 +22,7 @@ export TOKENIZERS_PARALLELISM=false
 # Positional model takes precedence over the legacy MODEL environment setting.
 MODEL="${1:-${MODEL:-llama}}"
 case "$MODEL" in
-    llama) MODEL="models/Llama-3.1-8B-Instruct" ;;
+    llama) MODEL="/scratch-shared/jsmidi/models/Llama-3.1-70B-Instruct" ;;
     gpt-oss) MODEL="models/gpt-oss-20b" ;;
 esac
 if [[ ! -f "$MODEL/config.json" ]]; then

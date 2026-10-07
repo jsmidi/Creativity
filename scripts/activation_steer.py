@@ -138,35 +138,8 @@ def extract(args):
     print(f"Saved {args.artifact}; norm {vector.norm().item():.4f}.")
 
 
-def generate(args):
-    """Run controlled behavioral interventions using an existing vector artifact.
-
-    Args:
-        args: CLI Namespace with artifact, model, revision, task, items, paraphrases,
-            and split; alphas sets addition/subtraction strengths; random_vectors
-            sets the number of norm-matched controls; repeats and seed set trial
-            blocks/order; temperature/high_temperature control decoding; max_tokens
-            caps completion length; scope sets hook timing; output_dir is the
-            destination; dry_run validates the artifact and prints the trial count.
-    Returns:
-        None. Writes one response CSV and a JSON manifest in output_dir.
-    Notes:
-        Trials include prompt baselines, addition/subtraction, centered suppression,
-        random controls, temperature, and donor patching. Patching is always prefill.
-        A shared seed pairs conditions within an item/wording/repeat block. Alphas
-        do not change suppression/patch strengths, which are fixed at one.
-        Even a dry run requires a readable artifact. Model/protocol/template checks
-        reject incompatible artifacts; generation exceptions propagate.
-    """
-    import torch
-    artifact = torch.load(args.artifact, map_location="cpu", weights_only=True)
-    if artifact["protocol"] != PROTOCOL_VERSION:
-        raise ValueError("Incompatible vector protocol.")
-    if args.model != artifact["model"]:
-        raise ValueError("Use the same model as extraction. Cross-model tests require re-extraction.")
-    config = get_task_config(args.task)
-    items = args.items or config["items"]
-    validate_holdout(artifact, args.task, items, args.paraphrases, args.split)
+def intervention_arms(args):
+    """Build baseline, learned, norm-matched random, suppression and donor-patching conditions."""
     arms = [(c, c, "none", 0.0, -1) for c in ["Standard", "Creative", "Effective", "Conventional", "Boring"]]
     for alpha in args.alphas:
         arms.extend([(f"Standard_add_{alpha:g}", "Standard", "add", alpha, -1),
@@ -182,40 +155,23 @@ def generate(args):
         arms.append((f"Creative_random_suppress{index}", "Creative", "suppress", 1.0, index))
     if getattr(args, "omit_temperature_control", False):
         arms = [arm for arm in arms if arm[2] != "temperature"]
-    trials = [(item, p, repeat, arm) for item in items for p in args.paraphrases
-              for repeat in range(args.repeats) for arm in arms]
-    random.Random(args.seed).shuffle(trials)
-    print(f"{len(trials)} generations; split {args.split}; extraction tasks {sorted({e['Task'] for e in artifact['examples']})}.")
-    if args.dry_run:
-        return
-    from interventions import load_engine
-    # Resolve to the extraction commit where available; refuse silent revision drift.
-    args.revision = args.revision or artifact.get("resolved_revision")
-    engine = load_engine(args.model, args.revision)
-    metadata = provenance(engine, args)
-    for field in ["resolved_revision", "chat_template_sha256"]:
-        if artifact.get(field) and artifact[field] != metadata[field]:
-            raise ValueError(f"Extraction/generation mismatch in {field}")
-    vector, center = artifact["vector"], artifact["center"]
-    rng = torch.Generator().manual_seed(args.seed)
+    return arms
+
+
+def random_directions(vector, count, seed):
+    """Draw reproducible Gaussian directions with the learned vector norm."""
+    import torch
+    rng = torch.Generator().manual_seed(seed)
     controls = []
-    for _ in range(args.random_vectors):
+    for _ in range(count):
         noise = torch.randn(vector.shape, generator=rng)
         controls.append(noise / noise.norm() * vector.norm())
-    run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S") + "_" + uuid.uuid4().hex[:8]
-    args.output_dir.mkdir(parents=True, exist_ok=True)
-    stem = f"results_{args.task.lower().replace(' ', '_')}_{run_id}"
-    path = args.output_dir / f"{stem}.csv"
-    manifest = dict(**metadata, protocol=PROTOCOL_VERSION, run_id=run_id,
-                    artifact=str(args.artifact.resolve()), artifact_sha256=hashlib.sha256(args.artifact.read_bytes()).hexdigest(),
-                    split=args.split, task=args.task, items=items, paraphrases=args.paraphrases,
-                    repeats=args.repeats, alphas=args.alphas, random_vectors=args.random_vectors,
-                    random_seed=args.seed, scope=args.scope, temperature=args.temperature,
-                    omit_temperature_control=getattr(args, "omit_temperature_control", False),
-                    high_temperature=args.high_temperature, max_tokens=args.max_tokens, top_p=1.0, top_k=0)
-    manifest["candidate_metadata"] = {key: artifact[key] for key in
-        ("vector_kind", "selected_heads", "selection", "upstream_commit", "audit_examples") if key in artifact}
-    (args.output_dir / f"{stem}.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    return controls
+
+
+def write_interventions(args, engine, artifact, config, controls, trials, manifest, run_id, path):
+    """Stream intervention responses to CSV, caching prompt-specific donor activations."""
+    vector, center = artifact["vector"], artifact["center"]
     patch_cache = {}
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = None
@@ -258,6 +214,69 @@ def generate(args):
     print(f"Saved {path}")
 
 
+def generate(args):
+    """Run controlled behavioral interventions using an existing vector artifact.
+
+    Args:
+        args: CLI Namespace with artifact, model, revision, task, items, paraphrases,
+            and split; alphas sets addition/subtraction strengths; random_vectors
+            sets the number of norm-matched controls; repeats and seed set trial
+            blocks/order; temperature/high_temperature control decoding; max_tokens
+            caps completion length; scope sets hook timing; output_dir is the
+            destination; dry_run validates the artifact and prints the trial count.
+    Returns:
+        None. Writes one response CSV and a JSON manifest in output_dir.
+    Notes:
+        Trials include prompt baselines, addition/subtraction, centered suppression,
+        random controls, temperature, and donor patching. Patching is always prefill.
+        A shared seed pairs conditions within an item/wording/repeat block. Alphas
+        do not change suppression/patch strengths, which are fixed at one.
+        Even a dry run requires a readable artifact. Model/protocol/template checks
+        reject incompatible artifacts; generation exceptions propagate.
+    """
+    import torch
+    artifact = torch.load(args.artifact, map_location="cpu", weights_only=True)
+    if artifact["protocol"] != PROTOCOL_VERSION:
+        raise ValueError("Incompatible vector protocol.")
+    if args.model != artifact["model"]:
+        raise ValueError("Use the same model as extraction. Cross-model tests require re-extraction.")
+    config = get_task_config(args.task)
+    items = args.items or config["items"]
+    validate_holdout(artifact, args.task, items, args.paraphrases, args.split)
+    arms = intervention_arms(args)
+    trials = [(item, p, repeat, arm) for item in items for p in args.paraphrases
+              for repeat in range(args.repeats) for arm in arms]
+    random.Random(args.seed).shuffle(trials)
+    print(f"{len(trials)} generations; split {args.split}; extraction tasks {sorted({e['Task'] for e in artifact['examples']})}.")
+    if args.dry_run:
+        return
+    from interventions import load_engine
+    # Resolve to the extraction commit where available; refuse silent revision drift.
+    args.revision = args.revision or artifact.get("resolved_revision")
+    engine = load_engine(args.model, args.revision)
+    metadata = provenance(engine, args)
+    for field in ["resolved_revision", "chat_template_sha256"]:
+        if artifact.get(field) and artifact[field] != metadata[field]:
+            raise ValueError(f"Extraction/generation mismatch in {field}")
+    vector = artifact["vector"]
+    controls = random_directions(vector, args.random_vectors, args.seed)
+    run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S") + "_" + uuid.uuid4().hex[:8]
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    stem = f"results_{args.task.lower().replace(' ', '_')}_{run_id}"
+    path = args.output_dir / f"{stem}.csv"
+    manifest = dict(**metadata, protocol=PROTOCOL_VERSION, run_id=run_id,
+                    artifact=str(args.artifact.resolve()), artifact_sha256=hashlib.sha256(args.artifact.read_bytes()).hexdigest(),
+                    split=args.split, task=args.task, items=items, paraphrases=args.paraphrases,
+                    repeats=args.repeats, alphas=args.alphas, random_vectors=args.random_vectors,
+                    random_seed=args.seed, scope=args.scope, temperature=args.temperature,
+                    omit_temperature_control=getattr(args, "omit_temperature_control", False),
+                    high_temperature=args.high_temperature, max_tokens=args.max_tokens, top_p=1.0, top_k=0)
+    manifest["candidate_metadata"] = {key: artifact[key] for key in
+        ("vector_kind", "selected_heads", "selection", "upstream_commit", "audit_examples") if key in artifact}
+    (args.output_dir / f"{stem}.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    write_interventions(args, engine, artifact, config, controls, trials, manifest, run_id, path)
+
+
 def main():
     """Parse the extract/generate CLI, validate settings, and dispatch the command.
 
@@ -297,8 +316,10 @@ def main():
             sub.add_argument("--output-dir", type=Path, default=Path("outputs/interventions"))
     args = parser.parse_args()
     if args.command == "generate":
-        if args.repeats < 1 or args.random_vectors < 1 or args.temperature < 0 or args.high_temperature <= args.temperature or args.max_tokens < 1:
-            parser.error("Require repeats/random-vectors/max-tokens >=1 and high-temperature > temperature >=0.")
+        if args.repeats < 1 or args.random_vectors < 1 or args.temperature < 0 or args.max_tokens < 1:
+            parser.error("Require repeats/random-vectors/max-tokens >=1 and temperature >=0.")
+        if not args.omit_temperature_control and args.high_temperature <= args.temperature:
+            parser.error("Require high-temperature > temperature when the temperature control is enabled.")
         if args.split == "test" and len(args.alphas) != 1:
             parser.error("Freeze one validation-selected alpha for test runs.")
     (extract if args.command == "extract" else generate)(args)

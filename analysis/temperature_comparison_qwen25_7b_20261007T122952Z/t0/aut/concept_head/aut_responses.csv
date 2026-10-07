@@ -1,0 +1,796 @@
+Protocol,Run_ID,Response_ID,Model,Task,Item,Split,Condition,Prompt_Condition,Instruction,Prompt,Paraphrase,Repeat,Block_ID,Generation_Seed,Request_Order,Temperature,Max_Tokens,Top_P,Top_K,Layer,Head,Intervention,Scope,Alpha,Random_Vector,Vector_Norm,Artifact_SHA256,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Source_File,Idea_Count,Unique_Idea_Count,Format_Valid,Semantic_Distance_Proxy,DB_Rarity_Score,Relative_Novelty_ICF,Embedding_Model,DB_Match_Threshold,DBSCAN_Eps,Norm_DB,Norm_DB_SHA256
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:0,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,0,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens and monitors
+2. Polishing car windows and mirrors
+3. Absorbing ink from drawings or paintings
+4. Wiping hands after washing dishes
+5. Covering hot surfaces to protect countertops
+6. Making quick repairs to small tears in clothing
+7. Absorbing spills on floors
+8. Cleaning pet fur after grooming
+9. Wiping camera lenses
+10. Creating a makeshift bandage for minor cuts",94,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7758707837611266,0.995170789163722,2.730543686175557,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:1,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,1,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Spreading butter on bread
+3. Holding papers together
+4. Cleaning small objects
+5. Piercing food to check doneness
+6. Straightening bent wires
+7. Scraping the bottom of a bowl
+8. Removing seeds from fabric
+9. Holding a paintbrush during touch-ups
+10. Creating small holes in plants for stakes",83,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8743287342599023,0.9971587743732592,3.4847789688059785,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:2,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,2,0.0,800,1.0,0,14,16,add,prefill,-1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a binder
+2. Securing notes to a wall
+3. Marking the edge of a page
+4. Creating a paperweight
+5. Connecting small metal parts
+6. Making a simple paper airplane weight
+7. Hanging plants from a ceiling
+8. Marking items in a grocery cart
+9. Securing a bookmark in a book
+10. Creating a simple paper clip art design",91,stop,69,1,91,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7422142687752614,0.9840995260663508,2.5413053977153957,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:3,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,3,0.0,800,1.0,0,14,16,add,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Doorstop
+9. Paperweight
+10. Art object",58,stop,65,1,58,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.779841326637274,0.9713458755426917,2.5520936928628677,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:4,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,4,0.0,800,1.0,0,14,16,add,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Doorstop
+9. Paperweight
+10. Art object",58,stop,65,1,58,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.779841326637274,0.9713458755426917,2.5520936928628677,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:5,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,5,0.0,800,1.0,0,14,16,suppress,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens and monitors
+2. Polishing car windows and mirrors
+3. Absorbing ink from drawings or paintings
+4. Wiping hands after washing dishes
+5. Covering hot surfaces to protect countertops
+6. Making quick repairs to small tears in clothing
+7. Absorbing spills on floors
+8. Cleaning pet fur after grooming
+9. Wiping camera lenses
+10. Creating a makeshift bandage for minor cuts",94,stop,68,1,94,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7758707830807932,0.995170789163722,2.730543686175557,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:6,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,6,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,5.955190658569336,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Hammering small nails
+2. Opening tight jars
+3. Defending against minor intruders
+4. Carving small wooden items
+5. Holding small objects together temporarily
+6. Beating out excess water from clothes
+7. Serving as a makeshift doorstop
+8. Creating indentations in soft materials
+9. Tapping small parts into place
+10. Marking straight lines on wood",86,stop,65,1,86,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.93640579755902,0.9978571428571428,3.225306817226458,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:7,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,7,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Hammering small nails
+2. Opening tight jars
+3. Defending against minor intruders
+4. Carving small wooden items
+5. Holding small objects together temporarily
+6. Beating out excess water from clothes
+7. Serving as a makeshift doorstop
+8. Creating indentations in soft materials
+9. Breaking small branches or twigs
+10. Stirring thick pastes or dough",87,stop,65,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9376231182627162,0.9978571428571428,3.3351680460932682,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:8,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,8,0.0,800,1.0,0,14,16,suppress,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding together loose pages in a folder
+2. Marking the place in a book
+3. Securing a note to a document
+4. Creating a simple paperweight
+5. Connecting small metal parts
+6. Making a simple paper airplane weight
+7. Hanging small items like keys or jewelry
+8. Serving as a simple paper cutter guide
+9. Indicating a priority item in a stack
+10. Creating a simple paperclip chain art project",99,stop,69,1,99,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.73519630283354,0.9854976303317535,2.5769728921092687,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:9,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,9,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a binder
+2. Securing notes to a wall
+3. Marking the edge of a page
+4. Creating a paperweight
+5. Connecting small metal parts
+6. Making a simple paper airplane weight
+7. Hanging plants from a ceiling
+8. Marking items in a drawer
+9. Creating a simple paper clip art
+10. Serving as a small paper bookmark",88,stop,69,1,88,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7034801060362124,0.9843601895734597,2.4496763245279802,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:10,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,10,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight jars or bottles
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Piercing food for cooking
+5. Straightening bent wires
+6. Scraping food from plates
+7. Marking small distances on paper
+8. Removing small thorns from plants
+9. Mixing small amounts of substances
+10. Polishing small metal surfaces",81,stop,65,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8745580022910258,0.9980362116991642,2.8605010712670897,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:11,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,11,0.0,800,1.0,0,14,16,add,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Hammering small nails
+2. Opening tight jars
+3. Defending against minor intruders
+4. Carving small wooden items
+5. Holding papers together
+6. Beating dough for bread
+7. Cleaning small gaps in furniture
+8. Starting a small fire
+9. Marking wood for cutting
+10. Serving as a seat in a pinch",79,stop,65,1,79,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9380735788819449,0.9974999999999999,4.0705722842543235,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:12,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,12,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,3.1861085891723637,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens and monitors
+2. Polishing car windows and mirrors
+3. Absorbing ink from drawings or paintings
+4. Wiping hands after washing dishes
+5. Covering hot surfaces to protect countertops
+6. Making quick repairs to small tears in fabric
+7. Absorbing spills on floors
+8. Creating a makeshift barrier for pets
+9. Drying wet plants or flowers
+10. Cleaning and drying camera lenses",94,stop,68,1,94,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8033197250630606,0.9955634079308991,2.840404915042368,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:13,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,13,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a stack
+2. Securing loose receipts or tickets
+3. Marking the place in a book
+4. Connecting notes to a document
+5. Hanging small items like keys or tags
+6. Creating a paper chain decoration
+7. Serving as a paper weight
+8. Indicating priority on a to-do list
+9. Making a simple paper airplane weight
+10. Holding together business cards for easy reference",94,stop,66,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7747555201373253,0.9885189573459716,2.515662444820628,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:14,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,14,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Absorbing spills on the floor
+3. Wiping hands after washing them
+4. Polishing silverware
+5. Covering hot dishes
+6. Dusting surfaces
+7. Cleaning shoes
+8. Wiping windows
+9. Wrapping gifts
+10. Cleaning car interiors",69,stop,65,1,69,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7684044431877612,0.9887711032587359,2.2044475281751303,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:15,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,15,0.0,800,1.0,0,14,16,suppress,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Serving as a makeshift paperweight
+5. Marking spots on a map
+6. Creating small holes in plants for seeds
+7. Serving as a decorative piece in flower arrangements
+8. Indicating choices in a menu
+9. Marking the center of a circular object
+10. Serving as a small tool for prying open containers",97,stop,68,1,97,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8826758095112798,0.9987604456824514,3.145218829190175,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:16,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,16,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Wiping a table
+2. Drying hands
+3. Cleaning glasses
+4. Absorbing spills
+5. Wiping feet
+6. Dusting surfaces
+7. Cleaning vegetables
+8. Wiping a phone
+9. Cleaning a keyboard
+10. Wiping a mirror",63,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7025330510299499,0.9723596387907343,3.208109414689061,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:17,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,17,0.0,800,1.0,0,14,16,add,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Wiping hands after washing them
+3. Polishing silverware
+4. Absorbing ink from drawings
+5. Covering hot surfaces
+6. Dusting furniture
+7. Wiping muddy shoes
+8. Cleaning pet messes
+9. Wrapping gifts
+10. Emergency bandage for small cuts",74,stop,65,1,74,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7549085380046056,0.986062033765214,2.6603746952055083,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:18,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|can|p0|r0,513058236,18,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. As a container for holding small items
+2. To serve as a weapon in a pinch
+3. For signaling for help
+4. As a seat in a pinch
+5. To use as a cutting edge
+6. For opening cans of food
+7. As a tool for breaking glass
+8. To use as a lever
+9. For catching small animals
+10. As a makeshift boat in shallow water",89,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8787405652136142,0.9916071428571429,4.136601619823211,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:19,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,19,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Spreading butter on bread
+3. Holding pages in books
+4. Piercing food to check doneness
+5. Cleaning small objects
+6. Straightening bent wires
+7. Marking lines on wood
+8. Mixing small amounts of paint
+9. Holding small items in place
+10. Scraping labels off cans",79,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8833349543209401,0.9980501392757659,3.074329275437367,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:20,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,20,0.0,800,1.0,0,14,16,add,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight jars or bottles
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Piercing food for cooking
+5. Straightening bent wires
+6. Scraping food from plates
+7. Marking small distances on paper
+8. Removing small thorns from plants
+9. Mixing small amounts of substances
+10. Polishing small metal surfaces",81,stop,65,1,81,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8745579971025244,0.9980362116991642,2.8605010712670897,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:21,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,21,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a stack
+2. Securing loose receipts or tickets
+3. Marking the place in a book
+4. Connecting notes to a document
+5. Hanging small items like keys or tags
+6. Creating a paper chain decoration
+7. Serving as a paper weight
+8. Indicating priority on a to-do list
+9. Making a simple paper airplane weight
+10. Holding together business cards for easy reference",94,stop,66,1,94,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7747555337004493,0.9885189573459716,2.515662444820628,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:22,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,22,0.0,800,1.0,0,14,16,add,prefill,-1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Polishing car windows
+3. Absorbing spills on the floor
+4. Wiping hands after washing them
+5. Covering hot dishes
+6. Dusting surfaces
+7. Wrapping gifts
+8. Cleaning eyeglasses
+9. Plugging gaps in doors
+10. Starting fires (in a controlled environment)",78,stop,68,1,78,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8037234967503238,0.9884962701217118,2.5858517878819245,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:23,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|book|p0|r0,1684191582,23,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Weight for keeping a door open
+3. Toy for a pet bird
+4. Surface for writing or drawing
+5. Firestarter
+6. Sound amplifier
+7. Level for checking if a surface is horizontal
+8. Paperweight
+9. Baseball bat (for indoor use)
+10. Doorstop",70,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8346576912992718,0.9716353111432706,3.625210255468235,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:24,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,24,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,5.625945568084717,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Absorbing spills on the floor
+3. Wiping hands after washing them
+4. Polishing silverware
+5. Covering hot dishes
+6. Dusting surfaces
+7. Cleaning shoes
+8. Wiping windows
+9. Wrapping gifts
+10. Cleaning car interiors",69,stop,65,1,69,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7684044384230024,0.9887711032587359,2.2044475281751303,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:25,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|can|p0|r0,513058236,25,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. As a container for small objects
+2. To tap on surfaces for attention
+3. As a makeshift ruler
+4. To fan oneself
+5. As a tool to open cans
+6. To hold paper clips
+7. As a toy for pets
+8. To scratch itches
+9. As a weight in crafts
+10. To mark spots on the ground",80,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8843913957950216,0.990982142857143,4.458489202310031,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:26,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,26,0.0,800,1.0,0,14,16,add,prefill,-1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Planting small seeds or bulbs
+2. Serving as a temporary birdhouse
+3. Using as a container for small tools
+4. Acting as a makeshift hat
+5. Serving as a small planter for herbs
+6. Using as a scoop for dry goods
+7. Creating a small shelter for insects
+8. Acting as a holder for small parts
+9. Using as a small trash can
+10. Serving as a marker in a garden",96,stop,68,1,96,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.934829841464874,0.9858630952380952,2.903419234739638,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:27,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,27,0.0,800,1.0,0,14,16,add,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Absorbing spills on the floor
+3. Wiping hands after washing them
+4. Polishing silverware
+5. Covering hot dishes
+6. Dusting surfaces
+7. Binding small packages
+8. Cleaning greasy hands
+9. Plugging gaps in doors
+10. Wiping muddy shoes",74,stop,65,1,74,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7822344878575065,0.9882214369846878,2.6118239136273385,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:28,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,28,0.0,800,1.0,0,14,16,add,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight jars or bottles
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Piercing food for cooking
+5. Straightening bent wires
+6. Scraping food from plates
+7. Marking small distances on paper
+8. Removing small thorns from plants
+9. Mixing small amounts of substances
+10. Polishing small metal surfaces",81,stop,65,1,81,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8745580052200606,0.9980362116991642,2.8605010712670897,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:29,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,29,0.0,800,1.0,0,14,16,suppress,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens and monitors
+2. Polishing car windows and mirrors
+3. Absorbing ink from drawings or paintings
+4. Wiping hands after washing dishes
+5. Covering hot surfaces to protect countertops
+6. Making quick repairs to small tears in fabric
+7. Absorbing spills on floors
+8. Creating a makeshift barrier for pets
+9. Drying wet plants or flowers
+10. Cleaning and drying camera lenses",94,stop,68,1,94,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8033197241453092,0.9955634079308991,2.840404915042368,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:30,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,30,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight jars or bottles
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Pricking or poking food items
+5. Straightening bent wires
+6. Scraping surfaces, like when cleaning a countertop
+7. Marking lines on paper or wood
+8. Mixing small amounts of substances
+9. Holding small items in place while applying glue or other substances
+10. Creating small holes in materials like cardboard or plastic",97,stop,65,1,97,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8816850362949076,0.9970612813370474,3.1282289255106352,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:31,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,31,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Holding pages in books while reading
+3. Cleaning small parts or components
+4. Serving as a makeshift paperweight
+5. Marking spots on fabric for sewing
+6. Creating small holes in plants for inserting stakes
+7. Serving as a small container for holding small items
+8. Polishing small metal objects
+9. Serving as a small trowel for gardening
+10. Creating indentations in clay or dough for decorative purposes",101,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9097746517152796,0.9973398328690808,3.0471359038890027,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:32,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,32,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding papers together
+2. Marking page numbers
+3. Creating bookmarks
+4. Securing envelopes
+5. Organizing small items
+6. Measuring small distances
+7. Opening bottle caps
+8. Tying ribbons loosely
+9. Marking items for attention
+10. Connecting small metal parts",68,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8079122683168769,0.9867417061611375,3.9495815302697492,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:33,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,33,0.0,800,1.0,0,14,16,add,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight jars or bottles
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Piercing food for cooking
+5. Straightening bent wires
+6. Scraping food from plates
+7. Marking small distances on paper
+8. Removing small thorns from plants
+9. Mixing small amounts of substances
+10. Polishing small metal surfaces",81,stop,65,1,81,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8745579992166711,0.9980362116991642,2.8605010712670897,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:34,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,34,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Wiping hands
+2. Cleaning windows
+3. Drying dishes
+4. Absorbing spills
+5. Polishing furniture
+6. Wiping feet
+7. Covering hot surfaces
+8. Cleaning mirrors
+9. Wrapping gifts
+10. Cleaning electronic screens",61,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7271074308084091,0.9701217118178249,2.4877688625807517,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:35,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,35,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Serving as a makeshift paperweight
+5. Marking spots on a map
+6. Creating small holes in plants for drainage
+7. Serving as a decorative piece in flower arrangements
+8. Indicating choices in a menu
+9. Marking the center of a circular object
+10. Serving as a small tool for prying open containers",97,stop,68,1,97,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8849069947042789,0.9986211699164345,3.145218829190175,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:36,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,36,0.0,800,1.0,0,14,16,add,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Doorstop
+9. Paperweight
+10. Art object",58,stop,65,1,58,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7798413277044111,0.9713458755426917,2.5520936928628677,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:37,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,37,0.0,800,1.0,0,14,16,add,prefill,-1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Doorstop
+4. Toy for pets
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Level (when flat)
+9. Paperweight
+10. Emergency signal (when placed in a visible location)",71,stop,68,1,71,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8150966266167397,0.9759768451519537,2.7418056913514555,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:38,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,38,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,3.3803870677948,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a binder
+2. Securing notes to a wall
+3. Marking the edge of a page
+4. Creating a paperweight
+5. Connecting small metal parts
+6. Making a simple paper airplane weight
+7. Hanging plants from a ceiling
+8. Marking items in a drawer
+9. Creating a simple paper clip art
+10. Serving as a small paper bookmark",88,stop,69,1,88,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7034801122584096,0.9843601895734597,2.4496763245279802,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:39,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|can|p0|r0,513058236,39,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Planting small seeds
+2. Holding business cards
+3. Marking pages in books
+4. As a makeshift hammer
+5. Opening jars
+6. Carrying loose change
+7. Tapping rhythm while thinking
+8. As a toy for pets
+9. Covering small holes
+10. As a pointer during presentations",72,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9114969339193223,0.9957142857142858,4.391194754985788,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:40,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,40,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy for pets
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Signage
+8. Weapon (for defense)
+9. Level (when flat)
+10. Art medium (for collages)",63,stop,68,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8134457244867963,0.984081041968162,2.912280500575298,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:41,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,41,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Absorbing spills on floors
+3. Wiping hands
+4. Polishing silverware
+5. Dusting surfaces
+6. Wrapping gifts
+7. Cleaning glasses and mirrors
+8. Squeezing out excess water from clothes
+9. Holding small items
+10. Emergency bandage material",73,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7255063048415729,0.9767962308598351,2.945663561669651,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:42,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,42,0.0,800,1.0,0,14,16,add,prefill,-1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Serving as a makeshift paperweight
+5. Marking spots on a map
+6. Creating small holes in plants for drainage
+7. Serving as a decorative piece in flower arrangements
+8. Indicating choices in a menu
+9. Marking the center of a circular object
+10. Serving as a small tool for prying open containers",97,stop,68,1,97,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8849069947042789,0.9986211699164345,3.145218829190175,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:43,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,43,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,3.1360890865325928,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Holding pages in books while reading
+3. Cleaning small parts or components
+4. Serving as a makeshift paperweight
+5. Marking spots on fabric for sewing
+6. Creating small holes in plants for inserting stakes
+7. Serving as a small container for holding small items
+8. Polishing small metal objects
+9. Serving as a small trowel for gardening
+10. Creating indentations in clay or dough for decorative purposes",101,stop,68,1,101,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.909774641212296,0.9973398328690808,3.0471359038890027,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:44,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,44,0.0,800,1.0,0,14,16,add,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Wiping hands after washing them
+3. Polishing silverware
+4. Absorbing spills on tables
+5. Drying wet hair
+6. Covering food to keep it fresh
+7. Cleaning muddy shoes
+8. Wiping camera lenses
+9. Removing makeup
+10. Wrapping gifts lightly",74,stop,65,1,74,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7610544174569196,0.9855516293678838,3.049808949152467,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:45,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,45,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Doorstop
+9. Paperweight
+10. Art object",58,stop,65,1,58,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.779841327540722,0.9713458755426917,2.5520936928628677,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:46,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,46,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Doorstop
+9. Paperweight
+10. Art object",58,stop,65,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7798413262636436,0.9713458755426917,2.5520936928628677,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:47,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,47,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Planting small seeds or bulbs
+2. Serving as a temporary birdhouse
+3. Using as a container for small tools
+4. Acting as a makeshift hat
+5. Serving as a small planter for herbs
+6. Using as a scoop for dry goods
+7. Creating a small shelter for insects
+8. Acting as a holder for small parts
+9. Using as a small trash can
+10. Serving as a marker in games",95,stop,68,1,95,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9261794435139169,0.9853869047619048,2.834104516683643,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:48,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,48,0.0,800,1.0,0,14,16,add,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a stack
+2. Securing loose receipts or tickets
+3. Marking the place in a book
+4. Connecting notes to a document
+5. Hanging small items like keys or tags
+6. Creating a paper chain decoration
+7. Serving as a paper weight
+8. Indicating priority on a to-do list
+9. Making a simple paper airplane weight
+10. Holding together business cards for easy reference",94,stop,66,1,94,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7747555337004493,0.9885189573459716,2.515662444820628,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:49,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,49,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Hammering small nails
+2. Opening tight jars
+3. Defending against minor intruders
+4. Carving small wooden items
+5. Holding small objects together temporarily
+6. Beating out excess water from clothes
+7. Serving as a makeshift doorstop
+8. Creating indentations in soft materials
+9. Tapping small parts into place
+10. Marking straight lines on wood",86,stop,65,1,86,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9364057964397526,0.9978571428571428,3.225306817226458,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:50,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,50,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Planting small seeds or bulbs
+2. Serving as a temporary birdhouse
+3. Using as a container for small tools
+4. Acting as a makeshift hat
+5. Serving as a small planter for herbs
+6. Using as a scoop for dry goods
+7. Creating a small shelter for insects
+8. Acting as a holder for small parts
+9. Using as a small trash can
+10. Serving as a marker in a garden",96,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.934829841464874,0.9858630952380952,2.903419234739638,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:51,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,51,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,5.7922468185424805,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight jars or bottles
+2. Holding pages in books while reading
+3. Cleaning small objects
+4. Piercing food for skewering
+5. Scraping surfaces, like countertops or cutting boards
+6. Serving as a makeshift pick for small items
+7. Marking pages in books or notebooks
+8. Creating small holes in materials for threading
+9. Holding small items in place while applying glue or other substances
+10. Serving as a small tool for digging or prying in tight spaces",106,stop,65,1,106,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8686097802652484,0.9957520891364903,2.7361967446863513,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:52,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,52,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Hold pages together in a binder
+2. Securely fasten notes to a memo
+3. Mark the place in a book
+4. Attach a label to an object
+5. Keep a stack of papers together
+6. Hold a ticket or receipt
+7. Secure a business card
+8. Attach a tag to a package
+9. Hold together a small bundle of wires
+10. Mark items in a grocery list",91,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8335129353404855,0.992026066350711,3.3901847694048497,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:53,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,53,0.0,800,1.0,0,14,16,suppress,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a binder
+2. Securing notes to a wall
+3. Marking the edge of a page
+4. Creating a paperweight
+5. Connecting small metal parts
+6. Making a simple paper airplane weight
+7. Hanging plants from a ceiling
+8. Marking items in a grocery bag
+9. Securing a bookmark in a book
+10. Making a simple paper clip art piece",91,stop,69,1,91,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7423656160919292,0.9820734597156399,2.5413053977153957,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:54,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,54,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,5.935617446899414,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a stack
+2. Securing loose threads on clothing
+3. Marking the edge of a page
+4. Creating a paper weight
+5. Opening jars with a small diameter
+6. Hanging small items on a hook
+7. Connecting small metal parts
+8. Indicating a reminder or note
+9. Measuring small distances
+10. Tying small bundles of items",88,stop,66,1,88,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8328006901079901,0.9888684834123224,3.293676679800491,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:55,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,55,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Wiping hands after washing them
+3. Polishing silverware
+4. Absorbing ink from drawings
+5. Covering hot surfaces
+6. Starting fires (in a survival situation)
+7. Binding minor injuries
+8. Dusting furniture
+9. Cleaning shoes
+10. Wiping camera lenses",73,stop,65,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8035790598957606,0.9897133882999608,2.693398863892566,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:56,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,56,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,3.42492413520813,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy for pets
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Signage
+8. Weapon (e.g., in self-defense)
+9. Level (when flat)
+10. Jewelry (e.g., pendant)",67,stop,68,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8243705886241708,0.9837916063675832,2.912280500575298,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:57,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,57,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,3.259176731109619,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Planting small seeds or bulbs
+2. Serving as a temporary birdhouse
+3. Using as a container for small tools
+4. Acting as a makeshift hat
+5. Serving as a small planter for herbs
+6. Using as a scoop for dry goods
+7. Creating a small shelter for insects
+8. Acting as a holder for small parts
+9. Using as a small trash can
+10. Serving as a marker in games",95,stop,68,1,95,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9261794491803415,0.9853869047619048,2.834104516683643,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:58,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,58,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy for pets
+5. Firestarter
+6. Musical instrument (when hollow)
+7. Shield in a pinch
+8. Level for rough surfaces
+9. Signal mirror
+10. Container for small items",58,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8442164667102572,0.9890014471780029,3.649051357812735,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:59,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,59,0.0,800,1.0,0,14,16,add,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a stack
+2. Securing loose receipts or tickets
+3. Marking the place in a book
+4. Connecting notes to a document
+5. Hanging small items like keys or tags
+6. Creating a paper chain
+7. Making a simple paperclip holder
+8. Measuring small distances
+9. As a makeshift paperweight
+10. Indicating priority on a to-do list",90,stop,66,1,90,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7535014404889272,0.9816943127962086,2.5444306520658064,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:60,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,60,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a binder
+2. Securing notes to a wall
+3. Marking the edge of a page
+4. Creating a paperweight
+5. Connecting small metal parts
+6. Opening jar lids
+7. Tying small items together
+8. Making a simple paper airplane weight
+9. Indicating a document needs attention
+10. Serving as a paper bookmark",84,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7328578031968583,0.9844431279620853,2.8223383027376583,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:61,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,61,0.0,800,1.0,0,14,16,suppress,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Planting small seeds or bulbs
+2. Serving as a temporary birdhouse
+3. Using as a container for small tools
+4. Acting as a makeshift hat
+5. Serving as a small planter for herbs
+6. Using as a scoop for dry goods
+7. Creating a small shelter for insects
+8. Acting as a holder for small parts
+9. Using as a small trash can
+10. Serving as a marker in games",95,stop,68,1,95,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9261794429825727,0.9853869047619048,2.834104516683643,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:62,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,62,0.0,800,1.0,0,14,16,add,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Hammering small nails
+2. Opening tight jars
+3. Defending against minor intruders
+4. Carving small wooden items
+5. Holding small objects together temporarily
+6. Beating out excess water from clothes
+7. Serving as a makeshift doorstop
+8. Creating indentations in soft materials
+9. Tapping small parts into place
+10. Marking straight lines on wood",86,stop,65,1,86,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9364057991917519,0.9978571428571428,3.225306817226458,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:63,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,63,0.0,800,1.0,0,14,16,add,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Hammering small nails
+2. Opening tight jars
+3. Defending against minor intruders
+4. Carving small wooden items
+5. Holding small objects together temporarily
+6. Beating out excess water from clothes
+7. Serving as a makeshift doorstop
+8. Creating indentations in soft materials
+9. Breaking small branches or twigs
+10. Stirring thick pastes or dough",87,stop,65,1,87,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9376231262724095,0.9978571428571428,3.3351680460932682,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:64,models/Qwen2.5-7B-Instruct,Alternative Uses Task,can,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,64,0.0,800,1.0,0,14,16,suppress,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Planting small seeds or bulbs
+2. Serving as a temporary birdhouse
+3. Using as a container for small tools
+4. Acting as a makeshift hat
+5. Serving as a small planter for herbs
+6. Using as a scoop for dry ingredients
+7. Acting as a holder for small parts or screws
+8. Serving as a small trash can
+9. Using as a marker in games
+10. Acting as a small mirror for makeup application",99,stop,68,1,99,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9316894510538942,0.9866369047619047,2.995048307927053,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:65,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|book|p0|r0,1684191582,65,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Paperweight
+2. Doorstop
+3. Toy for a small child
+4. Firestarter
+5. Surface for writing
+6. Plant pot
+7. Hammer
+8. Seat
+9. Signage
+10. Decorative object",54,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7785757990697171,0.9736613603473228,3.5425423981497888,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:66,models/Qwen2.5-7B-Instruct,Alternative Uses Task,towel,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,66,0.0,800,1.0,0,14,16,suppress,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Cleaning computer screens
+2. Polishing car windows
+3. Absorbing spills on the floor
+4. Wiping hands after washing them
+5. Covering hot dishes
+6. Dusting surfaces
+7. Wrapping gifts
+8. Cleaning eyeglasses
+9. Plugging gaps in doors
+10. Starting a small fire (emergency use only)",79,stop,68,1,79,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7918417918200339,0.988457008244994,2.5858517878819245,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:67,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,67,0.0,800,1.0,0,14,16,patch,prefill,1.0,-1,5.844063758850098,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Doorstop
+9. Paperweight
+10. Art object",58,stop,65,1,58,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7798413255701453,0.9713458755426917,2.5520936928628677,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:68,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,68,0.0,800,1.0,0,14,16,suppress,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Doorstop
+4. Toy for pets
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Writing surface (for rough drafts)
+8. Level for checking flatness
+9. Weapon (for defense or throwing)
+10. Decorative object",67,stop,68,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8168879170919963,0.9801736613603473,2.72357353567206,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:69,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,69,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Spreading butter on bread
+3. Holding papers together
+4. Cleaning small objects
+5. Piercing food for tasting
+6. Straightening bent wires
+7. Marking pages in books
+8. Scraping paint from walls
+9. Removing small thorns from plants
+10. Polishing small metal objects",77,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8891719488952882,0.9988997214484681,3.2342680330954265,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:70,models/Qwen2.5-7B-Instruct,Alternative Uses Task,fork,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,70,0.0,800,1.0,0,14,16,suppress,prefill,1.0,0,5.606357574462891,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Opening tight lids on jars
+2. Holding pages in books while reading
+3. Cleaning small parts or components
+4. Serving as a makeshift paperweight
+5. Marking spots on fabric for sewing
+6. Creating small holes in plants for inserting stakes
+7. Serving as a small container for holding small items
+8. Polishing small metal objects
+9. Serving as a small trowel for gardening
+10. Creating indentations in clay or dough for decorative purposes",101,stop,68,1,101,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.9097746562371556,0.9973398328690808,3.0471359038890027,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:71,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,71,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a binder
+2. Securing notes to a wall
+3. Marking the edge of a page
+4. Creating a paperweight
+5. Connecting small metal parts
+6. Making a simple paper airplane weight
+7. Hanging plants from a ceiling
+8. Marking items in a drawer
+9. Creating a simple paper clip art
+10. Serving as a small paper bookmark",88,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7034801121370187,0.9843601895734597,2.4496763245279802,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:72,models/Qwen2.5-7B-Instruct,Alternative Uses Task,paperclip,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,72,0.0,800,1.0,0,14,16,add,prefill,1.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Holding pages together in a stack
+2. Securing loose receipts or tickets
+3. Marking the place in a book
+4. Connecting notes to a document
+5. Hanging small items like keys or tags
+6. Creating a paper chain decoration
+7. Serving as a paper weight
+8. Indicating priority on a to-do list
+9. Making a simple paper airplane weight
+10. Holding together business cards for easy reference",94,stop,66,1,94,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7747555337004493,0.9885189573459716,2.515662444820628,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:73,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|book|p0|r0,1684191582,73,0.0,800,1.0,0,14,16,none,prefill,0.0,-1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Weight
+4. Toy
+5. Firestarter
+6. Musical instrument (when hollow)
+7. Container
+8. Weapon (in self-defense)
+9. Level (when flat and straight)
+10. Signage",56,stop,68,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.7912033340107932,0.9858176555716354,3.0827553097991407,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
+creativity-v2,20261007T141044_24825bce,20261007T141044_24825bce:74,models/Qwen2.5-7B-Instruct,Alternative Uses Task,book,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,74,0.0,800,1.0,0,14,16,suppress,prefill,1.0,1,5.606357097625732,357d94c45cec1fb9dfaa38117d6dbee564f232a0f5d9df84ec584abe81b7247e,"1. Bookmark
+2. Fan
+3. Doorstop
+4. Toy for pets
+5. Firestarter
+6. Musical instrument (e.g., drum)
+7. Weapon (e.g., in self-defense)
+8. Level (when flat)
+9. Paperweight
+10. Emergency signal (when placed in a visible location)",71,stop,68,1,71,ok,/gpfs/home4/jsmidi/Creativity/outputs/temperature_mechanistic_qwen25_7b_20261007T125200Z/t0/aut/concept_head/results_alternative_uses_task_20261007T141044_24825bce.csv,10,10,True,0.8150966291477031,0.9759768451519537,2.7418056913514555,all-mpnet-base-v2,0.75,0.35,/gpfs/home4/jsmidi/Creativity/aut_quality_scored_all.csv,0de6af7bc9a1df91321544628d5c9d82fa9fb1580807b5262efc5b358b0ab0ed
