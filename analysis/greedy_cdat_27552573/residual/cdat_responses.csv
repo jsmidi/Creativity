@@ -1,0 +1,1591 @@
+Protocol,Run_ID,Response_ID,Model,Task,Item,Split,Condition,Prompt_Condition,Instruction,Prompt,Paraphrase,Repeat,Block_ID,Generation_Seed,Request_Order,Temperature,Max_Tokens,Top_P,Top_K,Layer,Head,Intervention,Scope,Alpha,Random_Vector,Vector_Norm,Artifact_SHA256,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Source_File,Parsed_Words,Valid_Nouns,Format_Valid,CDAT_Novelty,CDAT_Appropriateness
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:0,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,0,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Plate
+2. Fork
+3. Restaurant
+4. Meal
+5. Spice
+6. Kitchen
+7. Recipe
+8. Snack
+9. Ingredient
+10. Menu",41,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""plate"", ""fork"", ""restaurant"", ""meal"", ""spice"", ""kitchen"", ""recipe"", ""snack"", ""ingredient"", ""menu""]",10,True,64.0214776399178,143.37507913111642
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:1,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,1,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Club",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""club""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:2,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,2,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Library
+3. Museum
+4. Park
+5. Hotel
+6. Restaurant
+7. University
+8. Theatres
+9. Arena
+10. Convention",42,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""library"", ""museum"", ""park"", ""hotel"", ""restaurant"", ""university"", ""arena"", ""convention""]",9,False,62.83727041504695,138.84144055132128
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:3,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,3,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Club",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""club""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:4,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,4,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:5,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,5,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Biscuit
+2. Fork
+3. Restaurant
+4. Spice
+5. Recipe
+6. Appetizer
+7. Platter
+8. Sauce
+9. Menu
+10. Kitchen",44,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""biscuit"", ""fork"", ""restaurant"", ""spice"", ""recipe"", ""appetizer"", ""platter"", ""sauce"", ""menu"", ""kitchen""]",10,True,70.2692799876608,137.53571083195246
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:6,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,6,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Cueball",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint""]",8,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:7,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,7,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Pocket
+6. Rack
+7. Cueist
+8. Billiard
+9. Club
+10. Snooker",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""pocket"", ""rack"", ""club"", ""snooker""]",8,False,70.60889754817444,127.46495668990181
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:8,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,8,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Rack
+6. Pocket
+7. Cueing
+8. Break
+9. Spin
+10. Cueball",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""rack"", ""pocket"", ""break"", ""spin""]",8,False,71.09126734279775,126.91705046207689
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:9,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,9,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Rack
+6. Pocket
+7. Cue
+8. Stick
+9. Chalk
+10. Green",42,stop,73,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""rack"", ""pocket"", ""stick"", ""chalk"", ""green""]",9,False,69.8188904822328,125.42393540027467
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:10,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,10,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Steak
+2. Sauce
+3. Plate
+4. Fork
+5. Restaurant
+6. Menu
+7. Appetizer
+8. Spatula
+9. Kitchen
+10. Recipe",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""steak"", ""sauce"", ""plate"", ""fork"", ""restaurant"", ""menu"", ""appetizer"", ""spatula"", ""kitchen"", ""recipe""]",10,True,61.40846961508751,139.45203222990426
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:11,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,11,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:12,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,12,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Piano
+8. Stage
+9. Microphone
+10. Album",44,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""piano"", ""stage"", ""microphone"", ""album""]",10,True,52.2772041304192,152.44688521174012
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:13,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,13,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Chalk
+5. Easel
+6. Gallery
+7. Sculpture
+8. Mural
+9. Fresco
+10. Sketchbook",46,stop,76,1,46,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""chalk"", ""easel"", ""gallery"", ""sculpture"", ""mural"", ""fresco"", ""sketchbook""]",10,True,62.681581827078915,147.33406359768384
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:14,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,14,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:15,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,15,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Rack
+6. Pocket
+7. Cue
+8. Stick
+9. Chalk
+10. Green",42,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""rack"", ""pocket"", ""stick"", ""chalk"", ""green""]",9,False,69.8188904822328,125.42393540027467
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:16,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,16,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.96511936187744,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Cueball",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint""]",8,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:17,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,17,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. River
+6. Tributary
+7. Valley
+8. Waterfall
+9. Basin
+10. Bridge",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""river"", ""tributary"", ""valley"", ""waterfall"", ""basin"", ""bridge""]",10,True,63.810052663636526,154.29726717756887
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:18,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,18,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:19,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,19,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Rack
+6. Pocket
+7. Cueing
+8. Break
+9. Spin
+10. Cueball",43,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""rack"", ""pocket"", ""break"", ""spin""]",8,False,71.09126734279775,126.91705046207689
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:20,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,20,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Museum
+3. Fountain
+4. Monument
+5. Arena
+6. Plaza
+7. Boulevard
+8. Cathedral
+9. Fountainhead
+10. Coliseum",42,stop,76,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""museum"", ""fountain"", ""monument"", ""arena"", ""plaza"", ""boulevard"", ""cathedral"", ""fountainhead"", ""coliseum""]",10,True,59.590408037772825,140.2559123545563
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:21,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,21,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.947888374328612,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Club",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""club""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:22,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,22,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.846588134765623,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Biscuit
+2. Fork
+3. Restaurant
+4. Spice
+5. Appetizer
+6. Platter
+7. Recipe
+8. Kitchen
+9. Ingredient
+10. Menu",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""biscuit"", ""fork"", ""restaurant"", ""spice"", ""appetizer"", ""platter"", ""recipe"", ""kitchen"", ""ingredient"", ""menu""]",10,True,70.2692799876608,137.53571083195243
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:23,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,23,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cue
+8. Stick
+9. Tip
+10. Trophy",41,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""stick"", ""tip"", ""trophy""]",9,False,75.76016639832017,122.89812439671518
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:24,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,24,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Cueball",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint""]",8,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:25,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,25,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Chalk
+5. Easel
+6. Gallery
+7. Sculpture
+8. Mural
+9. Fresco
+10. Sketchbook",46,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""chalk"", ""easel"", ""gallery"", ""sculpture"", ""mural"", ""fresco"", ""sketchbook""]",10,True,62.681581827078915,147.33406359768384
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:26,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,26,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Piano
+7. Harp
+8. Cello
+9. Stage
+10. Microphone",45,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""piano"", ""harp"", ""cello"", ""stage"", ""microphone""]",10,True,52.2772041304192,152.44688521174015
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:27,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,27,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Spotlight
+7. Lantern
+8. Glowstick
+9. Bulb
+10. Marker",42,stop,73,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""spotlight"", ""lantern"", ""bulb"", ""marker""]",9,False,64.00793132747789,141.84573016834352
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:28,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,28,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Tip",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""tip""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:29,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,29,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:30,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,30,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Plate
+2. Fork
+3. Restaurant
+4. Spice
+5. Recipe
+6. Kitchen
+7. Appetizer
+8. Ingredient
+9. Menu
+10. Banquet",42,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""plate"", ""fork"", ""restaurant"", ""spice"", ""recipe"", ""kitchen"", ""appetizer"", ""ingredient"", ""menu"", ""banquet""]",10,True,65.99595539863952,140.2173075746574
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:31,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,31,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Plate
+2. Fork
+3. Restaurant
+4. Recipe
+5. Spice
+6. Meal
+7. Kitchen
+8. Snack
+9. Ingredient
+10. Menu",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""plate"", ""fork"", ""restaurant"", ""recipe"", ""spice"", ""meal"", ""kitchen"", ""snack"", ""ingredient"", ""menu""]",10,True,64.0214776399178,143.37507913111645
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:32,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,32,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.89421272277832,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Pocket
+6. Rack
+7. Cueist
+8. Billiard
+9. Club
+10. Green",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""pocket"", ""rack"", ""club"", ""green""]",8,False,70.60889754817444,127.46495668990181
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:33,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,33,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.921216011047363,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Frame
+8. Gallery
+9. Sculpture
+10. Mosaic",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""frame"", ""gallery"", ""sculpture"", ""mosaic""]",10,True,65.60342723513303,138.46402430214712
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:34,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,34,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Stencil
+8. Painting
+9. Sculpture
+10. Gallery",44,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""stencil"", ""painting"", ""sculpture"", ""gallery""]",10,True,63.69279258451721,139.43419284728915
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:35,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,35,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:36,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,36,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Billboard
+3. Tourist
+4. Hotel
+5. Band
+6. Fan
+7. Mascot
+8. Souvenir
+9. Concert
+10. Map",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""billboard"", ""tourist"", ""hotel"", ""band"", ""fan"", ""mascot"", ""souvenir"", ""concert"", ""map""]",10,True,67.27895892109952,134.43662315984838
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:37,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,37,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.964292526245115,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:38,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,38,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.859542846679688,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:39,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,39,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Biscuit
+2. Fork
+3. Restaurant
+4. Spice
+5. Appetizer
+6. Platter
+7. Recipe
+8. Kitchen
+9. Ingredient
+10. Menu",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""biscuit"", ""fork"", ""restaurant"", ""spice"", ""appetizer"", ""platter"", ""recipe"", ""kitchen"", ""ingredient"", ""menu""]",10,True,70.2692799876608,137.53571083195243
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:40,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,40,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stopwatch
+2. Countdown
+3. Alarm
+4. Timer
+5. Schedule
+6. Calendar
+7. Hourglass
+8. Clock
+9. Pulse
+10. Deadline",41,stop,76,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stopwatch"", ""countdown"", ""alarm"", ""timer"", ""schedule"", ""calendar"", ""hourglass"", ""clock"", ""pulse"", ""deadline""]",10,True,58.903530679314386,141.85561463327574
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:41,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,41,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.88457489013672,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:42,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,42,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Sprout
+2. Stalk
+3. Bud
+4. Leaf
+5. Stem
+6. Root
+7. Shoot
+8. Petal
+9. Thimble
+10. Pod",45,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""sprout"", ""stalk"", ""bud"", ""leaf"", ""stem"", ""root"", ""shoot"", ""petal"", ""thimble"", ""pod""]",10,True,73.74864545719933,138.74093475150235
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:43,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,43,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Bridge
+4. Valley
+5. Current
+6. Island
+7. Waterfall
+8. Riverbank
+9. Tributary
+10. Hydroelectric",45,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""bridge"", ""valley"", ""current"", ""island"", ""waterfall"", ""riverbank"", ""tributary""]",9,False,72.65156239388601,141.58502254549393
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:44,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,44,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Sprout
+2. Stalk
+3. Bud
+4. Leaf
+5. Stem
+6. Root
+7. Shoot
+8. Petal
+9. Thimble
+10. Pod",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""sprout"", ""stalk"", ""bud"", ""leaf"", ""stem"", ""root"", ""shoot"", ""petal"", ""thimble"", ""pod""]",10,True,73.74864545719933,138.74093475150235
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:45,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,45,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stopwatch
+2. Countdown
+3. Alarm
+4. Timer
+5. Schedule
+6. Calendar
+7. Hourglass
+8. Clock
+9. Pulse
+10. Deadline",41,stop,76,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stopwatch"", ""countdown"", ""alarm"", ""timer"", ""schedule"", ""calendar"", ""hourglass"", ""clock"", ""pulse"", ""deadline""]",10,True,58.903530679314386,141.85561463327574
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:46,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,46,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Lamp
+2. Signal
+3. Flash
+4. Beacon
+5. Indicator
+6. Light
+7. Bulb
+8. Spotlight
+9. Lantern
+10. Glowstick",42,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""lamp"", ""signal"", ""flash"", ""beacon"", ""indicator"", ""light"", ""bulb"", ""spotlight"", ""lantern""]",9,False,62.64149229285749,148.4707917409422
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:47,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,47,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Frame
+8. Gallery
+9. Sculpture
+10. Mosaic",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""frame"", ""gallery"", ""sculpture"", ""mosaic""]",10,True,65.60342723513303,138.46402430214712
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:48,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,48,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:49,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,49,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Plate
+2. Fork
+3. Restaurant
+4. Menu
+5. Spice
+6. Kitchen
+7. Recipe
+8. Ingredient
+9. Tablecloth
+10. Appetizer",42,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""plate"", ""fork"", ""restaurant"", ""menu"", ""spice"", ""kitchen"", ""recipe"", ""ingredient"", ""tablecloth"", ""appetizer""]",10,True,63.976763187381835,141.08283490004695
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:50,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,50,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Player
+10. Championship",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""player"", ""championship""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:51,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,51,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Sprout
+2. Stalk
+3. Bud
+4. Leaf
+5. Stem
+6. Root
+7. Shoot
+8. Petal
+9. Thimble
+10. Pod",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""sprout"", ""stalk"", ""bud"", ""leaf"", ""stem"", ""root"", ""shoot"", ""petal"", ""thimble"", ""pod""]",10,True,73.74864545719933,138.74093475150235
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:52,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,52,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stopwatch
+2. Countdown
+3. Alarm
+4. Timer
+5. Schedule
+6. Calendar
+7. Hourglass
+8. Clock
+9. Pulse
+10. Deadline",41,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stopwatch"", ""countdown"", ""alarm"", ""timer"", ""schedule"", ""calendar"", ""hourglass"", ""clock"", ""pulse"", ""deadline""]",10,True,58.903530679314386,141.85561463327574
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:53,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,53,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Pocket
+6. Rack
+7. Cueist
+8. Billiard
+9. Club
+10. Green",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""pocket"", ""rack"", ""club"", ""green""]",8,False,70.60889754817444,127.46495668990181
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:54,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,54,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:55,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,55,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Theme
+2. Score
+3. Orchestra
+4. Melody
+5. Rhythm
+6. Harmonics
+7. Bass
+8. Piano
+9. Concert
+10. Opera",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""theme"", ""score"", ""orchestra"", ""melody"", ""rhythm"", ""harmonics"", ""bass"", ""piano"", ""concert"", ""opera""]",10,True,71.6443474305335,141.87233761982938
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:56,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,56,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. Marina
+6. Park
+7. Port
+8. Resort
+9. Tributary
+10. Waterfall",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""marina"", ""park"", ""port"", ""resort"", ""tributary"", ""waterfall""]",10,True,69.25380162529046,137.51448571527638
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:57,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,57,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. Mine
+6. Park
+7. Port
+8. Rapids
+9. Resort
+10. Valley",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""mine"", ""park"", ""port"", ""resort"", ""valley""]",9,False,73.61382838466723,135.00827848438217
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:58,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,58,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Biscuit
+2. Fork
+3. Restaurant
+4. Spice
+5. Recipe
+6. Appetizer
+7. Platter
+8. Sauce
+9. Menu
+10. Kitchen",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""biscuit"", ""fork"", ""restaurant"", ""spice"", ""recipe"", ""appetizer"", ""platter"", ""sauce"", ""menu"", ""kitchen""]",10,True,70.2692799876608,137.53571083195246
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:59,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,59,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Flashlight
+3. Signal
+4. Lantern
+5. Spotlight
+6. Indicator
+7. Glowstick
+8. Lighthouse
+9. Bulb
+10. Prism",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""flashlight"", ""signal"", ""lantern"", ""spotlight"", ""indicator"", ""lighthouse"", ""bulb"", ""prism""]",9,False,57.67044732716853,143.6293554390097
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:60,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,60,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Theme
+2. Score
+3. Rhapsody
+4. Melody
+5. Harmonica
+6. Orchestra
+7. Concerto
+8. Opera
+9. Symphony
+10. Jingle",46,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""theme"", ""score"", ""rhapsody"", ""melody"", ""harmonica"", ""orchestra"", ""concerto"", ""opera"", ""symphony"", ""jingle""]",10,True,67.17420833817786,143.73283767851535
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:61,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,61,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Spotlight
+7. Lantern
+8. Glowstick
+9. Bulb
+10. Marker",42,stop,73,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""spotlight"", ""lantern"", ""bulb"", ""marker""]",9,False,64.00793132747789,141.84573016834352
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:62,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,62,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Cello
+8. Stage
+9. Microphone
+10. Encore",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""cello"", ""stage"", ""microphone"", ""encore""]",10,True,53.85665457719877,150.16049174539
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:63,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,63,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Stencil
+8. Painting
+9. Sculpture
+10. Gallery",44,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""stencil"", ""painting"", ""sculpture"", ""gallery""]",10,True,63.69279258451721,139.43419284728915
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:64,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,64,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.949172973632812,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Rack
+6. Pocket
+7. Cue
+8. Stick
+9. Chalk
+10. Green",42,stop,73,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""rack"", ""pocket"", ""stick"", ""chalk"", ""green""]",9,False,69.8188904822328,125.42393540027467
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:65,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,65,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Chalk
+5. Easel
+6. Gallery
+7. Sculpture
+8. Mural
+9. Fresco
+10. Sketchbook",46,stop,76,1,46,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""chalk"", ""easel"", ""gallery"", ""sculpture"", ""mural"", ""fresco"", ""sketchbook""]",10,True,62.681581827078915,147.33406359768384
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:66,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,66,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Biscuit
+2. Fork
+3. Restaurant
+4. Spice
+5. Recipe
+6. Appetizer
+7. Platter
+8. Sauce
+9. Menu
+10. Kitchen",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""biscuit"", ""fork"", ""restaurant"", ""spice"", ""recipe"", ""appetizer"", ""platter"", ""sauce"", ""menu"", ""kitchen""]",10,True,70.2692799876608,137.53571083195246
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:67,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,67,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:68,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,68,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Frame
+8. Gallery
+9. Sculpture
+10. Mosaic",44,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""frame"", ""gallery"", ""sculpture"", ""mosaic""]",10,True,65.60342723513303,138.46402430214712
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:69,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,69,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:70,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,70,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Pocket
+6. Rack
+7. Cueist
+8. Billiard
+9. Club
+10. Green",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""pocket"", ""rack"", ""club"", ""green""]",8,False,70.60889754817444,127.46495668990181
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:71,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,71,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.858461380004885,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Sprout
+2. Stalk
+3. Bud
+4. Leaf
+5. Stem
+6. Root
+7. Shoot
+8. Petal
+9. Thimble
+10. Pod",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""sprout"", ""stalk"", ""bud"", ""leaf"", ""stem"", ""root"", ""shoot"", ""petal"", ""thimble"", ""pod""]",10,True,73.74864545719933,138.74093475150235
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:72,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,72,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Bridge
+5. Current
+6. Riverbank
+7. Waterfall
+8. Boat
+9. Tributary
+10. Erosion",46,stop,76,1,46,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""bridge"", ""current"", ""riverbank"", ""waterfall"", ""boat"", ""tributary"", ""erosion""]",10,True,69.91099604123973,146.43141057720678
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:73,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,73,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Concert
+5. Harmonica
+6. Symphony
+7. Solo
+8. Piano
+9. Stage
+10. Encore",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""concert"", ""harmonica"", ""symphony"", ""solo"", ""piano"", ""stage"", ""encore""]",10,True,59.64591614018347,147.39580157065944
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:74,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,74,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Desk
+2. Pencil
+3. Chair
+4. Book
+5. Ruler
+6. Folder
+7. Stapler
+8. Calculator
+9. Whiteboard
+10. Classroom",44,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""desk"", ""pencil"", ""chair"", ""book"", ""ruler"", ""folder"", ""stapler"", ""calculator"", ""classroom""]",9,False,67.68232057785536,127.97480840097433
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:75,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,75,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Frame
+8. Gallery
+9. Sculpture
+10. Mosaic",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""frame"", ""gallery"", ""sculpture"", ""mosaic""]",10,True,65.60342723513303,138.46402430214712
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:76,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,76,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Billboard
+3. Tourist
+4. Hotel
+5. Band
+6. Fan
+7. Mascot
+8. Souvenir
+9. Concert
+10. Map",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""billboard"", ""tourist"", ""hotel"", ""band"", ""fan"", ""mascot"", ""souvenir"", ""concert"", ""map""]",10,True,67.27895892109952,134.43662315984838
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:77,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,77,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Bulb
+7. Spotlight
+8. Lantern
+9. Glowstick
+10. Headlight",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""bulb"", ""spotlight"", ""lantern"", ""headlight""]",9,False,63.48664653541681,141.78174303881775
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:78,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,78,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cue
+8. Stick
+9. Joint
+10. Cloth",41,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""stick"", ""joint"", ""cloth""]",9,False,75.76016639832017,122.89812439671518
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:79,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,79,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Soil
+5. Garden
+6. Bed
+7. Pot
+8. Water
+9. Fertilizer
+10. Greenhouse",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""soil"", ""garden"", ""bed"", ""pot"", ""water"", ""fertilizer"", ""greenhouse""]",10,True,66.81691928462598,145.22783811119655
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:80,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,80,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Billboard
+3. Tourist
+4. Hotel
+5. Band
+6. Fan
+7. Mascot
+8. Souvenir
+9. Concert
+10. Map",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""billboard"", ""tourist"", ""hotel"", ""band"", ""fan"", ""mascot"", ""souvenir"", ""concert"", ""map""]",10,True,67.27895892109952,134.43662315984838
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:81,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,81,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Tip",43,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""tip""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:82,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,82,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:83,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,83,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:84,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,84,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.893035888671877,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stopwatch
+2. Countdown
+3. Alarm
+4. Timer
+5. Schedule
+6. Calendar
+7. Hourglass
+8. Clock
+9. Pulse
+10. Deadline",41,stop,76,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stopwatch"", ""countdown"", ""alarm"", ""timer"", ""schedule"", ""calendar"", ""hourglass"", ""clock"", ""pulse"", ""deadline""]",10,True,58.903530679314386,141.85561463327574
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:85,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,85,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Sprout
+2. Stalk
+3. Bud
+4. Leaf
+5. Stem
+6. Root
+7. Shoot
+8. Petal
+9. Thimble
+10. Pod",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""sprout"", ""stalk"", ""bud"", ""leaf"", ""stem"", ""root"", ""shoot"", ""petal"", ""thimble"", ""pod""]",10,True,73.74864545719933,138.74093475150235
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:86,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,86,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.740646362304688,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Billboard
+3. Tourist
+4. Hotel
+5. Band
+6. Fan
+7. Mascot
+8. Souvenir
+9. Concert
+10. Map",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""billboard"", ""tourist"", ""hotel"", ""band"", ""fan"", ""mascot"", ""souvenir"", ""concert"", ""map""]",10,True,67.27895892109952,134.43662315984838
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:87,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,87,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Bridge
+4. Valley
+5. Current
+6. Riverbank
+7. Waterfall
+8. Canoe
+9. Tributary
+10. Erosion",47,stop,76,1,47,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""bridge"", ""valley"", ""current"", ""riverbank"", ""waterfall"", ""canoe"", ""tributary"", ""erosion""]",10,True,69.64994510188467,148.35631746540884
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:88,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,88,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stopwatch
+2. Countdown
+3. Alarm
+4. Timer
+5. Schedule
+6. Calendar
+7. Hourglass
+8. Clock
+9. Pulse
+10. Moment",41,stop,76,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stopwatch"", ""countdown"", ""alarm"", ""timer"", ""schedule"", ""calendar"", ""hourglass"", ""clock"", ""pulse"", ""moment""]",10,True,58.903530679314386,141.85561463327574
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:89,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,89,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:90,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,90,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Frame
+8. Gallery
+9. Sculpture
+10. Mosaic",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""frame"", ""gallery"", ""sculpture"", ""mosaic""]",10,True,65.60342723513303,138.46402430214712
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:91,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,91,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:92,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,92,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Bridge
+4. Valley
+5. Current
+6. Island
+7. Waterfall
+8. Riverbank
+9. Tributary
+10. Hydroelectric",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""bridge"", ""valley"", ""current"", ""island"", ""waterfall"", ""riverbank"", ""tributary""]",9,False,72.65156239388601,141.58502254549393
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:93,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,93,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Biscuit
+2. Fork
+3. Restaurant
+4. Spice
+5. Recipe
+6. Appetizer
+7. Platter
+8. Sauce
+9. Menu
+10. Kitchen",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""biscuit"", ""fork"", ""restaurant"", ""spice"", ""recipe"", ""appetizer"", ""platter"", ""sauce"", ""menu"", ""kitchen""]",10,True,70.2692799876608,137.53571083195246
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:94,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,94,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Flashlight
+3. Signal
+4. Lantern
+5. Spotlight
+6. Glowstick
+7. Indicator
+8. Lighthouse
+9. Bulb
+10. Prism",44,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""flashlight"", ""signal"", ""lantern"", ""spotlight"", ""indicator"", ""lighthouse"", ""bulb"", ""prism""]",9,False,57.67044732716853,143.6293554390097
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:95,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,95,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Hour
+4. Watch
+5. Calendar
+6. Timer
+7. Stopwatch
+8. Period
+9. Interval
+10. Deadline",40,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""hour"", ""watch"", ""calendar"", ""timer"", ""stopwatch"", ""period"", ""interval"", ""deadline""]",10,True,55.79059430766513,146.67576689341385
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:96,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,96,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:97,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,97,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Rack
+6. Pocket
+7. Cueing
+8. Break
+9. Spin
+10. Cueball",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""rack"", ""pocket"", ""break"", ""spin""]",8,False,71.09126734279775,126.91705046207689
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:98,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,98,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.826766967773438,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Chalk
+5. Easel
+6. Gallery
+7. Sculpture
+8. Mural
+9. Fresco
+10. Sketchbook",46,stop,76,1,46,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""chalk"", ""easel"", ""gallery"", ""sculpture"", ""mural"", ""fresco"", ""sketchbook""]",10,True,62.681581827078915,147.33406359768384
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:99,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,99,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Piano
+8. Stage
+9. Microphone
+10. Album",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""piano"", ""stage"", ""microphone"", ""album""]",10,True,52.2772041304192,152.44688521174012
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:100,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,100,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:101,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,101,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. Mine
+6. Park
+7. Port
+8. Rapids
+9. Resort
+10. Valley",40,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""mine"", ""park"", ""port"", ""resort"", ""valley""]",9,False,73.61382838466723,135.00827848438217
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:102,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,102,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Steak
+2. Sauce
+3. Plate
+4. Fork
+5. Restaurant
+6. Menu
+7. Appetizer
+8. Spice
+9. Kitchen
+10. Recipe",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""steak"", ""sauce"", ""plate"", ""fork"", ""restaurant"", ""menu"", ""appetizer"", ""spice"", ""kitchen"", ""recipe""]",10,True,61.40846961508751,139.45203222990426
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:103,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,103,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Flashlight
+3. Signal
+4. Lantern
+5. Spotlight
+6. Indicator
+7. Glowstick
+8. Lighthouse
+9. Bulb
+10. Prism",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""flashlight"", ""signal"", ""lantern"", ""spotlight"", ""indicator"", ""lighthouse"", ""bulb"", ""prism""]",9,False,57.67044732716853,143.6293554390097
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:104,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,104,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:105,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,105,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Piano
+8. Stage
+9. Microphone
+10. Album",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""piano"", ""stage"", ""microphone"", ""album""]",10,True,52.2772041304192,152.44688521174012
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:106,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,106,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Cueball",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint""]",8,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:107,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,107,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Classroom
+2. Desk
+3. Pupil
+4. Teacher
+5. Lesson
+6. Book
+7. Chair
+8. Ruler
+9. Grade
+10. Diploma",42,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""classroom"", ""desk"", ""pupil"", ""teacher"", ""lesson"", ""book"", ""chair"", ""ruler"", ""grade"", ""diploma""]",10,True,65.92017331036024,141.19973830609962
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:108,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,108,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Clock
+2. Schedule
+3. Countdown
+4. Timer
+5. Stopwatch
+6. Hour
+7. Minute
+8. Second
+9. Interval
+10. Deadline",40,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""clock"", ""schedule"", ""countdown"", ""timer"", ""stopwatch"", ""hour"", ""minute"", ""second"", ""interval"", ""deadline""]",10,True,48.700480907528856,152.91275403843875
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:109,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,109,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Pocket
+6. Rack
+7. Cueist
+8. Billiard
+9. Club
+10. Snooker",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""pocket"", ""rack"", ""club"", ""snooker""]",8,False,70.60889754817444,127.46495668990181
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:110,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,110,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Chalk
+6. Marker
+7. Frame
+8. Gallery
+9. Sculpture
+10. Mosaic",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""chalk"", ""marker"", ""frame"", ""gallery"", ""sculpture"", ""mosaic""]",10,True,65.60342723513303,138.46402430214712
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:111,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Standard,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,111,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Spotlight
+7. Lantern
+8. Glowstick
+9. Bulb
+10. Marker",42,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""spotlight"", ""lantern"", ""bulb"", ""marker""]",9,False,64.00793132747789,141.84573016834352
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:112,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,112,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.88062858581543,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Cello
+8. Stage
+9. Microphone
+10. Encore",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""cello"", ""stage"", ""microphone"", ""encore""]",10,True,53.85665457719877,150.16049174539
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:113,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,113,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Light
+7. Bulb
+8. Spotlight
+9. Lantern
+10. Glowstick",42,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""light"", ""bulb"", ""spotlight"", ""lantern""]",9,False,62.64149229285749,148.4707917409422
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:114,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,114,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.97397804260254,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Piano
+8. Stage
+9. Microphone
+10. Album",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""piano"", ""stage"", ""microphone"", ""album""]",10,True,52.2772041304192,152.44688521174012
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:115,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,115,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Concert
+5. Harmonica
+6. Symphony
+7. Solo
+8. Piano
+9. Stage
+10. Encore",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""concert"", ""harmonica"", ""symphony"", ""solo"", ""piano"", ""stage"", ""encore""]",10,True,59.64591614018347,147.39580157065944
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:116,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,116,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Club",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""club""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:117,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,117,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Club",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""club""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:118,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,118,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.874663352966309,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Bridge
+4. Valley
+5. Current
+6. Island
+7. Waterfall
+8. Riverbank
+9. Tributary
+10. Hydroelectric",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""bridge"", ""valley"", ""current"", ""island"", ""waterfall"", ""riverbank"", ""tributary""]",9,False,72.65156239388601,141.58502254549393
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:119,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,119,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Bridge
+3. Island
+4. Fish
+5. Riverbank
+6. Waterfall
+7. Tributary
+8. Erosion
+9. Canoe
+10. Hydroelectric",48,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""bridge"", ""island"", ""fish"", ""riverbank"", ""waterfall"", ""tributary"", ""erosion"", ""canoe""]",9,False,65.40680408098446,152.46678998005547
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:120,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,120,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Chalk
+5. Easel
+6. Gallery
+7. Sculpture
+8. Mural
+9. Fresco
+10. Sketchbook",46,stop,76,1,46,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""chalk"", ""easel"", ""gallery"", ""sculpture"", ""mural"", ""fresco"", ""sketchbook""]",10,True,62.681581827078915,147.33406359768384
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:121,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,121,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Pocket
+6. Rack
+7. Cueing
+8. Break
+9. Snooker
+10. Green",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""pocket"", ""rack"", ""break"", ""snooker"", ""green""]",9,False,71.09126734279775,126.91705046207689
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:122,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,122,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Flashlight
+3. Signal
+4. Lantern
+5. Spotlight
+6. Indicator
+7. Glowstick
+8. Lighthouse
+9. Bulb
+10. Prism",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""flashlight"", ""signal"", ""lantern"", ""spotlight"", ""indicator"", ""lighthouse"", ""bulb"", ""prism""]",9,False,57.67044732716853,143.6293554390097
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:123,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,time,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|time|p0|r0,896944247,123,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stopwatch
+2. Countdown
+3. Alarm
+4. Timer
+5. Schedule
+6. Calendar
+7. Hourglass
+8. Clock
+9. Pulse
+10. Deadline",41,stop,76,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stopwatch"", ""countdown"", ""alarm"", ""timer"", ""schedule"", ""calendar"", ""hourglass"", ""clock"", ""pulse"", ""deadline""]",10,True,58.903530679314386,141.85561463327574
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:124,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,124,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. Mine
+6. Park
+7. Port
+8. Rapids
+9. Resort
+10. Valley",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""mine"", ""park"", ""port"", ""resort"", ""valley""]",9,False,73.61382838466723,135.00827848438217
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:125,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,125,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Sprout
+2. Stalk
+3. Bud
+4. Leaf
+5. Stem
+6. Root
+7. Petal
+8. Flower
+9. Garden
+10. Greenhouse",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""sprout"", ""stalk"", ""bud"", ""leaf"", ""stem"", ""root"", ""petal"", ""flower"", ""garden"", ""greenhouse""]",10,True,71.8228295770802,141.15764983837852
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:126,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,plant,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|plant|p0|r0,1655186688,126,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stem
+2. Leaf
+3. Root
+4. Flower
+5. Bud
+6. Petal
+7. Pollen
+8. Seed
+9. Sprout
+10. Garden",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stem"", ""leaf"", ""root"", ""flower"", ""bud"", ""petal"", ""pollen"", ""seed"", ""sprout"", ""garden""]",10,True,69.99706178988752,143.97106570185585
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:127,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Creative,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,127,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Symphony
+2. Jingle
+3. Overture
+4. Melody
+5. Rhapsody
+6. Interlude
+7. Harmonica
+8. Serenade
+9. Waltz
+10. Dirge",50,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""symphony"", ""jingle"", ""overture"", ""melody"", ""rhapsody"", ""interlude"", ""harmonica"", ""serenade"", ""waltz"", ""dirge""]",10,True,61.6052621091333,142.13072121884866
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:128,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,128,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.929515838623049,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Steak
+2. Sauce
+3. Knife
+4. Plate
+5. Fork
+6. Restaurant
+7. Recipe
+8. Spice
+9. Appetizer
+10. Menu",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""steak"", ""sauce"", ""knife"", ""plate"", ""fork"", ""restaurant"", ""recipe"", ""spice"", ""appetizer"", ""menu""]",10,True,65.35528525026949,137.15463195727722
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:129,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,129,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Billboard
+3. Tourist
+4. Hotel
+5. Band
+6. Fan
+7. Mascot
+8. Souvenir
+9. Concert
+10. Map",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""billboard"", ""tourist"", ""hotel"", ""band"", ""fan"", ""mascot"", ""souvenir"", ""concert"", ""map""]",10,True,67.27895892109952,134.43662315984838
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:130,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,130,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.972938537597656,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Spotlight
+7. Lantern
+8. Glowstick
+9. Bulb
+10. Marker",42,stop,73,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""spotlight"", ""lantern"", ""bulb"", ""marker""]",9,False,64.00793132747789,141.84573016834352
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:131,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,131,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:132,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,132,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Spotlight
+7. Lantern
+8. Glowstick
+9. Bulb
+10. Marker",42,stop,73,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""spotlight"", ""lantern"", ""bulb"", ""marker""]",9,False,64.00793132747789,141.84573016834352
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:133,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,133,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Chalk
+5. Easel
+6. Gallery
+7. Sculpture
+8. Mural
+9. Fresco
+10. Sketchbook",46,stop,76,1,46,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""chalk"", ""easel"", ""gallery"", ""sculpture"", ""mural"", ""fresco"", ""sketchbook""]",10,True,62.681581827078915,147.33406359768384
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:134,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,machine,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|machine|p0|r0,550931056,134,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Ball
+2. Table
+3. Pocket
+4. Cue
+5. Rack
+6. Felt
+7. Cueing
+8. Mechanism
+9. Joint
+10. Club",43,stop,76,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""ball"", ""table"", ""pocket"", ""cue"", ""rack"", ""felt"", ""mechanism"", ""joint"", ""club""]",9,False,79.67353616812338,125.57273039976991
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:135,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,135,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Flashlight
+3. Signal
+4. Lantern
+5. Spotlight
+6. Indicator
+7. Glowstick
+8. Lighthouse
+9. Bulb
+10. Prism",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""flashlight"", ""signal"", ""lantern"", ""spotlight"", ""indicator"", ""lighthouse"", ""bulb"", ""prism""]",9,False,57.67044732716853,143.6293554390097
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:136,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,136,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Signal
+3. Flash
+4. Lamp
+5. Indicator
+6. Marker
+7. Spotlight
+8. Lantern
+9. Binnacle
+10. Lighthouse",42,stop,73,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""signal"", ""flash"", ""lamp"", ""indicator"", ""marker"", ""spotlight"", ""lantern"", ""binnacle"", ""lighthouse""]",10,True,65.56617578286851,139.00823216759147
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:137,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,137,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. Mine
+6. Park
+7. Port
+8. Rapids
+9. Resort
+10. Valley",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""mine"", ""park"", ""port"", ""resort"", ""valley""]",9,False,73.61382838466723,135.00827848438217
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:138,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,138,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Piano
+8. Stage
+9. Microphone
+10. Album",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""piano"", ""stage"", ""microphone"", ""album""]",10,True,52.2772041304192,152.44688521174012
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:139,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,139,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.2597267627716064,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Piano
+8. Stage
+9. Microphone
+10. Album",44,stop,73,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""piano"", ""stage"", ""microphone"", ""album""]",10,True,52.2772041304192,152.44688521174012
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:140,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,city,validation,Conventional,Conventional,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Conditional Divergent Association Task|city|p0|r0,324457138,140,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Stadium
+2. Hotel
+3. Restaurant
+4. Museum
+5. Park
+6. Fountain
+7. Monument
+8. Billboard
+9. Arena
+10. Landmark",41,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""stadium"", ""hotel"", ""restaurant"", ""museum"", ""park"", ""fountain"", ""monument"", ""billboard"", ""arena"", ""landmark""]",10,True,59.51709417471657,140.86368155166443
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:141,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,141,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. Mine
+6. Park
+7. Port
+8. Rapids
+9. Resort
+10. Valley",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""mine"", ""park"", ""port"", ""resort"", ""valley""]",9,False,73.61382838466723,135.00827848438217
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:142,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,art,validation,Boring,Boring,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Conditional Divergent Association Task|art|p0|r0,590652312,142,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Brush
+2. Canvas
+3. Palette
+4. Easel
+5. Painting
+6. Frame
+7. Gallery
+8. Sculpture
+9. Chisel
+10. Studio",43,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""brush"", ""canvas"", ""palette"", ""easel"", ""painting"", ""frame"", ""gallery"", ""sculpture"", ""chisel"", ""studio""]",10,True,61.88331493508157,145.96334073715656
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:143,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,143,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.9329195022583,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Island
+4. Lake
+5. Mine
+6. Park
+7. Port
+8. Rapids
+9. Resort
+10. Valley",40,stop,73,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""island"", ""lake"", ""mine"", ""park"", ""port"", ""resort"", ""valley""]",9,False,73.61382838466723,135.00827848438217
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:144,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,school,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|school|p0|r0,630592686,144,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Racket
+2. Table
+3. Cue
+4. Ball
+5. Rack
+6. Pocket
+7. Cueing
+8. Break
+9. Spin
+10. Cueball",43,stop,73,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""racket"", ""table"", ""cue"", ""ball"", ""rack"", ""pocket"", ""break"", ""spin""]",8,False,71.09126734279775,126.91705046207689
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:145,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,light,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|light|p0|r0,811220651,145,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.901267051696776,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Beacon
+2. Flashlight
+3. Signal
+4. Lantern
+5. Spotlight
+6. Indicator
+7. Glowstick
+8. Lighthouse
+9. Bulb
+10. Prism",44,stop,76,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""beacon"", ""flashlight"", ""signal"", ""lantern"", ""spotlight"", ""indicator"", ""lighthouse"", ""bulb"", ""prism""]",9,False,57.67044732716853,143.6293554390097
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:146,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Effective,Effective,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,146,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Steak
+2. Fork
+3. Restaurant
+4. Recipe
+5. Spice
+6. Plate
+7. Appetizer
+8. Kitchen
+9. Ingredient
+10. Menu",41,stop,76,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""steak"", ""fork"", ""restaurant"", ""recipe"", ""spice"", ""plate"", ""appetizer"", ""kitchen"", ""ingredient"", ""menu""]",10,True,66.18514546776272,139.7189278160631
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:147,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,food,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Conditional Divergent Association Task|food|p0|r0,1575020433,147,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Plate
+2. Fork
+3. Restaurant
+4. Recipe
+5. Spice
+6. Kitchen
+7. Meal
+8. Snack
+9. Ingredient
+10. Menu",41,stop,73,1,41,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""plate"", ""fork"", ""restaurant"", ""recipe"", ""spice"", ""kitchen"", ""meal"", ""snack"", ""ingredient"", ""menu""]",10,True,64.0214776399178,143.37507913111645
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:148,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,music,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|music|p0|r0,1458186884,148,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Orchestra
+2. Melody
+3. Rhythm
+4. Symphony
+5. Concert
+6. Harp
+7. Cello
+8. Stage
+9. Microphone
+10. Encore",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""orchestra"", ""melody"", ""rhythm"", ""symphony"", ""concert"", ""harp"", ""cello"", ""stage"", ""microphone"", ""encore""]",10,True,53.85665457719877,150.16049174539
+creativity-v2,20261004T185041_65612bf4,20261004T185041_65612bf4:149,models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,river,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Conditional Divergent Association Task|river|p0|r0,410201345,149,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.259726881980896,cb51f2381f31135ee0c7dd37b46f2b5ba8b962e09cb04366de994bc9e9337ba2,"1. Dam
+2. Fish
+3. Bridge
+4. Valley
+5. Current
+6. Island
+7. Waterfall
+8. Riverbank
+9. Tributary
+10. Hydroelectric",45,stop,76,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv,"[""dam"", ""fish"", ""bridge"", ""valley"", ""current"", ""island"", ""waterfall"", ""riverbank"", ""tributary""]",9,False,72.65156239388601,141.58502254549393

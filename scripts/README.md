@@ -208,3 +208,164 @@ the Slurm allocation. A dry run needs no model or GPU:
 ```bash
 .venv-snellius/bin/python scripts/generate.py --provider local --model models/Llama-3.1-8B-Instruct --task "Divergent Association Task" --repeats 5 --dry-run
 ```
+
+## GPT-OSS-20B behavioral runs on Snellius
+
+Keep Llama in its existing folder. Download the Transformers weights separately
+from a node with internet access, then submit from the project root:
+
+```bash
+bash scripts/download_gpt_oss.sh
+mkdir -p logs
+REPEATS=1 sbatch --gpus=2 scripts/snellius_behavioral.sh gpt-oss
+```
+
+The runner uses `.venv/bin/python` and requires two 40GB A100 GPUs or one 80GB GPU. It reserves 8 GiB per
+GPU and requires at least 60 GiB remaining across the visible GPUs, using
+automatic layer placement without CPU/disk offloading. It explicitly dequantizes MXFP4 weights to BF16; it
+does not require downloaded MXFP4 kernels. The existing Transformers, Torch,
+and Accelerate dependencies provide the loader. This path still needs an actual
+GPU smoke test before a full experiment.
+
+The default is five repeats per condition, low reasoning effort and 4096 total
+new tokens (reasoning plus answer). Override `REPEATS`, `REASONING_EFFORT`, or
+`MAX_TOKENS` before submission. The one-hour allocation is not a runtime estimate.
+The model loads once per task. GPT-OSS runs use the same behavioral prompts and
+sampling settings, but their token budget differs from the Llama job; freeze and
+record the intended comparison settings before a study.
+
+Outputs go to `outputs/gpt-oss-20b/`. `Response` contains only the final channel;
+`Raw_Completion` retains the complete generated text. Missing final answers are
+logged as empty rather than scoring reasoning text. Inspect `Finish_Reason` for
+truncation. GPT-OSS support is behavioral only; Llama intervention scripts have
+not been adapted or validated for GPT-OSS.
+
+Evaluate the latest GPT-OSS DAT and AUT files with:
+
+```bash
+INPUT_DIR=outputs/gpt-oss-20b OUTPUT_DIR=analysis/gpt_oss_pilot \
+  sbatch scripts/snellius_evaluate.sh
+```
+
+Loading guidance: https://developers.openai.com/cookbook/articles/gpt-oss/run-transformers
+
+## Choose a model with one generation script
+
+Submit from the project root after creating `logs/`:
+
+```bash
+mkdir -p logs
+REPEATS=1 sbatch scripts/snellius_behavioral.sh llama
+REPEATS=1 sbatch --gpus=2 scripts/snellius_behavioral.sh gpt-oss
+# An explicit local directory also works:
+sbatch --gpus=2 scripts/snellius_behavioral.sh models/gpt-oss-20b
+```
+
+Both choices run DAT and AUT. Omitting the argument defaults to Llama (or the
+legacy `MODEL` environment setting). A positional argument takes precedence.
+The script reads `config.json`: GPT-OSS defaults to 4096 new tokens and other
+models to 800. `MAX_TOKENS` overrides either default; `REASONING_EFFORT` defaults
+to low and applies only to GPT-OSS. Arbitrary paths still require a model
+supported by the Python generation backend. Outputs remain separated by model
+under `outputs/`; both jobs log to `logs/creativity-JOBID.log`. The shared job
+requests one A100 for one hour; GPT-OSS retains its GPU memory check.
+
+## First residual-stream pilot (Llama)
+
+```bash
+mkdir -p logs
+sbatch scripts/snellius_residual.sh llama
+```
+
+This uses the downloaded Llama on one A100. It extracts the mean Creative minus
+Standard post-block residual at the last formatted prompt token, at zero-based
+layer 16, from AUT brick/rope/bottle/spoon. It then runs 240 validation
+responses: book/fork/paperclip/towel/can, three repeats, and 16 intervention/control conditions.
+The default alpha is 1 (one raw mean contrast), with two norm-matched random
+vectors. Addition/subtraction and centered suppression act at the prompt
+boundary (`SCOPE=prefill`); donor patching also acts there. Set `SCOPE=each_step`
+for a separate experiment with intervention during generation.
+
+Layer 16 and alpha 1 are pilot choices, not validated optima. Change `LAYER`,
+`ALPHA`, `REPEATS`, or `RANDOM_VECTORS` before submission. Every job writes a
+separate `outputs/residual_pilot_JOBID/` and `analysis/residual_pilot_JOBID/`.
+Extraction refuses to overwrite an existing vector. The two-hour request is
+an allocation limit, not a runtime estimate. GPT-OSS is not supported by this
+intervention adapter; its behavioral loader is separate.
+
+The job exports raw responses, extraction metadata, a generation manifest,
+blinded rating sheets, format audits, AUT proxy scores and a paired
+Standard-plus-vector minus Standard effect. MPNet must already be cached;
+`SCORE=0` skips embedding scoring and effect estimation. Inspect all controls,
+format failures and truncation, and collect originality/usefulness/validity
+ratings before interpreting the proxy effect. Five objects provide limited evidence for
+population-level claims. No DAT or final-test objects are used by this job;
+freeze layer/strength using validation before testing transfer.
+
+Protocol note: `creativity-v2` Standard is neutral, not the effective and
+length-matched control described in the Word proposal. Paraphrase IDs change
+condition suffixes, not the underlying task instruction or neutral Standard
+prompt. This pilot holds out AUT objects and creative condition wording only.
+Steering is a causal intervention on a candidate representation; it does not
+alone establish a creativity-specific circuit or natural contribution.
+
+## RSA-selected attention-head concept vectors
+
+An Opielka-inspired creativity pilot is now available. See
+[method, source attribution, controls and limitations](../writing/concept_vectors.md).
+
+```bash
+.venv/bin/python scripts/concept_vectors.py --output-dir /tmp/concept-preview --dry-run
+sbatch scripts/snellius_concept.sh llama
+```
+
+This scans all Llama heads with RSA, audits the fixed top five on separate
+objects/wording, and tests a projected Creative mean, a projected contrast, and
+a direct intervention on the highest-ranked head. It is an adaptation for
+creativity instruction conditions, not a replication of the original relational
+concept tasks. All outputs remain compatible with the current AUT evaluators.
+
+### Five-item AUT comparisons
+
+Both Slurm MI scripts now evaluate book, fork, paperclip, towel, and can.
+Each run includes unsteered Creative, Standard (no suffix), Effective,
+Conventional, and Boring conditions. Evaluation uses wording index 0:
+“Be creative.”, “Be effective.”, “Be conventional.”, and “Be boring.”
+Extraction uses brick, rope, bottle, and spoon with different wording;
+concept-head auditing uses umbrella and shoe. These are new exploratory runs,
+not reuse of the old artifacts or a frozen confirmatory experiment.
+
+With scoring enabled, `creative_vs_controls.csv` contains four separate paired
+comparisons, each reporting Creative minus one control for
+`Semantic_Distance_Proxy`. Positive differences mean greater semantic distance,
+not necessarily more useful or valid ideas. Intervals are exploratory 95%
+bootstrap intervals without multiple-comparison correction; blinded human
+ratings remain necessary. The existing vector-addition comparison is retained.
+
+Default generation counts are 240 for residual steering and 480 for concept
+vectors (160 for each of three candidates). The concept discovery RSA still
+ranks the original Creative/Conventional/Effective geometry; these behavioral
+comparisons do not constitute four independently learned vector contrasts.
+
+To analyze an existing scored run containing all five conditions:
+
+```bash
+.venv/bin/python scripts/analyze_effects.py PATH/aut_responses.csv \
+  --metric Semantic_Distance_Proxy --treatment Creative \
+  --controls Standard Effective Conventional Boring \
+  --output PATH/creative_vs_controls.csv
+```
+
+## Temperature sweep and CDAT/DRAT follow-up
+
+`snellius_behavioral.sh` now defaults to a four-temperature Slurm array
+(0, 0.7, 1.0, 1.3), with 30 repeats per item/condition at nonzero temperature and
+one greedy response per prompt. Set `REPEATS=60` for 60; use `--array=0` with a
+single-entry `TEMPERATURES` value for a single-temperature run. This replaces
+the older five-repeat, fixed-temperature shell defaults described above.
+
+See [the complete protocol and commands](../writing/temperature_and_association.md)
+for sampling provenance, evaluation by temperature, determinism checks, and
+optional CDAT/DRAT tasks. `INCLUDE_ASSOCIATION=1` adds those tasks to the array;
+they require new cue/anchor-conditioned answers and have explicitly documented
+pilot adaptations.

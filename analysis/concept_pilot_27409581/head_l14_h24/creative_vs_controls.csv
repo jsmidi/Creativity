@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Standard,-0.013814149095231565,-0.09544862299727558,0.0376919136937678,10,0,5,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Effective,-0.02053905754196973,-0.10051977952496853,0.03678258826132235,10,0,5,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Conventional,0.001572609503657041,-0.08792922249968457,0.061610496558372224,10,0,5,item and paired-generation bootstrap,2000,42
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Boring,-0.014313126559194589,-0.11987004062562252,0.04030837936795694,10,0,5,item and paired-generation bootstrap,2000,42

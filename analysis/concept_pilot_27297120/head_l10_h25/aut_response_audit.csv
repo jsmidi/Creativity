@@ -1,0 +1,589 @@
+Protocol,Run_ID,Response_ID,Model,Task,Item,Split,Condition,Prompt_Condition,Instruction,Prompt,Paraphrase,Repeat,Block_ID,Generation_Seed,Request_Order,Temperature,Max_Tokens,Layer,Head,Intervention,Scope,Alpha,Random_Vector,Vector_Norm,Artifact_SHA256,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Source_File,Idea_Count,Unique_Idea_Count,Format_Valid
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:0,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think conventionally.",2,0,Alternative Uses Task|rope|p2|r0,253374436,0,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant holder
+2. Curtain
+3. Mail holder
+4. Dog leash
+5. Hair tie
+6. Dress or skirt tie
+7. Doorstop
+8. Photo display
+9. Wall hanging
+10. Puppet string",51,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:1,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|brick|p2|r1,269818488,1,1.0,800,10,25,temperature,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Birdhouse
+2. Planter
+3. Garden marker
+4. Bookend
+5. Decorative wall art
+6. Fire starter
+7. Hot pad
+8. Step for an outdoor seating area
+9. Weight for a exercise routine
+10. Science project display",60,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:2,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|rope|p2|r1,845139438,2,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizer
+4. Photo display
+5. Curtain tie
+6. Bag handle
+7. Zipper pull
+8. Macrame wall hanging
+9. Jewelry display
+10. Wind chime component",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:3,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|brick|p2|r0,168794945,3,0.7,800,10,25,patch,prefill,1.0,-1,1.181484937667847,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative paperweight
+4. Photography prop
+5. Sound-absorbing material
+6. Wind chime component
+7. DIY birdhouse base
+8. Fire starter
+9. Geode display container
+10. Weighted exercise tool",63,stop,73,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:4,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think conventionally.",2,1,Alternative Uses Task|brick|p2|r1,269818488,4,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Paperweight
+4. Step stool
+5. Decorative wall art
+6. Garden border
+7. Hot pad
+8. Birdhouse
+9. Wind chime
+10. Weight for fishing line",55,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:5,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|brick|p2|r1,269818488,5,0.7,800,10,25,add,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookends
+2. Planters
+3. Garden edging
+4. Fire pit
+5. Birdhouse
+6. Picture frame
+7. Coat rack
+8. Desk organizer
+9. Rocket model
+10. Wind chime",52,stop,69,1,52,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:6,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|rope|p2|r1,845139438,6,1.0,800,10,25,temperature,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizers for electronics
+4. Hanger for clothes
+5. Tie for pot plants
+6. Visual aid in dance or sports performance
+7. Tie for curtains or blinds
+8. Dog leash
+9. Desk organizer for cables
+10. Fishing line for makeshift fishing gear",70,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:7,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|rope|p2|r1,845139438,7,0.7,800,10,25,suppress,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Wind chime component
+3. Jewelry component
+4. Desk organizer
+5. DIY photo display
+6. Sensory toy for pets
+7. Macrame wall hanging
+8. Leveling tool for uneven floors
+9. Cord organizer for electronics
+10. Fun material for kids' art projects",69,stop,73,1,69,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:8,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|rope|p2|r0,253374436,8,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker in a garden
+2. DIY photo string
+3. Dog pulling toy
+4. Wall hanging organizer
+5. Headband for hair tie
+6. Drumming practice aid
+7. Yoga block for support
+8. Fishing line substitute
+9. Sculpture material
+10. Wind chime component",67,stop,73,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:9,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|brick|p2|r1,269818488,9,0.7,800,10,25,add,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookends
+2. Planters
+3. Garden edging
+4. Fire pit
+5. Outdoor oven
+6. Birdhouse
+7. Picture frame
+8. Desk organizer
+9. Rocket model
+10. Sculpture",51,stop,69,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:10,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|brick|p2|r0,168794945,10,1.0,800,10,25,temperature,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall hanging
+4. Photography prop
+5. Sound-absorbing material
+6. Weight for leverage
+7. Geophone in seismology
+8. Agitator in chemistry
+9. Game piece in tabletop games
+10. Step in stduction or demonstration",71,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:11,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|rope|p2|r0,253374436,11,0.7,800,10,25,add,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant holder
+2. Shoe organizer
+3. Curtain tieback
+4. Bag strap
+5. Desk organizer
+6. Headboard for a bed
+7. Photo display
+8. Handrail
+9. Wind chime material
+10. Dog leash alternative",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:12,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|rope|p2|r0,253374436,12,0.7,800,10,25,suppress,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker in a garden
+2. DIY photo string
+3. Dog pulling toy
+4. Wall hanging organizer
+5. Headband for hair tie
+6. Drumming practice aid
+7. Yoga block for support
+8. Fishing line substitute
+9. Sculpture material
+10. Wind chime component",67,stop,73,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:13,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think conventionally.",2,1,Alternative Uses Task|rope|p2|r1,845139438,13,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizer
+4. Photo display
+5. Curtain tie
+6. Bag handle
+7. Zipper pull
+8. Macrame wall hanging
+9. Jewelry display
+10. Book binding",53,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:14,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|rope|p2|r0,253374436,14,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker in a garden
+2. DIY photo string
+3. Dog pulling toy
+4. Wall hanging organizer
+5. Headband for hair tie
+6. Macrame art material
+7. Wind chime component
+8. Puppet strings
+9. Book page bookmark
+10. Space for a keychain or small item on a backpack",73,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:15,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|rope|p2|r1,845139438,15,0.7,800,10,25,suppress,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Wind chime component
+3. Jewelry component
+4. Desk organizer
+5. DIY photo display
+6. Sensory toy for pets
+7. Macrame wall hanging
+8. Leveling tool for uneven floors
+9. Cord organizer for electronics
+10. Fun material for kids' art projects",69,stop,73,1,69,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:16,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|brick|p2|r0,168794945,16,0.7,800,10,25,add,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall art
+4. Fire pit
+5. Outdoor table top
+6. Weight for exercises
+7. Birdhouse
+8. Small storage container
+9. Step stool
+10. BBQ grill base",56,stop,69,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:17,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|brick|p2|r1,269818488,17,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Birdhouse
+2. Planter
+3. Garden marker
+4. Bookend
+5. Wind chime
+6. Music shaker instrument
+7. Geometric art piece
+8. Pet toy
+9. Fire starter
+10. Sculpture mold",56,stop,73,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:18,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|rope|p2|r1,845139438,18,0.7,800,10,25,add,prefill,-1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Wind chime component
+3. Jewelry component
+4. Desk organizer
+5. DIY photo display
+6. Sensory toy for pets
+7. Macrame wall hanging
+8. Leveling tool for uneven floors
+9. Cord organizer for electronics
+10. Fun material for kids' art projects",69,stop,73,1,69,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:19,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|brick|p2|r0,168794945,19,0.7,800,10,25,add,prefill,-1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative paperweight
+4. Photography prop
+5. Sound-absorbing material
+6. Wind chime component
+7. DIY birdhouse base
+8. Fire starter
+9. Geode display container
+10. Weight for fishing line or fishing net",66,stop,73,1,66,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:20,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|rope|p2|r0,253374436,20,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant holder
+2. Shoe organizer
+3. Curtain tieback
+4. Bag strap
+5. Desk organizer
+6. Headboard for a bed
+7. Wall decoration
+8. Photo display
+9. Dog leash alternative
+10. Wind chime element",57,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:21,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|brick|p2|r0,168794945,21,0.7,800,10,25,patch,prefill,1.0,-1,1.476755976676941,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall art
+4. Fire pit
+5. Outdoor table top
+6. Weight for exercises
+7. Birdhouse
+8. Small storage container
+9. Step stool
+10. Garden marker",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:22,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|rope|p2|r1,845139438,22,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizer
+4. Photo display
+5. Curtain tie
+6. Bag handle
+7. Zipper pull
+8. Macrame wall hanging
+9. Jewelry display
+10. Wind chime component",55,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:23,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|brick|p2|r1,269818488,23,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookends
+2. Planters
+3. Garden borders
+4. Fire pit
+5. Birdhouse
+6. Bird bath
+7. Weight for exercise
+8. Decoration for walls
+9. Marker for the beach
+10. Fire poker",54,stop,69,1,54,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:24,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|rope|p2|r0,253374436,24,0.7,800,10,25,patch,prefill,1.0,-1,1.4804298877716064,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant holder
+2. Shoe organizer
+3. Curtain tieback
+4. Bag strap
+5. Desk organizer
+6. Headboard for a bed
+7. Bookshelf divider
+8. Doorstop
+9. Meat marinating tool
+10. Guitar strap",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:25,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|brick|p2|r1,269818488,25,0.7,800,10,25,patch,prefill,1.0,-1,1.476755976676941,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookends
+2. Planters
+3. Garden edging
+4. Fire pit
+5. Outdoor oven
+6. Birdhouse
+7. Picture frame
+8. Desk organizer
+9. Rocket model
+10. Sculpture",51,stop,69,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:26,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|brick|p2|r0,168794945,26,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall art
+4. Fire pit
+5. Outdoor table top
+6. Weight for exercises
+7. Birdhouse
+8. Picture frame
+9. Fire starter
+10. Garden marker",54,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:27,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|brick|p2|r1,269818488,27,0.7,800,10,25,patch,prefill,1.0,-1,1.181484937667847,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Birdhouse
+2. Planter
+3. Garden marker
+4. Bookend
+5. Wind chime
+6. Music instrument (shaker)
+7. Geode replica
+8. Pet toy
+9. Fire starter
+10. Sculpture base",56,stop,73,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:28,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|rope|p2|r1,845139438,28,0.7,800,10,25,add,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizer
+4. Photo display
+5. Curtain tie
+6. Bag handle
+7. Zipper pull
+8. Macrame wall hanging
+9. Jewelry display
+10. Wind chime component",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:29,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|brick|p2|r1,269818488,29,0.7,800,10,25,add,prefill,-1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Birdhouse material
+2. Bookend
+3. Decorative vase filler
+4. DIY bird perch
+5. Garden stepping stone
+6. Geocaching cache container
+7. Miniature golf obstacle
+8. Paperweight
+9. Plant marker
+10. Wind chime component",62,stop,73,1,62,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:30,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|rope|p2|r0,253374436,30,0.7,800,10,25,add,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant holder
+2. Shoe organizer
+3. Curtain tieback
+4. Bag strap
+5. Desk organizer
+6. Headboard for a bed
+7. Wall decoration
+8. Photo display
+9. Dog leash alternative
+10. Wind chime element",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:31,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|rope|p2|r0,253374436,31,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant holder
+2. Shoe organizer
+3. Curtain tieback
+4. Bag strap
+5. Desk organizer
+6. Headboard for a bed
+7. Wall decoration
+8. Photo display
+9. Dog leash alternative
+10. Wind chime element",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:32,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|brick|p2|r1,269818488,32,0.7,800,10,25,suppress,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Birdhouse material
+2. Bookend
+3. Decorative vase filler
+4. DIY bird perch
+5. Garden stepping stone
+6. Geocaching cache container
+7. Miniature landscape feature
+8. Paperweight
+9. Plant marker
+10. Wind chime component",62,stop,73,1,62,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:33,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|brick|p2|r0,168794945,33,0.7,800,10,25,suppress,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative paperweight
+4. Photography prop
+5. Sound-absorbing material
+6. Wind chime component
+7. DIY birdhouse base
+8. Fire starter
+9. Geode display container
+10. Weighted exercise tool",63,stop,73,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:34,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|rope|p2|r0,253374436,34,0.7,800,10,25,patch,prefill,1.0,-1,1.1518882513046265,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker in a garden
+2. DIY photo string
+3. Dog pulling toy
+4. Wall hanging organizer
+5. Headband for hair tie
+6. Drumming practice aid
+7. Yoga block for support
+8. Macrame wall art material
+9. Wind chime material
+10. Arts and crafts material for kids",72,stop,73,1,72,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:35,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|rope|p2|r0,253374436,35,0.7,800,10,25,add,prefill,-1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker in a garden
+2. DIY photo string
+3. Dog pulling toy
+4. Wall hanging organizer
+5. Headband for hair tie
+6. Drumming practice aid
+7. Yoga block for support
+8. Fishing line substitute
+9. Sculpture material
+10. Wind chime component",67,stop,73,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:36,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|rope|p2|r1,845139438,36,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Wind chime component
+3. Jewelry component
+4. Desk organizer
+5. DIY photo display
+6. Sensory toy for pets
+7. Macrame wall hanging
+8. Leveling tool for uneven floors
+9. Cord organizer for electronics
+10. Fun material for kids' art projects",69,stop,73,1,69,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:37,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|brick|p2|r0,168794945,37,0.7,800,10,25,suppress,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative paperweight
+4. Photography prop
+5. Sound-absorbing material
+6. Weight for anchor
+7. Geophone in seismology
+8. Musical instrument (e.g. drum)
+9. Support for mini-greenhouse
+10. Radiation shield",68,stop,73,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:38,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|rope|p2|r1,845139438,38,0.7,800,10,25,add,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizer
+4. Photo display
+5. Wind chime material
+6. Macrame wall hanging
+7. Puppet strings
+8. Twine for packaging
+9. DIY jewelry component
+10. Cat toy",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:39,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|rope|p2|r1,845139438,39,0.7,800,10,25,patch,prefill,1.0,-1,1.1518882513046265,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Wind chime component
+3. Jewelry component
+4. Desk organizer
+5. DIY photo display
+6. Sensory toy for pets
+7. Macrame wall hanging
+8. Leveling tool for uneven floors
+9. Cord organizer for electronics
+10. Fun material for kids' art projects",69,stop,73,1,69,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:40,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think conventionally.",2,0,Alternative Uses Task|brick|p2|r0,168794945,40,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall art
+4. Fire pit
+5. Outdoor table top
+6. Stepping stones
+7. Birdhouse
+8. Picture frame
+9. Fire starter
+10. Garden marker",54,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:41,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|brick|p2|r1,269818488,41,0.7,800,10,25,suppress,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Birdhouse material
+2. Bookend
+3. Decorative vase
+4. Fire starter
+5. Geophone
+6. Garden marker
+7. Jewelry display
+8. Outdoor oven
+9. Wind chime
+10. Weight for fishing line",55,stop,73,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:42,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|rope|p2|r0,253374436,42,1.0,800,10,25,temperature,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Backing up a trailer
+2. Plant hanger
+3. Dog leash
+4. Hair accessory
+5. Dress pattern
+6. Sailing harness
+7. Prayer beads
+8. Gardening stake
+9. Puppet string
+10. Paint boundary marker",57,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:43,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|brick|p2|r0,168794945,43,0.7,800,10,25,add,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall art
+4. Fire pit
+5. Outdoor table top
+6. Weight for exercises
+7. Birdhouse
+8. Small storage container
+9. Step stool
+10. BBQ grill base",56,stop,69,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:44,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|rope|p2|r0,253374436,44,0.7,800,10,25,add,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant holder
+2. Shoe organizer
+3. Curtain tieback
+4. Bag strap
+5. Desk organizer
+6. Headboard for a bed
+7. Wall decoration
+8. Photo display
+9. Dog leash alternative
+10. Wind chime element",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:45,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|rope|p2|r1,845139438,45,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Wind chime component
+3. Jewelry component
+4. Desk organizer
+5. DIY photo display
+6. Sensory toy for pets
+7. Macrame wall hanging
+8. Leveling tool for uneven floors
+9. Cord organizer for electronics
+10. Fun material for kids' art projects",69,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:46,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|brick|p2|r0,168794945,46,0.7,800,10,25,add,prefill,1.0,1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall art
+4. Fire pit
+5. Outdoor table top
+6. Weight for exercises
+7. Birdhouse
+8. Small storage container
+9. Step stool
+10. BBQ grill base",56,stop,69,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:47,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|rope|p2|r1,845139438,47,0.7,800,10,25,patch,prefill,1.0,-1,1.4804298877716064,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizer
+4. Photo display
+5. Curtain tie
+6. Bag handle
+7. Zipper pull
+8. Macrame wall hanging
+9. Jewelry display
+10. Wind chime component",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:48,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,0,Alternative Uses Task|brick|p2|r0,168794945,48,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative wall art
+4. Fire pit
+5. Outdoor table top
+6. Weight for exercises
+7. Birdhouse
+8. Small storage container
+9. Step stool
+10. BBQ grill base",56,stop,69,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:49,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|brick|p2|r1,269818488,49,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookends
+2. Planters
+3. Garden borders
+4. Fire pit
+5. Birdhouse
+6. Bird bath
+7. Weight for exercise
+8. Decoration for walls
+9. Marker for the beach
+10. Fire poker",54,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:50,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,1,Alternative Uses Task|brick|p2|r1,269818488,50,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Birdhouse material
+2. Bookend
+3. Decorative vase filler
+4. DIY bird perch
+5. Garden stepping stone
+6. Geocaching cache container
+7. Miniature landscape feature
+8. Paperweight
+9. Plant marker
+10. Wind chime component",62,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:51,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|brick|p2|r1,269818488,51,0.7,800,10,25,add,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookends
+2. Planters
+3. Garden edging
+4. Fire pit
+5. Outdoor oven
+6. Birdhouse
+7. Picture frame
+8. Desk organizer
+9. Rocket model
+10. Sculpture",51,stop,69,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:52,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",2,1,Alternative Uses Task|rope|p2|r1,845139438,52,0.7,800,10,25,add,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker
+2. Doorstop
+3. Cord organizer
+4. Photo display
+5. Curtain tie
+6. Bag handle
+7. Zipper pull
+8. Macrame wall hanging
+9. Jewelry display
+10. Wind chime component",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:53,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|brick|p2|r0,168794945,53,0.7,800,10,25,none,prefill,0.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative paperweight
+4. Photography prop
+5. Sound-absorbing material
+6. Wind chime component
+7. DIY birdhouse base
+8. Fire starter
+9. Geode display container
+10. Weighted exercise tool",63,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:54,models/Llama-3.1-8B-Instruct,Alternative Uses Task,brick,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object brick other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|brick|p2|r0,168794945,54,0.7,800,10,25,suppress,prefill,1.0,-1,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Bookend
+2. Planter
+3. Decorative paperweight
+4. Photography prop
+5. Sound-absorbing material
+6. Wind chime component
+7. DIY birdhouse base
+8. Fire starter
+9. Geode display container
+10. Weighted exercise tool",63,stop,73,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True
+creativity-v2,20260928T115725_34c063a8,20260928T115725_34c063a8:55,models/Llama-3.1-8B-Instruct,Alternative Uses Task,rope,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object rope other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Think inventively.",2,0,Alternative Uses Task|rope|p2|r0,253374436,55,0.7,800,10,25,suppress,prefill,1.0,0,0.9708223938941956,3dee1e6eca06856f339c6a768bf2bf294be928e1c205257b8dc80936fb2fc1c5,"1. Plant marker in a garden
+2. DIY photo string
+3. Dog pulling toy
+4. Wall hanging organizer
+5. Headband for hair tie
+6. Macrame art material
+7. Wind chime component
+8. Puppet strings
+9. Book page bookmark
+10. Space for a keychain or small item on a backpack",73,stop,73,1,73,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27297120/head_l10_h25/results_alternative_uses_task_20260928T115725_34c063a8.csv,10,10,True

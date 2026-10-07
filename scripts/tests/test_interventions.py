@@ -2,6 +2,7 @@
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
 import torch
 from transformers import LlamaConfig, LlamaForCausalLM
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -36,6 +37,11 @@ class InterventionTests(unittest.TestCase):
         engine = ActivationEngine(self.model, tokenizer)
         inputs = engine.inputs("hello")
         self.assertEqual(inputs["input_ids"].tolist(), [[2, 4, 3]])
+        with patch.object(self.model, 'generate', wraps=self.model.generate) as generate:
+            engine.generate("hello", temperature=.8, top_p=.9, top_k=4, max_tokens=2)
+            self.assertEqual(generate.call_args.kwargs['top_p'], .9)
+            self.assertEqual(generate.call_args.kwargs['top_k'], 4)
+            self.assertTrue(generate.call_args.kwargs['do_sample'])
         baseline = engine.generate("hello", temperature=0, max_tokens=3)
         zero = engine.generate("hello", temperature=0, max_tokens=3, layer=0, vector=torch.ones(16), alpha=0)
         self.assertEqual(baseline["Response"], zero["Response"])

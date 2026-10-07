@@ -1,0 +1,326 @@
+Candidate,Item,Condition,Requests,Successful,Unique_Responses,Scored,Truncated
+behavioral,evolution | friction | election | polynomial,Boring,60,60,1,60,0
+behavioral,evolution | friction | election | polynomial,Conventional,60,60,1,60,0
+behavioral,evolution | friction | election | polynomial,Creative,60,60,1,60,0
+behavioral,evolution | friction | election | polynomial,Effective,60,60,1,60,0
+behavioral,evolution | friction | election | polynomial,Standard,60,60,1,60,0
+behavioral,genome | lattice | algorithm | court,Boring,60,60,1,60,0
+behavioral,genome | lattice | algorithm | court,Conventional,60,60,1,60,0
+behavioral,genome | lattice | algorithm | court,Creative,60,60,1,60,0
+behavioral,genome | lattice | algorithm | court,Effective,60,60,1,60,0
+behavioral,genome | lattice | algorithm | court,Standard,60,60,1,60,0
+behavioral,heart | engine | marketplace | equation,Boring,60,60,1,60,0
+behavioral,heart | engine | marketplace | equation,Conventional,60,60,1,60,0
+behavioral,heart | engine | marketplace | equation,Creative,60,60,1,60,0
+behavioral,heart | engine | marketplace | equation,Effective,60,60,1,60,0
+behavioral,heart | engine | marketplace | equation,Standard,60,60,1,60,0
+behavioral,heartbeat | wave | oscillator | function,Boring,60,60,1,60,0
+behavioral,heartbeat | wave | oscillator | function,Conventional,60,60,1,60,0
+behavioral,heartbeat | wave | oscillator | function,Creative,60,60,1,60,0
+behavioral,heartbeat | wave | oscillator | function,Effective,60,60,1,60,0
+behavioral,heartbeat | wave | oscillator | function,Standard,60,60,1,60,0
+behavioral,immune system | fire | organization | theorem,Boring,60,60,1,60,0
+behavioral,immune system | fire | organization | theorem,Conventional,60,60,1,60,0
+behavioral,immune system | fire | organization | theorem,Creative,60,60,1,60,0
+behavioral,immune system | fire | organization | theorem,Effective,60,60,1,60,0
+behavioral,immune system | fire | organization | theorem,Standard,60,60,1,60,0
+concept_contrast,evolution | friction | election | polynomial,Boring,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Conventional,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Creative,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Creative_patch_standard,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Creative_random_suppress0,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Creative_random_suppress1,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Creative_subtract_1,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Creative_suppress,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Effective,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Standard,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Standard_add_1,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Standard_patch_creative,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Standard_random0_1,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Standard_random1_1,1,1,1,1,0
+concept_contrast,evolution | friction | election | polynomial,Standard_suppress,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Boring,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Conventional,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Creative,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Creative_patch_standard,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Creative_random_suppress0,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Creative_random_suppress1,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Creative_subtract_1,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Creative_suppress,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Effective,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Standard,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Standard_add_1,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Standard_patch_creative,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Standard_random0_1,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Standard_random1_1,1,1,1,1,0
+concept_contrast,genome | lattice | algorithm | court,Standard_suppress,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Boring,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Conventional,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Creative,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Creative_patch_standard,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Creative_random_suppress0,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Creative_random_suppress1,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Creative_subtract_1,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Creative_suppress,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Effective,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Standard,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Standard_add_1,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Standard_patch_creative,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Standard_random0_1,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Standard_random1_1,1,1,1,1,0
+concept_contrast,heart | engine | marketplace | equation,Standard_suppress,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Boring,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Conventional,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Creative,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Creative_patch_standard,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Creative_random_suppress0,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Creative_random_suppress1,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Creative_subtract_1,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Creative_suppress,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Effective,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Standard,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Standard_add_1,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Standard_patch_creative,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Standard_random0_1,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Standard_random1_1,1,1,1,1,0
+concept_contrast,heartbeat | wave | oscillator | function,Standard_suppress,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Boring,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Conventional,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Creative,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Creative_patch_standard,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Creative_random_suppress0,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Creative_random_suppress1,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Creative_subtract_1,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Creative_suppress,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Effective,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Standard,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Standard_add_1,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Standard_patch_creative,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Standard_random0_1,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Standard_random1_1,1,1,1,1,0
+concept_contrast,immune system | fire | organization | theorem,Standard_suppress,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Boring,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Conventional,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Creative,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Creative_patch_standard,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Creative_random_suppress0,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Creative_random_suppress1,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Creative_subtract_1,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Creative_suppress,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Effective,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Standard,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Standard_add_1,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Standard_patch_creative,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Standard_random0_1,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Standard_random1_1,1,1,1,1,0
+concept_head,evolution | friction | election | polynomial,Standard_suppress,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Boring,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Conventional,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Creative,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Creative_patch_standard,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Creative_random_suppress0,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Creative_random_suppress1,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Creative_subtract_1,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Creative_suppress,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Effective,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Standard,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Standard_add_1,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Standard_patch_creative,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Standard_random0_1,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Standard_random1_1,1,1,1,1,0
+concept_head,genome | lattice | algorithm | court,Standard_suppress,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Boring,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Conventional,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Creative,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Creative_patch_standard,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Creative_random_suppress0,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Creative_random_suppress1,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Creative_subtract_1,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Creative_suppress,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Effective,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Standard,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Standard_add_1,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Standard_patch_creative,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Standard_random0_1,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Standard_random1_1,1,1,1,1,0
+concept_head,heart | engine | marketplace | equation,Standard_suppress,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Boring,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Conventional,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Creative,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Creative_patch_standard,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Creative_random_suppress0,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Creative_random_suppress1,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Creative_subtract_1,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Creative_suppress,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Effective,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Standard,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Standard_add_1,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Standard_patch_creative,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Standard_random0_1,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Standard_random1_1,1,1,1,1,0
+concept_head,heartbeat | wave | oscillator | function,Standard_suppress,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Boring,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Conventional,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Creative,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Creative_patch_standard,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Creative_random_suppress0,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Creative_random_suppress1,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Creative_subtract_1,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Creative_suppress,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Effective,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Standard,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Standard_add_1,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Standard_patch_creative,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Standard_random0_1,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Standard_random1_1,1,1,1,1,0
+concept_head,immune system | fire | organization | theorem,Standard_suppress,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Boring,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Conventional,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Creative,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Creative_patch_standard,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Creative_random_suppress0,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Creative_random_suppress1,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Creative_subtract_1,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Creative_suppress,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Effective,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Standard,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Standard_add_1,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Standard_patch_creative,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Standard_random0_1,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Standard_random1_1,1,1,1,1,0
+concept_mean,evolution | friction | election | polynomial,Standard_suppress,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Boring,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Conventional,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Creative,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Creative_patch_standard,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Creative_random_suppress0,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Creative_random_suppress1,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Creative_subtract_1,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Creative_suppress,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Effective,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Standard,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Standard_add_1,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Standard_patch_creative,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Standard_random0_1,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Standard_random1_1,1,1,1,1,0
+concept_mean,genome | lattice | algorithm | court,Standard_suppress,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Boring,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Conventional,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Creative,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Creative_patch_standard,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Creative_random_suppress0,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Creative_random_suppress1,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Creative_subtract_1,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Creative_suppress,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Effective,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Standard,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Standard_add_1,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Standard_patch_creative,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Standard_random0_1,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Standard_random1_1,1,1,1,1,0
+concept_mean,heart | engine | marketplace | equation,Standard_suppress,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Boring,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Conventional,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Creative,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Creative_patch_standard,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Creative_random_suppress0,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Creative_random_suppress1,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Creative_subtract_1,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Creative_suppress,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Effective,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Standard,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Standard_add_1,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Standard_patch_creative,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Standard_random0_1,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Standard_random1_1,1,1,1,1,0
+concept_mean,heartbeat | wave | oscillator | function,Standard_suppress,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Boring,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Conventional,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Creative,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Creative_patch_standard,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Creative_random_suppress0,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Creative_random_suppress1,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Creative_subtract_1,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Creative_suppress,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Effective,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Standard,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Standard_add_1,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Standard_patch_creative,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Standard_random0_1,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Standard_random1_1,1,1,1,1,0
+concept_mean,immune system | fire | organization | theorem,Standard_suppress,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Boring,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Conventional,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Creative,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Creative_patch_standard,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Creative_random_suppress0,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Creative_random_suppress1,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Creative_subtract_1,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Creative_suppress,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Effective,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Standard,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Standard_add_1,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Standard_patch_creative,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Standard_random0_1,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Standard_random1_1,1,1,1,1,0
+residual,evolution | friction | election | polynomial,Standard_suppress,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Boring,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Conventional,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Creative,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Creative_patch_standard,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Creative_random_suppress0,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Creative_random_suppress1,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Creative_subtract_1,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Creative_suppress,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Effective,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Standard,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Standard_add_1,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Standard_patch_creative,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Standard_random0_1,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Standard_random1_1,1,1,1,1,0
+residual,genome | lattice | algorithm | court,Standard_suppress,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Boring,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Conventional,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Creative,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Creative_patch_standard,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Creative_random_suppress0,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Creative_random_suppress1,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Creative_subtract_1,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Creative_suppress,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Effective,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Standard,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Standard_add_1,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Standard_patch_creative,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Standard_random0_1,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Standard_random1_1,1,1,1,1,0
+residual,heart | engine | marketplace | equation,Standard_suppress,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Boring,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Conventional,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Creative,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Creative_patch_standard,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Creative_random_suppress0,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Creative_random_suppress1,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Creative_subtract_1,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Creative_suppress,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Effective,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Standard,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Standard_add_1,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Standard_patch_creative,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Standard_random0_1,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Standard_random1_1,1,1,1,1,0
+residual,heartbeat | wave | oscillator | function,Standard_suppress,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Boring,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Conventional,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Creative,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Creative_patch_standard,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Creative_random_suppress0,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Creative_random_suppress1,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Creative_subtract_1,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Creative_suppress,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Effective,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Standard,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Standard_add_1,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Standard_patch_creative,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Standard_random0_1,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Standard_random1_1,1,1,1,1,0
+residual,immune system | fire | organization | theorem,Standard_suppress,1,1,1,1,0

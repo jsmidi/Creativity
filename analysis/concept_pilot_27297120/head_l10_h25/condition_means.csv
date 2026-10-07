@@ -1,0 +1,15 @@
+Condition,Semantic_Distance_Proxy
+Conventional,0.7263225149774963
+Creative,0.8207791130408431
+Creative_patch_standard,0.7957173935271864
+Creative_random_suppress0,0.8207791109495136
+Creative_random_suppress1,0.7982981891391104
+Creative_subtract_1,0.8043892085856332
+Creative_suppress,0.7864272766391787
+Standard,0.7560405860259278
+Standard_add_1,0.7615489300275142
+Standard_high_temperature,0.7502806427439751
+Standard_patch_creative,0.7552238566046117
+Standard_random0_1,0.7506525875412178
+Standard_random1_1,0.7577562390647689
+Standard_suppress,0.7597590397756576

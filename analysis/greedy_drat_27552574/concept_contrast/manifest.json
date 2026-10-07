@@ -1,0 +1,25 @@
+{
+  "inputs": [
+    "outputs/greedy_drat_27552574/concept_contrast"
+  ],
+  "task": "drat",
+  "noun_vocabulary": "databases/association/nouns.txt",
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "device": "cuda",
+  "pool_size": 5000,
+  "baseline_draws": 500,
+  "seed": 42,
+  "output_dir": "analysis/greedy_drat_27552574/concept_contrast",
+  "protocol": "association-exploratory-v1",
+  "noun_sha256": "e8b9babcb49ff797f771ef43fd330a79944184592f386179cce4dc13b31d47f3",
+  "source_sha256": "b482610ad03ab0ace01c923e5b0180e573b3b959d40b75dd866923cf4b026d00",
+  "embedding_sha256": "244d83990c80bf207346d84c085566b67518aba1c695eac79d7ed50ea65c42c9",
+  "raw_files": {
+    "/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/concept_contrast/results_divergent_remote_association_test_20261004T182817_0bb7d3b1.csv": "d2fce28c03470f32353a8157197cd9f97d8f361ed5d889957b65ee9ada839b55"
+  },
+  "drat_quantile": 0.9,
+  "drat_minimum": 3,
+  "cdat_minimum": 7,
+  "validity": "WordNet noun-lemma whitelist; no POS tagger; first ten entries only",
+  "cdat_gate": "Welch on cue means versus random lists, BH within temperature, alpha .001"
+}

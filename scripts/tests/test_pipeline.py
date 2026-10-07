@@ -4,6 +4,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 import numpy as np
 import pandas as pd
 
@@ -14,7 +15,7 @@ from evaluate_dat import evaluate_dat_metrics, load_dat_frequency_database
 from evaluate_aut import prepare_ideas, evaluate_aut_metrics
 from activation_steer import validate_holdout
 from generate import query_model
-from analyze_effects import paired_effect
+from analyze_effects import paired_effect, main as analyze_main
 
 
 class FakeEmbedding:
@@ -38,6 +39,27 @@ class PipelineTests(unittest.TestCase):
         frame.loc[0, "Score"] = np.nan
         result = paired_effect(frame, "Score", "Creative", "Standard", draws=100)
         self.assertEqual(result["Incomplete_Pairs"], 1)
+
+    def test_four_control_cli_preserves_separate_paired_effects(self):
+        controls = ["Standard", "Effective", "Conventional", "Boring"]
+        rows = []
+        for item in ["book", "fork", "paperclip", "towel", "can"]:
+            for condition, score in [("Creative", 10)] + list(zip(controls, [1, 2, 3, 4])):
+                rows.append(dict(Model="test", Task="Alternative Uses Task", Run_ID="run",
+                                 Block_ID=item, Response_ID=f"{item}-{condition}",
+                                 Item=item, Condition=condition, Score=score))
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory)/"input.csv", Path(directory)/"effects.csv"
+            pd.DataFrame(rows).to_csv(source, index=False)
+            with patch.object(sys, "argv", ["analyze_effects", str(source), "--metric", "Score",
+                                           "--controls", *controls, "--draws", "100",
+                                           "--output", str(output)]), patch("builtins.print"):
+                analyze_main()
+            result = pd.read_csv(output)
+        self.assertEqual(result["Control"].tolist(), controls)
+        self.assertEqual(result["Mean_Difference"].tolist(), [9, 8, 7, 6])
+        self.assertEqual(result["Complete_Pairs"].tolist(), [5]*4)
+        self.assertEqual(result["Items"].tolist(), [5]*4)
 
     def test_schedule_replicates_and_seed_blocks(self):
         args = (["book", "can"], ["Standard", "Creative", "Conventional"], 4, [0, 1], 42)

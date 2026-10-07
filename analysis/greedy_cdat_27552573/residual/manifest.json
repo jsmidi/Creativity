@@ -1,0 +1,25 @@
+{
+  "inputs": [
+    "outputs/greedy_cdat_27552573/residual"
+  ],
+  "task": "cdat",
+  "noun_vocabulary": "databases/association/nouns.txt",
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "device": "cuda",
+  "pool_size": 5000,
+  "baseline_draws": 500,
+  "seed": 42,
+  "output_dir": "analysis/greedy_cdat_27552573/residual",
+  "protocol": "association-exploratory-v1",
+  "noun_sha256": "e8b9babcb49ff797f771ef43fd330a79944184592f386179cce4dc13b31d47f3",
+  "source_sha256": "b482610ad03ab0ace01c923e5b0180e573b3b959d40b75dd866923cf4b026d00",
+  "embedding_sha256": "b33c55bb9a4cd53ab599d154fcd257b89b03cb16e30511552ecd00397e88209b",
+  "raw_files": {
+    "/gpfs/home4/jsmidi/Creativity/outputs/greedy_cdat_27552573/residual/results_conditional_divergent_association_task_20261004T185041_65612bf4.csv": "5dcc2306229bc6360eefe435054ada90c6e464dd78a442f96f218dd5edc62eee"
+  },
+  "drat_quantile": 0.9,
+  "drat_minimum": 3,
+  "cdat_minimum": 7,
+  "validity": "WordNet noun-lemma whitelist; no POS tagger; first ten entries only",
+  "cdat_gate": "Welch on cue means versus random lists, BH within temperature, alpha .001"
+}

@@ -1,0 +1,1691 @@
+Protocol,Run_ID,Response_ID,Model,Task,Item,Split,Condition,Prompt_Condition,Instruction,Prompt,Paraphrase,Repeat,Block_ID,Generation_Seed,Request_Order,Temperature,Max_Tokens,Layer,Head,Intervention,Scope,Alpha,Random_Vector,Vector_Norm,Artifact_SHA256,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Source_File,Idea_Count,Unique_Idea_Count,Format_Valid
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:0,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|fork|p0|r1,633993050,0,0.7,800,16,,patch,prefill,1.0,-1,10.028202056884766,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. DIY photo display
+3. Wind chime component
+4. Emergency phone extension
+5. Pot lid rest
+6. Paint stirrer
+7. Pencil grip
+8. Plant marker in a garden
+9. Homemade bird perch
+10. Leveling tool for shelves",64,stop,72,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:1,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,1,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. DIY photo display
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. Wind chime component
+6. Mini bookmark
+7. Emergency bookmark
+8. Geometric art design element
+9. Mini sculpture base
+10. Windscreen wiper for small instruments",66,stop,73,1,66,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:2,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,2,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Cleaning dust and dirt from surfaces
+2. Drying plants after watering
+3. Protecting furniture from spills
+4. Creating a makeshift blind or curtain
+5. Polishing metal objects
+6. Drying off pets after a bath
+7. Wiping down exercise equipment
+8. Dusting ceiling fans and air vents
+9. Cleaning delicate glassware
+10. Creating a DIY photo drop cloth",85,stop,69,1,85,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:3,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,3,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY craft material
+5. Pencils or pens holder
+6. Wind chime component
+7. Zipper pull
+8. Bookmark
+9. Theater prop
+10. Sculpture material",59,stop,69,1,59,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:4,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,4,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Pencil holder
+5. Small planter for herbs
+6. Geometric art project
+7. Mini photo display stand
+8. Desk organizer for small items
+9. Scent diffuser holder
+10. Fairy garden decoration",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:5,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,5,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,70,1,65,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:6,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,6,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Photo display
+6. Scent diffuser
+7. Pencil holder
+8. Candle holder
+9. Bookend
+10. Vase",56,stop,69,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:7,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,7,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark
+2. Decorative object
+3. Paperweight
+4. Desk organizer
+5. Bookend
+6. Prop for photography or film
+7. Gift item
+8. Trivet or hotpad
+9. Craft material
+10. Sound dampener (for a room)",62,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:8,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,8,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Photo display
+6. Scent diffuser
+7. Pencil holder
+8. Candle holder
+9. Bookend
+10. Geometric decorative element",58,stop,69,1,58,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:9,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,9,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:10,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|book|p0|r1,1663533372,10,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Book as a planter
+2. Book as a decorative wall art
+3. Book as a desk organizer
+4. Book as a coaster
+5. Book as a photo album
+6. Book as a bookend
+7. Book as a unique gift wrap
+8. Book as a bookmark holder
+9. Book as a DIY decorative lamp
+10. Book as a statement piece in a shadow box",86,stop,72,1,86,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:11,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,11,0.7,800,16,,patch,prefill,1.0,-1,10.04969596862793,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Photo display
+6. Scent diffuser
+7. Pencil holder
+8. Candle holder
+9. Bookend
+10. Geometric decorative element",58,stop,69,1,58,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:12,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|can|p0|r1,1983745481,12,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime
+3. Bird feeder
+4. Picture frame
+5. Spoon rest
+6. Candle holder
+7. DIY planter
+8. Herb holder
+9. Bookend
+10. Geometric decoration",53,stop,69,1,53,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:13,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,1,Alternative Uses Task|book|p0|r1,1663533372,13,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:14,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,14,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool
+2. Drop cloth
+3. Painting surface
+4. Picnic blanket
+5. Sun glare reduction on car windshield
+6. Plant wrapping
+7. Photo prop
+8. DIY craft material
+9. Pet bed
+10. Emergency blanket",57,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:15,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,15,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. Camping ground cloth
+7. Drop cloth for spills
+8. DIY project work surface
+9. Craft project backing
+10. Drop cloth for painting small items",64,stop,69,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:16,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,16,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Coaster
+4. Plant marker
+5. Menu or price list
+6. Bookmark
+7. Photo display
+8. Gift for a new home
+9. Desk organizer
+10. Fire starter",55,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:17,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|book|p0|r1,1663533372,17,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Book as a planter
+2. Book as a decorative wall art
+3. Book as a desk organizer
+4. Book as a coaster
+5. Book as a photo album
+6. Book as a bookend
+7. Book as a unique gift wrap
+8. Book as a bookmark holder
+9. Book as a DIY decorative lamp
+10. Book as a statement piece in a shadow box",86,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:18,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,1,Alternative Uses Task|fork|p0|r1,633993050,18,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame holder
+5. Cord organizer
+6. Pencil holder
+7. Wind chime material
+8. Squirrel deterrent
+9. Small item display
+10. Bookstand",56,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:19,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,19,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. Camping ground cloth
+7. Drop cloth for spills
+8. DIY project work surface
+9. Craft project backing
+10. Drop cloth for painting small items",64,stop,69,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:20,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,20,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Pot lid holder
+4. DIY wind chime
+5. Sculpture material
+6. Bookmark
+7. Fishing lure
+8. Plant marker
+9. Page turner
+10. Photo display easel",57,stop,72,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:21,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,21,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,70,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:22,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|can|p0|r0,513058236,22,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Photo display
+6. Scent diffuser
+7. Pencil holder
+8. Candle holder
+9. Bookend
+10. Vase",56,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:23,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,23,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. DIY photo display
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. Wind chime component
+6. Mini bookmark
+7. Emergency bookmark
+8. Geometric art design element
+9. Mini sculpture base
+10. Windscreen wiper for small instruments",66,stop,73,1,66,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:24,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|book|p0|r0,1684191582,24,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark
+2. Decorative object
+3. Paperweight
+4. Desk organizer
+5. Coaster
+6. Prop for photography
+7. Room divider
+8. Sound dampener
+9. Crafting material
+10. Fire starter",52,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:25,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,1,Alternative Uses Task|book|p0|r1,1663533372,25,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:26,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,26,0.7,800,16,,patch,prefill,1.0,-1,10.10430145263672,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,70,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:27,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,27,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Car drying cloth
+5. Gym workspace mat
+6. Photo studio reflector
+7. DIY kit absorbent
+8. Arts and crafts material
+9. Dance rehearsal mat
+10. Outdoor cleaning rag",63,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:28,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,28,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:29,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|can|p0|r1,1983745481,29,0.7,800,16,,patch,prefill,1.0,-1,10.04969596862793,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. Bird feeder
+4. Pencil holder
+5. Art project material
+6. Photo display
+7. Bookend
+8. Candle holder
+9. Painting palette
+10. Garden ornament",54,stop,69,1,54,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:30,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|can|p0|r1,1983745481,30,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Craft material
+3. Science experiment tool
+4. Picture frame
+5. Spoon rest
+6. Rocksake coaster
+7. Sink strainer
+8. DIY wind chime component
+9. Mini garden edging
+10. Bird perch",58,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:31,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,31,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Pencil holder
+5. Small planter for herbs
+6. Geometric art project
+7. Mini photo display stand
+8. Desk organizer for small items
+9. Scent diffuser holder
+10. Fairy garden decoration",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:32,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,32,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool for small crevices
+2. Painting drop cloth
+3. Pet bedding
+4. Camping ground cloth
+5. DIY photo studio backdrop
+6. Emergency blanket
+7. Beach mat
+8. Pet grooming tool
+9. Craft project material
+10. DIY room divider",63,stop,72,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:33,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|book|p0|r0,1684191582,33,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark
+2. Decorative object
+3. Paperweight
+4. Desk organizer
+5. Coaster
+6. Prop for photography
+7. Room divider
+8. Sound dampener
+9. Weight for a bird's swing
+10. Art project base",57,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:34,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,34,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Cleaning dust and dirt from surfaces
+2. Drying plants after watering
+3. Protecting furniture from spills
+4. Creating a makeshift blind or curtain
+5. Polishing metal objects
+6. Drying off pets after a bath
+7. Wiping down exercise equipment
+8. Dusting ceiling fans and air vents
+9. Cleaning delicate glassware
+10. Creating a DIY photo drop cloth",85,stop,69,1,85,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:35,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|fork|p0|r1,633993050,35,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. DIY photo display
+3. Wind chime component
+4. Emergency phone extension
+5. Pot lid rest
+6. Paint stirrer
+7. Pencil grip
+8. Plant marker in a garden
+9. Homemade bird perch
+10. Leveling tool for shelves",64,stop,72,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:36,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,36,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY craft material
+5. Pencils or pens holder
+6. Wind chime component
+7. Zipper pull
+8. Bookmark
+9. Theater prop
+10. Sculpture material",59,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:37,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,37,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer on a keychain
+7. Small hook for hanging items
+8. Impromptu bag tie
+9. Weight for a small object
+10. Fishing line guide",74,stop,70,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:38,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,38,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark for a map
+2. Decorative center piece
+3. Weight for a plant
+4. Photo display
+5. Bookmark for a ticket
+6. Gift for a bookmark character
+7. Coaster for a small vase
+8. Desk organizer
+9. Prop for a photo shoot
+10. Wall hanging",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:39,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,39,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting palette
+3. Pet bed
+4. Picnic blanket
+5. Drop cloth
+6. Impromptu picnic tablecloth
+7. Emergency blanket
+8. DIY photo studio backdrop
+9. Plant wrap
+10. Tablecloth for DIY craft projects",62,stop,72,1,62,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:40,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|fork|p0|r1,633993050,40,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame hanger
+5. Temporary screwdriver
+6. Plant marker
+7. Pot lid rest
+8. Measuring stick
+9. Small tool handle
+10. Sculpture material",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:41,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,41,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Potentium holder
+4. DIY photo display
+5. Craft stick
+6. Pointer
+7. Wind chime
+8. Funataion marker
+9. Sculpture tool
+10. Mini easel",58,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:42,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|fork|p0|r1,633993050,42,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. DIY photo display
+3. Wind chime component
+4. Emergency phone extension
+5. Pot lid rest
+6. Paint stirrer
+7. Pencil grip
+8. Plant marker in a garden
+9. Homemade bird perch
+10. Leveling tool for shelves",64,stop,72,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:43,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,43,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool for small crevices
+2. Painting drop cloth
+3. Pet bedding
+4. Camping ground cloth
+5. DIY photo studio backdrop
+6. Emergency blanket
+7. Beach mat
+8. Pet grooming tool
+9. Craft project material
+10. DIY room divider",63,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:44,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|fork|p0|r1,633993050,44,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. DIY photo display
+3. Wind chime component
+4. Emergency phone extension
+5. Pot lid rest
+6. Paint stirrer
+7. Pencil grip
+8. Plant marker in a garden
+9. Homemade bird perch
+10. Leveling tool for shelves",64,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:45,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,45,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. DIY photo display
+4. Cord organizer
+5. Mini bookmark
+6. Emergency temporary repair for a broken chain
+7. Weights for a homemade bird feeder
+8. Miniature sculpture base
+9. Temporary fix for a wobbly table leg
+10. Miniature game piece",76,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:46,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,46,0.7,800,16,,patch,prefill,1.0,-1,10.10430145263672,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,70,1,65,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:47,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,47,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Photo display
+6. Scent diffuser
+7. Pencil holder
+8. Candle holder
+9. Bookend
+10. Vase",56,stop,69,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:48,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,48,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,70,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:49,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|book|p0|r1,1663533372,49,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:50,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,50,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:51,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,51,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,70,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:52,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|can|p0|r0,513058236,52,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Pencil holder
+5. Small planter
+6. Candle holder
+7. Gift box container
+8. Centerpiece
+9. Bookend
+10. Photo display",56,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:53,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|book|p0|r1,1663533372,53,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Book as a planter
+2. Book as a decorative wall art
+3. Book as a desk organizer
+4. Book as a coaster
+5. Book as a photo album
+6. Book as a bookend
+7. Book as a unique gift wrap
+8. Book as a bookmark holder
+9. Book as a DIY decorative lamp
+10. Book as a statement piece in a shadow box",86,stop,72,1,86,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:54,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,54,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. DIY photo display
+4. Cord organizer
+5. Mini bookmark
+6. Emergency temporary repair for a broken chain
+7. Weights for a drapery cord
+8. Geometric art piece
+9. Wind chime attachment
+10. Miniature sculpture base",72,stop,73,1,72,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:55,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,55,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool for small crevices
+2. Painting drop cloth
+3. Pet bedding
+4. Camping ground cloth
+5. DIY photo studio backdrop
+6. Emergency blanket
+7. Beach mat
+8. Pet grooming tool
+9. Craft project material
+10. DIY room divider",63,stop,72,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:56,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,56,0.7,800,16,,patch,prefill,1.0,-1,10.041805267333984,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark for a map
+2. Decorative center piece
+3. Weight for a plant
+4. Photo display
+5. Bookmark for a ticket
+6. Gift for a bookmark character
+7. Coaster for a small vase
+8. Desk organizer
+9. Prop for a photo shoot
+10. Wall hanging",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:57,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,57,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. Camping ground cloth
+7. Drop cloth for spills
+8. DIY project work surface
+9. Craft project backing
+10. Drop cloth for painting small items",64,stop,69,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:58,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|can|p0|r1,1983745481,58,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime
+3. Bird feeder
+4. Picture frame
+5. Spoon rest
+6. Candle holder
+7. DIY planter
+8. Herb holder
+9. Shelf liner
+10. Geometric decoration",53,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:59,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,59,0.7,800,16,,patch,prefill,1.0,-1,9.913128852844238,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Pencil holder
+5. Small planter for herbs
+6. Geometric art project
+7. Mini photo display stand
+8. Desk organizer for small items
+9. Scent diffuser holder
+10. Fairy garden decoration",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:60,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,60,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY sculpture material
+5. Pencils or pens holder
+6. Wind chime component
+7. Zipper pull
+8. Bookmark
+9. Theater prop
+10. Sculpture base",59,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:61,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|fork|p0|r1,633993050,61,0.7,800,16,,patch,prefill,1.0,-1,10.068849563598633,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame hanger
+5. Temporary screwdriver
+6. Plant marker
+7. Pot lid rest
+8. Measuring stick
+9. Small tool handle
+10. Sculpture material",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:62,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,62,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Photo clip
+5. DIY stamp
+6. Gadget holder
+7. Mini bookmark
+8. Stud or screw holder
+9. Phone stand
+10. Magnifying glass holder",56,stop,70,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:63,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|book|p0|r1,1663533372,63,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Journal
+4. Sketchbook
+5. Marker holder
+6. Bookmark
+7. Gift
+8. Paper plate in a emergency
+9. Prop for photography or theater
+10. Desk organizer",54,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:64,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,64,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool for small crevices
+2. Painting drop cloth
+3. Pet bedding
+4. Camping ground cloth
+5. DIY photo studio backdrop
+6. Emergency blanket
+7. Beach mat
+8. Pet grooming tool
+9. Craft project material
+10. DIY room divider",63,stop,72,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:65,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,65,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,70,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:66,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,1,Alternative Uses Task|fork|p0|r1,633993050,66,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame hanger
+5. Temporary screwdriver
+6. Plant marker
+7. Pot lid rest
+8. Measuring stick
+9. Small tool handle
+10. Wedge for opening packages",59,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:67,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,67,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Photo display
+6. Scent diffuser
+7. Pencil holder
+8. Candle holder
+9. Bookend
+10. Vase",56,stop,69,1,56,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:68,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|book|p0|r0,1684191582,68,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Paperweight
+2. Decorative item
+3. Coaster
+4. Trivet
+5. Desk organizer
+6. Bookmark
+7. Gift tag
+8. Scrapbook filler
+9. Fire starter
+10. Prop for photography",52,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:69,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,69,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Bookmark
+7. Temporary repair for a torn page
+8. Fishing line weight
+9. Emergency phone stand
+10. Mini photo display",61,stop,73,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:70,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,1,Alternative Uses Task|can|p0|r1,1983745481,70,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Craft material
+3. Wind chime component
+4. Pencil holder
+5. Bookmark
+6. DIY picture frame
+7. Small hammer
+8. Desk organizer
+9. Geometric art piece
+10. Bookend",55,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:71,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,71,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Potentium holder
+4. DIY photo display
+5. Sculpture material
+6. Dog nail scratcher
+7. Wind chime component
+8. Geometric art
+9. Bookend
+10. Microphone stand",61,stop,72,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:72,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|can|p0|r1,1983745481,72,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Picture frame weight
+5. Homemade loom
+6. Cold pack
+7. Sensory toy
+8. Geometric sculpture
+9. Macrame project base
+10. Birdhouse roof support",61,stop,72,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:73,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|can|p0|r0,513058236,73,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookend
+2. Planter
+3. Picture frame
+4. Candle holder
+5. Desk organizer
+6. Magazine rack
+7. Doorstop
+8. Pencil holder
+9. Centerpiece
+10. Wall decoration",51,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:74,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,74,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool
+2. Painting palette pad
+3. Cleaning cloth for electronics
+4. Polishing cloth for jewelry
+5. Drool cloth for pets
+6. Wipe for gym equipment
+7. Cleaning cloth for sunglasses
+8. Drying cloth for art supplies
+9. Wipe for musical instruments
+10. Cleaning cloth for eyeglasses",76,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:75,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,75,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. Camping ground cloth
+7. Drop cloth for spills
+8. DIY project work surface
+9. Craft project backing
+10. Drop cloth for painting small items",64,stop,69,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:76,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|can|p0|r1,1983745481,76,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Picture frame weight
+5. Homemade loom
+6. Cold pack
+7. Sensory toy
+8. Geometric sculpture
+9. Macrame project base
+10. Birdhouse roof support",61,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:77,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,77,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,70,1,65,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:78,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|book|p0|r1,1663533372,78,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Book as a planter
+2. Book as a decorative wall art
+3. Book as a desk organizer
+4. Book as a coaster
+5. Book as a photo album
+6. Book as a bookend
+7. Book as a unique gift wrap
+8. Book as a bookmark holder
+9. Book as a DIY decorative lamp
+10. Book as a bookmark for a musical composition",85,stop,72,1,85,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:79,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,79,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Camping ground cloth
+6. Drop cloth for furniture moving
+7. DIY project cover
+8. Pet bed
+9. Outdoor picnic tablecloth
+10. Drop cloth for cleaning spills",63,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:80,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|book|p0|r1,1663533372,80,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,69,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:81,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,81,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting palette
+3. Pet bed
+4. Picnic blanket
+5. Drop cloth
+6. Impromptu picnic tablecloth
+7. Emergency blanket
+8. DIY photo studio backdrop
+9. Plant wrap
+10. Tablecloth for DIY craft projects",62,stop,72,1,62,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:82,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,82,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark for a map
+2. Decorative center piece
+3. Weight for a plant
+4. Photo display
+5. Bookmark for a ticket
+6. Gift for a bookmark character
+7. Coaster for a small vase
+8. Desk organizer
+9. Prop for a photo shoot
+10. Wall hanging",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:83,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,83,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:84,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,84,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY sculpture
+5. Picture hanger
+6. Plant marker
+7. Cord organizer
+8. Pencil holder
+9. Candle holder
+10. Theater prop",53,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:85,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,85,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Photo display
+6. Scent diffuser
+7. Pencil holder
+8. Candle holder
+9. Bookend
+10. Geometric decorative element",58,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:86,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,86,0.7,800,16,,patch,prefill,1.0,-1,10.120038986206056,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. Camping ground cloth
+7. Drop cloth for spills
+8. DIY project work surface
+9. Craft project backing
+10. Drop cloth for painting small items",64,stop,69,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:87,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,87,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Pot lid holder
+4. DIY wind chime
+5. Sculpture material
+6. Dog toy
+7. Fishing lure
+8. Bookend
+9. Music instrument
+10. Photo display",55,stop,72,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:88,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,1,Alternative Uses Task|book|p0|r1,1663533372,88,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Paperweight
+2. Decorative item
+3. Desk organizer
+4. Gift for someone
+5. Storage for small items
+6. Weight for a picture frame
+7. Prop for a photo shoot
+8. Place card holder
+9. Desk calendar base
+10. Plant stand",62,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:89,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,89,0.7,800,16,,patch,prefill,1.0,-1,10.055152893066406,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool for small crevices
+2. Painting drop cloth
+3. Pet bedding
+4. Camping ground cloth
+5. DIY photo studio backdrop
+6. Emergency blanket
+7. Beach mat
+8. Pet grooming tool
+9. Craft project material
+10. DIY room divider",63,stop,72,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:90,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,90,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Bookmark
+7. Temporary repair for a torn page
+8. Fishing line weight
+9. Emergency phone stand
+10. Mini photo display",61,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:91,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,91,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Camping ground cloth
+6. Drop cloth for furniture moving
+7. DIY project cover
+8. Pet bed
+9. Outdoor picnic tablecloth
+10. Drop cloth for cleaning spills",63,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:92,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|can|p0|r1,1983745481,92,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime
+3. Bird feeder
+4. Picture frame
+5. Spoon rest
+6. Candle holder
+7. DIY planter
+8. Herb holder
+9. Bookend
+10. Geometric decoration",53,stop,69,1,53,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:93,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,93,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting palette
+3. Pet bed
+4. Picnic blanket
+5. Drop cloth
+6. Impromptu picnic tablecloth
+7. Emergency blanket
+8. DIY photo studio backdrop
+9. Plant wrap
+10. Tablecloth for DIY craft projects",62,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:94,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,94,0.7,800,16,,patch,prefill,1.0,-1,10.055152893066406,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Beach umbrella stand
+5. Impromptu scarf
+6. Drop cloth for small projects
+7. Photo prop
+8. DIY craft material
+9. Cover for outdoor furniture
+10. Sailing sheet cover",64,stop,72,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:95,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,95,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Cleaning rags
+3. Painting drop cloth
+4. Window cleaning
+5. Polishing metal
+6. Absorbing spills
+7. Gym towel
+8. Beach blanket
+9. Picnic blanket
+10. Drop cloth for oil changes",60,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:96,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,96,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. Camping ground cloth
+7. Drop cloth for spills
+8. DIY project work surface
+9. Craft project backing
+10. Drop cloth for painting small items",64,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:97,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,97,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool for small crevices
+2. Painting drop cloth
+3. Pet bedding
+4. Camping ground cloth
+5. DIY photo studio backdrop
+6. Emergency blanket
+7. Beach mat
+8. Pet grooming tool
+9. Craft project material
+10. DIY room divider",63,stop,72,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:98,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,98,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool
+2. Painting palette pad
+3. Cleaning cloth for electronics
+4. Polishing metal surfaces
+5. Dropping cloth for spills
+6. Improvised photography diffuser
+7. Cleaning pet paws
+8. Styling hair or mustache
+9. Wiping down bike chains
+10. Protecting furniture from dust",74,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:99,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|book|p0|r1,1663533372,99,0.7,800,16,,patch,prefill,1.0,-1,10.041805267333984,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Book as a planter
+2. Book as a decorative wall art
+3. Book as a desk organizer
+4. Book as a coaster
+5. Book as a photo album
+6. Book as a bookend
+7. Book as a unique gift wrap
+8. Book as a bookmark holder
+9. Book as a DIY decorative lamp
+10. Book as a statement piece in a shadow box",86,stop,72,1,86,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:100,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,100,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper pull
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Bookmark
+7. Temporary repair for a torn page
+8. Fishing line weight
+9. Emergency phone cord repair
+10. Wind chime component",63,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:101,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,101,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting palette
+3. Pet bed
+4. Picnic blanket
+5. Drop cloth
+6. Impromptu picnic tablecloth
+7. Emergency blanket
+8. DIY photo studio backdrop
+9. Plant wrap
+10. Tablecloth for DIY craft projects",62,stop,72,1,62,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:102,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|can|p0|r1,1983745481,102,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime
+3. Bird feeder
+4. Picture frame
+5. Spoon rest
+6. Candle holder
+7. DIY planter
+8. Herb holder
+9. Bookend
+10. Geometric decoration",53,stop,69,1,53,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:103,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,103,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,70,1,65,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:104,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|book|p0|r1,1663533372,104,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,69,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:105,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,105,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. DIY photo display
+4. Cord organizer
+5. Mini bookmark
+6. Emergency temporary repair for a broken chain
+7. Weights for a homemade bird feeder
+8. Miniature sculpture base
+9. Temporary fix for a wobbly table leg
+10. Miniature game piece",76,stop,73,1,76,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:106,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,106,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Pot lid holder
+4. DIY wind chime
+5. Sculpture material
+6. Dog toy
+7. Fishing lure
+8. Bookend
+9. Music instrument
+10. Photo display",55,stop,72,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:107,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,107,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. DIY photo display
+4. Cord organizer
+5. Mini bookmark
+6. Emergency temporary repair for a broken chain
+7. Weights for a homemade bird feeder
+8. Miniature sculpture base
+9. Temporary fix for a wobbly table leg
+10. Miniature game piece",76,stop,73,1,76,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:108,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,108,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,70,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:109,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,109,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Cleaning dust and dirt from surfaces
+2. Drying plants after watering
+3. Protecting furniture from spills
+4. Creating a makeshift blind or curtain
+5. Polishing metal objects
+6. Drying off pets after a bath
+7. Wiping down exercise equipment
+8. Dusting ceiling fans and air vents
+9. Cleaning delicate glassware
+10. Creating a DIY photo drop cloth",85,stop,69,1,85,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:110,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,110,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY craft material
+5. Pencils or pens holder
+6. Wind chime component
+7. Zipper pull
+8. Bookmark
+9. Theater prop
+10. Sculpture material",59,stop,69,1,59,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:111,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|can|p0|r1,1983745481,111,0.7,800,16,,patch,prefill,1.0,-1,9.913128852844238,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Picture frame weight
+5. Homemade loom
+6. Cold pack
+7. Sensory toy
+8. Geometric sculpture
+9. Macrame project base
+10. Birdhouse roof support",61,stop,72,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:112,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,112,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Coaster
+4. Plant marker
+5. Menu or price list
+6. Bookmark
+7. Photo display
+8. Gift for a new home
+9. Desk organizer
+10. Fire starter",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:113,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,113,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. DIY craft material
+7. Drop cloth for spills
+8. Beach umbrella stand
+9. Outdoor picnic tablecloth
+10. Curtain or drapes in a temporary setting",66,stop,72,1,66,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:114,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_random_suppress1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,114,0.7,800,16,,suppress,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark for a map
+2. Decorative center piece
+3. Weight for a plant
+4. Photo display
+5. Bookmark for a ticket
+6. Gift for a bookmark character
+7. Coaster for a small vase
+8. Desk organizer
+9. Prop for a photo shoot
+10. Wall hanging",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:115,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Boring,Boring,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be boring.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,115,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer on a keychain
+7. Small item retriever from tight spaces
+8. Cord wrap
+9. Temporary patch for a torn page
+10. Craft supply for making sculptures",76,stop,73,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:116,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|fork|p0|r1,633993050,116,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame hanger
+5. Temporary screwdriver
+6. Plant marker
+7. Pot lid rest
+8. Measuring stick
+9. Small tool handle
+10. Sculpture material",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:117,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,117,0.7,800,16,,patch,prefill,1.0,-1,10.062596321105955,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Bookmark
+7. Temporary repair for a torn page
+8. Fishing line weight
+9. Emergency phone cord repair
+10. Wind chime component",63,stop,73,1,63,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:118,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_add_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,118,0.7,800,16,,add,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Coaster
+4. Plant marker
+5. Menu or price list
+6. Bookmark
+7. Photo display
+8. Gift for a new home
+9. Desk organizer
+10. Fire starter",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:119,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,119,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Cleaning dust and dirt from surfaces
+2. Drying plants after watering
+3. Protecting furniture from spills
+4. Creating a makeshift blind or curtain
+5. Polishing metal objects
+6. Drying off pets after a bath
+7. Wiping down exercise equipment
+8. Dusting ceiling fans and air vents
+9. Cleaning delicate glassware
+10. Creating a DIY photo drop cloth",85,stop,69,1,85,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:120,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,120,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Pot lid holder
+4. DIY wind chime
+5. Sculpture material
+6. Dog toy
+7. Fishing lure
+8. Bookend
+9. Music instrument
+10. Photo display",55,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:121,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,121,0.7,800,16,,patch,prefill,1.0,-1,10.062596321105955,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. DIY photo display
+4. Cord organizer
+5. Mini bookmark
+6. Emergency temporary repair for a broken chain
+7. Weights for a homemade bird feeder
+8. Miniature sculpture base
+9. Temporary fix for a wobbly table leg
+10. Miniature game piece",76,stop,73,1,76,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:122,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,122,0.7,800,16,,patch,prefill,1.0,-1,10.068849563598633,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY craft material
+5. Pencils or pens holder
+6. Wind chime component
+7. Zipper pull
+8. Bookmark
+9. Theater prop
+10. Sculpture material",59,stop,69,1,59,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:123,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,123,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Pencil holder
+5. Small planter for herbs
+6. Geometric art project
+7. Mini photo display stand
+8. Desk organizer for small items
+9. Scent diffuser holder
+10. Fairy garden decoration",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:124,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_patch_standard,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,124,0.7,800,16,,patch,prefill,1.0,-1,10.028202056884766,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Pot lid holder
+4. DIY wind chime
+5. Sculpture material
+6. Dog toy
+7. Fishing lure
+8. Bookend
+9. Music instrument
+10. Photo display",55,stop,72,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:125,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,125,0.7,800,16,,patch,prefill,1.0,-1,10.09040069580078,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Coaster
+4. Plant marker
+5. Menu or price list
+6. Bookmark
+7. Photo display
+8. Gift for a new home
+9. Desk organizer
+10. Fire starter",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:126,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|fork|p0|r1,633993050,126,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame hanger
+5. Temporary screwdriver
+6. Plant marker
+7. Pot lid rest
+8. Measuring stick
+9. Small tool handle
+10. Sculpture material",57,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:127,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,1,Alternative Uses Task|can|p0|r1,1983745481,127,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Craft material
+3. Wind chime component
+4. Pencil holder
+5. Bookmark
+6. DIY photo display
+7. Small hammer
+8. Desk organizer
+9. Bird feeder
+10. Guitar slide",53,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:128,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|can|p0|r1,1983745481,128,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Picture frame weight
+5. Homemade loom
+6. Cold pack
+7. Sensory toy
+8. Geometric sculpture
+9. Macrame project base
+10. Birdhouse roof support",61,stop,72,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:129,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,129,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. DIY photo display
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. Wind chime component
+6. Mini bookmark
+7. Emergency bookmark
+8. Geometric art design element
+9. Mini sculpture base
+10. Windscreen wiper for small instruments",66,stop,73,1,66,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:130,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,1,Alternative Uses Task|can|p0|r1,1983745481,130,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime
+3. DIY photo display
+4. Pencil holder
+5. Bird feeder
+6. Coat rack
+7. Candle holder
+8. Herb garden
+9. Birdhouse
+10. Bookend",53,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:131,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,131,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY craft material
+5. Pencils or pens holder
+6. Wind chime component
+7. Zipper pull
+8. Bookmark
+9. Theater prop
+10. Sculpture material",59,stop,69,1,59,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:132,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,132,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Pencil holder
+5. Small planter for herbs
+6. Geometric art project
+7. Mini photo display stand
+8. Desk organizer for small items
+9. Scent diffuser holder
+10. Fairy garden decoration",68,stop,72,1,68,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:133,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|paperclip|p0|r1,231722278,133,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Zipper slider
+3. Cord organizer
+4. Temporary fix for a broken zipper
+5. DIY jewelry
+6. Picture frame clip
+7. Bookmarks
+8. Cable tie
+9. Temporary fix for a broken chain
+10. Emergency repair for a broken spectacle frame",65,stop,70,1,65,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:134,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|can|p0|r1,1983745481,134,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Picture frame weight
+5. Homemade loom
+6. Cold pack
+7. Sensory toy
+8. Geometric sculpture
+9. Macrame project base
+10. Birdhouse roof support",61,stop,72,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:135,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,135,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. DIY craft material
+5. Pencils or pens holder
+6. Wind chime component
+7. Zipper pull
+8. Bookmark
+9. Theater prop
+10. Sculpture material",59,stop,69,1,59,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:136,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,136,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark for a map
+2. Decorative center piece
+3. Weight for a plant
+4. Photo display
+5. Bookmark for a ticket
+6. Gift for a bookmark character
+7. Coaster for a small vase
+8. Desk organizer
+9. Prop for a photo shoot
+10. Wall hanging",68,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:137,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,137,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. Coating remover for small areas
+4. DIY photo display
+5. Emergency cord organizer
+6. Jewelry organizer
+7. Cord wrap
+8. Polishing metal objects
+9. Fixing a torn page
+10. Wind chime component",67,stop,70,1,67,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:138,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,1,Alternative Uses Task|towel|p0|r1,1869708123,138,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting cloth
+2. Painting drop cloth
+3. Picnic blanket
+4. Gym mat
+5. Photography diffuser
+6. Camping ground cloth
+7. Drop cloth for spills
+8. DIY project work surface
+9. Craft project backing
+10. Drop cloth for painting small items",64,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:139,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|fork|p0|r1,633993050,139,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame hanger
+5. Temporary screwdriver
+6. Plant marker
+7. Pot lid rest
+8. Measuring stick
+9. Small tool handle
+10. Sculpture material",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:140,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,140,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Dusting tool
+2. Clean rag for polishing
+3. Incorporated in crafting projects
+4. Used as drop cloths
+5. DIY collars for homemade pet costumes
+6. Makeshift binding for torn pages
+7. Mascara remover
+8. Wipe down electrical appliances
+9. Exercise sweat-wicking garment liner
+10. DIY pompoms for decorations",78,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:141,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|can|p0|r1,1983745481,141,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime
+3. Bird feeder
+4. Picture frame
+5. Spoon rest
+6. Candle holder
+7. DIY planter
+8. Herb holder
+9. Bookend
+10. Geometric decoration",53,stop,69,1,53,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:142,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Effective,Effective,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be effective.",0,1,Alternative Uses Task|fork|p0|r1,633993050,142,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. DIY photo display
+3. Wind chime
+4. Zipper pull
+5. Bookmark
+6. Pencil holder
+7. Potpourri holder
+8. Hair accessory
+9. Small tool for crafting
+10. Drumming instrument",58,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:143,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|can|p0|r1,1983745481,143,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Picture frame weight
+5. Homemade loom
+6. Cold pack
+7. Sensory toy
+8. Geometric sculpture
+9. Macrame project base
+10. Birdhouse roof support",61,stop,72,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:144,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Creative,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|can|p0|r0,513058236,144,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Wind chime component
+3. DIY bird feeder
+4. Pencil holder
+5. Small planter for herbs
+6. Geometric pattern maker
+7. Mini photo display stand
+8. Desk organizer for small items
+9. Scent diffuser holder
+10. Mini sculpture base",68,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:145,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|fork|p0|r1,633993050,145,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Stirrer for sauces
+3. Chisel for wood
+4. Scoring tool for wood
+5. Exfoliating tool
+6. Phone stand
+7. Seed starter
+8. Mini measuring cup
+9. DIY mountain stone polish
+10. Leveling tool",63,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:146,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|fork|p0|r1,633993050,146,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Bookmark
+3. DIY craft material
+4. Picture frame hanger
+5. Temporary screwdriver
+6. Plant marker
+7. Pot lid rest
+8. Measuring stick
+9. Small tool handle
+10. Sculpture material",57,stop,69,1,57,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:147,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|book|p0|r1,1663533372,147,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,69,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:148,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_random0_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,148,0.7,800,16,,add,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Coaster
+4. Plant marker
+5. Menu or price list
+6. Bookmark
+7. Photo display
+8. Gift for a new home
+9. Desk organizer
+10. Fire starter",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:149,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_random1_1,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|book|p0|r0,1684191582,149,0.7,800,16,,add,prefill,1.0,1,0.609702467918396,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Coaster
+4. Plant marker
+5. Menu or price list
+6. Bookmark
+7. Photo display
+8. Gift for a new home
+9. Desk organizer
+10. Fire starter",55,stop,69,1,55,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:150,models/Llama-3.1-8B-Instruct,Alternative Uses Task,towel,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object towel other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|towel|p0|r0,1859035831,150,0.7,800,16,,patch,prefill,1.0,-1,10.120038986206056,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Cleaning dust and dirt from surfaces
+2. Drying plants after watering
+3. Protecting furniture from spills
+4. Creating a makeshift blind or curtain
+5. Polishing metal objects
+6. Drying off pets after a bath
+7. Wiping down exercise equipment
+8. Dusting ceiling fans and air vents
+9. Cleaning delicate glassware
+10. Creating a DIY photo drop cloth",85,stop,69,1,85,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:151,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|book|p0|r1,1663533372,151,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Book as a planter
+2. Book as a decorative wall art
+3. Book as a desk organizer
+4. Book as a coaster
+5. Book as a photo album
+6. Book as a bookend
+7. Book as a unique gift wrap
+8. Book as a bookmark holder
+9. Book as a DIY decorative lamp
+10. Book as a statement piece in a shadow box",86,stop,72,1,86,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:152,models/Llama-3.1-8B-Instruct,Alternative Uses Task,can,validation,Standard_high_temperature,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object can other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,0,Alternative Uses Task|can|p0|r0,513058236,152,1.0,800,16,,temperature,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Wind chime component
+3. DIY craft material
+4. Bird feeder
+5. Potpourri container
+6. Candle holder
+7. Pencil holder
+8. Water feature decoration
+9. Succulent planter
+10. Birdhouse attachment",60,stop,69,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:153,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_suppress,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|book|p0|r1,1663533372,153,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,69,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:154,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Conventional,Conventional,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be conventional.",0,0,Alternative Uses Task|fork|p0|r0,2084629211,154,0.7,800,16,,none,prefill,0.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. Measuring tool
+3. Mixing spoon
+4. Picture frame
+5. Bookend
+6. Pencil holder
+7. DIY craft material
+8. Gardening tool
+9. Sculpture base
+10. Photo display",55,stop,72,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:155,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_suppress,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|fork|p0|r1,633993050,155,0.7,800,16,,suppress,prefill,1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. DIY photo display
+3. Wind chime component
+4. Emergency phone extension
+5. Pot lid rest
+6. Paint stirrer
+7. Pencil grip
+8. Plant marker in a garden
+9. Homemade bird perch
+10. Leveling tool for shelves",64,stop,72,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:156,models/Llama-3.1-8B-Instruct,Alternative Uses Task,fork,validation,Creative_random_suppress0,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object fork other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,1,Alternative Uses Task|fork|p0|r1,633993050,156,0.7,800,16,,suppress,prefill,1.0,0,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant label
+2. DIY photo display
+3. Wind chime component
+4. Emergency phone extension
+5. Pot lid rest
+6. Paint stirrer
+7. Pencil grip
+8. Plant marker in a garden
+9. Homemade bird perch
+10. Leveling tool for shelves",64,stop,72,1,64,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:157,models/Llama-3.1-8B-Instruct,Alternative Uses Task,paperclip,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object paperclip other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|paperclip|p0|r0,882287540,157,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Plant marker
+2. Temporary fix for a broken zipper
+3. DIY photo display
+4. Cord organizer
+5. Mini bookmark
+6. Emergency temporary repair for a broken chain
+7. Weights for a drapery cord
+8. Geometric art piece
+9. Wind chime attachment
+10. Miniature sculpture base",72,stop,73,1,72,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:158,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Creative_subtract_1,Creative,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.
+Be creative.",0,0,Alternative Uses Task|book|p0|r0,1684191582,158,0.7,800,16,,add,prefill,-1.0,-1,0.6097024083137512,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Bookmark for a map
+2. Decorative center piece
+3. Weight for a plant
+4. Insulation in a microwave
+5. Waterproof container for small items
+6. Desk organizer for keys
+7. Prop for photography
+8. Homemade picture frame
+9. Coaster for hot dishes
+10. Wind chime component",71,stop,72,1,71,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True
+creativity-v2,20260930T141748_cdba3eec,20260930T141748_cdba3eec:159,models/Llama-3.1-8B-Instruct,Alternative Uses Task,book,validation,Standard_patch_creative,Standard,"List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.","List exactly 10 uses for the object book other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.",0,1,Alternative Uses Task|book|p0|r1,1663533372,159,0.7,800,16,,patch,prefill,1.0,-1,10.09040069580078,9affbf97016e715d84c0a5fcca89b6004365dbddbf6c43aec3cbe85676f74553,"1. Decorative item
+2. Paperweight
+3. Desk organizer
+4. Gift for someone
+5. Prop for photography
+6. Display of artwork
+7. Bookend
+8. Stash for small items
+9. Mood booster with sentimental value
+10. Emergency fire starter",61,stop,69,1,61,ok,/gpfs/home4/jsmidi/Creativity/outputs/concept_pilot_27409581/contrast/results_alternative_uses_task_20260930T141748_cdba3eec.csv,10,10,True

@@ -1,0 +1,2 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Standard_add_1,Standard,0.005508344001586368,-0.008126984407417659,0.018913640261745968,4,0,2,item and paired-generation bootstrap,2000,42

@@ -31,6 +31,20 @@ def get_task_config(task_name=None):
                 "the feeling of learning a difficult, highly complex new skill"
             ]
         },
+        "Conditional Divergent Association Task": {
+            "instruction": "List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",
+            # Exploratory cues, not the published 500-cue benchmark.
+            "items": ["music", "river", "school", "light", "food", "time", "plant", "city", "machine", "art"]
+        },
+        "Divergent Remote Association Test": {
+            "instruction": "List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",
+            # First five scientific anchor sets, Schapiro et al. (2026), Appendix F.3.
+            "items": ["heart | engine | marketplace | equation",
+                      "immune system | fire | organization | theorem",
+                      "evolution | friction | election | polynomial",
+                      "genome | lattice | algorithm | court",
+                      "heartbeat | wave | oscillator | function"]
+        },
         "Divergent Association Task": {
             "instruction": "Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",
             "items": [

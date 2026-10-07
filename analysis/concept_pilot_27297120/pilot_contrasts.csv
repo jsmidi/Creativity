@@ -1,0 +1,16 @@
+Candidate,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+creative_mean,Semantic_Distance_Proxy,Creative,Standard,0.06473851797514862,0.042171700871510454,0.09046841573913827,4,0,2,item and paired-generation bootstrap,2000,42
+creative_mean,Semantic_Distance_Proxy,Standard_add_1,Standard,-0.0017562777854263079,-0.015790667109223194,0.011155351445092582,4,0,2,item and paired-generation bootstrap,2000,42
+creative_mean,Semantic_Distance_Proxy,Standard_add_1,Standard_random0_1,2.263096376964313e-10,-1.2609380206640708e-09,1.3630178097301382e-09,4,0,2,item and paired-generation bootstrap,2000,42
+creative_mean,Semantic_Distance_Proxy,Standard_add_1,Standard_random1_1,0.0036317188358346852,-0.0009502756109024124,0.011845427253674295,4,0,2,item and paired-generation bootstrap,2000,42
+creative_mean,Semantic_Distance_Proxy,Creative_suppress,Creative,-0.017892189628827604,-0.05021981328928346,-1.034269891952988e-10,4,0,2,item and paired-generation bootstrap,2000,42
+contrast,Semantic_Distance_Proxy,Creative,Standard,0.06473852492063248,0.04217170417134675,0.09046842600743835,4,0,2,item and paired-generation bootstrap,2000,42
+contrast,Semantic_Distance_Proxy,Standard_add_1,Standard,-0.010643957842246338,-0.021287924805231395,9.120738719836652e-09,4,0,2,item and paired-generation bootstrap,2000,42
+contrast,Semantic_Distance_Proxy,Standard_add_1,Standard_random0_1,-0.015840977422412056,-0.032315475375150615,0.0006335205303265035,4,0,2,item and paired-generation bootstrap,2000,42
+contrast,Semantic_Distance_Proxy,Standard_add_1,Standard_random1_1,-0.014362406009332862,-0.028724821734841033,9.716175308760455e-09,4,0,2,item and paired-generation bootstrap,2000,42
+contrast,Semantic_Distance_Proxy,Creative_suppress,Creative,-0.0011522518351126387,-0.0034567553079457303,0.0,4,0,2,item and paired-generation bootstrap,2000,42
+head_l10_h25,Semantic_Distance_Proxy,Creative,Standard,0.06473852701491514,0.04217171363155353,0.09046842150458437,4,0,2,item and paired-generation bootstrap,2000,42
+head_l10_h25,Semantic_Distance_Proxy,Standard_add_1,Standard,0.005508344001586368,-0.008126984407417659,0.018913640261745968,4,0,2,item and paired-generation bootstrap,2000,42
+head_l10_h25,Semantic_Distance_Proxy,Standard_add_1,Standard_random0_1,0.010896342486296479,1.737168742188544e-10,0.022373087272031328,4,0,2,item and paired-generation bootstrap,2000,42
+head_l10_h25,Semantic_Distance_Proxy,Standard_add_1,Standard_random1_1,0.0037926909627453986,-0.005837036989271099,0.01721510781605573,4,0,2,item and paired-generation bootstrap,2000,42
+head_l10_h25,Semantic_Distance_Proxy,Creative_suppress,Creative,-0.03435183640166434,-0.06870367267173388,-1.3159479061997104e-10,4,0,2,item and paired-generation bootstrap,2000,42

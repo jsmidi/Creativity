@@ -1,0 +1,796 @@
+Protocol,Run_ID,Response_ID,Model,Task,Item,Split,Condition,Prompt_Condition,Instruction,Prompt,Paraphrase,Repeat,Block_ID,Generation_Seed,Request_Order,Temperature,Max_Tokens,Top_P,Top_K,Layer,Head,Intervention,Scope,Alpha,Random_Vector,Vector_Norm,Artifact_SHA256,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Source_File,Parsed_Words,Valid_Nouns,Format_Valid,DRAT_Score,Utility_Threshold,Survivors,Utilities
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:0,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Creative,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,0,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Bridge
+2. Matrix
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Scaffold
+9. Framework
+10. Blueprint",40,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""bridge"", ""matrix"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""scaffold"", ""framework"", ""blueprint""]",10,True,67.14270162522948,0.2985850564165134,8,"[0.33371776404319936, 0.35485660178679, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3328115269124692, 0.3621620827362875, 0.3454107954934763]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:1,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Conventional,Conventional,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,1,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Shield
+3. Framework
+4. Pillar
+5. Beacon
+6. Catalyst
+7. Foundation
+8. Firewall
+9. Blueprint
+10. Scaffold",41,stop,96,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""shield"", ""framework"", ""pillar"", ""beacon"", ""catalyst"", ""foundation"", ""firewall"", ""blueprint"", ""scaffold""]",10,True,65.5001892172381,0.308500416820026,5,"[0.28018944054901723, 0.29620186112099633, 0.37100684249256366, 0.21574676616145105, 0.2201515521552061, 0.3106138423758554, 0.3654543453251957, 0.3997364262405827, 0.332553901376888, 0.29774095484234697]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:2,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,2,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Painter
+3. Scientist
+4. Chain
+5. Glacier
+6. Cartographer
+7. Geologist
+8. Seamstress
+9. Architect
+10. Geode",44,stop,95,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""painter"", ""scientist"", ""chain"", ""glacier"", ""cartographer"", ""geologist"", ""seamstress"", ""architect"", ""geode""]",10,True,0.0,0.30323314261064765,1,"[0.2238695806494623, 0.21632816637870142, 0.41179449835365683, 0.20971572420223145, 0.2817158555663062, 0.1682685136423508, 0.29336113916499473, 0.1953878645451421, 0.2215837135550846, 0.19229298373352682]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:3,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,3,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Foundation
+5. Spark
+6. Center
+7. Pivot
+8. Keystone
+9. Catalyst
+10. Nucleus",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""foundation"", ""spark"", ""center"", ""pivot"", ""keystone"", ""catalyst"", ""nucleus""]",10,True,69.57195213874918,0.3081994158050631,7,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.31630467821305563, 0.4499491315714596, 0.302276912582385, 0.20812501090576857, 0.3699661556367603, 0.4594142687219858, 0.2259785096812031]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:4,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,4,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Foundation
+5. Spark
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Catalyst",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""foundation"", ""spark"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""catalyst""]",10,True,69.57195213874918,0.3081994158050631,7,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.31630467821305563, 0.4499491315714596, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.4594142687219858]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:5,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,5,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Bridge
+2. Matrix
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Scaffold
+9. Framework
+10. Blueprint",40,stop,95,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""bridge"", ""matrix"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""scaffold"", ""framework"", ""blueprint""]",10,True,67.14270162522948,0.2985850564165134,8,"[0.33371776404319936, 0.35485660178679, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3328115269124692, 0.3621620827362875, 0.3454107954934763]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:6,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,6,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.810481071472168,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Shore
+3. Resonator
+4. Algorithm
+5. Drum
+6. Seabed
+7. Metronome
+8. Reef
+9. Generator
+10. Rhythm",47,stop,92,1,47,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""shore"", ""resonator"", ""algorithm"", ""drum"", ""seabed"", ""metronome"", ""reef"", ""generator"", ""rhythm""]",10,True,73.22760179147093,0.28901744938057566,9,"[0.6957997330929331, 0.38401612282234393, 0.6029323653337479, 0.2843332566841802, 0.36083347997609566, 0.3478411336165418, 0.3860083025996055, 0.48066885526509895, 0.39839158248206386, 0.5045140499341783]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:7,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Standard,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,7,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Shore
+3. Resonator
+4. Algorithm
+5. Drum
+6. Seabed
+7. Metronome
+8. Reef
+9. Generator
+10. Rhythm",47,stop,92,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""shore"", ""resonator"", ""algorithm"", ""drum"", ""seabed"", ""metronome"", ""reef"", ""generator"", ""rhythm""]",10,True,73.22760179147093,0.28901744938057566,9,"[0.6957997330929331, 0.38401612282234393, 0.6029323653337479, 0.2843332566841802, 0.36083347997609566, 0.3478411336165418, 0.3860083025996055, 0.48066885526509895, 0.39839158248206386, 0.5045140499341783]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:8,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,8,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Painter
+3. Scientist
+4. Chain
+5. Glacier
+6. Cartographer
+7. Geologist
+8. Seamstress
+9. Architect
+10. Geode",44,stop,95,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""painter"", ""scientist"", ""chain"", ""glacier"", ""cartographer"", ""geologist"", ""seamstress"", ""architect"", ""geode""]",10,True,0.0,0.30323314261064765,1,"[0.2238695806494623, 0.21632816637870142, 0.41179449835365683, 0.20971572420223145, 0.2817158555663062, 0.1682685136423508, 0.29336113916499473, 0.1953878645451421, 0.2215837135550846, 0.19229298373352682]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:9,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,9,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Painter
+3. Scientist
+4. Chain
+5. Glacier
+6. Brake
+7. Geologist
+8. Cartographer
+9. Seamstress
+10. Geode",44,stop,95,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""painter"", ""scientist"", ""chain"", ""glacier"", ""brake"", ""geologist"", ""cartographer"", ""seamstress"", ""geode""]",10,True,0.0,0.30323314261064765,1,"[0.2238695806494623, 0.21632816637870142, 0.41179449835365683, 0.20971572420223145, 0.2817158555663062, 0.24914152163739053, 0.29336113916499473, 0.1682685136423508, 0.1953878645451421, 0.19229298373352682]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:10,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Standard,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,10,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,93,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:11,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,11,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Shore
+3. Resonator
+4. Algorithm
+5. Drum
+6. Boundary
+7. Pendulum
+8. Rhythm
+9. Seismograph
+10. Metronome",48,stop,92,1,48,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""shore"", ""resonator"", ""algorithm"", ""drum"", ""boundary"", ""pendulum"", ""rhythm"", ""seismograph"", ""metronome""]",10,True,71.58033970943308,0.28901744938057566,8,"[0.6957997330929331, 0.38401612282234393, 0.6029323653337479, 0.2843332566841802, 0.36083347997609566, 0.32037986606700786, 0.45898714274030356, 0.5045140499341783, 0.23396129632976298, 0.3860083025996055]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:12,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,12,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.781757354736328,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Bridge
+2. Matrix
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Scaffold
+9. Framework
+10. Blueprint",40,stop,95,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""bridge"", ""matrix"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""scaffold"", ""framework"", ""blueprint""]",10,True,67.14270162522948,0.2985850564165134,8,"[0.33371776404319936, 0.35485660178679, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3328115269124692, 0.3621620827362875, 0.3454107954934763]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:13,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Standard,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,13,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Vote
+4. Chain
+5. Glacier
+6. Rope
+7. Brake
+8. Fjord
+9. Gear
+10. Boulder",42,stop,92,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""vote"", ""chain"", ""glacier"", ""rope"", ""brake"", ""fjord"", ""gear"", ""boulder""]",10,True,73.31345575033686,0.30323314261064765,4,"[0.2238695806494623, 0.31158762431524734, 0.624289403881688, 0.20971572420223145, 0.2817158555663062, 0.381570575825635, 0.24914152163739053, 0.21480630970242676, 0.31593731677215786, 0.2600680586003239]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:14,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,14,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Ship
+2. Framework
+3. Code
+4. Bench
+5. Grid
+6. System
+7. Matrix
+8. Scaffold
+9. Foundation
+10. Network",40,stop,92,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""ship"", ""framework"", ""code"", ""bench"", ""grid"", ""system"", ""matrix"", ""scaffold"", ""foundation"", ""network""]",10,True,69.2065519036159,0.2985850564165134,7,"[0.3502802418945137, 0.3621620827362875, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.24546873008324216, 0.35485660178679, 0.3328115269124692, 0.28786710659293446, 0.3265177897422849]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:15,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,15,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,96,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:16,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Boring,Boring,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,16,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Book
+2. Bridge
+3. Building
+4. Code
+5. Document
+6. Framework
+7. Grid
+8. Map
+9. Network
+10. Structure",40,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""book"", ""bridge"", ""building"", ""code"", ""document"", ""framework"", ""grid"", ""map"", ""network"", ""structure""]",10,True,70.29959924322038,0.2985850564165134,8,"[0.2507805977343546, 0.33371776404319936, 0.33967273455429614, 0.5208536961688641, 0.37234849077819476, 0.3621620827362875, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3865846468622615]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:17,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,17,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Ship
+2. Framework
+3. Code
+4. Bench
+5. Grid
+6. System
+7. Matrix
+8. Scaffold
+9. Foundation
+10. Network",40,stop,92,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""ship"", ""framework"", ""code"", ""bench"", ""grid"", ""system"", ""matrix"", ""scaffold"", ""foundation"", ""network""]",10,True,69.2065519036159,0.2985850564165134,7,"[0.3502802418945137, 0.3621620827362875, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.24546873008324216, 0.35485660178679, 0.3328115269124692, 0.28786710659293446, 0.3265177897422849]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:18,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Conventional,Conventional,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,18,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Crest
+3. Resonator
+4. Rhythm
+5. Surge
+6. Vibration
+7. Cycle
+8. Frequency
+9. Tidal
+10. Cadence",46,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""crest"", ""resonator"", ""rhythm"", ""surge"", ""vibration"", ""cycle"", ""frequency"", ""cadence""]",9,False,69.84357408258624,0.28901744938057566,9,"[0.6957997330929331, 0.3296435435450254, 0.6029323653337479, 0.5045140499341783, 0.44321023307134916, 0.47208717822477336, 0.3671466241590109, 0.3857842926416182, 0.35680501485506944]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:19,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Boring,Boring,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,19,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Network
+2. Catalyst
+3. Framework
+4. Algorithm
+5. Structure
+6. Foundation
+7. Matrix
+8. Blueprint
+9. Hierarchy
+10. Protocol",41,stop,96,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""network"", ""catalyst"", ""framework"", ""algorithm"", ""structure"", ""foundation"", ""matrix"", ""blueprint"", ""hierarchy"", ""protocol""]",10,True,68.33707720827206,0.308500416820026,9,"[0.4348818287435626, 0.3106138423758554, 0.37100684249256366, 0.3175611150402927, 0.6396442353432292, 0.3654543453251957, 0.22146104144993903, 0.332553901376888, 0.609157187348965, 0.37385468454773635]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:20,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,20,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,93,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:21,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,21,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Vote
+4. Chain
+5. Glacier
+6. Rope
+7. Brake
+8. Fjord
+9. Gear
+10. Boulder",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""vote"", ""chain"", ""glacier"", ""rope"", ""brake"", ""fjord"", ""gear"", ""boulder""]",10,True,73.31345575033686,0.30323314261064765,4,"[0.2238695806494623, 0.31158762431524734, 0.624289403881688, 0.20971572420223145, 0.2817158555663062, 0.381570575825635, 0.24914152163739053, 0.21480630970242676, 0.31593731677215786, 0.2600680586003239]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:22,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,22,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Bridge
+2. Matrix
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Scaffold
+9. Framework
+10. Blueprint",40,stop,95,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""bridge"", ""matrix"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""scaffold"", ""framework"", ""blueprint""]",10,True,67.14270162522948,0.2985850564165134,8,"[0.33371776404319936, 0.35485660178679, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3328115269124692, 0.3621620827362875, 0.3454107954934763]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:23,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Effective,Effective,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,23,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Pulse
+5. Gearbox
+6. Exchange
+7. Center
+8. Rhythm
+9. Catalyst
+10. Keystone",42,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""pulse"", ""gearbox"", ""exchange"", ""center"", ""rhythm"", ""catalyst"", ""keystone""]",10,True,74.46621616667431,0.3081994158050631,9,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.5815366699206941, 0.47693026064599675, 0.4734277386881605, 0.302276912582385, 0.416420630730707, 0.4594142687219858, 0.3699661556367603]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:24,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,24,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.820271492004396,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Ship
+2. Framework
+3. Code
+4. Bench
+5. Grid
+6. Program
+7. Dock
+8. Matrix
+9. Pier
+10. Scaffold",40,stop,92,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""ship"", ""framework"", ""code"", ""bench"", ""grid"", ""program"", ""dock"", ""matrix"", ""pier"", ""scaffold""]",10,True,69.82891943288739,0.2985850564165134,7,"[0.3502802418945137, 0.3621620827362875, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.5039315002480415, 0.2608700752517622, 0.35485660178679, 0.2764839025211671, 0.3328115269124692]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:25,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Boring,Boring,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,25,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Crest
+3. Resonator
+4. Algorithm
+5. Rhythm
+6. Surge
+7. Generator
+8. Meter
+9. Cadence
+10. Amplitude",45,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""crest"", ""resonator"", ""algorithm"", ""rhythm"", ""surge"", ""generator"", ""meter"", ""cadence"", ""amplitude""]",10,True,70.45901137753268,0.28901744938057566,8,"[0.6957997330929331, 0.3296435435450254, 0.6029323653337479, 0.2843332566841802, 0.5045140499341783, 0.44321023307134916, 0.39839158248206386, 0.26987418691596654, 0.35680501485506944, 0.4631926803646627]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:26,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,26,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Drum
+2. Shore
+3. Pendulum
+4. Rhythm
+5. Siren
+6. Pulse
+7. Resonator
+8. Surgeon
+9. Metronome
+10. Tectonic",50,stop,95,1,50,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""drum"", ""shore"", ""pendulum"", ""rhythm"", ""siren"", ""pulse"", ""resonator"", ""surgeon"", ""metronome""]",9,False,71.12882152365286,0.28901744938057566,8,"[0.36083347997609566, 0.38401612282234393, 0.45898714274030356, 0.5045140499341783, 0.32398285377047153, 0.6957997330929331, 0.6029323653337479, 0.24249292569264422, 0.3860083025996055]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:27,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,27,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Ship
+2. Framework
+3. Code
+4. Bench
+5. Grid
+6. System
+7. Matrix
+8. Scaffold
+9. Foundation
+10. Network",40,stop,92,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""ship"", ""framework"", ""code"", ""bench"", ""grid"", ""system"", ""matrix"", ""scaffold"", ""foundation"", ""network""]",10,True,69.2065519036159,0.2985850564165134,7,"[0.3502802418945137, 0.3621620827362875, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.24546873008324216, 0.35485660178679, 0.3328115269124692, 0.28786710659293446, 0.3265177897422849]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:28,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,28,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,93,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:29,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,29,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Bridge
+2. Matrix
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Scaffold
+9. Framework
+10. Blueprint",40,stop,95,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""bridge"", ""matrix"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""scaffold"", ""framework"", ""blueprint""]",10,True,67.14270162522948,0.2985850564165134,8,"[0.33371776404319936, 0.35485660178679, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3328115269124692, 0.3621620827362875, 0.3454107954934763]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:30,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,30,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,93,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:31,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Creative,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,31,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,96,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:32,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Conventional,Conventional,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,32,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Glacier
+4. Brake
+5. Chain
+6. Fender
+7. Boulder
+8. Rudder
+9. Gear
+10. Ridge",42,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""glacier"", ""brake"", ""chain"", ""fender"", ""boulder"", ""rudder"", ""gear"", ""ridge""]",10,True,0.0,0.30323314261064765,2,"[0.2238695806494623, 0.31158762431524734, 0.2817158555663062, 0.24914152163739053, 0.20971572420223145, 0.21836217056468687, 0.2600680586003239, 0.26672983234787073, 0.31593731677215786, 0.23839679153530732]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:33,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,33,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,93,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:34,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Conventional,Conventional,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,34,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Ship
+2. Framework
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Scaffold
+9. Matrix
+10. Foundation",40,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""ship"", ""framework"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""scaffold"", ""matrix"", ""foundation""]",10,True,69.2065519036159,0.2985850564165134,7,"[0.3502802418945137, 0.3621620827362875, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3328115269124692, 0.35485660178679, 0.28786710659293446]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:35,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,35,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,96,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:36,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,36,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Foundation
+5. Spark
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Catalyst",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""foundation"", ""spark"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""catalyst""]",10,True,69.57195213874918,0.3081994158050631,7,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.31630467821305563, 0.4499491315714596, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.4594142687219858]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:37,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,37,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Compass
+2. Hub
+3. Balance
+4. Core
+5. Piston
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Axis",43,stop,95,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""compass"", ""hub"", ""balance"", ""core"", ""piston"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""axis""]",10,True,73.17512857778935,0.3081994158050631,5,"[0.3045507254960147, 0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.430250857288597, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.29654702090440116]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:38,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,38,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.780561447143556,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Painter
+3. Glacier
+4. Guitar
+5. Brake
+6. Sculptor
+7. Fray
+8. Cartographer
+9. Geologist
+10. Seamstress",45,stop,95,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""painter"", ""glacier"", ""guitar"", ""brake"", ""sculptor"", ""fray"", ""cartographer"", ""geologist"", ""seamstress""]",10,True,0.0,0.30323314261064765,0,"[0.2238695806494623, 0.21632816637870142, 0.2817158555663062, 0.18938532391745339, 0.24914152163739053, 0.28945724369665465, 0.22555612276997739, 0.1682685136423508, 0.29336113916499473, 0.1953878645451421]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:39,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Effective,Effective,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,39,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Crest
+3. Resonator
+4. Rhythm
+5. Surge
+6. Vibration
+7. Cycle
+8. Tidal
+9. Frequency
+10. Cadence",46,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""crest"", ""resonator"", ""rhythm"", ""surge"", ""vibration"", ""cycle"", ""frequency"", ""cadence""]",9,False,69.84357408258624,0.28901744938057566,9,"[0.6957997330929331, 0.3296435435450254, 0.6029323653337479, 0.5045140499341783, 0.44321023307134916, 0.47208717822477336, 0.3671466241590109, 0.3857842926416182, 0.35680501485506944]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:40,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,40,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Compass
+2. Hub
+3. Balance
+4. Core
+5. Piston
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Axis",43,stop,95,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""compass"", ""hub"", ""balance"", ""core"", ""piston"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""axis""]",10,True,73.17512857778935,0.3081994158050631,5,"[0.3045507254960147, 0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.430250857288597, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.29654702090440116]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:41,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Effective,Effective,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,41,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Bridge
+2. Matrix
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Framework
+9. Scaffold
+10. Foundation",40,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""bridge"", ""matrix"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""framework"", ""scaffold"", ""foundation""]",10,True,68.41623775771059,0.2985850564165134,7,"[0.33371776404319936, 0.35485660178679, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3621620827362875, 0.3328115269124692, 0.28786710659293446]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:42,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Creative_subtract_1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,42,0.0,800,1.0,0,16,,add,prefill,-1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,96,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:43,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,43,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.772587776184082,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,96,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:44,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,44,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Ship
+2. Framework
+3. Code
+4. Bench
+5. Grid
+6. System
+7. Matrix
+8. Scaffold
+9. Foundation
+10. Network",40,stop,92,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""ship"", ""framework"", ""code"", ""bench"", ""grid"", ""system"", ""matrix"", ""scaffold"", ""foundation"", ""network""]",10,True,69.2065519036159,0.2985850564165134,7,"[0.3502802418945137, 0.3621620827362875, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.24546873008324216, 0.35485660178679, 0.3328115269124692, 0.28786710659293446, 0.3265177897422849]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:45,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,45,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Foundation
+5. Spark
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Catalyst",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""foundation"", ""spark"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""catalyst""]",10,True,69.57195213874918,0.3081994158050631,7,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.31630467821305563, 0.4499491315714596, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.4594142687219858]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:46,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Standard,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,46,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Foundation
+5. Spark
+6. Center
+7. Pivot
+8. Keystone
+9. Catalyst
+10. Nucleus",42,stop,92,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""foundation"", ""spark"", ""center"", ""pivot"", ""keystone"", ""catalyst"", ""nucleus""]",10,True,69.57195213874918,0.3081994158050631,7,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.31630467821305563, 0.4499491315714596, 0.302276912582385, 0.20812501090576857, 0.3699661556367603, 0.4594142687219858, 0.2259785096812031]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:47,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,47,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Drum
+2. Shore
+3. Pendulum
+4. Rhythm
+5. Surgeon
+6. Metronome
+7. Pulse
+8. Tidal
+9. Resonator
+10. Cadence",49,stop,95,1,49,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""drum"", ""shore"", ""pendulum"", ""rhythm"", ""surgeon"", ""metronome"", ""pulse"", ""resonator"", ""cadence""]",9,False,69.2829660812271,0.28901744938057566,8,"[0.36083347997609566, 0.38401612282234393, 0.45898714274030356, 0.5045140499341783, 0.24249292569264422, 0.3860083025996055, 0.6957997330929331, 0.6029323653337479, 0.35680501485506944]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:48,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,48,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Vote
+4. Chain
+5. Glacier
+6. Rope
+7. Brake
+8. Fjord
+9. Gear
+10. Boulder",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""vote"", ""chain"", ""glacier"", ""rope"", ""brake"", ""fjord"", ""gear"", ""boulder""]",10,True,73.31345575033686,0.30323314261064765,4,"[0.2238695806494623, 0.31158762431524734, 0.624289403881688, 0.20971572420223145, 0.2817158555663062, 0.381570575825635, 0.24914152163739053, 0.21480630970242676, 0.31593731677215786, 0.2600680586003239]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:49,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Standard_suppress,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,49,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Shore
+3. Resonator
+4. Algorithm
+5. Drum
+6. Boundary
+7. Pendulum
+8. Rhythm
+9. Seismograph
+10. Metronome",48,stop,92,1,48,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""shore"", ""resonator"", ""algorithm"", ""drum"", ""boundary"", ""pendulum"", ""rhythm"", ""seismograph"", ""metronome""]",10,True,71.58033970943308,0.28901744938057566,8,"[0.6957997330929331, 0.38401612282234393, 0.6029323653337479, 0.2843332566841802, 0.36083347997609566, 0.32037986606700786, 0.45898714274030356, 0.5045140499341783, 0.23396129632976298, 0.3860083025996055]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:50,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Creative,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,50,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Drum
+2. Shore
+3. Pendulum
+4. Rhythm
+5. Siren
+6. Pulse
+7. Resonator
+8. Surgeon
+9. Metronome
+10. Tectonic",50,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""drum"", ""shore"", ""pendulum"", ""rhythm"", ""siren"", ""pulse"", ""resonator"", ""surgeon"", ""metronome""]",9,False,71.12882152365286,0.28901744938057566,8,"[0.36083347997609566, 0.38401612282234393, 0.45898714274030356, 0.5045140499341783, 0.32398285377047153, 0.6957997330929331, 0.6029323653337479, 0.24249292569264422, 0.3860083025996055]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:51,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,51,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.821070671081545,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,93,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:52,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Boring,Boring,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,52,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Glacier
+4. Brake
+5. Chain
+6. Rubble
+7. Pencil
+8. Fray
+9. Boulder
+10. Gear",43,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""glacier"", ""brake"", ""chain"", ""rubble"", ""pencil"", ""fray"", ""boulder"", ""gear""]",10,True,73.45497581919945,0.30323314261064765,3,"[0.2238695806494623, 0.31158762431524734, 0.2817158555663062, 0.24914152163739053, 0.20971572420223145, 0.3276213493454098, 0.2512248700890789, 0.22555612276997739, 0.2600680586003239, 0.31593731677215786]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:53,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,53,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Painter
+3. Glacier
+4. Guitar
+5. Brake
+6. Sculptor
+7. Fray
+8. Cartographer
+9. Geologist
+10. Seamstress",45,stop,95,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""painter"", ""glacier"", ""guitar"", ""brake"", ""sculptor"", ""fray"", ""cartographer"", ""geologist"", ""seamstress""]",10,True,0.0,0.30323314261064765,0,"[0.2238695806494623, 0.21632816637870142, 0.2817158555663062, 0.18938532391745339, 0.24914152163739053, 0.28945724369665465, 0.22555612276997739, 0.1682685136423508, 0.29336113916499473, 0.1953878645451421]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:54,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,54,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.794023513793944,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Vote
+4. Chain
+5. Glacier
+6. Rope
+7. Brake
+8. Fjord
+9. Gear
+10. Boulder",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""vote"", ""chain"", ""glacier"", ""rope"", ""brake"", ""fjord"", ""gear"", ""boulder""]",10,True,73.31345575033686,0.30323314261064765,4,"[0.2238695806494623, 0.31158762431524734, 0.624289403881688, 0.20971572420223145, 0.2817158555663062, 0.381570575825635, 0.24914152163739053, 0.21480630970242676, 0.31593731677215786, 0.2600680586003239]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:55,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Standard,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,55,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Ship
+2. Framework
+3. Code
+4. Bench
+5. Grid
+6. System
+7. Matrix
+8. Scaffold
+9. Foundation
+10. Network",40,stop,92,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""ship"", ""framework"", ""code"", ""bench"", ""grid"", ""system"", ""matrix"", ""scaffold"", ""foundation"", ""network""]",10,True,69.2065519036159,0.2985850564165134,7,"[0.3502802418945137, 0.3621620827362875, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.24546873008324216, 0.35485660178679, 0.3328115269124692, 0.28786710659293446, 0.3265177897422849]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:56,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,56,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.808424949645996,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Compass
+2. Hub
+3. Balance
+4. Core
+5. Piston
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Axis",43,stop,95,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""compass"", ""hub"", ""balance"", ""core"", ""piston"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""axis""]",10,True,73.17512857778935,0.3081994158050631,5,"[0.3045507254960147, 0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.430250857288597, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.29654702090440116]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:57,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Creative_patch_standard,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,57,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.806181907653809,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Drum
+2. Shore
+3. Pendulum
+4. Rhythm
+5. Siren
+6. Pulse
+7. Resonator
+8. Surgeon
+9. Metronome
+10. Tectonic",50,stop,95,1,50,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""drum"", ""shore"", ""pendulum"", ""rhythm"", ""siren"", ""pulse"", ""resonator"", ""surgeon"", ""metronome""]",9,False,71.12882152365286,0.28901744938057566,8,"[0.36083347997609566, 0.38401612282234393, 0.45898714274030356, 0.5045140499341783, 0.32398285377047153, 0.6957997330929331, 0.6029323653337479, 0.24249292569264422, 0.3860083025996055]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:58,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Creative,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,58,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Compass
+2. Hub
+3. Balance
+4. Core
+5. Piston
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Axis",43,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""compass"", ""hub"", ""balance"", ""core"", ""piston"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""axis""]",10,True,73.17512857778935,0.3081994158050631,5,"[0.3045507254960147, 0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.430250857288597, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.29654702090440116]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:59,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,59,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Vote
+4. Chain
+5. Glacier
+6. Rope
+7. Brake
+8. Fjord
+9. Gear
+10. Boulder",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""vote"", ""chain"", ""glacier"", ""rope"", ""brake"", ""fjord"", ""gear"", ""boulder""]",10,True,73.31345575033686,0.30323314261064765,4,"[0.2238695806494623, 0.31158762431524734, 0.624289403881688, 0.20971572420223145, 0.2817158555663062, 0.381570575825635, 0.24914152163739053, 0.21480630970242676, 0.31593731677215786, 0.2600680586003239]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:60,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Effective,Effective,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,60,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Glacier
+4. Brake
+5. Chain
+6. Fjord
+7. Rope
+8. Gear
+9. Boulder
+10. Fray",43,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""glacier"", ""brake"", ""chain"", ""fjord"", ""rope"", ""gear"", ""boulder"", ""fray""]",10,True,65.59509841714913,0.30323314261064765,3,"[0.2238695806494623, 0.31158762431524734, 0.2817158555663062, 0.24914152163739053, 0.20971572420223145, 0.21480630970242676, 0.381570575825635, 0.31593731677215786, 0.2600680586003239, 0.22555612276997739]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:61,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,61,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Drum
+2. Shore
+3. Pendulum
+4. Rhythm
+5. Siren
+6. Pulse
+7. Resonator
+8. Surgeon
+9. Metronome
+10. Tectonic",50,stop,95,1,50,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""drum"", ""shore"", ""pendulum"", ""rhythm"", ""siren"", ""pulse"", ""resonator"", ""surgeon"", ""metronome""]",9,False,71.12882152365286,0.28901744938057566,8,"[0.36083347997609566, 0.38401612282234393, 0.45898714274030356, 0.5045140499341783, 0.32398285377047153, 0.6957997330929331, 0.6029323653337479, 0.24249292569264422, 0.3860083025996055]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:62,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Standard_random1_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,62,0.0,800,1.0,0,16,,add,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Shore
+3. Resonator
+4. Algorithm
+5. Drum
+6. Seabed
+7. Metronome
+8. Reef
+9. Generator
+10. Rhythm",47,stop,92,1,47,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""shore"", ""resonator"", ""algorithm"", ""drum"", ""seabed"", ""metronome"", ""reef"", ""generator"", ""rhythm""]",10,True,73.22760179147093,0.28901744938057566,9,"[0.6957997330929331, 0.38401612282234393, 0.6029323653337479, 0.2843332566841802, 0.36083347997609566, 0.3478411336165418, 0.3860083025996055, 0.48066885526509895, 0.39839158248206386, 0.5045140499341783]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:63,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Standard_random0_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,63,0.0,800,1.0,0,16,,add,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Pulse
+2. Shore
+3. Resonator
+4. Method
+5. Surgeon
+6. Pendulum
+7. Rhythm
+8. Seismograph
+9. Generator
+10. Cadence",48,stop,92,1,48,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""pulse"", ""shore"", ""resonator"", ""method"", ""surgeon"", ""pendulum"", ""rhythm"", ""seismograph"", ""generator"", ""cadence""]",10,True,74.29070316934724,0.28901744938057566,8,"[0.6957997330929331, 0.38401612282234393, 0.6029323653337479, 0.3465360656283536, 0.24249292569264422, 0.45898714274030356, 0.5045140499341783, 0.23396129632976298, 0.39839158248206386, 0.35680501485506944]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:64,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heartbeat | wave | oscillator | function,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heartbeat | wave | oscillator | function|p0|r0,559741006,64,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Drum
+2. Shore
+3. Pendulum
+4. Rhythm
+5. Siren
+6. Pulse
+7. Resonator
+8. Surgeon
+9. Metronome
+10. Harp",49,stop,95,1,49,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""drum"", ""shore"", ""pendulum"", ""rhythm"", ""siren"", ""pulse"", ""resonator"", ""surgeon"", ""metronome"", ""harp""]",10,True,71.12882152365286,0.28901744938057566,8,"[0.36083347997609566, 0.38401612282234393, 0.45898714274030356, 0.5045140499341783, 0.32398285377047153, 0.6957997330929331, 0.6029323653337479, 0.24249292569264422, 0.3860083025996055, 0.2627585481622121]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:65,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Boring,Boring,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,65,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Stone
+2. Balance
+3. Gear
+4. Scale
+5. Foundation
+6. Piston
+7. Hub
+8. Center
+9. Core
+10. Keystone",41,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""stone"", ""balance"", ""gear"", ""scale"", ""foundation"", ""piston"", ""hub"", ""center"", ""core"", ""keystone""]",10,True,72.08919113465095,0.3081994158050631,7,"[0.24839296116407822, 0.35116957561086815, 0.4183010279500665, 0.19346373130938127, 0.31630467821305563, 0.430250857288597, 0.4059151081094749, 0.302276912582385, 0.3522700575282227, 0.3699661556367603]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:66,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,genome | lattice | algorithm | court,validation,Creative_suppress,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|genome | lattice | algorithm | court|p0|r0,2026900226,66,0.0,800,1.0,0,16,,suppress,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Bridge
+2. Matrix
+3. Code
+4. Bench
+5. Grid
+6. Map
+7. Network
+8. Scaffold
+9. Framework
+10. Blueprint",40,stop,95,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""bridge"", ""matrix"", ""code"", ""bench"", ""grid"", ""map"", ""network"", ""scaffold"", ""framework"", ""blueprint""]",10,True,67.14270162522948,0.2985850564165134,8,"[0.33371776404319936, 0.35485660178679, 0.5208536961688641, 0.28479649676141916, 0.41989965450109845, 0.27813649619055614, 0.3265177897422849, 0.3328115269124692, 0.3621620827362875, 0.3454107954934763]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:67,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Standard_patch_creative,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,67,0.0,800,1.0,0,16,,patch,prefill,1.0,-1,9.82322597503662,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Foundation
+5. Spark
+6. Center
+7. Pivot
+8. Keystone
+9. Catalyst
+10. Nucleus",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""foundation"", ""spark"", ""center"", ""pivot"", ""keystone"", ""catalyst"", ""nucleus""]",10,True,69.57195213874918,0.3081994158050631,7,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.31630467821305563, 0.4499491315714596, 0.302276912582385, 0.20812501090576857, 0.3699661556367603, 0.4594142687219858, 0.2259785096812031]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:68,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,68,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Compass
+2. Hub
+3. Balance
+4. Core
+5. Piston
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Axis",43,stop,95,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""compass"", ""hub"", ""balance"", ""core"", ""piston"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""axis""]",10,True,73.17512857778935,0.3081994158050631,5,"[0.3045507254960147, 0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.430250857288597, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.29654702090440116]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:69,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Effective,Effective,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,69,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Flame
+6. Hierarchy
+7. Algorithm
+8. Barrier
+9. Framework
+10. Pillar",42,stop,96,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""flame"", ""hierarchy"", ""algorithm"", ""barrier"", ""framework"", ""pillar""]",10,True,73.19254972340876,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.7494628534266579, 0.609157187348965, 0.3175611150402927, 0.2659657168169989, 0.37100684249256366, 0.21574676616145105]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:70,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,immune system | fire | organization | theorem,validation,Creative_random_suppress0,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|immune system | fire | organization | theorem|p0|r0,2064605213,70,0.0,800,1.0,0,16,,suppress,prefill,1.0,0,1.0483052730560305,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Fortress
+2. Catalyst
+3. Blueprint
+4. Shield
+5. Spark
+6. Framework
+7. Firewall
+8. Algorithm
+9. Barrier
+10. Catalyst",40,stop,96,1,40,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""fortress"", ""catalyst"", ""blueprint"", ""shield"", ""spark"", ""framework"", ""firewall"", ""algorithm"", ""barrier""]",9,False,71.20233208623152,0.308500416820026,6,"[0.28018944054901723, 0.3106138423758554, 0.332553901376888, 0.29620186112099633, 0.4765342264885782, 0.37100684249256366, 0.3997364262405827, 0.3175611150402927, 0.2659657168169989]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:71,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Creative,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,71,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Painter
+3. Scientist
+4. Chain
+5. Glacier
+6. Cartographer
+7. Geologist
+8. Seamstress
+9. Architect
+10. Geode",44,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""painter"", ""scientist"", ""chain"", ""glacier"", ""cartographer"", ""geologist"", ""seamstress"", ""architect"", ""geode""]",10,True,0.0,0.30323314261064765,1,"[0.2238695806494623, 0.21632816637870142, 0.41179449835365683, 0.20971572420223145, 0.2817158555663062, 0.1682685136423508, 0.29336113916499473, 0.1953878645451421, 0.2215837135550846, 0.19229298373352682]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:72,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,evolution | friction | election | polynomial,validation,Standard_add_1,Standard,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",0,0,Divergent Remote Association Test|evolution | friction | election | polynomial|p0|r0,926230620,72,0.0,800,1.0,0,16,,add,prefill,1.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Mountain
+2. Nail
+3. Vote
+4. Chain
+5. Glacier
+6. Rope
+7. Brake
+8. Fjord
+9. Gear
+10. Boulder",42,stop,92,1,42,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""mountain"", ""nail"", ""vote"", ""chain"", ""glacier"", ""rope"", ""brake"", ""fjord"", ""gear"", ""boulder""]",10,True,73.31345575033686,0.30323314261064765,4,"[0.2238695806494623, 0.31158762431524734, 0.624289403881688, 0.20971572420223145, 0.2817158555663062, 0.381570575825635, 0.24914152163739053, 0.21480630970242676, 0.31593731677215786, 0.2600680586003239]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:73,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Conventional,Conventional,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,73,0.0,800,1.0,0,16,,none,prefill,0.0,-1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Hub
+2. Balance
+3. Core
+4. Pulse
+5. Gear
+6. Center
+7. Keystone
+8. Spark
+9. Pivot
+10. Nucleus",42,stop,95,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""hub"", ""balance"", ""core"", ""pulse"", ""gear"", ""center"", ""keystone"", ""spark"", ""pivot"", ""nucleus""]",10,True,73.32497222132456,0.3081994158050631,7,"[0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.5815366699206941, 0.4183010279500665, 0.302276912582385, 0.3699661556367603, 0.4499491315714596, 0.20812501090576857, 0.2259785096812031]"
+creativity-v2,20261004T182431_e5dcb0a3,20261004T182431_e5dcb0a3:74,models/Llama-3.1-8B-Instruct,Divergent Remote Association Test,heart | engine | marketplace | equation,validation,Creative_random_suppress1,Creative,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.",0,0,Divergent Remote Association Test|heart | engine | marketplace | equation|p0|r0,889189259,74,0.0,800,1.0,0,16,,suppress,prefill,1.0,1,1.0483053922653198,43197564271979f2fc4b27406239ff6871aa8aed7ff3d475d049f1d0bfeb7a40,"1. Compass
+2. Hub
+3. Balance
+4. Core
+5. Piston
+6. Center
+7. Keystone
+8. Pivot
+9. Nucleus
+10. Axis",43,stop,95,1,43,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_drat_27552574/residual/results_divergent_remote_association_test_20261004T182431_e5dcb0a3.csv,"[""compass"", ""hub"", ""balance"", ""core"", ""piston"", ""center"", ""keystone"", ""pivot"", ""nucleus"", ""axis""]",10,True,73.17512857778935,0.3081994158050631,5,"[0.3045507254960147, 0.4059151081094749, 0.35116957561086815, 0.3522700575282227, 0.430250857288597, 0.302276912582385, 0.3699661556367603, 0.20812501090576857, 0.2259785096812031, 0.29654702090440116]"

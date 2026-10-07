@@ -3,4 +3,5 @@ scripts/*.env
 outputs/
 databases/*.txt
 models/
+logs/
 *__pycache__/

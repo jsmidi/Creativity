@@ -1,0 +1,160 @@
+Protocol,Run_ID,Response_ID,Model,Task,Item,Split,Condition,Prompt_Condition,Instruction,Prompt,Paraphrase,Repeat,Block_ID,Generation_Seed,Request_Order,Temperature,Max_Tokens,Top_P,Top_K,Layer,Head,Intervention,Scope,Alpha,Random_Vector,Vector_Norm,Artifact_SHA256,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Source_File,Parsed_Words,Valid_Word_Count,List_Count,Scorable,Validation,DAT_GloVe_Score,DAT_MPNet_Proxy,Rarity_Score,Frequency_Coverage
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:0,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Standard_random1_1,Standard,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",0,0,Divergent Association Task||p0|r0,1767513049,0,0.0,800,1.0,0,14,24,add,prefill,1.0,1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Cloud
+2. Piano
+3. Diamond
+4. Pineapple
+5. Submarine
+6. Harmonica
+7. Perfume
+8. Bicycle
+9. Glacier
+10. Harmonium",45,stop,78,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['cloud', 'piano', 'diamond', 'pineapple', 'submarine', 'harmonica', 'perfume', 'bicycle', 'glacier', 'harmonium']",10,10,True,dictionary,84.31098175048828,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:1,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Creative_random_suppress0,Creative,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.",0,0,Divergent Association Task||p0|r0,1767513049,1,0.0,800,1.0,0,14,24,suppress,prefill,1.0,0,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Quasar
+2. Croissant
+3. Harmonica
+4. Glacier
+5. Perfume
+6. Submarine
+7. Fjord
+8. Banjo
+9. Meteorite
+10. Saffron",51,stop,81,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['quasar', 'croissant', 'harmonica', 'glacier', 'perfume', 'submarine', 'fjord', 'banjo', 'meteorite', 'saffron']",10,10,True,dictionary,85.66683197021484,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:2,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Standard_random0_1,Standard,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",0,0,Divergent Association Task||p0|r0,1767513049,2,0.0,800,1.0,0,14,24,add,prefill,1.0,0,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Cloud
+2. Piano
+3. Diamond
+4. Pineapple
+5. Submarine
+6. Harmonica
+7. Perfume
+8. Bicycle
+9. Glacier
+10. Guitar",44,stop,78,1,44,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['cloud', 'piano', 'diamond', 'pineapple', 'submarine', 'harmonica', 'perfume', 'bicycle', 'glacier', 'guitar']",10,10,True,dictionary,84.31098175048828,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:3,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Creative_subtract_1,Creative,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.",0,0,Divergent Association Task||p0|r0,1767513049,3,0.0,800,1.0,0,14,24,add,prefill,-1.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Quasar
+2. Croissant
+3. Harmonica
+4. Glacier
+5. Perfume
+6. Submarine
+7. Fjord
+8. Banjo
+9. Meteorite
+10. Saffron",51,stop,81,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['quasar', 'croissant', 'harmonica', 'glacier', 'perfume', 'submarine', 'fjord', 'banjo', 'meteorite', 'saffron']",10,10,True,dictionary,85.66683197021484,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:4,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Creative_random_suppress1,Creative,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.",0,0,Divergent Association Task||p0|r0,1767513049,4,0.0,800,1.0,0,14,24,suppress,prefill,1.0,1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Quasar
+2. Croissant
+3. Harmonica
+4. Glacier
+5. Perfume
+6. Submarine
+7. Fjord
+8. Banjo
+9. Meteorite
+10. Saffron",51,stop,81,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['quasar', 'croissant', 'harmonica', 'glacier', 'perfume', 'submarine', 'fjord', 'banjo', 'meteorite', 'saffron']",10,10,True,dictionary,85.66683197021484,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:5,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Creative_patch_standard,Creative,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.",0,0,Divergent Association Task||p0|r0,1767513049,5,0.0,800,1.0,0,14,24,patch,prefill,1.0,-1,0.8719802498817444,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Quasar
+2. Croissant
+3. Harmonica
+4. Glacier
+5. Perfume
+6. Submarine
+7. Fjord
+8. Banjo
+9. Meteorite
+10. Saffron",51,stop,81,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['quasar', 'croissant', 'harmonica', 'glacier', 'perfume', 'submarine', 'fjord', 'banjo', 'meteorite', 'saffron']",10,10,True,dictionary,85.66683197021484,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:6,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Standard_add_1,Standard,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",0,0,Divergent Association Task||p0|r0,1767513049,6,0.0,800,1.0,0,14,24,add,prefill,1.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Cloud
+2. Piano
+3. Diamond
+4. Submarine
+5. Pineapple
+6. Harmonica
+7. Glacier
+8. Perfume
+9. Bicycle
+10. Microscope",45,stop,78,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['cloud', 'piano', 'diamond', 'submarine', 'pineapple', 'harmonica', 'glacier', 'perfume', 'bicycle', 'microscope']",10,10,True,dictionary,84.04645538330078,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:7,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Effective,Effective,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be effective.",0,0,Divergent Association Task||p0|r0,1767513049,7,0.0,800,1.0,0,14,24,none,prefill,0.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Quasar
+2. Piano
+3. Pineapple
+4. Glacier
+5. Harmonica
+6. Perfume
+7. Submarine
+8. Fjord
+9. Cello
+10. Meteorite",49,stop,81,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['quasar', 'piano', 'pineapple', 'glacier', 'harmonica', 'perfume', 'submarine', 'fjord', 'cello', 'meteorite']",10,10,True,dictionary,86.8663101196289,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:8,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Creative_suppress,Creative,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.",0,0,Divergent Association Task||p0|r0,1767513049,8,0.0,800,1.0,0,14,24,suppress,prefill,1.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Quasar
+2. Croissant
+3. Harmonica
+4. Glacier
+5. Perfume
+6. Submarine
+7. Fjord
+8. Banjo
+9. Meteorite
+10. Saffron",51,stop,81,1,51,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['quasar', 'croissant', 'harmonica', 'glacier', 'perfume', 'submarine', 'fjord', 'banjo', 'meteorite', 'saffron']",10,10,True,dictionary,85.66683197021484,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:9,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Conventional,Conventional,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be conventional.",0,0,Divergent Association Task||p0|r0,1767513049,9,0.0,800,1.0,0,14,24,none,prefill,0.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Cloud
+2. Piano
+3. Diamond
+4. Bicycle
+5. Library
+6. Perfume
+7. Submarine
+8. Pineapple
+9. Harmonica
+10. Glacier",44,stop,81,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['cloud', 'piano', 'diamond', 'bicycle', 'library', 'perfume', 'submarine', 'pineapple', 'harmonica', 'glacier']",10,10,True,dictionary,85.0185546875,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:10,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Boring,Boring,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be boring.",0,0,Divergent Association Task||p0|r0,1767513049,10,0.0,800,1.0,0,14,24,none,prefill,0.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Sock
+2. Glacier
+3. Piano
+4. Carrot
+5. Microscope
+6. Lighthouse
+7. Harmonica
+8. Fjord
+9. Dictionary
+10. Toaster",48,stop,81,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['sock', 'glacier', 'piano', 'carrot', 'microscope', 'lighthouse', 'harmonica', 'fjord', 'dictionary', 'toaster']",10,10,True,dictionary,84.95886993408203,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:11,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Standard_patch_creative,Standard,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",0,0,Divergent Association Task||p0|r0,1767513049,11,0.0,800,1.0,0,14,24,patch,prefill,1.0,-1,0.9172521233558656,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Cloud
+2. Piano
+3. Diamond
+4. Pineapple
+5. Bicycle
+6. Perfume
+7. Lighthouse
+8. Harmonica
+9. Snowflake
+10. Submarine",46,stop,78,1,46,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['cloud', 'piano', 'diamond', 'pineapple', 'bicycle', 'perfume', 'lighthouse', 'harmonica', 'snowflake', 'submarine']",10,10,True,dictionary,83.18842315673828,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:12,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Standard,Standard,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",0,0,Divergent Association Task||p0|r0,1767513049,12,0.0,800,1.0,0,14,24,none,prefill,0.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Cloud
+2. Piano
+3. Diamond
+4. Submarine
+5. Pineapple
+6. Harmonica
+7. Glacier
+8. Perfume
+9. Bicycle
+10. Microscope",45,stop,78,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['cloud', 'piano', 'diamond', 'submarine', 'pineapple', 'harmonica', 'glacier', 'perfume', 'bicycle', 'microscope']",10,10,True,dictionary,84.04645538330078,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:13,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Creative,Creative,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.
+Be creative.",0,0,Divergent Association Task||p0|r0,1767513049,13,0.0,800,1.0,0,14,24,none,prefill,0.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Quasar
+2. Croissant
+3. Harmonica
+4. Glacier
+5. Perfume
+6. Submarine
+7. Fjord
+8. Banjo
+9. Meteorite
+10. Saffron",51,stop,81,0,0,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['quasar', 'croissant', 'harmonica', 'glacier', 'perfume', 'submarine', 'fjord', 'banjo', 'meteorite', 'saffron']",10,10,True,dictionary,85.66683197021484,,,0.0
+creativity-v2,20261004T180843_71c03d94,20261004T180843_71c03d94:14,models/Llama-3.1-8B-Instruct,Divergent Association Task,,validation,Standard_suppress,Standard,"Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.","Name 10 different single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",0,0,Divergent Association Task||p0|r0,1767513049,14,0.0,800,1.0,0,14,24,suppress,prefill,1.0,-1,0.3150427341461181,ed66fbe5c3c75c7f5fdd2d822b9f4f758558b46e0bd54b9011ee892bb5952ac7,"1. Cloud
+2. Piano
+3. Diamond
+4. Pineapple
+5. Submarine
+6. Harmonica
+7. Perfume
+8. Bicycle
+9. Glacier
+10. Harmonium",45,stop,78,1,45,ok,/gpfs/home4/jsmidi/Creativity/outputs/greedy_dat_27552572/concept_head/results_divergent_association_task_20261004T180843_71c03d94.csv,"['cloud', 'piano', 'diamond', 'pineapple', 'submarine', 'harmonica', 'perfume', 'bicycle', 'glacier', 'harmonium']",10,10,True,dictionary,84.31098175048828,,,0.0

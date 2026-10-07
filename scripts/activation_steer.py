@@ -16,6 +16,17 @@ from task_config import get_task_config
 
 
 def extraction_examples(tasks, items, paraphrases):
+    """Expand task, item, and wording choices into extraction records.
+
+    Args:
+        tasks: Task names recognized by get_task_config.
+        items: Optional item override; allowed only for a single task.
+        paraphrases: Condition-suffix indices, normally 0, 1, or 2.
+    Returns:
+        List of dictionaries with Task, Item, and Paraphrase.
+    Raises:
+        ValueError: If custom items are supplied for multiple tasks.
+    """
     if items and len(tasks) != 1:
         raise ValueError("--items requires a single extraction task.")
     return [dict(Task=task, Item=item, Paraphrase=p)
@@ -24,19 +35,46 @@ def extraction_examples(tasks, items, paraphrases):
 
 
 def validate_holdout(artifact, task, items, paraphrases, split):
+    """Reject extraction overlap in validation/test generation.
+
+    Args:
+        artifact: Loaded vector dictionary with examples and optional audit_examples.
+        task: Target task name.
+        items: Target items; compared after canonicalization.
+        paraphrases: Target condition-wording indices.
+        split: "pilot" bypasses checks; other values enforce overlap checks.
+    Returns:
+        None when checks pass.
+    Raises:
+        ValueError: If wording overlaps extraction, or non-DAT items overlap
+            extraction/audit objects. DAT has no object axis.
+    Notes:
+        Audit wording is not excluded. This function does not track previous
+        validation/test runs or enforce an entire research-history split.
+    """
     if split == "pilot":
         return
     examples = artifact["examples"]
     used_p = {e["Paraphrase"] for e in examples}
     if set(paraphrases) & used_p:
         raise ValueError("Validation/test instruction paraphrases must be held out from extraction.")
-    used_items = {canonical_item(e["Item"]) for e in examples if e["Task"] == task}
+    used_items = {canonical_item(e["Item"]) for e in examples + artifact.get("audit_examples", []) if e["Task"] == task}
     # DAT has no object axis; reserve instruction wordings and fresh generations.
     if task != "Divergent Association Task" and used_items & {canonical_item(i) for i in items}:
         raise ValueError("Validation/test items overlap extraction items.")
 
 
 def provenance(engine, args):
+    """Collect model, tokenizer-template, and library identity metadata.
+
+    Args:
+        engine: Loaded ActivationEngine with model config and tokenizer.
+        args: Namespace with model and revision attributes.
+    Returns:
+        Dictionary with requested/resolved revision, torch/transformers versions,
+        and SHA-256 of the chat template. Local models may lack a resolved commit;
+        this metadata does not hash all checkpoint weights.
+    """
     return dict(model=args.model, requested_revision=args.revision or "main",
                 resolved_revision=getattr(engine.model.config, "_commit_hash", None),
                 torch=importlib.metadata.version("torch"),
@@ -45,6 +83,23 @@ def provenance(engine, args):
 
 
 def extract(args):
+    """Extract and save a mean Creative-minus-baseline activation direction.
+
+    Args:
+        args: CLI Namespace: tasks, items, paraphrases define paired examples;
+            model/revision choose the checkpoint; layer/head choose the target;
+            baseline is Standard or Conventional; artifact is the output Path;
+            dry_run prints the forward-pass count without loading the model.
+    Returns:
+        None. Writes a .pt vector artifact and companion .json metadata.
+    Notes:
+        Captures the last formatted prompt token, averages within each task, then
+        weights tasks equally. Saves the raw mean difference and baseline center,
+        without unit normalization or generated-answer quality selection.
+    Raises:
+        ValueError: If the direction is zero or nonfinite.
+        FileExistsError: If the artifact path already exists.
+    """
     examples = extraction_examples(args.tasks, args.items, args.paraphrases)
     print(f"{len(examples) * 2} forward passes; layer {args.layer}, head {args.head}.")
     if args.dry_run:
@@ -84,6 +139,25 @@ def extract(args):
 
 
 def generate(args):
+    """Run controlled behavioral interventions using an existing vector artifact.
+
+    Args:
+        args: CLI Namespace with artifact, model, revision, task, items, paraphrases,
+            and split; alphas sets addition/subtraction strengths; random_vectors
+            sets the number of norm-matched controls; repeats and seed set trial
+            blocks/order; temperature/high_temperature control decoding; max_tokens
+            caps completion length; scope sets hook timing; output_dir is the
+            destination; dry_run validates the artifact and prints the trial count.
+    Returns:
+        None. Writes one response CSV and a JSON manifest in output_dir.
+    Notes:
+        Trials include prompt baselines, addition/subtraction, centered suppression,
+        random controls, temperature, and donor patching. Patching is always prefill.
+        A shared seed pairs conditions within an item/wording/repeat block. Alphas
+        do not change suppression/patch strengths, which are fixed at one.
+        Even a dry run requires a readable artifact. Model/protocol/template checks
+        reject incompatible artifacts; generation exceptions propagate.
+    """
     import torch
     artifact = torch.load(args.artifact, map_location="cpu", weights_only=True)
     if artifact["protocol"] != PROTOCOL_VERSION:
@@ -93,7 +167,7 @@ def generate(args):
     config = get_task_config(args.task)
     items = args.items or config["items"]
     validate_holdout(artifact, args.task, items, args.paraphrases, args.split)
-    arms = [(c, c, "none", 0.0, -1) for c in ["Standard", "Creative", "Conventional"]]
+    arms = [(c, c, "none", 0.0, -1) for c in ["Standard", "Creative", "Effective", "Conventional", "Boring"]]
     for alpha in args.alphas:
         arms.extend([(f"Standard_add_{alpha:g}", "Standard", "add", alpha, -1),
                      (f"Creative_subtract_{alpha:g}", "Creative", "add", -alpha, -1)])
@@ -106,6 +180,8 @@ def generate(args):
                  ("Creative_patch_standard", "Creative", "patch", 1.0, -1)])
     for index in range(args.random_vectors):
         arms.append((f"Creative_random_suppress{index}", "Creative", "suppress", 1.0, index))
+    if getattr(args, "omit_temperature_control", False):
+        arms = [arm for arm in arms if arm[2] != "temperature"]
     trials = [(item, p, repeat, arm) for item in items for p in args.paraphrases
               for repeat in range(args.repeats) for arm in arms]
     random.Random(args.seed).shuffle(trials)
@@ -135,7 +211,10 @@ def generate(args):
                     split=args.split, task=args.task, items=items, paraphrases=args.paraphrases,
                     repeats=args.repeats, alphas=args.alphas, random_vectors=args.random_vectors,
                     random_seed=args.seed, scope=args.scope, temperature=args.temperature,
-                    high_temperature=args.high_temperature, max_tokens=args.max_tokens)
+                    omit_temperature_control=getattr(args, "omit_temperature_control", False),
+                    high_temperature=args.high_temperature, max_tokens=args.max_tokens, top_p=1.0, top_k=0)
+    manifest["candidate_metadata"] = {key: artifact[key] for key in
+        ("vector_kind", "selected_heads", "selection", "upstream_commit", "audit_examples") if key in artifact}
     (args.output_dir / f"{stem}.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     patch_cache = {}
     with path.open("w", encoding="utf-8", newline="") as handle:
@@ -165,6 +244,7 @@ def generate(args):
                        Condition=label, Prompt_Condition=condition, Instruction=config["instruction"],
                        Prompt=prompt, Paraphrase=p, Repeat=repeat, Block_ID=block, Generation_Seed=seed,
                        Request_Order=order, Temperature=temperature, Max_Tokens=args.max_tokens,
+                       Top_P=1.0, Top_K=0,
                        Layer=artifact["layer"], Head=artifact["head"], Intervention=mode, Scope=scope,
                        Alpha=alpha, Random_Vector=random_index, Vector_Norm=direction.norm().item(),
                        Artifact_SHA256=manifest["artifact_sha256"], **result,
@@ -179,6 +259,14 @@ def generate(args):
 
 
 def main():
+    """Parse the extract/generate CLI, validate settings, and dispatch the command.
+
+    Args:
+        None. Reads arguments from sys.argv; use --help or a subcommand's --help.
+    Returns:
+        None. Parser errors terminate with a nonzero exit status. Final-test
+        generation accepts only one alpha, but prior tuning is not tracked.
+    """
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     for command in ["extract", "generate"]:
@@ -202,6 +290,7 @@ def main():
             sub.add_argument("--repeats", type=int, default=10)
             sub.add_argument("--seed", type=int, default=42)
             sub.add_argument("--temperature", type=float, default=0.7)
+            sub.add_argument("--omit-temperature-control", action="store_true", help="Exclude the sampling-temperature arm for all-greedy experiments")
             sub.add_argument("--high-temperature", type=float, default=1.0)
             sub.add_argument("--max-tokens", type=int, default=800)
             sub.add_argument("--scope", choices=["each_step", "prefill"], default="each_step")

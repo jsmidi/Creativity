@@ -1,0 +1,15 @@
+Condition,Responses,Mean_Semantic_Distance,Format_Valid
+Conventional,6,0.7015038413890927,6
+Creative,6,0.825985574716953,6
+Creative_patch_standard,6,0.8323419165713268,6
+Creative_random_suppress0,6,0.8212485983750004,6
+Creative_random_suppress1,6,0.830400717800272,6
+Creative_subtract_1,6,0.8306805178695451,6
+Creative_suppress,6,0.8292064047187461,6
+Standard,6,0.7246627152116464,6
+Standard_add_1,6,0.722278310580981,6
+Standard_high_temperature,6,0.7879832868185548,6
+Standard_patch_creative,6,0.7436855270995778,6
+Standard_random0_1,6,0.7380506228182021,6
+Standard_random1_1,6,0.72564749971426,6
+Standard_suppress,6,0.7390183915089299,6
