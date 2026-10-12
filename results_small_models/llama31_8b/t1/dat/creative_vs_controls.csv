@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Standard,1.2120242940968478,0.3376666693851866,2.077790358970905,58,2,1,within-item sampling only,2000,42
+models/Llama-3.1-8B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Effective,0.8533397543019257,-0.01753612057916097,1.7747902639980968,58,2,1,within-item sampling only,2000,42
+models/Llama-3.1-8B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Conventional,2.109982063030374,1.159639411137021,3.0792334457923625,58,2,1,within-item sampling only,2000,42
+models/Llama-3.1-8B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Boring,0.31761393053778264,-0.5816230806811102,1.1898152417150016,58,2,1,within-item sampling only,2000,42

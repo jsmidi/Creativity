@@ -258,9 +258,53 @@ class ActivationEngine:
             handle.remove()
 
     @torch.inference_mode()
+    @torch.inference_mode()
+    def capture_response_means(self, prompt_ids, completion_ids, layers=None):
+        """Mean-pool post-block residuals over actual response tokens in a replay.
+
+        Replays the exact prompt + completion IDs with causal attention and no
+        cache. Prompt positions and tokenizer special tokens (including EOS) are
+        excluded from pooling. Each response gets one mean regardless of length.
+        Returns a CPU float32 tensor per zero-based block, before final model norm.
+        This captures states *at* response tokens, not the states predicting them.
+        """
+        layers = list(range(len(self.model.model.layers))) if layers is None else list(layers)
+        if not layers or len(set(layers)) != len(layers):
+            raise ValueError("Choose nonempty unique layers.")
+        if not prompt_ids or not completion_ids:
+            raise ValueError("Prompt and completion token IDs must be nonempty.")
+        targets = {layer: self.target(layer)[0] for layer in layers}
+        special = set(self.tokenizer.all_special_ids) if self.tokenizer is not None else set()
+        keep = torch.tensor([token not in special for token in completion_ids], dtype=torch.bool)
+        if not keep.any():
+            raise ValueError("Response has no non-special tokens to pool.")
+        device = self.model.get_input_embeddings().weight.device
+        ids = torch.tensor([prompt_ids + completion_ids], dtype=torch.long, device=device)
+        pooled, handles = {}, []
+
+        def pool_hook(layer):
+            """Build a hook that retains only one response mean for this layer."""
+            def hook(_module, _args, output):
+                hidden = hidden_tensor(output)[0, len(prompt_ids):]
+                pooled[layer] = hidden[keep.to(hidden.device)].float().mean(0).cpu()
+            return hook
+
+        try:
+            for layer, module in targets.items():
+                handles.append(module.register_forward_hook(pool_hook(layer)))
+            # The decoder alone avoids allocating vocabulary logits for every token.
+            self.model.model(input_ids=ids, attention_mask=torch.ones_like(ids), use_cache=False)
+        finally:
+            for handle in handles:
+                handle.remove()
+        if set(pooled) != set(layers):
+            raise RuntimeError("Not all requested residual hooks ran.")
+        return pooled
+
     def generate(self, prompt, seed=42, temperature=0.7, max_tokens=800,
                  layer=None, vector=None, mode="add", alpha=1.0,
-                 center=None, head=None, scope="each_step", top_p=1.0, top_k=0):
+                 center=None, head=None, scope="each_step", top_p=1.0, top_k=0,
+                 return_token_ids=False):
         """Generate one completion, optionally with a temporary activation intervention.
 
         Args:
@@ -277,6 +321,7 @@ class ActivationEngine:
             scope: "prefill" or "each_step"; passed to intervene.
             top_p: Nucleus probability in (0, 1], used only when sampling.
             top_k: Nonnegative candidate limit; zero disables this filter.
+            return_token_ids: Include exact prompt/completion IDs for activation replay.
         Returns:
             Dictionary containing Response, prompt/completion token counts,
             Finish_Reason, and hook counters. Only completion tokens are decoded.
@@ -301,10 +346,14 @@ class ActivationEngine:
         eos = self.model.generation_config.eos_token_id
         eos_ids = eos if isinstance(eos, list) else [eos]
         finished = bool(completion.numel() and completion[-1].item() in eos_ids)
-        return dict(Response=self.tokenizer.decode(completion, skip_special_tokens=True).strip(),
+        result = dict(Response=self.tokenizer.decode(completion, skip_special_tokens=True).strip(),
                     Generated_Tokens=completion.numel(), Finish_Reason="stop" if finished else "length",
                     Prompt_Tokens=inputs["input_ids"].shape[1],
                     Intervention_Calls=stats["interventions"], Forward_Calls=stats["forward_calls"])
+        if return_token_ids:
+            result.update(Prompt_Token_IDs=inputs["input_ids"][0].tolist(),
+                          Completion_Token_IDs=completion.tolist())
+        return result
 
 
 def load_engine(model_id, revision=None):

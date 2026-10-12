@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Standard,-0.31886168115592856,-1.8652973500264165,1.305712974130431,300,0,5,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Effective,-0.6360812505659823,-1.7372637082481326,0.03394649513379108,300,0,5,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Conventional,-0.7545127791753307,-2.4258669649423767,0.513836452822788,300,0,5,item and paired-generation bootstrap,2000,42
+models/Qwen2.5-7B-Instruct,Divergent Remote Association Test,DRAT_Score,Creative,Boring,0.638847830910372,-1.4368106532925515,3.228672142098939,300,0,5,item and paired-generation bootstrap,2000,42

@@ -1,0 +1,541 @@
+Protocol,Run_ID,Response_ID,Model,Provider,Task,Split,Instruction,Item,Condition,Repeat,Paraphrase,Block_ID,Generation_Seed,Request_Order,Schedule_Seed,Seed_Sent,Request_Ordering,Temperature,Max_Tokens,Top_P,Top_K,Decoding,Sampling_Filters_Active,Extra_Body_JSON,Timestamp_UTC,Prompt,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Error,Model_Dtype,Source_File,Parsed_Words,Valid_Nouns,Format_Valid,CDAT_Novelty,CDAT_Appropriateness
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:0,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",time,Standard,0,0,time|p0|r0,1527500108,0,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:51.763481+00:00,"List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Moment
+2. Hour
+3. Day
+4. Week
+5. Month
+6. Year
+7. Decade
+8. Generation
+9. Era
+10. Epoch",42,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""moment"", ""hour"", ""day"", ""week"", ""month"", ""year"", ""decade"", ""generation"", ""era"", ""epoch""]",10,True,67.78658017024797,139.58040429879824
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:1,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",food,Boring,0,0,food|p0|r0,1352375530,1,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:53.857473+00:00,"List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Apple
+2. Bread
+3. Carrot
+4. Doughnut
+5. Eggplant
+6. Fig
+7. Grape
+8. Honeydew
+9. Ice
+10. Jam",46,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""apple"", ""bread"", ""carrot"", ""doughnut"", ""eggplant"", ""fig"", ""grape"", ""honeydew"", ""ice"", ""jam""]",10,True,61.51685057605223,137.72294802775193
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:2,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",light,Creative,0,0,light|p0|r0,1767485923,2,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:54.925805+00:00,"List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Signal
+2. Beacon
+3. Indicator
+4. Lamp
+5. Flashlight
+6. Lantern
+7. Torch
+8. Headlight
+9. Navigation
+10. Alarm",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""signal"", ""beacon"", ""indicator"", ""lamp"", ""flashlight"", ""lantern"", ""torch"", ""headlight"", ""navigation"", ""alarm""]",10,True,56.34935462936876,145.1120416657904
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:3,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",school,Conventional,0,0,school|p0|r0,1297245549,3,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:55.924007+00:00,"List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Classroom
+2. Teacher
+3. Student
+4. Desk
+5. Book
+6. Exam
+7. Playground
+8. Principal
+9. Library
+10. Uniform",41,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""classroom"", ""teacher"", ""student"", ""desk"", ""book"", ""exam"", ""playground"", ""principal"", ""library"", ""uniform""]",10,True,62.70656255441081,148.0451865972355
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:4,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",music,Creative,0,0,music|p0|r0,843685318,4,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:56.877666+00:00,"List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Concert
+2. Tempo
+3. Lyric
+4. Orchestra
+5. Beat
+6. Song
+7. Chord
+8. Melody
+9. Instrument
+10. Score",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""concert"", ""tempo"", ""lyric"", ""orchestra"", ""beat"", ""song"", ""chord"", ""melody"", ""instrument"", ""score""]",10,True,64.57858994719489,147.5037570629729
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:5,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",art,Standard,0,0,art|p0|r0,527975779,5,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:57.902529+00:00,"List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Ball
+2. Cue
+3. Pocket
+4. Rack
+5. Break
+6. Spin
+7. Shot
+8. Game
+9. Table
+10. Foul",42,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""ball"", ""cue"", ""pocket"", ""rack"", ""break"", ""spin"", ""shot"", ""game"", ""table"", ""foul""]",10,True,72.8718969346058,123.37471280035356
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:6,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",time,Conventional,0,0,time|p0|r0,1527500108,6,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:58.880333+00:00,"List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Hour
+2. Minute
+3. Day
+4. Week
+5. Month
+6. Year
+7. Decade
+8. Century
+9. Era
+10. Generation",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""hour"", ""minute"", ""day"", ""week"", ""month"", ""year"", ""decade"", ""century"", ""era"", ""generation""]",10,True,66.02310192649051,140.96405575138004
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:7,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",river,Creative,0,0,river|p0|r0,240598992,7,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:39:59.854857+00:00,"List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Stream
+2. Flood
+3. Current
+4. Delta
+5. Boat
+6. Shore
+7. Dam
+8. Current
+9. Watershed
+10. Aqueduct",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""stream"", ""flood"", ""current"", ""delta"", ""boat"", ""shore"", ""dam"", ""watershed"", ""aqueduct""]",9,False,70.89032818749233,141.7683255771995
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:8,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",time,Creative,0,0,time|p0|r0,1527500108,8,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:00.853498+00:00,"List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Moment
+2. Epoch
+3. Instant
+4. Era
+5. Second
+6. Period
+7. Dawn
+8. Noon
+9. Sunset
+10. Midnight",41,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""moment"", ""epoch"", ""instant"", ""era"", ""second"", ""period"", ""dawn"", ""noon"", ""sunset"", ""midnight""]",10,True,72.24709930339613,135.28538211140628
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:9,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",light,Conventional,0,0,light|p0|r0,1767485923,9,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:01.804419+00:00,"List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Signal
+2. Beacon
+3. Lamp
+4. Flashlight
+5. Bulb
+6. Torch
+7. Indicator
+8. Lantern
+9. Headlight
+10. Projector",45,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""signal"", ""beacon"", ""lamp"", ""flashlight"", ""bulb"", ""torch"", ""indicator"", ""lantern"", ""headlight"", ""projector""]",10,True,55.81220688676598,145.04805453626463
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:10,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",plant,Conventional,0,0,plant|p0|r0,1663092183,10,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:02.849420+00:00,"List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Seed
+2. Stem
+3. Leaf
+4. Root
+5. Flower
+6. Fruit
+7. Bark
+8. Branch
+9. Sap
+10. Pollen",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""seed"", ""stem"", ""leaf"", ""root"", ""flower"", ""fruit"", ""bark"", ""branch"", ""sap"", ""pollen""]",10,True,67.65338684055907,146.91931875351844
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:11,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",food,Conventional,0,0,food|p0|r0,1352375530,11,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:03.822425+00:00,"List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Apple
+2. Bread
+3. Carrot
+4. Doughnut
+5. Eggplant
+6. Fig
+7. Grape
+8. Ham
+9. Ice
+10. Jam",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""apple"", ""bread"", ""carrot"", ""doughnut"", ""eggplant"", ""fig"", ""grape"", ""ham"", ""ice"", ""jam""]",10,True,61.51685057605223,137.72294802775193
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:12,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",school,Effective,0,0,school|p0|r0,1297245549,12,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:04.843231+00:00,"List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Classroom
+2. Principal
+3. Textbook
+4. Playground
+5. Library
+6. Cafeteria
+7. Bell
+8. Desk
+9. Uniform
+10. Curriculum",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""classroom"", ""principal"", ""textbook"", ""playground"", ""library"", ""cafeteria"", ""bell"", ""desk"", ""uniform"", ""curriculum""]",10,True,66.7349797563252,141.70459359565757
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:13,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",music,Boring,0,0,music|p0|r0,843685318,13,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:05.840873+00:00,"List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Concert
+2. Tempo
+3. Lyric
+4. Instrument
+5. Genre
+6. Beat
+7. Orchestra
+8. Song
+9. Chord
+10. Score",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""concert"", ""tempo"", ""lyric"", ""instrument"", ""genre"", ""beat"", ""orchestra"", ""song"", ""chord"", ""score""]",10,True,62.31718494089539,149.34737539960605
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:14,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",city,Creative,0,0,city|p0|r0,1056063297,14,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:06.839805+00:00,"List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Tokyo
+2. Senso-ji
+3. Shinkansen
+4. Sumo
+5. Sushi
+6. Kabuki
+7. Tsunami
+8. Yokohama
+9. Samurai
+10. Roppongi",55,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""tokyo"", ""sumo"", ""sushi"", ""tsunami"", ""yokohama"", ""samurai""]",6,False,,
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:15,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",city,Boring,0,0,city|p0|r0,1056063297,15,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:08.112122+00:00,"List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Paris
+2. Berlin
+3. Tokyo
+4. Sydney
+5. Madrid
+6. London
+7. Rome
+8. New York
+9. Moscow
+10. CapeTown",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""paris"", ""berlin"", ""tokyo"", ""sydney"", ""madrid"", ""london"", ""rome"", ""moscow""]",8,False,44.52357483509698,156.5586954382645
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:16,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",school,Standard,0,0,school|p0|r0,1297245549,16,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:09.108271+00:00,"List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Classroom
+2. Teacher
+3. Student
+4. Desk
+5. Curriculum
+6. Library
+7. Playground
+8. Exam
+9. Uniform
+10. Principal",41,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""classroom"", ""teacher"", ""student"", ""desk"", ""curriculum"", ""library"", ""playground"", ""exam"", ""uniform"", ""principal""]",10,True,60.99751922963974,148.09320110063564
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:17,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",food,Creative,0,0,food|p0|r0,1352375530,17,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:10.059722+00:00,"List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Apple
+2. Bacon
+3. Carrot
+4. Doughnut
+5. Eggplant
+6. Fig
+7. Grape
+8. Ham
+9. Iceberg
+10. Jalapeno",47,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""apple"", ""bacon"", ""carrot"", ""doughnut"", ""eggplant"", ""fig"", ""grape"", ""ham"", ""iceberg"", ""jalapeno""]",10,True,62.28100881441752,136.2294122559107
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:18,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",city,Standard,0,0,city|p0|r0,1056063297,18,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:11.149542+00:00,"List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Tokyo
+2. Shinkansen
+3. Sumo
+4. Sushi
+5. Koi
+6. Zen
+7. Kimono
+8. Haiku
+9. Yokohama
+10. Tokyo Tower",51,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""tokyo"", ""sumo"", ""sushi"", ""zen"", ""kimono"", ""haiku"", ""yokohama""]",7,False,66.50380266317964,132.6279183555067
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:19,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",music,Standard,0,0,music|p0|r0,843685318,19,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:12.329749+00:00,"List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Concert
+2. Tune
+3. Orchestra
+4. Beat
+5. Song
+6. Chord
+7. Melody
+8. Rhythm
+9. Harmony
+10. Score",44,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""concert"", ""tune"", ""orchestra"", ""beat"", ""song"", ""chord"", ""melody"", ""rhythm"", ""harmony"", ""score""]",10,True,63.43561887319875,148.31730926013464
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:20,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",machine,Boring,0,0,machine|p0|r0,1154554023,20,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:13.350317+00:00,"List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Coin
+2. Lever
+3. Ball
+4. Ticket
+5. Slot
+6. Handle
+7. Bell
+8. Drum
+9. Prize
+10. Jackpot",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""coin"", ""lever"", ""ball"", ""ticket"", ""slot"", ""handle"", ""bell"", ""drum"", ""prize"", ""jackpot""]",10,True,69.49019341801197,126.0618895757893
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:21,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",light,Boring,0,0,light|p0|r0,1767485923,21,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:14.324817+00:00,"List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Signal
+2. Bulb
+3. Flashlight
+4. Beacon
+5. Lantern
+6. Indicator
+7. Torch
+8. Lamp
+9. Headlight
+10. Projector",45,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""signal"", ""bulb"", ""flashlight"", ""beacon"", ""lantern"", ""indicator"", ""torch"", ""lamp"", ""headlight"", ""projector""]",10,True,56.93962888947932,143.84224518596994
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:22,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",plant,Boring,0,0,plant|p0|r0,1663092183,22,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:15.366450+00:00,"List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Seed
+2. Stem
+3. Leaf
+4. Root
+5. Flower
+6. Bark
+7. Branch
+8. Fruit
+9. Sap
+10. Pollen",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""seed"", ""stem"", ""leaf"", ""root"", ""flower"", ""bark"", ""branch"", ""fruit"", ""sap"", ""pollen""]",10,True,69.37001367082516,144.224171961101
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:23,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",art,Boring,0,0,art|p0|r0,527975779,23,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:16.340384+00:00,"List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Canvas
+2. Symphony
+3. Quantum
+4. Serendipity
+5. Vase
+6. Asteroid
+7. Symphony
+8. Quill
+9. Sapphire
+10. Zest",48,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""canvas"", ""symphony"", ""quantum"", ""serendipity"", ""vase"", ""asteroid"", ""quill"", ""sapphire"", ""zest""]",9,False,75.36048734343274,131.9396397895147
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:24,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",machine,Conventional,0,0,machine|p0|r0,1154554023,24,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:17.452002+00:00,"List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Coin
+2. Ball
+3. Ticket
+4. Card
+5. Lever
+6. Screen
+7. Slot
+8. Handle
+9. Vending
+10. Projection",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""coin"", ""ball"", ""ticket"", ""card"", ""lever"", ""screen"", ""slot"", ""handle"", ""vending"", ""projection""]",10,True,68.90722368348632,129.38869320819495
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:25,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",plant,Standard,0,0,plant|p0|r0,1663092183,25,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:18.427238+00:00,"List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Seed
+2. Stem
+3. Leaf
+4. Root
+5. Flower
+6. Fruit
+7. Bark
+8. Branch
+9. Sap
+10. Pollen",42,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""seed"", ""stem"", ""leaf"", ""root"", ""flower"", ""fruit"", ""bark"", ""branch"", ""sap"", ""pollen""]",10,True,67.65338684055907,146.91931875351844
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:26,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",time,Boring,0,0,time|p0|r0,1527500108,26,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:19.401835+00:00,"List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Moment
+2. Century
+3. Instant
+4. Epoch
+5. Year
+6. Second
+7. Era
+8. Day
+9. Minute
+10. Age",41,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""moment"", ""century"", ""instant"", ""epoch"", ""year"", ""second"", ""era"", ""day"", ""minute"", ""age""]",10,True,67.79633421182612,137.03096427853993
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:27,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",food,Standard,0,0,food|p0|r0,1352375530,27,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:20.352192+00:00,"List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Apple
+2. Bread
+3. Carrot
+4. Doughnut
+5. Eggplant
+6. Fig
+7. Grape
+8. Ham
+9. Ice
+10. Jam",44,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""apple"", ""bread"", ""carrot"", ""doughnut"", ""eggplant"", ""fig"", ""grape"", ""ham"", ""ice"", ""jam""]",10,True,61.51685057605223,137.72294802775193
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:28,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",food,Effective,0,0,food|p0|r0,1352375530,28,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:21.371741+00:00,"List 10 distinct single English nouns that are related to the cue food but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Apple
+2. Bread
+3. Carrot
+4. Doughnut
+5. Eggplant
+6. Fig
+7. Grape
+8. Ham
+9. Ice
+10. Jam",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""apple"", ""bread"", ""carrot"", ""doughnut"", ""eggplant"", ""fig"", ""grape"", ""ham"", ""ice"", ""jam""]",10,True,61.51685057605223,137.72294802775193
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:29,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",machine,Effective,0,0,machine|p0|r0,1154554023,29,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:22.392746+00:00,"List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Coin
+2. Lever
+3. Ball
+4. Ticket
+5. Slot
+6. Handle
+7. Button
+8. Vending
+9. Dispenser
+10. Ejector",45,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""coin"", ""lever"", ""ball"", ""ticket"", ""slot"", ""handle"", ""button"", ""vending"", ""dispenser"", ""ejector""]",10,True,66.87687353390879,128.79393053557823
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:30,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",art,Conventional,0,0,art|p0|r0,527975779,30,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:23.440062+00:00,"List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Ball
+2. Cue
+3. Pocket
+4. Rack
+5. Table
+6. Break
+7. Shot
+8. Spin
+9. Game
+10. Player",41,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""ball"", ""cue"", ""pocket"", ""rack"", ""table"", ""break"", ""shot"", ""spin"", ""game"", ""player""]",10,True,73.92080199003888,122.75444812186733
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:31,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",city,Conventional,0,0,city|p0|r0,1056063297,31,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:24.390560+00:00,"List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Tokyo
+2. Temple
+3. Rice
+4. Sumo
+5. Shinto
+6. Cherry
+7. Samurai
+8. Geisha
+9. Tsunami
+10. Yokohama",47,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""tokyo"", ""temple"", ""rice"", ""sumo"", ""shinto"", ""cherry"", ""samurai"", ""geisha"", ""tsunami"", ""yokohama""]",10,True,67.49321708833965,132.12963662984637
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:32,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",plant,Effective,0,0,plant|p0|r0,1663092183,32,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:25.481092+00:00,"List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Seed
+2. Root
+3. Stem
+4. Leaf
+5. Flower
+6. Fruit
+7. Bark
+8. Sap
+9. Pollen
+10. Wood",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""seed"", ""root"", ""stem"", ""leaf"", ""flower"", ""fruit"", ""bark"", ""sap"", ""pollen"", ""wood""]",10,True,67.65338684055905,146.91931875351844
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:33,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",machine,Creative,0,0,machine|p0|r0,1154554023,33,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:26.460996+00:00,"List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Coin
+2. Lever
+3. Ball
+4. Ticket
+5. Slot
+6. Handle
+7. Vending
+8. Bell
+9. Dispenser
+10. Ejector",45,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""coin"", ""lever"", ""ball"", ""ticket"", ""slot"", ""handle"", ""vending"", ""bell"", ""dispenser"", ""ejector""]",10,True,68.97742502459843,128.7026497793775
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:34,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",school,Boring,0,0,school|p0|r0,1297245549,34,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:27.516509+00:00,"List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Classroom
+2. Principal
+3. Textbook
+4. Playground
+5. Library
+6. Cafeteria
+7. Bell
+8. Desk
+9. Uniform
+10. Curriculum",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""classroom"", ""principal"", ""textbook"", ""playground"", ""library"", ""cafeteria"", ""bell"", ""desk"", ""uniform"", ""curriculum""]",10,True,66.7349797563252,141.70459359565757
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:35,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",art,Creative,0,0,art|p0|r0,527975779,35,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:28.534411+00:00,"List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Canvas
+2. Frame
+3. Palette
+4. Brush
+5. Palette knife
+6. Easel
+7. Paint
+8. Gallery
+9. Artwork
+10. Signature",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""canvas"", ""frame"", ""palette"", ""brush"", ""easel"", ""paint"", ""gallery"", ""artwork"", ""signature""]",9,False,62.59109657173134,144.9068790610231
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:36,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",art,Effective,0,0,art|p0|r0,527975779,36,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:29.571248+00:00,"List 10 distinct single English nouns that are related to the cue art but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Ball
+2. Cue
+3. Pocket
+4. Rack
+5. Break
+6. Spin
+7. Shot
+8. Game
+9. Table
+10. Foul",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""ball"", ""cue"", ""pocket"", ""rack"", ""break"", ""spin"", ""shot"", ""game"", ""table"", ""foul""]",10,True,72.8718969346058,123.37471280035356
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:37,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",music,Effective,0,0,music|p0|r0,843685318,37,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:30.561838+00:00,"List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Concert
+2. Tempo
+3. Lyric
+4. Orchestra
+5. Beat
+6. Song
+7. Chord
+8. Melody
+9. Instrument
+10. Score",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""concert"", ""tempo"", ""lyric"", ""orchestra"", ""beat"", ""song"", ""chord"", ""melody"", ""instrument"", ""score""]",10,True,64.57858994719489,147.5037570629729
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:38,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",time,Effective,0,0,time|p0|r0,1527500108,38,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:31.601357+00:00,"List 10 distinct single English nouns that are related to the cue time but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Moment
+2. Hour
+3. Day
+4. Week
+5. Month
+6. Year
+7. Decade
+8. Generation
+9. Era
+10. Epoch",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""moment"", ""hour"", ""day"", ""week"", ""month"", ""year"", ""decade"", ""generation"", ""era"", ""epoch""]",10,True,67.78658017024797,139.58040429879824
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:39,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",city,Effective,0,0,city|p0|r0,1056063297,39,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:32.590996+00:00,"List 10 distinct single English nouns that are related to the cue city but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Tokyo
+2. Sky
+3. History
+4. Rice
+5. Sumo
+6. Cherry
+7. Samurai
+8. Temple
+9. Tsunami
+10. Neon",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""tokyo"", ""sky"", ""history"", ""rice"", ""sumo"", ""cherry"", ""samurai"", ""temple"", ""tsunami"", ""neon""]",10,True,73.24449664547436,130.2866386740501
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:40,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",river,Standard,0,0,river|p0|r0,240598992,40,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:33.610701+00:00,"List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Stream
+2. Flood
+3. Current
+4. Delta
+5. Bank
+6. Boat
+7. Watershed
+8. Current
+9. Aqueduct
+10. Estuary",44,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""stream"", ""flood"", ""current"", ""delta"", ""bank"", ""boat"", ""watershed"", ""aqueduct"", ""estuary""]",9,False,69.78870518029126,144.66064613947637
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:41,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",plant,Creative,0,0,plant|p0|r0,1663092183,41,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:34.650966+00:00,"List 10 distinct single English nouns that are related to the cue plant but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Seed
+2. Stem
+3. Leaf
+4. Root
+5. Flower
+6. Fruit
+7. Bark
+8. Sap
+9. Pollen
+10. Wood",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""seed"", ""stem"", ""leaf"", ""root"", ""flower"", ""fruit"", ""bark"", ""sap"", ""pollen"", ""wood""]",10,True,67.65338684055907,146.91931875351844
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:42,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",river,Conventional,0,0,river|p0|r0,240598992,42,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:35.641705+00:00,"List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Stream
+2. Flood
+3. Current
+4. Delta
+5. Bank
+6. Boat
+7. Watershed
+8. Current
+9. Aqueduct
+10. Estuary",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""stream"", ""flood"", ""current"", ""delta"", ""bank"", ""boat"", ""watershed"", ""aqueduct"", ""estuary""]",9,False,69.78870518029126,144.66064613947637
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:43,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",river,Boring,0,0,river|p0|r0,240598992,43,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:36.679527+00:00,"List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Stream
+2. Flood
+3. Current
+4. Delta
+5. Boat
+6. Shore
+7. Dam
+8. Current
+9. Watershed
+10. Ferry",42,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""stream"", ""flood"", ""current"", ""delta"", ""boat"", ""shore"", ""dam"", ""watershed"", ""ferry""]",9,False,70.89032818749233,141.7683255771995
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:44,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",school,Creative,0,0,school|p0|r0,1297245549,44,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:37.671886+00:00,"List 10 distinct single English nouns that are related to the cue school but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Classroom
+2. Principal
+3. Textbook
+4. Playground
+5. Library
+6. Cafeteria
+7. Bell
+8. Desk
+9. Uniform
+10. Curriculum",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""classroom"", ""principal"", ""textbook"", ""playground"", ""library"", ""cafeteria"", ""bell"", ""desk"", ""uniform"", ""curriculum""]",10,True,66.7349797563252,141.70459359565757
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:45,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",light,Standard,0,0,light|p0|r0,1767485923,45,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:38.681683+00:00,"List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Signal
+2. Beacon
+3. Indicator
+4. Lamp
+5. Torch
+6. Flashlight
+7. Lantern
+8. Bulb
+9. Siren
+10. Beacon",44,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""signal"", ""beacon"", ""indicator"", ""lamp"", ""torch"", ""flashlight"", ""lantern"", ""bulb"", ""siren""]",9,False,56.349354629368776,145.1120416657904
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:46,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",light,Effective,0,0,light|p0|r0,1767485923,46,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:39.708835+00:00,"List 10 distinct single English nouns that are related to the cue light but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Signal
+2. Beacon
+3. Indicator
+4. Lamp
+5. Torch
+6. Flashlight
+7. Lantern
+8. Headlight
+9. Bulb
+10. Spotlight",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""signal"", ""beacon"", ""indicator"", ""lamp"", ""torch"", ""flashlight"", ""lantern"", ""headlight"", ""bulb"", ""spotlight""]",10,True,56.349354629368776,145.1120416657904
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:47,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",music,Conventional,0,0,music|p0|r0,843685318,47,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:40.727808+00:00,"List 10 distinct single English nouns that are related to the cue music but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Concert
+2. Song
+3. Tempo
+4. Lyric
+5. Instrument
+6. Beat
+7. Chorus
+8. Orchestra
+9. Melody
+10. DJ",44,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""concert"", ""song"", ""tempo"", ""lyric"", ""instrument"", ""beat"", ""chorus"", ""orchestra"", ""melody"", ""dj""]",10,True,60.43354825428429,147.7051016166496
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:48,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",river,Effective,0,0,river|p0|r0,240598992,48,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:41.746263+00:00,"List 10 distinct single English nouns that are related to the cue river but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Stream
+2. Flood
+3. Current
+4. Delta
+5. Boat
+6. Shore
+7. Dam
+8. Current
+9. Watershed
+10. Aqueduct",43,stop,72,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""stream"", ""flood"", ""current"", ""delta"", ""boat"", ""shore"", ""dam"", ""watershed"", ""aqueduct""]",9,False,70.89032818749233,141.7683255771995
+creativity-v2,20261007T123951_6f46bf06,20261007T123951_6f46bf06:49,models/Qwen2.5-7B-Instruct,local,Conditional Divergent Association Task,pilot,"List 10 distinct single English nouns that are related to the cue {item} but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",machine,Standard,0,0,machine|p0|r0,1154554023,49,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T12:40:42.742144+00:00,"List 10 distinct single English nouns that are related to the cue machine but as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Coin
+2. Lever
+3. Ball
+4. Ticket
+5. Slot
+6. Handle
+7. Button
+8. Vending
+9. Dispenser
+10. Ejector",45,stop,69,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/cdat/Qwen2.5-7B-Instruct/results_conditional_divergent_association_task_20261007T123951_6f46bf06.csv,"[""coin"", ""lever"", ""ball"", ""ticket"", ""slot"", ""handle"", ""button"", ""vending"", ""dispenser"", ""ejector""]",10,True,66.87687353390879,128.79393053557823

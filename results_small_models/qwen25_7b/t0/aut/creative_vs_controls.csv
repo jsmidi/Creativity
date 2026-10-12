@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Standard,-0.0004370386037352514,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Effective,0.014896231502699763,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Conventional,0.01777591128700835,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Qwen2.5-7B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Boring,0.017164748263865603,,,5,0,5,"greedy decoding; descriptive only, no sampling CI",0,42

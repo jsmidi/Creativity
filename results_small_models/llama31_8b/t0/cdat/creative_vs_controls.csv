@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Standard,2.46139202859298,,,600,0,10,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Effective,1.7592047052791415,,,600,0,10,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Conventional,4.875370823640483,,,600,0,10,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Conditional Divergent Association Task,CDAT_Novelty,Creative,Boring,2.065170938794554,,,600,0,10,"greedy decoding; descriptive only, no sampling CI",0,42

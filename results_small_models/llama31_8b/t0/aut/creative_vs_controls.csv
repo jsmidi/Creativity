@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Standard,-0.013575613750924873,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Effective,-0.006728727044216743,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Conventional,0.002588007930688317,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42
+models/Llama-3.1-8B-Instruct,Alternative Uses Task,Semantic_Distance_Proxy,Creative,Boring,-0.010971650500901731,,,300,0,5,"greedy decoding; descriptive only, no sampling CI",0,42

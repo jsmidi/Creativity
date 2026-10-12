@@ -1,0 +1,271 @@
+Protocol,Run_ID,Response_ID,Model,Provider,Task,Split,Instruction,Item,Condition,Repeat,Paraphrase,Block_ID,Generation_Seed,Request_Order,Schedule_Seed,Seed_Sent,Request_Ordering,Temperature,Max_Tokens,Top_P,Top_K,Decoding,Sampling_Filters_Active,Extra_Body_JSON,Timestamp_UTC,Prompt,Response,Generated_Tokens,Finish_Reason,Prompt_Tokens,Intervention_Calls,Forward_Calls,Status,Error,Model_Dtype,Source_File,Parsed_Words,Valid_Nouns,Format_Valid,DRAT_Score,Utility_Threshold,Survivors,Utilities
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:0,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",genome | lattice | algorithm | court,Conventional,0,0,genome | lattice | algorithm | court|p0|r0,183041955,0,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:49.693109+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Code
+2. Grid
+3. Process
+4. Panel
+5. Blueprint
+6. Strand
+7. System
+8. Bench
+9. Framework
+10. Network",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""code"", ""grid"", ""process"", ""panel"", ""blueprint"", ""strand"", ""system"", ""bench"", ""framework"", ""network""]",10,True,70.65112505961159,0.29858510006318406,7,"[0.5208536961688641, 0.41989964121269746, 0.2987714399642066, 0.31442978712832687, 0.3454108165809274, 0.281608897461959, 0.24546873008324216, 0.28479649676141916, 0.36216202442101575, 0.32651779191361324]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:1,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",evolution | friction | election | polynomial,Effective,0,0,evolution | friction | election | polynomial|p0|r0,1521023837,1,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:51.751074+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Change
+2. Resistance
+3. Choice
+4. Term
+5. Degree
+6. Path
+7. Force
+8. Cycle
+9. Root
+10. Node",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""change"", ""resistance"", ""choice"", ""term"", ""degree"", ""path"", ""force"", ""cycle"", ""root"", ""node""]",10,True,74.53567969383428,0.30323314261064765,5,"[0.3227349357404928, 0.4450762665885065, 0.3085623497262569, 0.2544646671271007, 0.34662200577524216, 0.23535816346978167, 0.4542974488703957, 0.27549734375970203, 0.2522052626114645, 0.22234610706625]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:2,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",immune system | fire | organization | theorem,Creative,0,0,immune system | fire | organization | theorem|p0|r0,304373360,2,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:52.692602+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Cell
+2. Flame
+3. Department
+4. Law
+5. Shield
+6. Network
+7. Spark
+8. Structure
+9. Principle
+10. Wall",41,stop,92,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""cell"", ""flame"", ""department"", ""law"", ""shield"", ""network"", ""spark"", ""structure"", ""principle"", ""wall""]",10,True,73.99763761925122,0.30850041175945747,9,"[0.34884070671160494, 0.749462760224124, 0.5002557569466617, 0.316593481970599, 0.2962018754409712, 0.43488183270670133, 0.4765342016625431, 0.6396442353432292, 0.3906399091714038, 0.3329600299976966]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:3,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",genome | lattice | algorithm | court,Creative,0,0,genome | lattice | algorithm | court|p0|r0,183041955,3,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:53.631047+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Code
+2. Grid
+3. Logic
+4. Panel
+5. Blueprint
+6. Strand
+7. Network
+8. Judgment
+9. Structure
+10. Pattern",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""code"", ""grid"", ""logic"", ""panel"", ""blueprint"", ""strand"", ""network"", ""judgment"", ""structure"", ""pattern""]",10,True,73.24953145061228,0.29858510006318406,8,"[0.5208536961688641, 0.41989964121269746, 0.2838837825339331, 0.31442978712832687, 0.3454108165809274, 0.281608897461959, 0.32651779191361324, 0.4990369521953668, 0.386584727399098, 0.3293117396307248]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:4,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",genome | lattice | algorithm | court,Boring,0,0,genome | lattice | algorithm | court|p0|r0,183041955,4,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:54.572831+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Cell
+2. Grid
+3. Code
+4. Panel
+5. Strand
+6. Network
+7. Chamber
+8. Framework
+9. Process
+10. Space",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""cell"", ""grid"", ""code"", ""panel"", ""strand"", ""network"", ""chamber"", ""framework"", ""process"", ""space""]",10,True,72.44259127048738,0.29858510006318406,8,"[0.32327528064216743, 0.41989964121269746, 0.5208536961688641, 0.31442978712832687, 0.281608897461959, 0.32651779191361324, 0.32748128576360724, 0.36216202442101575, 0.2987714399642066, 0.2924920804317533]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:5,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",immune system | fire | organization | theorem,Conventional,0,0,immune system | fire | organization | theorem|p0|r0,304373360,5,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:55.517352+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Cell
+2. Flame
+3. Department
+4. Law
+5. Wall
+6. Network
+7. Heat
+8. Structure
+9. Proof
+10. Shield",41,stop,92,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""cell"", ""flame"", ""department"", ""law"", ""wall"", ""network"", ""heat"", ""structure"", ""proof"", ""shield""]",10,True,74.92663371932836,0.30850041175945747,9,"[0.34884070671160494, 0.749462760224124, 0.5002557569466617, 0.316593481970599, 0.3329600299976966, 0.43488183270670133, 0.49289121388708373, 0.6396442353432292, 0.4061016570863324, 0.2962018754409712]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:6,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",immune system | fire | organization | theorem,Standard,0,0,immune system | fire | organization | theorem|p0|r0,304373360,6,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:56.460012+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Cell
+2. Flame
+3. Department
+4. Law
+5. Wall
+6. Network
+7. Spark
+8. Shield
+9. Structure
+10. Proof",41,stop,89,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""cell"", ""flame"", ""department"", ""law"", ""wall"", ""network"", ""spark"", ""shield"", ""structure"", ""proof""]",10,True,75.40698780033284,0.30850041175945747,9,"[0.34884070671160494, 0.749462760224124, 0.5002557569466617, 0.316593481970599, 0.3329600299976966, 0.43488183270670133, 0.4765342016625431, 0.2962018754409712, 0.6396442353432292, 0.4061016570863324]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:7,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",evolution | friction | election | polynomial,Standard,0,0,evolution | friction | election | polynomial|p0|r0,1521023837,7,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:57.402948+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Change
+2. Resistance
+3. Choice
+4. Term
+5. Degree
+6. Path
+7. Force
+8. Cycle
+9. Root
+10. Scale",41,stop,88,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""change"", ""resistance"", ""choice"", ""term"", ""degree"", ""path"", ""force"", ""cycle"", ""root"", ""scale""]",10,True,74.53567969383428,0.30323314261064765,5,"[0.3227349357404928, 0.4450762665885065, 0.3085623497262569, 0.2544646671271007, 0.34662200577524216, 0.23535816346978167, 0.4542974488703957, 0.27549734375970203, 0.2522052626114645, 0.1796455359261639]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:8,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",genome | lattice | algorithm | court,Standard,0,0,genome | lattice | algorithm | court|p0|r0,183041955,8,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:58.346250+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Code
+2. Grid
+3. Process
+4. Panel
+5. Blueprint
+6. Strand
+7. System
+8. Stage
+9. Framework
+10. Network",41,stop,88,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""code"", ""grid"", ""process"", ""panel"", ""blueprint"", ""strand"", ""system"", ""stage"", ""framework"", ""network""]",10,True,71.81049119429659,0.29858510006318406,8,"[0.5208536961688641, 0.41989964121269746, 0.2987714399642066, 0.31442978712832687, 0.3454108165809274, 0.281608897461959, 0.24546873008324216, 0.31885548232949923, 0.36216202442101575, 0.32651779191361324]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:9,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heartbeat | wave | oscillator | function,Conventional,0,0,heartbeat | wave | oscillator | function|p0|r0,1651834574,9,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:18:59.287573+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Pulse
+2. Tide
+3. Clock
+4. Signal
+5. Rhythm
+6. Curve
+7. Motion
+8. Cycle
+9. Beat
+10. Vibration",43,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""pulse"", ""tide"", ""clock"", ""signal"", ""rhythm"", ""curve"", ""motion"", ""cycle"", ""beat"", ""vibration""]",10,True,71.19123262682385,0.28901744938057566,10,"[0.6957996997353706, 0.3110823544041318, 0.32418023564068427, 0.4758536804201358, 0.5045140499341783, 0.32366176656621487, 0.3747127077395519, 0.36714657837218667, 0.4305645392226655, 0.4720871733809675]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:10,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",evolution | friction | election | polynomial,Conventional,0,0,evolution | friction | election | polynomial|p0|r0,1521023837,10,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:00.270126+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Change
+2. Resistance
+3. Choice
+4. Term
+5. Degree
+6. Path
+7. Force
+8. Cycle
+9. Root
+10. Node",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""change"", ""resistance"", ""choice"", ""term"", ""degree"", ""path"", ""force"", ""cycle"", ""root"", ""node""]",10,True,74.53567969383428,0.30323314261064765,5,"[0.3227349357404928, 0.4450762665885065, 0.3085623497262569, 0.2544646671271007, 0.34662200577524216, 0.23535816346978167, 0.4542974488703957, 0.27549734375970203, 0.2522052626114645, 0.22234610706625]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:11,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",genome | lattice | algorithm | court,Effective,0,0,genome | lattice | algorithm | court|p0|r0,183041955,11,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:01.206012+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: genome | lattice | algorithm | court. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Code
+2. Grid
+3. Process
+4. Panel
+5. Blueprint
+6. Strand
+7. System
+8. Bench
+9. Framework
+10. Network",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""code"", ""grid"", ""process"", ""panel"", ""blueprint"", ""strand"", ""system"", ""bench"", ""framework"", ""network""]",10,True,70.65112505961159,0.29858510006318406,7,"[0.5208536961688641, 0.41989964121269746, 0.2987714399642066, 0.31442978712832687, 0.3454108165809274, 0.281608897461959, 0.24546873008324216, 0.28479649676141916, 0.36216202442101575, 0.32651779191361324]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:12,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heart | engine | marketplace | equation,Conventional,0,0,heart | engine | marketplace | equation|p0|r0,916258050,12,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:02.141104+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be conventional.","1. Love
+2. Power
+3. Trade
+4. Balance
+5. Soul
+6. Car
+7. Forum
+8. Harmony
+9. Core
+10. Market",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""love"", ""power"", ""trade"", ""balance"", ""soul"", ""car"", ""forum"", ""harmony"", ""core"", ""market""]",10,True,72.57928189669349,0.3081994158050631,10,"[0.50379593464862, 0.3515210232292987, 0.33960865779220584, 0.3511696487974044, 0.5007634643053733, 0.5932696099411521, 0.4395579605374438, 0.3535296146399286, 0.35227006819515594, 0.6891663648081752]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:13,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",evolution | friction | election | polynomial,Creative,0,0,evolution | friction | election | polynomial|p0|r0,1521023837,13,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:03.076785+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Change
+2. Resistance
+3. Choice
+4. Term
+5. Degree
+6. Path
+7. Force
+8. Cycle
+9. Root
+10. Scale",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""change"", ""resistance"", ""choice"", ""term"", ""degree"", ""path"", ""force"", ""cycle"", ""root"", ""scale""]",10,True,74.53567969383428,0.30323314261064765,5,"[0.3227349357404928, 0.4450762665885065, 0.3085623497262569, 0.2544646671271007, 0.34662200577524216, 0.23535816346978167, 0.4542974488703957, 0.27549734375970203, 0.2522052626114645, 0.1796455359261639]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:14,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heartbeat | wave | oscillator | function,Effective,0,0,heartbeat | wave | oscillator | function|p0|r0,1651834574,14,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:04.011756+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Pulse
+2. Tide
+3. Clock
+4. Signal
+5. Rhythm
+6. Curve
+7. Vibration
+8. Operation
+9. Cycle
+10. Beat",43,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""pulse"", ""tide"", ""clock"", ""signal"", ""rhythm"", ""curve"", ""vibration"", ""operation"", ""cycle"", ""beat""]",10,True,73.3391088817035,0.28901744938057566,10,"[0.6957996997353706, 0.3110823544041318, 0.32418023564068427, 0.4758536804201358, 0.5045140499341783, 0.32366176656621487, 0.4720871733809675, 0.38005247497029915, 0.36714657837218667, 0.4305645392226655]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:15,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",evolution | friction | election | polynomial,Boring,0,0,evolution | friction | election | polynomial|p0|r0,1521023837,15,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:04.999176+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: evolution | friction | election | polynomial. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Change
+2. Resistance
+3. Choice
+4. Term
+5. Degree
+6. Path
+7. Force
+8. Node
+9. Cycle
+10. Root",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""change"", ""resistance"", ""choice"", ""term"", ""degree"", ""path"", ""force"", ""node"", ""cycle"", ""root""]",10,True,74.53567969383428,0.30323314261064765,5,"[0.3227349357404928, 0.4450762665885065, 0.3085623497262569, 0.2544646671271007, 0.34662200577524216, 0.23535816346978167, 0.4542974488703957, 0.22234610706625, 0.27549734375970203, 0.2522052626114645]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:16,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heart | engine | marketplace | equation,Effective,0,0,heart | engine | marketplace | equation|p0|r0,916258050,16,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:05.940566+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Love
+2. Power
+3. Trade
+4. Balance
+5. Life
+6. Hope
+7. Market
+8. Core
+9. Harmony
+10. Formula",41,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""love"", ""power"", ""trade"", ""balance"", ""life"", ""hope"", ""market"", ""core"", ""harmony"", ""formula""]",10,True,72.72639221845752,0.3081994158050631,9,"[0.50379593464862, 0.3515210232292987, 0.33960865779220584, 0.3511696487974044, 0.4552436659970873, 0.3029726769215436, 0.6891663648081752, 0.35227006819515594, 0.3535296146399286, 0.5847883544231136]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:17,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heartbeat | wave | oscillator | function,Boring,0,0,heartbeat | wave | oscillator | function|p0|r0,1651834574,17,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:06.884991+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Pulse
+2. Tide
+3. Clock
+4. Signal
+5. Curve
+6. Rhythm
+7. Vibration
+8. Operation
+9. Motion
+10. Cycle",43,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""pulse"", ""tide"", ""clock"", ""signal"", ""curve"", ""rhythm"", ""vibration"", ""operation"", ""motion"", ""cycle""]",10,True,72.47696572536752,0.28901744938057566,10,"[0.6957996997353706, 0.3110823544041318, 0.32418023564068427, 0.4758536804201358, 0.32366176656621487, 0.5045140499341783, 0.4720871733809675, 0.38005247497029915, 0.3747127077395519, 0.36714657837218667]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:18,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heart | engine | marketplace | equation,Creative,0,0,heart | engine | marketplace | equation|p0|r0,916258050,18,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:07.873883+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Love
+2. Power
+3. Trade
+4. Balance
+5. Compassion
+6. Ignition
+7. Competition
+8. Harmony
+9. Vitality
+10. Exchange",44,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""love"", ""power"", ""trade"", ""balance"", ""compassion"", ""ignition"", ""competition"", ""harmony"", ""vitality"", ""exchange""]",10,True,70.45531480514938,0.3081994158050631,10,"[0.50379593464862, 0.3515210232292987, 0.33960865779220584, 0.3511696487974044, 0.5563927145860195, 0.5166952385244395, 0.41414896743796714, 0.3535296146399286, 0.4874805124380428, 0.4734277386881605]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:19,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heartbeat | wave | oscillator | function,Creative,0,0,heartbeat | wave | oscillator | function|p0|r0,1651834574,19,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:08.885623+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be creative.","1. Pulse
+2. Tide
+3. Clock
+4. Signal
+5. Rhythm
+6. Curve
+7. Vibration
+8. Operation
+9. Cycle
+10. Beat",43,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""pulse"", ""tide"", ""clock"", ""signal"", ""rhythm"", ""curve"", ""vibration"", ""operation"", ""cycle"", ""beat""]",10,True,73.3391088817035,0.28901744938057566,10,"[0.6957996997353706, 0.3110823544041318, 0.32418023564068427, 0.4758536804201358, 0.5045140499341783, 0.32366176656621487, 0.4720871733809675, 0.38005247497029915, 0.36714657837218667, 0.4305645392226655]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:20,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",immune system | fire | organization | theorem,Effective,0,0,immune system | fire | organization | theorem|p0|r0,304373360,20,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:09.875637+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be effective.","1. Cell
+2. Flame
+3. Department
+4. Law
+5. Wall
+6. Network
+7. Heat
+8. Structure
+9. Proof
+10. Shield",41,stop,92,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""cell"", ""flame"", ""department"", ""law"", ""wall"", ""network"", ""heat"", ""structure"", ""proof"", ""shield""]",10,True,74.92663371932836,0.30850041175945747,9,"[0.34884070671160494, 0.749462760224124, 0.5002557569466617, 0.316593481970599, 0.3329600299976966, 0.43488183270670133, 0.49289121388708373, 0.6396442353432292, 0.4061016570863324, 0.2962018754409712]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:21,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",immune system | fire | organization | theorem,Boring,0,0,immune system | fire | organization | theorem|p0|r0,304373360,21,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:10.818957+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: immune system | fire | organization | theorem. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Cell
+2. Flame
+3. Department
+4. Law
+5. Particle
+6. Beacon
+7. Shield
+8. Spark
+9. Module
+10. Pillar",42,stop,92,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""cell"", ""flame"", ""department"", ""law"", ""particle"", ""beacon"", ""shield"", ""spark"", ""module"", ""pillar""]",10,True,73.68210471134711,0.30850041175945747,5,"[0.34884070671160494, 0.749462760224124, 0.5002557569466617, 0.316593481970599, 0.22949392205261654, 0.22015155545670523, 0.2962018754409712, 0.4765342016625431, 0.24040814474983874, 0.21574676616145105]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:22,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heart | engine | marketplace | equation,Standard,0,0,heart | engine | marketplace | equation|p0|r0,916258050,22,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:11.785681+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Love
+2. Power
+3. Trade
+4. Balance
+5. Compassion
+6. Ignition
+7. Competition
+8. Emotion
+9. Market
+10. Harmony",44,stop,88,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""love"", ""power"", ""trade"", ""balance"", ""compassion"", ""ignition"", ""competition"", ""emotion"", ""market"", ""harmony""]",10,True,69.0359464677455,0.3081994158050631,10,"[0.50379593464862, 0.3515210232292987, 0.33960865779220584, 0.3511696487974044, 0.5563927145860195, 0.5166952385244395, 0.41414896743796714, 0.572310301691007, 0.6891663648081752, 0.3535296146399286]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:23,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heart | engine | marketplace | equation,Boring,0,0,heart | engine | marketplace | equation|p0|r0,916258050,23,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:12.796469+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heart | engine | marketplace | equation. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.
+Be boring.","1. Love
+2. Motor
+3. Bazaar
+4. Balance
+5. Core
+6. Pump
+7. Square
+8. Formula
+9. Seat
+10. Drive",42,stop,91,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""love"", ""motor"", ""bazaar"", ""balance"", ""core"", ""pump"", ""square"", ""formula"", ""seat"", ""drive""]",10,True,77.43941321802264,0.3081994158050631,9,"[0.50379593464862, 0.6617131381287287, 0.6392604365196544, 0.3511696487974044, 0.35227006819515594, 0.3661548758855475, 0.33491944369680315, 0.5847883544231136, 0.27392564324200364, 0.3864530332231483]"
+creativity-v2,20261007T131849_3a5388da,20261007T131849_3a5388da:24,models/Qwen2.5-7B-Instruct,local,Divergent Remote Association Test,pilot,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",heartbeat | wave | oscillator | function,Standard,0,0,heartbeat | wave | oscillator | function|p0|r0,1651834574,24,42,True,randomized,0.0,800,1.0,0,greedy,False,{},2026-10-07T13:19:13.763111+00:00,"List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: heartbeat | wave | oscillator | function. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.","1. Pulse
+2. Tide
+3. Clock
+4. Signal
+5. Rhythm
+6. Curve
+7. Beat
+8. Vibration
+9. Operation
+10. Cycle",43,stop,88,0,0,ok,,torch.bfloat16,/gpfs/home4/jsmidi/Creativity/outputs/temperature_comparison_qwen25_7b_20261007T122952Z/t0/drat/Qwen2.5-7B-Instruct/results_divergent_remote_association_test_20261007T131849_3a5388da.csv,"[""pulse"", ""tide"", ""clock"", ""signal"", ""rhythm"", ""curve"", ""beat"", ""vibration"", ""operation"", ""cycle""]",10,True,73.3391088817035,0.28901744938057566,10,"[0.6957996997353706, 0.3110823544041318, 0.32418023564068427, 0.4758536804201358, 0.5045140499341783, 0.32366176656621487, 0.4305645392226655, 0.4720871733809675, 0.38005247497029915, 0.36714657837218667]"

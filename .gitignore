@@ -5,3 +5,4 @@ databases/*.txt
 models/
 logs/
 *__pycache__/
+/tmp

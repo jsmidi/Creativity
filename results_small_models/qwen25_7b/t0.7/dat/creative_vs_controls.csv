@@ -1,0 +1,5 @@
+Model,Task,Metric,Treatment,Control,Mean_Difference,CI_Lower,CI_Upper,Complete_Pairs,Incomplete_Pairs,Items,Scope,Bootstrap_Draws,Bootstrap_Seed
+models/Qwen2.5-7B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Standard,1.7732611338297526,0.8020066293080648,2.730700896581014,60,0,1,within-item sampling only,2000,42
+models/Qwen2.5-7B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Effective,1.6236192067464192,0.7192444737752279,2.489389492670695,60,0,1,within-item sampling only,2000,42
+models/Qwen2.5-7B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Conventional,2.572790273030599,1.6132650661468506,3.5123446750640865,60,0,1,within-item sampling only,2000,42
+models/Qwen2.5-7B-Instruct,Divergent Association Task,DAT_GloVe_Score,Creative,Boring,2.1534956614176433,1.1808302688598633,3.041431891123454,60,0,1,within-item sampling only,2000,42
