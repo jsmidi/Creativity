@@ -7,7 +7,7 @@ import sys
 
 TASKS = {
     'Divergent Association Task': ('dat', 'DAT_GloVe_Score'),
-    'Alternative Uses Task': ('aut', 'Semantic_Distance_Proxy'),
+    'Alternative Uses Task': ('aut', 'Pairwise_Semantic_Distance_Proxy'),
     'Conditional Divergent Association Task': ('cdat', 'CDAT_Novelty'),
     'Divergent Remote Association Test': ('drat', 'DRAT_Score'),
 }

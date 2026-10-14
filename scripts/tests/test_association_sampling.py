@@ -73,7 +73,9 @@ class MetricTests(unittest.TestCase):
                 self.assertTrue(np.isfinite(result.loc[0, metric]))
                 self.assertTrue(np.isnan(result.loc[1, metric]))
                 self.assertEqual(len((root/'result'/'calibration_nouns.txt').read_text().splitlines()), 10)
-                self.assertIn('embedding_sha256', json.loads((root/'result'/'manifest.json').read_text()))
+                manifest = json.loads((root/'result'/'manifest.json').read_text())
+                self.assertEqual(manifest['drat_minimum'], 3)
+                self.assertFalse(any('sha256' in key for key in manifest))
 
     def test_geometry(self):
         self.assertAlmostEqual(novelty(np.eye(3)), 100)

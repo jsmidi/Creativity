@@ -1,6 +1,5 @@
 """Download WordNet once and freeze a noun vocabulary for exploratory CDAT/DRAT."""
 import argparse
-import hashlib
 import io
 import json
 from pathlib import Path
@@ -12,7 +11,7 @@ URL = 'https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpor
 
 
 def main():
-    """Save sorted single-word noun lemmas, upstream license and download hashes."""
+    """Save sorted single-word noun lemmas, upstream license and source URL."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-dir', type=Path, default=Path('databases/association'))
     args = parser.parse_args()
@@ -28,7 +27,6 @@ def main():
     path.write_text('\n'.join(words)+'\n')
     (args.output_dir/'WORDNET_LICENSE').write_bytes(archive.read('wordnet/LICENSE'))
     (args.output_dir/'source.json').write_text(json.dumps(dict(url=URL,
-        archive_sha256=hashlib.sha256(data).hexdigest(), nouns_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
         count=len(words), filtering='unique lowercase single-word noun lemmas, hyphens allowed'), indent=2))
     print(f'Saved {len(words)} nouns to {path}')
 

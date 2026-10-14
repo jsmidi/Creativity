@@ -282,7 +282,7 @@ class ActivationEngine:
     def generate(self, prompt, seed=42, temperature=0.7, max_tokens=800,
                  layer=None, vector=None, mode="add", alpha=1.0,
                  center=None, head=None, scope="each_step", top_p=1.0, top_k=0,
-                 return_token_ids=False):
+                 return_token_ids=False, repetition_penalty=None):
         """Generate one completion, optionally with a temporary activation intervention.
 
         Args:
@@ -300,6 +300,7 @@ class ActivationEngine:
             top_p: Nucleus probability in (0, 1], used only when sampling.
             top_k: Nonnegative candidate limit; zero disables this filter.
             return_token_ids: Include exact prompt/completion IDs for activation replay.
+            repetition_penalty: Optional explicit override of model decoding defaults.
         Returns:
             Dictionary containing Response, prompt/completion token counts,
             Finish_Reason, and hook counters. Only completion tokens are decoded.
@@ -314,6 +315,8 @@ class ActivationEngine:
         kwargs = dict(max_new_tokens=max_tokens, do_sample=temperature > 0,
                       use_cache=True, pad_token_id=self.tokenizer.eos_token_id)
         kwargs.update(sampling_kwargs(temperature, top_p, top_k))
+        if repetition_penalty is not None:
+            kwargs["repetition_penalty"] = repetition_penalty
         stats = dict(forward_calls=0, interventions=0)
         if vector is None:
             tokens = self.model.generate(**inputs, **kwargs)

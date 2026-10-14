@@ -16,8 +16,8 @@ export HF_HUB_OFFLINE=1 TOKENIZERS_PARALLELISM=false MPLBACKEND=Agg
 export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
 PYTHON="${PYTHON:-.venv/bin/python}"
 MODEL="models/Qwen2.5-7B-Instruct"
-RUN_ROOT="${RUN_ROOT:?Set RUN_ROOT to a prepared directory containing frozen code}"
-CODE="$RUN_ROOT/code"
+RUN_ROOT="${RUN_ROOT:?Set RUN_ROOT to an output directory}"
+CODE=scripts
 INDEX="${SLURM_ARRAY_TASK_ID:?Submit as a Slurm array}"
 if (( INDEX < 0 || INDEX > 11 )); then echo 'Array index must be 0 through 11' >&2; exit 1; fi
 TASK_NAMES=('Alternative Uses Task' 'Divergent Association Task' 'Conditional Divergent Association Task' 'Divergent Remote Association Test')
@@ -34,7 +34,7 @@ RAW_ROOT="$RUN_ROOT/t${TEMP}/$KEY"
 ANALYSIS_ROOT="analysis/${RUN_ROOT##*/}/t${TEMP}/$KEY"
 mkdir -p "$RAW_ROOT"
 echo "Task=$TASK temperature=$TEMP repeats=$REPEATS model=$MODEL"
-echo "Frozen sources=$CODE raw=$RAW_ROOT analysis=$ANALYSIS_ROOT"
+echo "Scripts=$CODE raw=$RAW_ROOT analysis=$ANALYSIS_ROOT"
 srun "$PYTHON" -u "$CODE/run_tasks.py"     --provider local --model "$MODEL" --task "$TASK"     --conditions Standard Conventional Effective Boring Creative     --repeats "$REPEATS" --paraphrases 0 --randomize --seed 42     --temperature "$TEMP" --top-p 1 --top-k 0 --max-tokens 800     --output-root "$RAW_ROOT"
 if [[ "$KEY" == aut ]]; then
     srun "$PYTHON" -u "$CODE/evaluate_aut.py" --inputs "$RAW_ROOT"         --norm-db aut_quality_scored_all.csv --output-dir "$ANALYSIS_ROOT"

@@ -111,6 +111,31 @@ class PipelineTests(unittest.TestCase):
             validate_holdout(artifact, "Divergent Association Task", [""], [0], "test")
         validate_holdout(artifact, "Divergent Association Task", [""], [2], "test")
 
+    def test_aut_pairwise_distance_within_response(self):
+        class KnownEmbedding:
+            def encode(self, texts):
+                vectors = {"east": [1, 0], "north": [0, 1], "west": [-1, 0]}
+                return np.array([vectors.get(text, [1, 0]) for text in texts], dtype=float)
+
+        rows = pd.DataFrame([
+            dict(Response_ID="a", Response="1. east\n2. north\n3. west", Status="ok", Item="book"),
+            dict(Response_ID="b", Response="1. east\n2. east", Status="ok", Item="book"),
+            dict(Response_ID="c", Response="1. north", Status="ok", Item="book"),
+            dict(Response_ID="d", Response="", Status="error", Item="book"),
+        ])
+        responses, ideas = prepare_ideas(rows)
+        scored = evaluate_aut_metrics(ideas, KnownEmbedding(), {})
+        metric = "Pairwise_Semantic_Distance_Proxy"
+        np.testing.assert_allclose(scored.loc[scored.Response_ID == "a", metric], [1.5, 1, 1.5])
+        means = scored.groupby("Response_ID")[metric].mean()
+        result = responses.merge(means, on="Response_ID", how="left")
+        self.assertAlmostEqual(result.loc[0, metric], 4 / 3)
+        self.assertEqual(result.loc[1, metric], 0)
+        self.assertTrue(result.loc[2:, metric].isna().all())
+        self.assertIn("Semantic_Distance_Proxy", scored)
+        empty = evaluate_aut_metrics(ideas.iloc[:0], KnownEmbedding(), {})
+        self.assertIn(metric, empty)
+
     def test_legacy_opt_in_and_duplicate_rejection(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "raw.csv"

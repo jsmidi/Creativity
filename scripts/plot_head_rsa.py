@@ -1,6 +1,5 @@
 """Reproduce the pilot discovery head-RSA heatmap and selected-head audit panel."""
 import argparse
-import hashlib
 import json
 from pathlib import Path
 import shutil
@@ -50,7 +49,7 @@ def plot_head_rsa(discovery, output, title):
         shutil.copy2(path, output/path.name)
     (output/'manifest.json').write_text(json.dumps(dict(
         discovery_directory=str(discovery), figure='pilot discovery Cross_RSA heatmap and fixed-head Audit_RSA comparison',
-        source_sha256={str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in [ranking_path, audit_path]}), indent=2)+'\n')
+        source_files=[str(p) for p in [ranking_path, audit_path]]), indent=2)+'\n')
 
 
 def main():

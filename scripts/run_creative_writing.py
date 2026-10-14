@@ -7,7 +7,6 @@ No GPU inference or downloads occur on import or in a generation dry run.
 import argparse
 import csv
 from datetime import datetime, timezone
-import hashlib
 import json
 from pathlib import Path
 import random
@@ -15,22 +14,6 @@ import shutil
 
 from creative_writing import DEFAULT_CUES, PROMPT_VERSION, TASK, load_cues, story_prompt
 from experiment import PROTOCOL_VERSION, stable_seed
-
-
-def file_fingerprint(path):
-    """Detect changed story data before replaying saved tokens."""
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-
-
-def snapshot_sources(output):
-    """Freeze this pipeline and its generation dependencies alongside the output."""
-    source = Path(__file__).resolve().parent
-    destination = output / "code"
-    destination.mkdir()
-    names = ["run_creative_writing.py", "creative_writing.py", "interventions.py",
-             "run_residual.py", "experiment.py", "task_config.py", "sampling.py"]
-    for name in names:
-        shutil.copyfile(source / name, destination / name)
 
 
 def writing_trials(cues, repeats, seed):
@@ -55,7 +38,8 @@ def write_stories(engine, args, trials, run_id):
             prompt = story_prompt(cue, condition)
             result = engine.generate(prompt, seed=seed, temperature=args.temperature,
                                      max_tokens=args.max_tokens, top_p=args.top_p,
-                                     top_k=args.top_k, return_token_ids=True)
+                                     top_k=args.top_k, return_token_ids=True,
+                                     repetition_penalty=getattr(args, "repetition_penalty", 1.0))
             row = dict(Protocol=PROTOCOL_VERSION, Prompt_Version=PROMPT_VERSION,
                        Run_ID=run_id, Response_ID=f"{run_id}:{order}", Model=args.model,
                        Task=TASK, Cue_ID=cue["id"], Item=", ".join(cue["items"]),
@@ -64,6 +48,7 @@ def write_stories(engine, args, trials, run_id):
                        Paraphrase=0, Repeat=repeat, Block_ID=block, Generation_Seed=seed,
                        Request_Order=order, Temperature=args.temperature,
                        Top_P=args.top_p, Top_K=args.top_k, Max_Tokens=args.max_tokens,
+                       Repetition_Penalty=getattr(args, "repetition_penalty", 1.0),
                        Status="ok" if result["Response"] else "empty", **result)
             raw.write(json.dumps(row, ensure_ascii=False) + "\n")
             raw.flush()
@@ -93,27 +78,26 @@ def generate(args):
     from run_residual import provenance
     from interventions import load_engine
     args.output_dir.mkdir(parents=True, exist_ok=False)
-    snapshot_sources(args.output_dir)
     shutil.copyfile(args.cues, args.output_dir / "cues.json")
     engine = load_engine(args.model, args.revision)
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     manifest = dict(**provenance(engine, args), protocol=PROTOCOL_VERSION,
                     prompt_version=PROMPT_VERSION, task=TASK, run_id=run_id,
-                    cues_sha256=file_fingerprint(args.output_dir / "cues.json"),
                     cue_metadata=document.get("metadata", {}), split=args.split,
                     cue_ids=[cue["id"] for cue in cues], repeats=args.repeats,
                     temperature=args.temperature, top_p=args.top_p, top_k=args.top_k,
+                    repetition_penalty=getattr(args, "repetition_penalty", 1.0),
                     max_tokens=args.max_tokens, seed=args.seed,
                     planned_responses=len(trials), completed=False)
     path = args.output_dir / "manifest.json"
     path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     write_stories(engine, args, trials, run_id)
-    manifest.update(completed=True, responses_sha256=file_fingerprint(args.output_dir / "responses.jsonl"))
+    manifest.update(completed=True)
     path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
 
 def read_discovery(run_dir, allow_truncated=False):
-    """Require a complete, unchanged discovery run with every planned matched pair.
+    """Require a complete discovery run with every planned matched pair.
 
     Empty responses and incomplete blocks fail closed. Length-capped responses
     require explicit inclusion; content quality is not silently used for selection.
@@ -122,10 +106,6 @@ def read_discovery(run_dir, allow_truncated=False):
     if (not manifest.get("completed") or manifest["split"] != "discovery" or
             manifest["prompt_version"] != PROMPT_VERSION or manifest["protocol"] != PROTOCOL_VERSION):
         raise ValueError("Extraction requires a completed compatible discovery run.")
-    if file_fingerprint(run_dir / "responses.jsonl") != manifest["responses_sha256"]:
-        raise ValueError("Response file differs from the completed generation manifest.")
-    if file_fingerprint(run_dir / "cues.json") != manifest["cues_sha256"]:
-        raise ValueError("Cue file differs from the generation manifest.")
     cues = {cue["id"]: cue for cue in load_cues(run_dir / "cues.json")["data"]
             if cue["split"] == "discovery"}
     if set(cues) != set(manifest["cue_ids"]):
@@ -204,7 +184,7 @@ def export_vectors(output, pooled, pairs, manifest, run_dir, allow_truncated):
     base = dict(protocol=PROTOCOL_VERSION, model=manifest["model"],
                 requested_revision=manifest["requested_revision"],
                 resolved_revision=manifest["resolved_revision"],
-                chat_template_sha256=manifest["chat_template_sha256"], head=None,
+                head=None,
                 baseline="Standard", examples=examples, prompt_version=PROMPT_VERSION,
                 vector_kind="story_response_mean_contrast", extraction_split="discovery",
                 extraction_position="post-block residual at response tokens; prompt/special tokens excluded",
@@ -224,7 +204,6 @@ def export_vectors(output, pooled, pairs, manifest, run_dir, allow_truncated):
         (output / f"layer_{layer:02d}.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
         norms.append(dict(layer=layer, vector_norm=metadata["vector_norm"]))
     torch.save(dict(pooled=pooled, metadata=base), output / "response_means.pt")
-    snapshot_sources(output)
     (output / "manifest.json").write_text(json.dumps(dict(**base, layers=norms), indent=2), encoding="utf-8")
 
 
@@ -241,7 +220,7 @@ def extract(args):
     revision = manifest.get("resolved_revision") or manifest.get("requested_revision")
     engine = load_engine(manifest["model"], revision)
     current = provenance(engine, Namespace(model=manifest["model"], revision=revision))
-    for field in ("resolved_revision", "chat_template_sha256"):
+    for field in ("resolved_revision",):
         if manifest.get(field) and current[field] != manifest[field]:
             raise ValueError(f"Extraction/generation mismatch in {field}.")
     pooled = pool_stories(engine, pairs, args.layers)
@@ -263,6 +242,7 @@ def parse_args():
     generation.add_argument("--temperature", type=float, default=0.7)
     generation.add_argument("--top-p", type=float, default=1.0)
     generation.add_argument("--top-k", type=int, default=0)
+    generation.add_argument("--repetition-penalty", type=float, default=1.0)
     generation.add_argument("--max-tokens", type=int, default=256)
     extraction = commands.add_parser("extract")
     extraction.add_argument("--run-dir", type=Path, required=True)
@@ -275,8 +255,9 @@ def parse_args():
     if args.command == "generate":
         import math
         if (args.repeats < 1 or args.max_tokens < 1 or not math.isfinite(args.temperature) or
-                args.temperature < 0 or not 0 < args.top_p <= 1 or args.top_k < 0):
-            parser.error("Require repeats/max-tokens >=1, finite temperature >=0, 0<top-p<=1 and top-k>=0.")
+                args.temperature < 0 or not 0 < args.top_p <= 1 or args.top_k < 0 or
+                not math.isfinite(args.repetition_penalty) or args.repetition_penalty <= 0):
+            parser.error("Require repeats/max-tokens >=1, finite temperature >=0, 0<top-p<=1, top-k>=0 and finite repetition-penalty>0.")
     elif args.layers is not None and (min(args.layers) < 0 or len(set(args.layers)) != len(args.layers)):
         parser.error("Layers must be unique nonnegative decoder block indices.")
     return args

@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from creative_writing import load_cues, story_prompt, TASK, PROMPT_VERSION
 from experiment import PROTOCOL_VERSION
 from interventions import ActivationEngine
-from run_creative_writing import aggregate_layer, read_discovery, file_fingerprint, writing_trials, export_vectors
+from run_creative_writing import aggregate_layer, read_discovery, writing_trials, export_vectors
 import run_creative_writing as runner
 
 
@@ -62,8 +62,7 @@ class ResponsePoolingTests(unittest.TestCase):
         torch.testing.assert_close(vector, torch.tensor([3., 1.]))
         torch.testing.assert_close(center, torch.tensor([2., 2.]))
         pairs = {key: {"Standard": {"Item": key[0]}} for key in pooled}
-        manifest = dict(model="fake", requested_revision="main", resolved_revision=None,
-                        chat_template_sha256="fake")
+        manifest = dict(model="fake", requested_revision="main", resolved_revision=None)
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
             export_vectors(output, pooled, pairs, manifest, output, False)
@@ -94,6 +93,7 @@ class StoryProtocolTests(unittest.TestCase):
 
         def completion(**kwargs):
             """Return the same story; prompt-conditioned states still differ."""
+            self.assertEqual(kwargs["repetition_penalty"], 1.0)
             return torch.cat([kwargs["input_ids"], torch.tensor([[4, 5, 6, 1]])], dim=1)
 
         with tempfile.TemporaryDirectory() as directory:
@@ -119,6 +119,10 @@ class StoryProtocolTests(unittest.TestCase):
             self.assertNotIn("Prompt_Token_IDs", stories[0])
             manifest, pairs = read_discovery(generation.output_dir)
             self.assertTrue(manifest["completed"])
+            self.assertEqual(manifest["repetition_penalty"], 1.0)
+            self.assertFalse((generation.output_dir / "code").exists())
+            self.assertFalse((root / "vectors/code").exists())
+            self.assertFalse(any("sha256" in key for key in manifest))
             self.assertEqual(len(pairs), 1)
             self.assertEqual(next(iter(pairs.values()))["Creative"]["Response"], "a story ended")
             artifact = root / "vectors/layer_00.pt"
@@ -174,10 +178,9 @@ class StoryProtocolTests(unittest.TestCase):
             (root / "cues.json").write_text(json.dumps(document))
             manifest = dict(completed=True, split="discovery", prompt_version=PROMPT_VERSION,
                             protocol=PROTOCOL_VERSION, cue_ids=[cue["id"]], repeats=1,
-                            planned_responses=2, model="fake", cues_sha256=file_fingerprint(root / "cues.json"))
+                            planned_responses=2, model="fake")
             def save(data):
                 (root / "responses.jsonl").write_text("\n".join(json.dumps(row) for row in data))
-                manifest["responses_sha256"] = file_fingerprint(root / "responses.jsonl")
                 (root / "manifest.json").write_text(json.dumps(manifest))
             save(rows)
             self.assertEqual(len(read_discovery(root)[1]), 1)

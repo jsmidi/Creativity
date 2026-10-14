@@ -12,6 +12,6 @@ cd "${SLURM_SUBMIT_DIR:?Submit from project root}"
 export HF_HUB_OFFLINE=1 TOKENIZERS_PARALLELISM=false MPLBACKEND=Agg
 export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
 PYTHON="${PYTHON:-.venv/bin/python}"
-srun "$PYTHON" -u "${RUN_ROOT:?}/code/run_temperature_mechanistic.py" \
+srun "$PYTHON" -u scripts/run_temperature_mechanistic.py \
     --phase "${PHASE:?}" --index "${SLURM_ARRAY_TASK_ID:-0}" \
     --model "${MODEL:?}" --run-root "$RUN_ROOT" --analysis-root "${ANALYSIS_ROOT:?}" --repeats 60

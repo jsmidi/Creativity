@@ -5,7 +5,6 @@ Examples in scripts/README.md. No inference or downloads occur on import.
 import argparse
 import csv
 from datetime import datetime, timezone
-import hashlib
 import importlib.metadata
 from pathlib import Path
 import random
@@ -42,8 +41,7 @@ def provenance(engine, args):
     return dict(model=args.model, requested_revision=args.revision or "main",
                 resolved_revision=getattr(engine.model.config, "_commit_hash", None),
                 torch=importlib.metadata.version("torch"),
-                transformers=importlib.metadata.version("transformers"),
-                chat_template_sha256=hashlib.sha256(engine.tokenizer.chat_template.encode()).hexdigest())
+                transformers=importlib.metadata.version("transformers"))
 
 
 def collect_residual_activations(engine, examples, layer, baseline="Standard", head=None):
@@ -201,7 +199,7 @@ def generate(args):
     args.revision = args.revision or artifact.get("resolved_revision")
     engine = load_engine(args.model, args.revision)
     metadata = provenance(engine, args)
-    for field in ["resolved_revision", "chat_template_sha256"]:
+    for field in ["resolved_revision"]:
         if artifact.get(field) and artifact[field] != metadata[field]:
             raise ValueError(f"Extraction/generation mismatch in {field}")
     vector = artifact["vector"]

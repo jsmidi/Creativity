@@ -1,6 +1,7 @@
 scripts/*.env
 scripts/*.env
 outputs/
+outputs_old/
 databases/*.txt
 models/
 logs/

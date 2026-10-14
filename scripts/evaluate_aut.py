@@ -61,12 +61,15 @@ def add_cluster_novelty(frame, ideas, cluster_eps):
 
 
 def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps=0.35):
-    """Score ideas by item distance, frequency-weighted database rarity and within-item cluster rarity.
+    """Score ideas by item distance, within-response pairwise distance and rarity.
 
+    Pairwise distance is mean cosine distance to the other ideas in the same response.
+    Averaging these idea scores gives the mean over all unordered pairs, excluding self-pairs.
+    Responses with fewer than two ideas have missing pairwise scores; duplicates are retained.
     ICF is log(total ideas / cluster size), fitted to this scoring sample; it is not an external novelty norm."""
     frame = eval_df.reset_index(drop=True).copy()
     if frame.empty:
-        for column in ["Semantic_Distance_Proxy", "DB_Rarity_Score", "Relative_Novelty_ICF"]:
+        for column in ["Pairwise_Semantic_Distance_Proxy", "Semantic_Distance_Proxy", "DB_Rarity_Score", "Relative_Novelty_ICF"]:
             frame[column] = pd.Series(dtype=float)
         return frame
     frame["Item_Key"] = frame["Item"].map(canonical_item)
@@ -75,6 +78,14 @@ def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps
     formatted = [f"use {item} as {idea.lower()}" for item, idea in zip(frame["Item_Key"], frame["Parsed_Ideas"])]
     formatted_emb = normalize(emb_model.encode(formatted))
     frame["Semantic_Distance_Proxy"] = 1 - np.sum(items * ideas, axis=1)
+    frame["Pairwise_Semantic_Distance_Proxy"] = np.nan
+    for _, group in frame.groupby("Response_ID"):
+        indices = group.index.to_numpy()
+        if len(indices) < 2:
+            continue
+        distances = np.clip(1 - ideas[indices] @ ideas[indices].T, 0, 2)
+        np.fill_diagonal(distances, 0)
+        frame.loc[indices, "Pairwise_Semantic_Distance_Proxy"] = distances.sum(axis=1) / (len(indices) - 1)
     rarities = database_rarities(frame, formatted_emb, aut_db, threshold)
     frame["DB_Rarity_Score"] = rarities
     frame = add_cluster_novelty(frame, ideas, cluster_eps)
@@ -130,13 +141,14 @@ def main():
     model = SentenceTransformer("all-mpnet-base-v2")
     database = load_aut_normative_database(args.norm_db, model)
     scored = evaluate_aut_metrics(ideas, model, database, args.match_threshold, args.cluster_eps)
-    metrics = ["Semantic_Distance_Proxy", "DB_Rarity_Score", "Relative_Novelty_ICF"]
+    metrics = ["Pairwise_Semantic_Distance_Proxy", "Semantic_Distance_Proxy", "DB_Rarity_Score", "Relative_Novelty_ICF"]
     means = scored.groupby("Response_ID")[metrics].mean()
     responses = responses.merge(means, on="Response_ID", how="left", validate="one_to_one")
     manifest = dict(embedding_model="all-mpnet-base-v2", match_threshold=args.match_threshold,
+                    primary_metric="Pairwise_Semantic_Distance_Proxy",
+                    pairwise_distance="Mean cosine distance over unordered idea pairs within each Response_ID; duplicates retained; fewer than two ideas is missing",
                     cluster_eps=args.cluster_eps, norm_db=str(args.norm_db.resolve()),
-                    norm_db_sha256=hashlib.sha256(args.norm_db.read_bytes()).hexdigest()
-                    if args.norm_db.exists() else "", source_files=responses.Source_File.unique().tolist())
+                    source_files=responses.Source_File.unique().tolist())
     (args.output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     scored = scored.drop(columns=["Response", "Protocol", "Source_File"], errors="ignore")
     responses = responses.drop(columns=["Protocol", "Source_File"], errors="ignore")

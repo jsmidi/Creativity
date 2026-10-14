@@ -3,7 +3,6 @@
 See writing/temperature_and_association.md for adaptations and source protocols.
 """
 import argparse
-import hashlib
 import json
 from pathlib import Path
 import numpy as np
@@ -171,7 +170,7 @@ def score_responses(task, frame, parsed, anchors, lookup, pool):
 
 
 def save_results(args, frame, result, baseline_rows, texts, vectors, pool_words):
-    """Save score CSVs, calibration, source hashes, CDAT gates and descriptive plots."""
+    """Save score CSVs, calibration, settings, CDAT gates and descriptive plots."""
     args.output_dir.mkdir(parents=True)
     result.drop(columns=['Protocol', 'Source_File'], errors='ignore').to_csv(
         args.output_dir/f'{args.task}_responses.csv', index=False)
@@ -182,10 +181,7 @@ def save_results(args, frame, result, baseline_rows, texts, vectors, pool_words)
     np.savez_compressed(args.output_dir/'scoring_embeddings.npz', texts=np.array(texts), vectors=vectors)
     (args.output_dir/'calibration_nouns.txt').write_text('\n'.join(pool_words)+'\n')
     manifest = dict(vars(args), protocol='association-exploratory-v1',
-                    noun_sha256=hashlib.sha256(args.noun_vocabulary.read_bytes()).hexdigest(),
-                    source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-                    embedding_sha256=hashlib.sha256((args.output_dir/'scoring_embeddings.npz').read_bytes()).hexdigest(),
-                    raw_files={p: hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in frame.Source_File.unique()},
+                    raw_files=frame.Source_File.unique().tolist(),
                     drat_quantile=.9, drat_minimum=3, cdat_minimum=7,
                     validity='WordNet noun-lemma whitelist; no POS tagger; first ten entries only',
                     cdat_gate='Welch on cue means versus random lists, BH within temperature, alpha .001')

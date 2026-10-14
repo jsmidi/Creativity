@@ -62,6 +62,12 @@ directory to preserve its calibration. Missing scores remain missing.
 CDAT novelty needs its condition-level appropriateness gate in `cdat_gates.csv`;
 DRAT scores zero when fewer than three nouns pass its relevance threshold.
 AUT automated scores are proxies; cluster novelty depends on the scoring sample.
+The primary AUT metric, `Pairwise_Semantic_Distance_Proxy`, is the mean cosine
+distance across all distinct pairs of ideas within each generated response
+(45 pairs for a ten-idea list). Higher scores indicate more semantically diverse
+uses. Duplicate ideas remain in the calculation; fewer than two parsed ideas
+produce a missing score. `Semantic_Distance_Proxy` retains the mean distance
+from each idea to the target object. Both use `all-mpnet-base-v2` embeddings.
 
 ## Mechanistic analysis
 
@@ -126,7 +132,7 @@ response plot automatically.
 
 ```bash
 .venv/bin/python scripts/plot_tasks.py analysis/aut_example/aut_responses.csv \
-  --metrics Semantic_Distance_Proxy --output analysis/aut_example/scores.pdf
+  --metrics Pairwise_Semantic_Distance_Proxy --output analysis/aut_example/scores.pdf
 
 .venv/bin/python scripts/plot_tasks.py analysis/aut_example/effects.csv \
   --effects --output analysis/aut_example/effects.png
@@ -165,8 +171,8 @@ Story CSVs remain a ten-column reading table; their JSONL keeps exact prompts an
 token IDs. Story replay still uses a small manifest to validate complete pairs,
 cue splits and model/tokenizer compatibility. Association scoring manifests retain
 its calibration resources. These serve a different purpose from the removed
-behavioral settings sidecar. Old CSVs remain readable; original run outputs and
-frozen code are not rewritten.
+behavioral settings sidecar. File fingerprints and automatic code snapshots are
+no longer saved. Exact token IDs and complete-pair checks still validate story replay.
 
 Shared modules:
 
@@ -175,10 +181,9 @@ Shared modules:
 - `scoring_common.py`: CSV loading, list parsing and response plots.
 
 `jobs/` contains Slurm launchers. Create `logs/` before submission and check model
-and resource settings. Prepared comparison jobs need a run root with frozen `code/`.
+and resource settings. All maintained launchers execute the main `scripts/` directory.
 `run_greedy_task.py` remains for the four existing standalone greedy launchers.
-Frozen runs retain their original entry points; use newly frozen code with the
-updated launchers. GPT-OSS supports behavioral generation, not intervention hooks.
+GPT-OSS supports behavioral generation, not intervention hooks.
 
 Removed redundant utilities: `audit_sampling.py`, `check_providers.py`, `run_all.py`,
 `plot_greedy_results.py`, and `plot_greedy_bars.py`. Renamed `generate.py` to
