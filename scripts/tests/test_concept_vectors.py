@@ -2,14 +2,17 @@
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+from types import SimpleNamespace
+from unittest.mock import patch
 import numpy as np
 import torch
 from scipy.stats import spearmanr
 from transformers import LlamaConfig, LlamaForCausalLM, Qwen2Config, Qwen2ForCausalLM
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from concept_vectors import capture_heads, project_heads, rank_heads, rsa_features, rsa_scores, stimuli, residual_center
+from run_attention_heads import capture_attention_heads, project_heads, rank_heads, rsa_features, rsa_scores, stimuli, collect_residual_center, collect_head_activations, export_vectors
 from interventions import ActivationEngine, changed_activation
-from activation_steer import validate_holdout
+from run_residual import validate_holdout
 
 
 class ConceptVectorTests(unittest.TestCase):
@@ -47,17 +50,49 @@ class ConceptVectorTests(unittest.TestCase):
               intermediate_size=32,num_hidden_layers=2,num_attention_heads=4,num_key_value_heads=2)).eval()
         engine=ActivationEngine(model)
         inputs={'input_ids':torch.tensor([[1,2,3]])}
-        heads=capture_heads(engine,inputs)
+        heads=capture_attention_heads(engine,inputs)
         self.assertEqual(tuple(heads.shape),(2,4,4))
-        torch.testing.assert_close(heads[0,2],engine.capture(inputs,0,2))
+        torch.testing.assert_close(heads[0,2],engine.capture_prompt_activation(inputs,0,2))
         selected=[{'Layer':0,'Head':1},{'Layer':0,'Head':3}]
         projected=project_heads(engine,heads,selected)
         masked=torch.zeros(16); masked[4:8]=heads[0,1]; masked[12:]=heads[0,3]
         torch.testing.assert_close(projected,model.model.layers[0].self_attn.o_proj.weight.detach()@masked)
         self.assertFalse(model.model.layers[0].self_attn.o_proj._forward_pre_hooks)
         with self.assertRaises(Exception):
-            capture_heads(engine,{'input_ids':torch.tensor([[1000]])})
+            capture_attention_heads(engine,{'input_ids':torch.tensor([[1000]])})
         self.assertTrue(all(not l.self_attn.o_proj._forward_pre_hooks for l in model.model.layers))
+
+    def test_explicit_head_collection_and_vector_export(self):
+        model = LlamaForCausalLM(LlamaConfig(vocab_size=32, hidden_size=16,
+            intermediate_size=32, num_hidden_layers=2, num_attention_heads=4, num_key_value_heads=2)).eval()
+        engine = ActivationEngine(model, SimpleNamespace(chat_template='test'))
+        engine.inputs = lambda prompt: {'input_ids': torch.tensor([[1, 2, 3 if prompt.endswith('Be creative.') else 4]])}
+        discovery = stimuli(['book', 'fork'], [0])
+        audit = stimuli(['shoe', 'umbrella'], [2])
+        baseline = stimuli(['book', 'fork'], [0], ['Standard'])
+        with patch('builtins.print'):
+            positive = collect_head_activations(engine, discovery)
+            held_out = collect_head_activations(engine, audit)
+            standard = collect_head_activations(engine, baseline)
+        self.assertEqual(tuple(positive.shape), (12, 2, 4, 4))
+        creative = positive[[i for i, row in enumerate(discovery) if row['Condition']=='Creative']].mean(0)
+        selected = [{'Layer': 0, 'Head': 2}]
+        center = collect_residual_center(engine, baseline, 0)
+        with tempfile.TemporaryDirectory() as directory:
+            args = SimpleNamespace(model='tiny', revision=None, layer=0, task='Alternative Uses Task',
+                items=['book', 'fork'], paraphrases=[0], audit_items=['shoe', 'umbrella'],
+                audit_paraphrase=2, seed=42, permutations=19, output_dir=Path(directory))
+            with patch('builtins.print'):
+                export_vectors(engine, args, discovery, audit, baseline, positive, held_out, standard, center, selected)
+            head = torch.load(args.output_dir/'head_l0_h2.pt', weights_only=True)
+            torch.testing.assert_close(head['vector'], creative[0, 2]-standard.mean(0)[0, 2])
+            composite = torch.load(args.output_dir/'contrast.pt', weights_only=True)
+            expected = project_heads(engine, creative-standard.mean(0), selected)
+            torch.testing.assert_close(composite['vector'], expected)
+            torch.testing.assert_close(composite['center'], center)
+            buffers = torch.load(args.output_dir/'head_activations.pt', weights_only=True)
+            torch.testing.assert_close(buffers['baseline'], standard)
+            self.assertFalse(list(args.output_dir.glob('*.json')))
 
     def test_audit_items_cannot_be_used_for_causal_validation(self):
         artifact={'examples':[{'Task':'Alternative Uses Task','Item':'book','Paraphrase':0}],
@@ -71,17 +106,17 @@ class ConceptVectorTests(unittest.TestCase):
             num_key_value_heads=2)).eval()
         engine = ActivationEngine(model)
         inputs = {'input_ids': torch.tensor([[1, 2, 3]])}
-        heads = capture_heads(engine, inputs)
+        heads = capture_attention_heads(engine, inputs)
         self.assertEqual(tuple(heads.shape), (2, 4, 4))
-        torch.testing.assert_close(heads[0, 2], engine.capture(inputs, 0, 2))
+        torch.testing.assert_close(heads[0, 2], engine.capture_prompt_activation(inputs, 0, 2))
         projected = project_heads(engine, heads, [{'Layer': 0, 'Head': 2}])
         masked = torch.zeros(16)
         masked[8:12] = heads[0, 2]
         torch.testing.assert_close(projected, model.model.layers[0].self_attn.o_proj.weight.detach() @ masked)
         token_inputs = [inputs, {'input_ids': torch.tensor([[3, 2, 1]])}]
         engine.inputs = lambda prompt: token_inputs[prompt]
-        center = residual_center(engine, [{'Prompt': 0}, {'Prompt': 1}], 1)
-        expected = torch.stack([engine.capture(x, 1) for x in token_inputs]).mean(0)
+        center = collect_residual_center(engine, [{'Prompt': 0}, {'Prompt': 1}], 1)
+        expected = torch.stack([engine.capture_prompt_activation(x, 1) for x in token_inputs]).mean(0)
         torch.testing.assert_close(center, expected)
         suppressed = changed_activation(center.reshape(1, 1, -1), projected, 'suppress', 1, center)
         torch.testing.assert_close(suppressed.reshape(-1), center)

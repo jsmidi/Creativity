@@ -6,24 +6,20 @@ W_O-projected head contributions, never raw head coordinates summed across layer
 """
 import argparse
 import csv
-import json
 from pathlib import Path
 
 import numpy as np
 from scipy.stats import rankdata
 import torch
 
-from activation_steer import provenance
+from run_residual import provenance
 from experiment import PROTOCOL_VERSION, CONDITION_TEXT, canonical_item
 from interventions import load_engine
 from task_config import get_task_config
 
 UPSTREAM_COMMIT = 'dcbcd0ef16d8a6c1af8b0a2378b7717a9ba66c42'
 CONCEPTS = ('Creative', 'Conventional', 'Effective')
-FORMATS = {
-    'numbered': 'List exactly 10 uses for the object {item} other than its primary use. Provide only a numbered list (1-10), with one use per line and no explanations.',
-    'bullets': 'List exactly 10 uses for the object {item} other than its primary use. Provide only a bulleted list, with one use per line and no explanations.',
-}
+
 
 
 def stimuli(items, paraphrases, conditions=CONCEPTS, task="Alternative Uses Task"):
@@ -50,79 +46,51 @@ def stimuli(items, paraphrases, conditions=CONCEPTS, task="Alternative Uses Task
 
 
 @torch.inference_mode()
-def capture_heads(engine, inputs):
-    """Capture all pre-o_proj head outputs in one prompt forward pass.
+def capture_attention_heads(engine, inputs):
+    """Read all heads before o_proj at the last prompt token.
 
-    Args:
-        engine: ActivationEngine wrapping a tested Llama or Qwen2 architecture.
-        inputs: Tokenized input mapping for one unpadded prompt.
-    Returns:
-        Detached CPU float32 tensor [layers, query_heads, head_dim] at the final
-        prompt token. Query-head counts, not KV-head counts, support Llama GQA.
-    Raises:
-        ValueError: For an unsupported model type or batch size other than one.
-    Notes:
-        All projection hooks are removed even on failure; no answer is generated.
+    Returns CPU float32 [layers, query_heads, head_dim]. Each o_proj input
+    contains concatenated head outputs; reshape it to separate the heads.
     """
     if engine.model.config.model_type not in ('llama', 'qwen2'):
         raise ValueError('Only the tested Llama and Qwen2 adapters are supported.')
     captured, handles = {}, []
     n_heads = engine.model.config.num_attention_heads
+
     def hook_for(layer):
-        """Create a capture callback bound to one decoder layer.
-
-        Args:
-            layer: Zero-based layer key used to store the captured head tensor.
-        Returns:
-            A forward-pre-hook closure sharing the enclosing capture dictionary.
-        """
-        def hook(_module, args):
-            """Capture or replace activations for the enclosing hook operation.
-
-            Args:
-                _module: Module invoking the hook; unused.
-                args: Projection positional inputs; args[0] is the activation tensor.
-            Returns:
-                None for capture hooks; a replacement output/input tuple for edit hooks.
-                Uses the target and storage closed over by the enclosing function.
-            """
-            value = args[0]
-            if value.shape[0] != 1:
+        def read_head_outputs(_module, projection_inputs):
+            head_outputs = projection_inputs[0]  # [batch, tokens, heads * head_dim]
+            if head_outputs.shape[0] != 1:
                 raise ValueError('Capture expects one unpadded prompt.')
-            captured[layer] = value[0, -1].detach().float().cpu().reshape(n_heads, -1)
-        return hook
+            final_token = head_outputs[0, -1].detach().float().cpu()
+            captured[layer] = final_token.reshape(n_heads, -1)
+        return read_head_outputs
+
     try:
         for layer, block in enumerate(engine.model.model.layers):
-            handles.append(block.self_attn.o_proj.register_forward_pre_hook(hook_for(layer)))
+            projection = block.self_attn.o_proj
+            handles.append(projection.register_forward_pre_hook(hook_for(layer)))
         engine.model(**inputs, use_cache=False)
     finally:
         for handle in handles:
             handle.remove()
-    return torch.stack([captured[i] for i in range(len(engine.model.model.layers))])
+    return torch.stack([captured[layer] for layer in range(len(engine.model.model.layers))])
 
 
-def collect(engine, examples):
-    """Capture all heads for each example, preserving example order.
-
-    Args:
-        engine: Loaded ActivationEngine with chat tokenizer.
-        examples: Nonempty list of stimulus records containing Prompt; modified
-            in place to add Prompt_Tokens.
-    Returns:
-        CPU tensor [examples, layers, query_heads, head_dim]. Prints progress.
-    """
-    values = []
-    for i, row in enumerate(examples):
-        inputs = engine.inputs(row['Prompt'])
-        row['Prompt_Tokens'] = inputs['input_ids'].shape[1]
-        values.append(capture_heads(engine, inputs))
-        print(f'Captured {i + 1}/{len(examples)} prompts', flush=True)
-    return torch.stack(values)
+def collect_head_activations(engine, examples):
+    """Collect [prompts, layers, heads, head_dim], keeping the prompt order."""
+    activations = []
+    for index, example in enumerate(examples):
+        inputs = engine.inputs(example['Prompt'])
+        example['Prompt_Tokens'] = inputs['input_ids'].shape[1]
+        activations.append(capture_attention_heads(engine, inputs))
+        print(f'Collected head activations {index + 1}/{len(examples)}', flush=True)
+    return torch.stack(activations)
 
 
-def residual_center(engine, examples, layer):
-    """Mean Standard post-block state in the coordinates used for suppression."""
-    return torch.stack([engine.capture(engine.inputs(row['Prompt']), layer)
+def collect_residual_center(engine, examples, layer):
+    """Collect Standard post-block residuals and average for suppression."""
+    return torch.stack([engine.capture_prompt_activation(engine.inputs(row['Prompt']), layer)
                         for row in examples]).mean(0)
 
 
@@ -306,7 +274,7 @@ def save_artifact(path, metadata, vector, center):
         vector: Nonzero finite residual/head steering tensor.
         center: Baseline tensor in matching coordinates, used for suppression.
     Returns:
-        None. Writes a torch artifact and companion .json including vector_norm.
+        None. Writes a torch artifact including its model and coordinate metadata.
     Raises:
         ValueError: If vector is zero or nonfinite. Center shape is checked later
             by the intervention engine when suppression is requested.
@@ -314,7 +282,6 @@ def save_artifact(path, metadata, vector, center):
     if not torch.isfinite(vector).all() or vector.norm() < 1e-10:
         raise ValueError('Zero or nonfinite concept vector.')
     torch.save(dict(**metadata, vector=vector, center=center, task_vectors={}), path)
-    path.with_suffix('.json').write_text(json.dumps(dict(**metadata, vector_norm=vector.norm().item()), indent=2))
 
 
 def parse_args():
@@ -358,38 +325,35 @@ def build_stimuli(args):
     return discovery, audit, baseline
 
 
-def select_heads(engine, args, discovery):
+def select_heads(args, discovery, discovery_activations):
     """Rank discovery heads and freeze the top defined cross-pair RSA scores."""
-    discovery_activations = collect(engine, discovery)
     ranking = rank_heads(discovery_activations.numpy(), discovery, args.permutations, args.seed)
     selected = [r for r in ranking if np.isfinite(r['Cross_RSA'])][:args.top_k]
     if len(selected) < args.top_k:
         raise ValueError('Not enough heads with defined RSA.')
     write_csv(args.output_dir / 'head_ranking.csv', ranking)
     print('Selected heads:', selected, flush=True)
-    return discovery_activations, selected
+    return selected
 
 
-def audit_heads(engine, args, audit, discovery_activations, selected):
+def audit_heads(args, audit, audit_activations, selected):
     """Evaluate the frozen selection on new items and wording without re-ranking."""
-    audit_activations = collect(engine, audit)
     # All audit prompts use the held-out wording; exclude same-item/same-format pairs.
     audit_features, audit_valid, i, j = rsa_features(audit_activations.numpy(), audit, cross_wording=False)
     audit_scores = rsa_scores(audit_features, [e['Condition'] for e in audit], i, j)
-    n_heads = discovery_activations.shape[2]
+    n_heads = audit_activations.shape[2]
     audit_rows = [dict(**r, Audit_RSA=float(audit_scores[r['Layer']*n_heads+r['Head']])
                        if audit_valid[r['Layer']*n_heads+r['Head']] else float('nan')) for r in selected]
     write_csv(args.output_dir / 'selected_heads_audit.csv', audit_rows)
-    return audit_activations
 
 
-def export_vectors(engine, args, discovery, audit, baseline, discovery_activations, audit_activations, selected):
+def export_vectors(engine, args, discovery, audit, baseline, discovery_activations,
+                   audit_activations, baseline_activations, center, selected):
     """Save composite residual vectors, correctly centered suppression and direct-head contrasts."""
-    standard = collect(engine, baseline).mean(0)
+    standard = baseline_activations.mean(0)
     creative = discovery_activations[[i for i,e in enumerate(discovery) if e['Condition']=='Creative']].mean(0)
     positive = project_heads(engine, creative, selected)
     negative = project_heads(engine, standard, selected)
-    center = residual_center(engine, baseline, args.layer)
     meta = dict(protocol=PROTOCOL_VERSION, **provenance(engine, args), layer=args.layer,
                 head=None, baseline='Standard', examples=[dict(Task=args.task, Item=i, Paraphrase=p)
                 for i in args.items for p in args.paraphrases],
@@ -415,7 +379,7 @@ def export_vectors(engine, args, discovery, audit, baseline, discovery_activatio
     write_csv(args.output_dir/'discovery_prompts.csv', discovery)
     write_csv(args.output_dir/'audit_prompts.csv', audit)
     write_csv(args.output_dir/'baseline_prompts.csv', baseline)
-    torch.save(dict(discovery=discovery_activations, audit=audit_activations), args.output_dir/'head_activations.pt')
+    torch.save(dict(discovery=discovery_activations, audit=audit_activations, baseline=baseline_activations), args.output_dir/'head_activations.pt')
     print(f'Saved rankings, held-out audit, composite vectors and head contrasts in {args.output_dir}')
 
 
@@ -431,9 +395,21 @@ def main():
     engine.target(args.layer)
     if args.top_k > len(engine.model.model.layers) * engine.model.config.num_attention_heads:
         raise ValueError('top-k exceeds the number of heads.')
-    discovery_activations, selected = select_heads(engine, args, discovery)
-    audit_activations = audit_heads(engine, args, audit, discovery_activations, selected)
-    export_vectors(engine, args, discovery, audit, baseline, discovery_activations, audit_activations, selected)
+    # 1. COLLECT: prompt forward passes read every layer/head before o_proj.
+    discovery_activations = collect_head_activations(engine, discovery)
+
+    # 2. SELECT: RSA uses discovery activations only; freeze the chosen heads.
+    selected = select_heads(args, discovery, discovery_activations)
+
+    # 3. CHECK/CENTER: collect held-out and Standard prompts separately.
+    audit_activations = collect_head_activations(engine, audit)
+    baseline_activations = collect_head_activations(engine, baseline)
+    center = collect_residual_center(engine, baseline, args.layer)
+    audit_heads(args, audit, audit_activations, selected)
+
+    # 4. SAVE: average selected heads and export Creative-minus-Standard vectors.
+    export_vectors(engine, args, discovery, audit, baseline, discovery_activations,
+                   audit_activations, baseline_activations, center, selected)
 
 
 if __name__ == '__main__':

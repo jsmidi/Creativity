@@ -57,7 +57,7 @@ if [[ "${INCLUDE_ASSOCIATION:-0}" == 1 ]]; then
     TASKS+=("Conditional Divergent Association Task" "Divergent Remote Association Test")
 fi
 for task in "${TASKS[@]}"; do
-    srun "$PYTHON" -u scripts/generate.py \
+    srun "$PYTHON" -u scripts/run_tasks.py \
         --provider local --model "$MODEL" --task "$task" \
         --conditions Standard Conventional Effective Boring Creative \
         --repeats "$REPEATS" --paraphrases 0 --randomize \

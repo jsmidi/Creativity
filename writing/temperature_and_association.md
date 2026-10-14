@@ -59,11 +59,8 @@ originality and usefulness ratings remain relevant.
 ## What sampling settings can be confirmed?
 
 `analysis/sampling_audit.csv` is an evidence-only audit of stored raw records,
-with file hashes and counts. Refresh it on the cluster using:
-
-```bash
-.venv/bin/python scripts/audit_sampling.py
-```
+with file hashes and counts. The standalone audit utility has been removed;
+new runs record decoding settings directly in their result CSVs.
 
 The September 24 Llama DAT/AUT raw CSVs record T=0.7, top_p=1.0 and top_k=0.
 The older MI CSVs record T=0.7 and the high-temperature control T=1.0 but omit
@@ -142,9 +139,9 @@ and its license are in `databases/association/`; recreate in a *new* directory:
 Preview or generate a small pilot within a GPU allocation:
 
 ```bash
-.venv/bin/python scripts/generate.py \
+.venv/bin/python scripts/run_tasks.py \
   --task 'Conditional Divergent Association Task' --repeats 1 --randomize --dry-run
-.venv/bin/python scripts/generate.py \
+.venv/bin/python scripts/run_tasks.py \
   --task 'Divergent Remote Association Test' --repeats 1 --randomize --dry-run
 ```
 

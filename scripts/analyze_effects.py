@@ -28,6 +28,9 @@ def paired_effect(frame, metric, treatment, control, draws=2000, seed=42):
         excluded; with fewer than two complete pairs interval bounds are NaN.
         These exploratory intervals do not correct for multiple comparisons.
     """
+    if "Block_ID" not in frame and {"Item", "Generation_Seed"}.issubset(frame):
+        frame = frame.copy()
+        frame["Block_ID"] = frame["Item"].map(canonical_item) + "|seed=" + frame["Generation_Seed"].astype(str)
     needed = ["Run_ID", "Block_ID", "Response_ID", "Item", "Condition", metric]
     if not set(needed).issubset(frame):
         raise ValueError(f"Require response-level v2 data with columns {needed}")

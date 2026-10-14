@@ -2,7 +2,15 @@
 from pathlib import Path
 import re
 import pandas as pd
-from experiment import PROTOCOL_VERSION, CONDITION_TEXT
+from experiment import PROTOCOL_VERSION, CONDITION_TEXT, canonical_item
+
+# Scored tables keep pairing and validity; full request details stay in the raw CSV.
+RESPONSE_COLUMNS = (
+    "Response_ID", "Run_ID", "Model", "Task", "Item", "Split", "Condition",
+    "Paraphrase", "Repeat", "Block_ID", "Generation_Seed", "Temperature",
+    "Top_P", "Top_K", "Intervention", "Alpha", "Random_Vector", "Artifact", "Scope",
+    "Response", "Status", "Error", "Finish_Reason",
+)
 
 
 def parse_numbered_list(text):
@@ -34,9 +42,12 @@ def load_responses(input_paths, task, include_legacy=False):
         if "Parsed_Ideas" in frame or "Parsed_Words" in frame:
             continue  # Do not accidentally ingest scored exports.
         if "Protocol" not in frame:
-            if not include_legacy:
+            # New self-contained runs have a recognizable schema, without a sidecar.
+            compact = {"Run_ID", "Response_ID", "Instruction", "Generation_Seed",
+                       "Prompt", "Max_Tokens", "Top_P", "Top_K", "Timestamp_UTC"}.issubset(frame)
+            if not compact and not include_legacy:
                 continue
-            frame["Protocol"] = "legacy"
+            frame["Protocol"] = PROTOCOL_VERSION if compact else "legacy"
         if not include_legacy:
             frame = frame[frame["Protocol"] == PROTOCOL_VERSION].copy()
         frame = frame[frame["Task"] == task].copy()
@@ -48,7 +59,12 @@ def load_responses(input_paths, task, include_legacy=False):
         if "Status" not in frame:
             frame["Status"] = frame["Response"].apply(
                 lambda x: "error" if str(x).lstrip().startswith("Error:") else "ok" if str(x).strip() else "empty")
-        frames.append(frame)
+            if "Error" in frame:
+                frame.loc[frame["Error"].astype(str).str.strip().ne(""), "Status"] = "error"
+        if "Block_ID" not in frame and "Generation_Seed" in frame:
+            frame["Block_ID"] = frame["Item"].map(canonical_item) + "|seed=" + frame["Generation_Seed"].astype(str)
+        keep = [column for column in (*RESPONSE_COLUMNS, "Protocol", "Source_File") if column in frame]
+        frames.append(frame[keep])
     if not frames:
         raise ValueError("No matching raw responses. Legacy data require --include-legacy.")
     result = pd.concat(frames, ignore_index=True)

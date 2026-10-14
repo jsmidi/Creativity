@@ -23,7 +23,7 @@ if [[ "$MODEL" == llama ]]; then MODEL=/scratch-shared/jsmidi/models/Llama-3.1-7
 RUN_DIR="${RUN_DIR:-outputs/concept_pilot_${SLURM_JOB_ID}}"
 ANALYSIS_DIR="${ANALYSIS_DIR:-analysis/concept_pilot_${SLURM_JOB_ID}}"
 "$PYTHON" -c 'import torch; assert torch.cuda.is_available(), "CUDA unavailable"; print(torch.cuda.get_device_name(0))'
-srun "$PYTHON" -u scripts/concept_vectors.py --model "$MODEL" \
+srun "$PYTHON" -u scripts/run_attention_heads.py --model "$MODEL" \
     --output-dir "$RUN_DIR/discovery" --top-k "${TOP_K:-5}" --layer "${LAYER:-16}" \
     --permutations "${PERMUTATIONS:-199}" --items brick rope bottle spoon \
     --paraphrases 1 2 --audit-paraphrase 0
@@ -32,7 +32,7 @@ srun "$PYTHON" -u scripts/concept_vectors.py --model "$MODEL" \
 # top discovery-ranked head. Audit scores never re-rank heads.
 HEAD_ARTIFACT=$("$PYTHON" -c 'import csv,sys; r=next(csv.DictReader(open(sys.argv[1]))); print("head_l"+r["Layer"]+"_h"+r["Head"])' "$RUN_DIR/discovery/head_ranking.csv")
 for candidate in creative_mean contrast "$HEAD_ARTIFACT"; do
-    srun "$PYTHON" -u scripts/activation_steer.py generate \
+    srun "$PYTHON" -u scripts/run_residual.py generate \
         --model "$MODEL" --artifact "$RUN_DIR/discovery/$candidate.pt" \
         --task 'Alternative Uses Task' --items book fork paperclip towel can --paraphrases 0 \
         --split validation --alphas "${ALPHA:-1}" --repeats "${REPEATS:-2}" \

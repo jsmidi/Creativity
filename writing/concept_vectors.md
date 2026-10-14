@@ -39,7 +39,7 @@ execute the authors' code and does not require their NNsight/remote setup.
 7. Export `creative_mean.pt` (sum of Creative means), `contrast.pt` (Creative
    minus neutral Standard sum), and individual `head_lL_hH.pt` contrasts. The
    first two add to a chosen residual layer; the last directly intervenes in
-   its head before W_O. All work with `activation_steer.py generate` and the
+   its head before W_O. All work with `run_residual.py generate` and the
    existing random, suppression, subtraction, temperature, and patch controls.
 
 The paper-style mean construction differs from the contrastive adaptation:
@@ -82,7 +82,7 @@ MaxT_P. In that case describe the selected heads as exploratory candidates.
 
 ```bash
 # No model loading:
-.venv/bin/python scripts/concept_vectors.py --output-dir /tmp/concept-preview --dry-run
+.venv/bin/python scripts/run_attention_heads.py --output-dir /tmp/concept-preview --dry-run
 # Full pilot (one A100, at most two hours):
 mkdir -p logs
 sbatch scripts/snellius_concept.sh llama

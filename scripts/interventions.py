@@ -130,48 +130,26 @@ class ActivationEngine:
         return inputs.to(self.model.get_input_embeddings().weight.device)
 
     @torch.inference_mode()
-    def capture(self, inputs, layer, head=None):
-        """Capture the last prompt token at one residual or attention-head target.
+    def capture_prompt_activation(self, inputs, layer, head=None):
+        """Read one final-token vector: post-block residual, or head before o_proj.
 
-        Args:
-            inputs: Tokenized model inputs for one unpadded prompt.
-            layer: Zero-based decoder block index.
-            head: Query-head index before o_proj, or None for the post-block residual.
-        Returns:
-            Detached CPU float32 vector: [hidden_size] or [head_dim].
-        Notes:
-            Runs one forward pass without a KV cache or gradients. The temporary hook
-            is removed even if the forward pass fails; no answer is generated.
+        Returns CPU float32 [hidden_size] or [head_dim]. The prompt must be
+        unpadded with batch size one. The hook is always removed after capture.
         """
-        module, section = self.target(layer, head)
+        module, head_slice = self.target(layer, head)
         captured = []
-        if section is None:
-            def hook(_module, _args, output):
-                """Capture or replace activations for the enclosing hook operation.
-
-                Args:
-                    _module: Module invoking the hook; unused.
-                    _args: Positional block inputs; unused.
-                    output: Original decoder block tensor or tuple output.
-                Returns:
-                    None for capture hooks; a replacement output/input tuple for edit hooks.
-                    Uses the target and storage closed over by the enclosing function.
-                """
-                captured.append(hidden_tensor(output)[:, -1, :].detach().float().cpu())
-            handle = module.register_forward_hook(hook)
+        if head_slice is None:
+            def read_residual(_module, _inputs, block_output):
+                # [batch, tokens, hidden_size] -> the final prompt token.
+                residual_stream = hidden_tensor(block_output)
+                captured.append(residual_stream[:, -1, :].detach().float().cpu())
+            handle = module.register_forward_hook(read_residual)
         else:
-            def hook(_module, args):
-                """Capture or replace activations for the enclosing hook operation.
-
-                Args:
-                    _module: Module invoking the hook; unused.
-                    args: Projection positional inputs; args[0] is the activation tensor.
-                Returns:
-                    None for capture hooks; a replacement output/input tuple for edit hooks.
-                    Uses the target and storage closed over by the enclosing function.
-                """
-                captured.append(args[0][:, -1, section].detach().float().cpu())
-            handle = module.register_forward_pre_hook(hook)
+            def read_head(_module, projection_inputs):
+                # o_proj input still contains separate head coordinates.
+                head_outputs = projection_inputs[0]
+                captured.append(head_outputs[:, -1, head_slice].detach().float().cpu())
+            handle = module.register_forward_pre_hook(read_head)
         try:
             self.model(**inputs, use_cache=False)
         finally:
@@ -258,7 +236,6 @@ class ActivationEngine:
             handle.remove()
 
     @torch.inference_mode()
-    @torch.inference_mode()
     def capture_response_means(self, prompt_ids, completion_ids, layers=None):
         """Mean-pool post-block residuals over actual response tokens in a replay.
 
@@ -301,6 +278,7 @@ class ActivationEngine:
             raise RuntimeError("Not all requested residual hooks ran.")
         return pooled
 
+    @torch.inference_mode()
     def generate(self, prompt, seed=42, temperature=0.7, max_tokens=800,
                  layer=None, vector=None, mode="add", alpha=1.0,
                  center=None, head=None, scope="each_step", top_p=1.0, top_k=0,

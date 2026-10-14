@@ -5,4 +5,8 @@ databases/*.txt
 models/
 logs/
 *__pycache__/
-/tmp
+temp/
+jobs/
+data/
+analysis/
+results_small_models/

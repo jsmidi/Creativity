@@ -8,8 +8,8 @@ import unittest
 from unittest.mock import patch
 import torch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from activation_steer import main as steer_main, validate_holdout
-from concept_vectors import stimuli
+from run_residual import main as steer_main, validate_holdout
+from run_attention_heads import stimuli
 from run_greedy_task import NAMES, DISCOVERY, AUDIT
 from task_config import get_task_config
 

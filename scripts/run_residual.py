@@ -7,7 +7,6 @@ import csv
 from datetime import datetime, timezone
 import hashlib
 import importlib.metadata
-import json
 from pathlib import Path
 import random
 import uuid
@@ -16,17 +15,7 @@ from task_config import get_task_config
 
 
 def extraction_examples(tasks, items, paraphrases):
-    """Expand task, item, and wording choices into extraction records.
-
-    Args:
-        tasks: Task names recognized by get_task_config.
-        items: Optional item override; allowed only for a single task.
-        paraphrases: Condition-suffix indices, normally 0, 1, or 2.
-    Returns:
-        List of dictionaries with Task, Item, and Paraphrase.
-    Raises:
-        ValueError: If custom items are supplied for multiple tasks.
-    """
+    """Expand tasks, items and wordings into extraction examples."""
     if items and len(tasks) != 1:
         raise ValueError("--items requires a single extraction task.")
     return [dict(Task=task, Item=item, Paraphrase=p)
@@ -35,23 +24,7 @@ def extraction_examples(tasks, items, paraphrases):
 
 
 def validate_holdout(artifact, task, items, paraphrases, split):
-    """Reject extraction overlap in validation/test generation.
-
-    Args:
-        artifact: Loaded vector dictionary with examples and optional audit_examples.
-        task: Target task name.
-        items: Target items; compared after canonicalization.
-        paraphrases: Target condition-wording indices.
-        split: "pilot" bypasses checks; other values enforce overlap checks.
-    Returns:
-        None when checks pass.
-    Raises:
-        ValueError: If wording overlaps extraction, or non-DAT items overlap
-            extraction/audit objects. DAT has no object axis.
-    Notes:
-        Audit wording is not excluded. This function does not track previous
-        validation/test runs or enforce an entire research-history split.
-    """
+    """Reject extraction item/wording overlap in validation and test runs."""
     if split == "pilot":
         return
     examples = artifact["examples"]
@@ -65,16 +38,7 @@ def validate_holdout(artifact, task, items, paraphrases, split):
 
 
 def provenance(engine, args):
-    """Collect model, tokenizer-template, and library identity metadata.
-
-    Args:
-        engine: Loaded ActivationEngine with model config and tokenizer.
-        args: Namespace with model and revision attributes.
-    Returns:
-        Dictionary with requested/resolved revision, torch/transformers versions,
-        and SHA-256 of the chat template. Local models may lack a resolved commit;
-        this metadata does not hash all checkpoint weights.
-    """
+    """Record model revision, library versions and tokenizer template identity."""
     return dict(model=args.model, requested_revision=args.revision or "main",
                 resolved_revision=getattr(engine.model.config, "_commit_hash", None),
                 torch=importlib.metadata.version("torch"),
@@ -82,24 +46,28 @@ def provenance(engine, args):
                 chat_template_sha256=hashlib.sha256(engine.tokenizer.chat_template.encode()).hexdigest())
 
 
-def extract(args):
-    """Extract and save a mean Creative-minus-baseline activation direction.
+def collect_residual_activations(engine, examples, layer, baseline="Standard", head=None):
+    """Collect Creative/baseline states at the last chat-prompt token.
 
-    Args:
-        args: CLI Namespace: tasks, items, paraphrases define paired examples;
-            model/revision choose the checkpoint; layer/head choose the target;
-            baseline is Standard or Conventional; artifact is the output Path;
-            dry_run prints the forward-pass count without loading the model.
-    Returns:
-        None. Writes a .pt vector artifact and companion .json metadata.
-    Notes:
-        Captures the last formatted prompt token, averages within each task, then
-        weights tasks equally. Saves the raw mean difference and baseline center,
-        without unit normalization or generated-answer quality selection.
-    Raises:
-        ValueError: If the direction is zero or nonfinite.
-        FileExistsError: If the artifact path already exists.
+    Each returned tensor is [examples, hidden_size]. With an explicit head,
+    it is [examples, head_dim] instead. The post-block hook that reads the
+    residual is in ActivationEngine.capture_prompt_activation (interventions.py).
+    This stage runs prompt forward passes; it does not generate responses.
     """
+    import torch
+    creative_states, baseline_states = [], []
+    for index, example in enumerate(examples):
+        instruction = get_task_config(example["Task"])["instruction"]
+        creative_prompt = build_prompt(instruction, example["Item"], "Creative", example["Paraphrase"])
+        baseline_prompt = build_prompt(instruction, example["Item"], baseline, example["Paraphrase"])
+        creative_states.append(engine.capture_prompt_activation(engine.inputs(creative_prompt), layer, head))
+        baseline_states.append(engine.capture_prompt_activation(engine.inputs(baseline_prompt), layer, head))
+        print(f"Collected residual pair {index + 1}/{len(examples)}", flush=True)
+    return torch.stack(creative_states), torch.stack(baseline_states)
+
+
+def extract(args):
+    """Save the Creative-minus-baseline prompt activation and baseline center."""
     examples = extraction_examples(args.tasks, args.items, args.paraphrases)
     print(f"{len(examples) * 2} forward passes; layer {args.layer}, head {args.head}.")
     if args.dry_run:
@@ -107,20 +75,20 @@ def extract(args):
     import torch
     from interventions import load_engine
     engine = load_engine(args.model, args.revision)
-    task_deltas, task_centers = {}, {}
-    for example in examples:
-        task, item, p = example["Task"], example["Item"], example["Paraphrase"]
-        instruction = get_task_config(task)["instruction"]
-        creative = build_prompt(instruction, item, "Creative", p)
-        baseline = build_prompt(instruction, item, args.baseline, p)
-        positive = engine.capture(engine.inputs(creative), args.layer, args.head)
-        negative = engine.capture(engine.inputs(baseline), args.layer, args.head)
-        task_deltas.setdefault(task, []).append(positive - negative)
-        task_centers.setdefault(task, []).append(negative)
-    # Equal task weights prevent a task with more items dominating the direction.
-    by_task = {task: torch.stack(values).mean(0) for task, values in task_deltas.items()}
+    # 1. COLLECT: one Creative and one baseline activation per prompt example.
+    creative_states, baseline_states = collect_residual_activations(
+        engine, examples, args.layer, args.baseline, args.head)
+
+    # 2. AVERAGE: Creative minus baseline, with equal weights for each task.
+    by_task, centers = {}, []
+    for task in dict.fromkeys(example["Task"] for example in examples):
+        indices = [i for i, example in enumerate(examples) if example["Task"] == task]
+        by_task[task] = (creative_states[indices] - baseline_states[indices]).mean(0)
+        centers.append(baseline_states[indices].mean(0))
     vector = torch.stack(list(by_task.values())).mean(0)
-    center = torch.stack([torch.stack(values).mean(0) for values in task_centers.values()]).mean(0)
+    center = torch.stack(centers).mean(0)
+
+    # 3. SAVE: vector, baseline center and model/layer metadata in one .pt file.
     if not torch.isfinite(vector).all() or vector.norm() < 1e-10:
         raise ValueError("Extracted direction is zero or nonfinite.")
     artifact = dict(protocol=PROTOCOL_VERSION, **provenance(engine, args), layer=args.layer,
@@ -132,9 +100,6 @@ def extract(args):
     if args.artifact.exists():
         raise FileExistsError(f"Choose a new artifact path: {args.artifact}")
     torch.save(artifact, args.artifact)
-    metadata = {key: value for key, value in artifact.items() if key not in ("vector", "center", "task_vectors")}
-    metadata["vector_norm"] = vector.norm().item()
-    args.artifact.with_suffix(".json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     print(f"Saved {args.artifact}; norm {vector.norm().item():.4f}.")
 
 
@@ -169,7 +134,7 @@ def random_directions(vector, count, seed):
     return controls
 
 
-def write_interventions(args, engine, artifact, config, controls, trials, manifest, run_id, path):
+def write_interventions(args, engine, artifact, config, controls, trials, run_id, path):
     """Stream intervention responses to CSV, caching prompt-specific donor activations."""
     vector, center = artifact["vector"], artifact["center"]
     patch_cache = {}
@@ -187,24 +152,23 @@ def write_interventions(args, engine, artifact, config, controls, trials, manife
                 key = (item, p, donor_condition)
                 if key not in patch_cache:
                     donor = build_prompt(config["instruction"], item, donor_condition, p)
-                    patch_cache[key] = engine.capture(engine.inputs(donor), artifact["layer"], artifact["head"])
+                    patch_cache[key] = engine.capture_prompt_activation(engine.inputs(donor), artifact["layer"], artifact["head"])
                 direction = patch_cache[key]
                 scope = "prefill"  # Matched donor state exists only at the prompt boundary.
             temperature = args.high_temperature if mode == "temperature" else args.temperature
             intervention = direction if mode in ("add", "suppress", "patch") else None
+            timestamp = datetime.now(timezone.utc).isoformat()
             result = engine.generate(prompt, seed, temperature, args.max_tokens,
                                      artifact["layer"], intervention, mode if intervention is not None else "add",
                                      alpha, center, artifact["head"], scope)
-            row = dict(Protocol=PROTOCOL_VERSION, Run_ID=run_id, Response_ID=f"{run_id}:{order}",
-                       Model=args.model, Task=args.task, Item=item, Split=args.split,
-                       Condition=label, Prompt_Condition=condition, Instruction=config["instruction"],
-                       Prompt=prompt, Paraphrase=p, Repeat=repeat, Block_ID=block, Generation_Seed=seed,
-                       Request_Order=order, Temperature=temperature, Max_Tokens=args.max_tokens,
-                       Top_P=1.0, Top_K=0,
-                       Layer=artifact["layer"], Head=artifact["head"], Intervention=mode, Scope=scope,
-                       Alpha=alpha, Random_Vector=random_index, Vector_Norm=direction.norm().item(),
-                       Artifact_SHA256=manifest["artifact_sha256"], **result,
-                       Status="ok" if result["Response"] else "empty")
+            row = dict(Run_ID=run_id, Response_ID=f"{run_id}:{order}", Model=args.model,
+                       Task=args.task, Instruction=config["instruction"], Item=item,
+                       Condition=label, Generation_Seed=seed, Temperature=temperature,
+                       Max_Tokens=args.max_tokens, Top_P=1.0, Top_K=0, Timestamp_UTC=timestamp,
+                       Prompt=prompt, Response=result["Response"],
+                       Generated_Tokens=result["Generated_Tokens"], Prompt_Tokens=result["Prompt_Tokens"],
+                       Error="", Model_Dtype=str(engine.model.dtype),
+                       Artifact=str(args.artifact.resolve()), Scope=scope)
             if writer is None:
                 writer = csv.DictWriter(handle, fieldnames=list(row))
                 writer.writeheader()
@@ -215,25 +179,7 @@ def write_interventions(args, engine, artifact, config, controls, trials, manife
 
 
 def generate(args):
-    """Run controlled behavioral interventions using an existing vector artifact.
-
-    Args:
-        args: CLI Namespace with artifact, model, revision, task, items, paraphrases,
-            and split; alphas sets addition/subtraction strengths; random_vectors
-            sets the number of norm-matched controls; repeats and seed set trial
-            blocks/order; temperature/high_temperature control decoding; max_tokens
-            caps completion length; scope sets hook timing; output_dir is the
-            destination; dry_run validates the artifact and prints the trial count.
-    Returns:
-        None. Writes one response CSV and a JSON manifest in output_dir.
-    Notes:
-        Trials include prompt baselines, addition/subtraction, centered suppression,
-        random controls, temperature, and donor patching. Patching is always prefill.
-        A shared seed pairs conditions within an item/wording/repeat block. Alphas
-        do not change suppression/patch strengths, which are fixed at one.
-        Even a dry run requires a readable artifact. Model/protocol/template checks
-        reject incompatible artifacts; generation exceptions propagate.
-    """
+    """Load a compatible vector, validate held-out prompts and run paired interventions."""
     import torch
     artifact = torch.load(args.artifact, map_location="cpu", weights_only=True)
     if artifact["protocol"] != PROTOCOL_VERSION:
@@ -264,17 +210,7 @@ def generate(args):
     args.output_dir.mkdir(parents=True, exist_ok=True)
     stem = f"results_{args.task.lower().replace(' ', '_')}_{run_id}"
     path = args.output_dir / f"{stem}.csv"
-    manifest = dict(**metadata, protocol=PROTOCOL_VERSION, run_id=run_id,
-                    artifact=str(args.artifact.resolve()), artifact_sha256=hashlib.sha256(args.artifact.read_bytes()).hexdigest(),
-                    split=args.split, task=args.task, items=items, paraphrases=args.paraphrases,
-                    repeats=args.repeats, alphas=args.alphas, random_vectors=args.random_vectors,
-                    random_seed=args.seed, scope=args.scope, temperature=args.temperature,
-                    omit_temperature_control=getattr(args, "omit_temperature_control", False),
-                    high_temperature=args.high_temperature, max_tokens=args.max_tokens, top_p=1.0, top_k=0)
-    manifest["candidate_metadata"] = {key: artifact[key] for key in
-        ("vector_kind", "selected_heads", "selection", "upstream_commit", "audit_examples") if key in artifact}
-    (args.output_dir / f"{stem}.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-    write_interventions(args, engine, artifact, config, controls, trials, manifest, run_id, path)
+    write_interventions(args, engine, artifact, config, controls, trials, run_id, path)
 
 
 def main():

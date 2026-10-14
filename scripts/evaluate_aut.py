@@ -1,6 +1,7 @@
 """AUT proxies, response-level exports, and blinded human-rating sheets."""
 import argparse
 import hashlib
+import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -77,8 +78,6 @@ def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps
     rarities = database_rarities(frame, formatted_emb, aut_db, threshold)
     frame["DB_Rarity_Score"] = rarities
     frame = add_cluster_novelty(frame, ideas, cluster_eps)
-    frame["DB_Match_Threshold"] = threshold
-    frame["DBSCAN_Eps"] = cluster_eps
     return frame
 
 
@@ -124,7 +123,8 @@ def main():
     args.output_dir.mkdir(parents=True, exist_ok=True)
     export_ratings(ideas, args.output_dir)
     if args.ratings_only:
-        responses.to_csv(args.output_dir / "aut_response_audit.csv", index=False)
+        responses.drop(columns=["Protocol", "Source_File"], errors="ignore").to_csv(
+            args.output_dir / "aut_response_audit.csv", index=False)
         return
     from sentence_transformers import SentenceTransformer
     model = SentenceTransformer("all-mpnet-base-v2")
@@ -133,11 +133,13 @@ def main():
     metrics = ["Semantic_Distance_Proxy", "DB_Rarity_Score", "Relative_Novelty_ICF"]
     means = scored.groupby("Response_ID")[metrics].mean()
     responses = responses.merge(means, on="Response_ID", how="left", validate="one_to_one")
-    responses["Embedding_Model"] = "all-mpnet-base-v2"
-    responses["DB_Match_Threshold"] = args.match_threshold
-    responses["DBSCAN_Eps"] = args.cluster_eps
-    responses["Norm_DB"] = str(args.norm_db.resolve())
-    responses["Norm_DB_SHA256"] = hashlib.sha256(args.norm_db.read_bytes()).hexdigest() if args.norm_db.exists() else ""
+    manifest = dict(embedding_model="all-mpnet-base-v2", match_threshold=args.match_threshold,
+                    cluster_eps=args.cluster_eps, norm_db=str(args.norm_db.resolve()),
+                    norm_db_sha256=hashlib.sha256(args.norm_db.read_bytes()).hexdigest()
+                    if args.norm_db.exists() else "", source_files=responses.Source_File.unique().tolist())
+    (args.output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    scored = scored.drop(columns=["Response", "Protocol", "Source_File"], errors="ignore")
+    responses = responses.drop(columns=["Protocol", "Source_File"], errors="ignore")
     scored.to_csv(args.output_dir / "aut_ideas.csv", index=False)
     responses.to_csv(args.output_dir / "aut_responses.csv", index=False)
     descriptive_plot(responses, {metric: metric for metric in metrics}, args.output_dir / "aut_results.png")

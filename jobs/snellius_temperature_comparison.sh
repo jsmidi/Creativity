@@ -33,7 +33,7 @@ ANALYSIS_ROOT="analysis/${RUN_ROOT##*/}/t${TEMP}/$KEY"
 mkdir -p "$RAW_ROOT"
 echo "Task=$TASK temperature=$TEMP repeats=60 model=$MODEL"
 echo "Frozen sources=$CODE raw=$RAW_ROOT analysis=$ANALYSIS_ROOT"
-srun "$PYTHON" -u "$CODE/generate.py"     --provider local --model "$MODEL" --task "$TASK"     --conditions Standard Conventional Effective Boring Creative     --repeats 60 --paraphrases 0 --randomize --seed 42     --temperature "$TEMP" --top-p 1 --top-k 0 --max-tokens 800     --output-root "$RAW_ROOT"
+srun "$PYTHON" -u "$CODE/run_tasks.py"     --provider local --model "$MODEL" --task "$TASK"     --conditions Standard Conventional Effective Boring Creative     --repeats 60 --paraphrases 0 --randomize --seed 42     --temperature "$TEMP" --top-p 1 --top-k 0 --max-tokens 800     --output-root "$RAW_ROOT"
 if [[ "$KEY" == aut ]]; then
     srun "$PYTHON" -u "$CODE/evaluate_aut.py" --inputs "$RAW_ROOT"         --norm-db aut_quality_scored_all.csv --output-dir "$ANALYSIS_ROOT"
     METRIC=Semantic_Distance_Proxy

@@ -7,6 +7,7 @@ import pandas as pd
 from run_greedy_task import NAMES, DISCOVERY, AUDIT, METRICS, run, score
 from task_config import get_task_config
 from analyze_effects import paired_effect
+from plot_tasks import effect_plot
 
 CANDIDATES = ['residual', 'concept_mean', 'concept_contrast', 'concept_head']
 TEMPERATURES = [0, 0.7, 1]
@@ -34,29 +35,6 @@ def contrasts(frame, metric):
             rows.append(dict(Metric=metric, Treatment=treatment, Control=control,
                              Analysis_Status=str(exc)))
     return pd.DataFrame(rows)
-
-
-def effect_plot(effects, output, title):
-    """Plot intervention differences and unadjusted bootstrap intervals; greedy runs show points only."""
-    import matplotlib.pyplot as plt
-    import numpy as np
-    valid = effects[effects.Analysis_Status.eq('ok')].copy()
-    valid = valid[valid.Treatment.ne('Creative')]
-    labels = [f'{r.Treatment} minus {r.Control}' for r in valid.itertuples()]
-    y = np.arange(len(valid))
-    fig, ax = plt.subplots(figsize=(11, max(5, len(valid)*.35)))
-    for position, row in zip(y, valid.itertuples()):
-        ax.plot([row.CI_Lower, row.CI_Upper], [position, position], color='C0')
-        ax.plot(row.Mean_Difference, position, 'o', color='C0')
-    ax.axvline(0, color='gray', linestyle='--')
-    ax.set_yticks(y, labels)
-    ax.invert_yaxis()
-    ax.set_xlabel('Paired score difference; exploratory 95% bootstrap interval'
-                  if valid.CI_Lower.notna().any() else 'Paired score difference; greedy decoding, descriptive only')
-    ax.set_title(title)
-    fig.tight_layout()
-    fig.savefig(output, dpi=180)
-    plt.close(fig)
 
 
 def parse_args():
@@ -117,10 +95,10 @@ def extract_vectors(args):
     if args.dry_run:
         return
     root.mkdir(parents=True, exist_ok=False)
-    run('activation_steer.py', 'extract', '--model', args.model, '--artifact', root/'residual.pt',
+    run('run_residual.py', 'extract', '--model', args.model, '--artifact', root/'residual.pt',
         '--tasks', NAMES[task], '--items', *DISCOVERY[task], '--paraphrases', 1, 2,
         '--baseline', 'Standard', '--layer', 16)
-    run('concept_vectors.py', '--model', args.model, '--task', NAMES[concept_task],
+    run('run_attention_heads.py', '--model', args.model, '--task', NAMES[concept_task],
         '--output-dir', root/'concept_discovery', '--items', *DISCOVERY[concept_task],
         '--audit-items', *AUDIT[concept_task], '--paraphrases', 1, 2,
         '--audit-paraphrase', 0, '--top-k', 5, '--layer', 16, '--permutations', 199)
@@ -156,7 +134,7 @@ def run_intervention(args):
         return
     if output.exists() or raw.exists():
         raise ValueError('Choose unused candidate directories; do not overwrite results')
-    run('activation_steer.py', 'generate', '--model', args.model, '--artifact', artifact,
+    run('run_residual.py', 'generate', '--model', args.model, '--artifact', artifact,
         '--task', NAMES[task], '--items', *items, '--paraphrases', 0, '--split', 'validation',
         '--temperature', temperature, '--omit-temperature-control', '--repeats', repeats,
         '--alphas', 1, '--random-vectors', 2, '--scope', 'prefill', '--max-tokens', 800,

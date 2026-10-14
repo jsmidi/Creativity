@@ -13,7 +13,7 @@ from sampling import sampling_kwargs
 from evaluate_association import drat_score, novelty, normalized, bh_adjust, cdat_gates, main as score_main, CDAT, DRAT
 from experiment import PROTOCOL_VERSION
 from analyze_effects import paired_effect
-from generate import query_model
+from run_tasks import query_model
 
 
 class SamplingTests(unittest.TestCase):
@@ -32,12 +32,15 @@ class SamplingTests(unittest.TestCase):
 
     def test_api_top_p_is_sent(self):
         client = Mock()
-        result = Mock(model='model', usage=None)
+        result = Mock(model='model', usage=SimpleNamespace(completion_tokens=5, prompt_tokens=9))
         choice = Mock(finish_reason='stop')
         choice.message.content = 'answer'
         result.choices = [choice]
         client.chat.completions.create.return_value = result
-        self.assertEqual(query_model(client, 'prompt', 'model', top_p=.85)['Response'], 'answer')
+        response = query_model(client, 'prompt', 'model', top_p=.85)
+        self.assertEqual(response['Response'], 'answer')
+        self.assertEqual(response['Generated_Tokens'], 5)
+        self.assertEqual(response['Prompt_Tokens'], 9)
         self.assertEqual(client.chat.completions.create.call_args.kwargs['top_p'], .85)
 
 

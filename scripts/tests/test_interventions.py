@@ -2,6 +2,8 @@
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+from types import SimpleNamespace
 from unittest.mock import patch
 import torch
 from transformers import LlamaConfig, LlamaForCausalLM
@@ -20,10 +22,50 @@ class InterventionTests(unittest.TestCase):
         cls.inputs = dict(input_ids=torch.tensor([[1, 2, 3]]), attention_mask=torch.ones(1, 3, dtype=torch.long))
 
     def test_capture_shapes_and_actual_head(self):
-        residual = self.engine.capture(self.inputs, 0)
-        head = self.engine.capture(self.inputs, 0, 2)
+        residual = self.engine.capture_prompt_activation(self.inputs, 0)
+        head = self.engine.capture_prompt_activation(self.inputs, 0, 2)
         self.assertEqual(residual.shape, (16,))
         self.assertEqual(head.shape, (4,))
+
+    def test_explicit_residual_collection_and_saved_task_average(self):
+        from run_residual import collect_residual_activations, extraction_examples, extract
+        from experiment import build_prompt
+        from task_config import get_task_config
+        engine = ActivationEngine(self.model, SimpleNamespace(chat_template="test"))
+        def tokenize(prompt):
+            condition_token = 3 if prompt.endswith("Be creative.") else 4
+            item_token = 5 + sum(map(ord, prompt.split("\n")[0])) % 20
+            return dict(input_ids=torch.tensor([[1, item_token, condition_token]]))
+        engine.inputs = tokenize
+        tasks = ['Alternative Uses Task', 'Divergent Association Task']
+        examples = extraction_examples(tasks, None, [0])
+        with patch('builtins.print'):
+            positive, negative = collect_residual_activations(engine, examples, 0)
+        self.assertEqual(tuple(positive.shape), (6, 16))
+        first = examples[0]
+        prompt = build_prompt(get_task_config(first['Task'])['instruction'], first['Item'], 'Creative')
+        observed = []
+        observer = self.model.model.layers[0].register_forward_hook(
+            lambda _module, _inputs, output: observed.append(hidden_tensor(output)[0, -1].detach().float().cpu()))
+        try:
+            with torch.inference_mode():
+                self.model(**tokenize(prompt))
+        finally:
+            observer.remove()
+        torch.testing.assert_close(positive[0], observed[0])
+        task_vectors = [positive[:5].mean(0)-negative[:5].mean(0), positive[5]-negative[5]]
+        with tempfile.TemporaryDirectory() as directory:
+            artifact = Path(directory)/'residual.pt'
+            args = SimpleNamespace(tasks=tasks, items=None, paraphrases=[0], layer=0, head=None,
+                baseline='Standard', dry_run=False, model='tiny', revision=None, artifact=artifact)
+            with patch('interventions.load_engine', return_value=engine), patch('builtins.print'):
+                extract(args)
+            saved = torch.load(artifact, weights_only=True)
+            torch.testing.assert_close(saved['vector'], torch.stack(task_vectors).mean(0))
+            torch.testing.assert_close(saved['center'], torch.stack([negative[:5].mean(0), negative[5]]).mean(0))
+            self.assertEqual(saved['model'], 'tiny')
+            self.assertFalse(artifact.with_suffix('.json').exists())
+        self.assertTrue(all(not block._forward_hooks for block in self.model.model.layers))
 
     def test_chat_generation_returns_only_completion(self):
         from tokenizers import Tokenizer

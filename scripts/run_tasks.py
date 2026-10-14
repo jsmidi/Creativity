@@ -3,15 +3,12 @@ import argparse
 import csv
 from datetime import datetime, timezone
 import json
-import hashlib
-import subprocess
-import importlib.metadata
 import os
 from pathlib import Path
 import time
 import uuid
-from experiment import PROTOCOL_VERSION, CONDITION_TEXT, build_prompt, trial_schedule
-from task_config import get_task_config
+from experiment import CONDITION_TEXT, build_prompt, trial_schedule
+from task_config import get_task_config, TASK_NAMES
 from sampling import sampling_kwargs
 
 
@@ -32,23 +29,22 @@ def query_model(client, prompt, model_id, provider="together", max_retries=5,
             return dict(Response=(content or "").strip(),
                         Status="ok" if content and content.strip() else "empty",
                         Error="", Finish_Reason=choice.finish_reason,
-                        Returned_Model=result.model,
-                        System_Fingerprint=getattr(result, "system_fingerprint", None),
-                        Usage_JSON=json.dumps(result.usage.model_dump() if result.usage else {}))
+                        Generated_Tokens=getattr(result.usage, "completion_tokens", "") if result.usage else "",
+                        Prompt_Tokens=getattr(result.usage, "prompt_tokens", "") if result.usage else "")
         except Exception as exc:
             status = getattr(exc, "status_code", None)
             if status in (429, 500, 502, 503, 504) and attempt + 1 < max_retries:
                 time.sleep(min(2 ** (attempt + 1), 30))
                 continue
             return dict(Response="", Status="error", Error=str(exc), Finish_Reason="",
-                        Returned_Model="", System_Fingerprint="", Usage_JSON="{}")
+                        Generated_Tokens="", Prompt_Tokens="")
 
 
 def parse_args():
     """Parse and validate decoding options; build the paired trial schedule."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", default="models/Llama-3.1-8B-Instruct")
-    parser.add_argument("--task", choices=list(get_task_config()), default="Alternative Uses Task")
+    parser.add_argument("--task", type=lambda name: TASK_NAMES.get(name.lower(), name), choices=list(get_task_config()), default="Alternative Uses Task")
     parser.add_argument("--provider", choices=["together", "groq", "openrouter", "local"], default="local")
     parser.add_argument("--repeats", type=int, default=10, help="Pilot setting, not a power calculation")
     parser.add_argument("--conditions", nargs="+", choices=list(CONDITION_TEXT), default=list(CONDITION_TEXT))
@@ -108,64 +104,40 @@ def load_backend(args):
     return engine, client
 
 
-def prepare_output(args, config, engine, planned_responses):
-    """Create a unique run directory and save source, model and sampling provenance."""
+def prepare_output(args):
+    """Choose a unique CSV path; settings are saved in each row, without a manifest."""
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S") + "_" + uuid.uuid4().hex[:8]
     directory = args.output_root / args.model.split("/")[-1].replace(":", "_")
     directory.mkdir(parents=True, exist_ok=True)
     path = directory / f"results_{args.task.lower().replace(' ', '_')}_{run_id}.csv"
-    revision = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
-    manifest = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
-    manifest.update(run_id=run_id, protocol=PROTOCOL_VERSION, git_commit=revision,
-                    task_config=config, planned_responses=planned_responses,
-                    source_sha256={name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
-                                   for name in ["generate.py", "sampling.py", "interventions.py", "local_generation.py", "experiment.py", "task_config.py"]})
-    source_dir = directory / f"sources_{run_id}"
-    source_dir.mkdir()
-    for name in manifest["source_sha256"]:
-        (source_dir/name).write_bytes(Path(__file__).with_name(name).read_bytes())
-    manifest["source_directory"] = str(source_dir)
-    manifest["slurm"] = {key: os.getenv(key) for key in ["SLURM_JOB_ID", "SLURM_ARRAY_JOB_ID", "SLURM_ARRAY_TASK_ID"]}
-    if args.provider == "local":
-        import torch
-        manifest["hardware"] = dict(cuda_version=torch.version.cuda,
-                                    gpu_names=[torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())])
-        manifest.update(generation_overrides=sampling_kwargs(args.temperature, args.top_p, args.top_k),
-                        model_generation_config=engine.model.generation_config.to_dict(),
-                        model_config=engine.model.config.to_dict(),
-                        model_dtype=str(engine.model.dtype),
-                        chat_template_sha256=hashlib.sha256(str(engine.tokenizer.chat_template).encode()).hexdigest(),
-                        versions={name: importlib.metadata.version(name) for name in ["torch", "transformers", "accelerate"]})
-    path.with_suffix(".json").write_text(json.dumps(manifest, indent=2, default=str)+"\n")
     return run_id, path
 
 
 def response_row(args, config, trial, run_id, order, engine, client):
-    """Generate one response and attach the protocol, seed, settings and status fields."""
+    """Generate one response and save its prompt, settings and token counts."""
     prompt = build_prompt(config["instruction"], trial["Item"], trial["Condition"], trial["Paraphrase"])
-    row = dict(Protocol=PROTOCOL_VERSION, Run_ID=run_id, Response_ID=f"{run_id}:{order}",
-               Model=args.model, Provider=args.provider, Task=args.task, Split=args.split,
-               Instruction=config["instruction"], **trial, Request_Order=order,
-               Schedule_Seed=args.seed, Seed_Sent=args.send_seed or args.provider == "local",
-               Request_Ordering="randomized" if args.randomize else "fixed",
-               Temperature=args.temperature, Max_Tokens=args.max_tokens,
-               Top_P=args.top_p, Top_K=args.top_k if args.provider == "local" else "provider_default_unknown",
-               Decoding="greedy" if args.temperature == 0 and args.provider == "local" else "sampling",
-               Sampling_Filters_Active=args.temperature > 0,
-               Extra_Body_JSON=json.dumps(args.extra_body, sort_keys=True),
-               Timestamp_UTC=datetime.now(timezone.utc).isoformat(), Prompt=prompt)
+    timestamp = datetime.now(timezone.utc).isoformat()
     if args.provider == "local":
         result = engine.generate(prompt, seed=trial["Generation_Seed"],
                                  temperature=args.temperature, max_tokens=args.max_tokens,
                                  top_p=args.top_p, top_k=args.top_k)
-        row.update(result, Status="ok" if result["Response"] else "empty", Error="",
-                   Model_Dtype=str(engine.model.dtype))
+        error = ""
+        model_dtype = str(engine.model.dtype)
     else:
-        row.update(query_model(client, prompt, args.model, args.provider,
-                           temperature=args.temperature, max_tokens=args.max_tokens,
-                           seed=trial["Generation_Seed"] if args.send_seed else None,
-                           extra_body=args.extra_body, top_p=args.top_p))
-    return row
+        result = query_model(client, prompt, args.model, args.provider,
+                             temperature=args.temperature, max_tokens=args.max_tokens,
+                             seed=trial["Generation_Seed"] if args.send_seed else None,
+                             extra_body=args.extra_body, top_p=args.top_p)
+        error = result["Error"]
+        model_dtype = "unknown"  # API providers do not report the weight dtype.
+    return dict(Run_ID=run_id, Response_ID=f"{run_id}:{order}", Model=args.model,
+                Task=args.task, Instruction=config["instruction"], Item=trial["Item"],
+                Condition=trial["Condition"], Generation_Seed=trial["Generation_Seed"],
+                Temperature=args.temperature, Max_Tokens=args.max_tokens,
+                Top_P=args.top_p, Top_K=args.top_k if args.provider == "local" else "unknown",
+                Timestamp_UTC=timestamp, Prompt=prompt, Response=result["Response"],
+                Generated_Tokens=result.get("Generated_Tokens", ""),
+                Prompt_Tokens=result.get("Prompt_Tokens", ""), Error=error, Model_Dtype=model_dtype)
 
 
 def write_responses(args, config, trials, run_id, path, engine, client):
@@ -180,9 +152,10 @@ def write_responses(args, config, trials, run_id, path, engine, client):
                 writer.writeheader()
             writer.writerow(row)
             handle.flush()
-            print(f"{order + 1}/{len(trials)} {trial['Condition']}: {row['Status']}")
-            failures += row["Status"] != "ok"
-            if order == 0 and row["Status"] == "error":
+            status = "error" if row["Error"] else "ok" if row["Response"].strip() else "empty"
+            print(f"{order + 1}/{len(trials)} {trial['Condition']}: {status}")
+            failures += status != "ok"
+            if order == 0 and status == "error":
                 print(row["Error"])
                 break
     print(f"Saved {path}; {failures} failed/empty requests retained in log.")
@@ -193,7 +166,7 @@ def write_responses(args, config, trials, run_id, path, engine, client):
 def main():
     """Plan a behavioral run, initialize its backend, then stream logged responses."""
     args, config, trials = parse_args()
-    print(f"{len(trials)} requests planned for {args.model}; protocol {PROTOCOL_VERSION}.")
+    print(f"{len(trials)} requests planned for {args.model}.")
     if args.dry_run:
         print(build_prompt(config["instruction"], trials[0]["Item"], trials[0]["Condition"], trials[0]["Paraphrase"]))
         return
@@ -201,7 +174,7 @@ def main():
         engine, client = load_backend(args)
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc
-    run_id, path = prepare_output(args, config, engine, len(trials))
+    run_id, path = prepare_output(args)
     write_responses(args, config, trials, run_id, path, engine, client)
 
 

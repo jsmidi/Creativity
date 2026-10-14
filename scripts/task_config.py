@@ -1,4 +1,8 @@
 """Pilot tasks; these are not a verified reproduction of AGC-Bench items."""
+TASK_NAMES = dict(aut="Alternative Uses Task", dat="Divergent Association Task",
+                  cdat="Conditional Divergent Association Task", drat="Divergent Remote Association Test")
+
+
 def get_task_config(task_name=None):
     """Return the complete task registry or one task definition containing instructions and pilot items."""
     tasks = {

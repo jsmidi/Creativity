@@ -119,7 +119,7 @@ def build_plan(args):
 
 def generate_behavioral(args, task):
     """Generate and score unsteered greedy condition baselines."""
-    run('generate.py', '--task', task, '--model', args.model, '--provider', 'local',
+    run('run_tasks.py', '--task', task, '--model', args.model, '--provider', 'local',
         '--repeats', args.repeats, '--temperature', 0, '--top-p', 1, '--top-k', 0,
         '--paraphrases', 0, '--randomize', '--output-root', args.run_dir/'behavioral')
     score(args.task, args.run_dir/'behavioral', args.analysis_dir/'behavioral')
@@ -128,10 +128,10 @@ def generate_behavioral(args, task):
 def extract_vectors(args, task, concept_task):
     """Extract the task residual and select/audit concept heads."""
     residual = args.run_dir/'residual.pt'
-    run('activation_steer.py', 'extract', '--model', args.model, '--artifact', residual,
+    run('run_residual.py', 'extract', '--model', args.model, '--artifact', residual,
         '--tasks', task, '--items', *DISCOVERY[args.task], '--paraphrases', 1, 2, '--baseline', 'Standard', '--layer', 16)
     discovery = args.run_dir/'concept_discovery'
-    run('concept_vectors.py', '--model', args.model, '--task', NAMES[concept_task], '--output-dir', discovery,
+    run('run_attention_heads.py', '--model', args.model, '--task', NAMES[concept_task], '--output-dir', discovery,
         '--items', *DISCOVERY[concept_task], '--audit-items', *AUDIT[concept_task],
         '--paraphrases', 1, 2, '--audit-paraphrase', 0, '--top-k', 5, '--layer', 16, '--permutations', 199)
     return residual, discovery
@@ -145,7 +145,7 @@ def run_interventions(args, task, items, residual, discovery):
     for candidate, artifact in [('residual', residual), ('concept_mean', discovery/'creative_mean.pt'),
                                 ('concept_contrast', discovery/'contrast.pt'), ('concept_head', discovery/f'{head}.pt')]:
         output = args.run_dir/candidate
-        run('activation_steer.py', 'generate', '--model', args.model, '--artifact', artifact,
+        run('run_residual.py', 'generate', '--model', args.model, '--artifact', artifact,
             '--task', task, '--items', *items, '--paraphrases', 0, '--split', 'validation',
             '--temperature', 0, '--omit-temperature-control', '--repeats', args.mi_repeats,
             '--alphas', 1, '--random-vectors', 2, '--scope', 'prefill', '--max-tokens', 800,

@@ -35,7 +35,7 @@ would need a separate explicit policy.
 
 ### 2. Composite suppression centers a full residual on selected-head contributions
 
-`scripts/concept_vectors.py:385–400` saves the projected Standard contribution
+`scripts/run_attention_heads.py:385–400` saves the projected Standard contribution
 of the selected heads as `center` for both composite artifacts, which are
 injected into the full post-block residual at `args.layer`.
 `scripts/interventions.py:58–66` computes:
@@ -176,7 +176,7 @@ comparison or its separate extraction-format portability assay.
 
 ## Residual contrast
 
-`scripts/activation_steer.py:111–123` computes:
+`scripts/run_residual.py:111–123` computes:
 
 ```text
 v_layer = mean_i[h_layer(last_prompt_token, Creative_i)

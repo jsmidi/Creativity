@@ -13,8 +13,8 @@ from experiment import canonical_item, trial_schedule
 from scoring_common import load_responses, parse_dat_words
 from evaluate_dat import evaluate_dat_metrics, load_dat_frequency_database
 from evaluate_aut import prepare_ideas, evaluate_aut_metrics
-from activation_steer import validate_holdout
-from generate import query_model
+from run_residual import validate_holdout
+from run_tasks import query_model
 from analyze_effects import paired_effect, main as analyze_main
 
 

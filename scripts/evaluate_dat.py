@@ -1,6 +1,7 @@
 """DAT scoring: official GloVe scorer or explicitly named MPNet proxy."""
 import argparse
 import importlib.util
+import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -77,7 +78,17 @@ def main():
         model = SentenceTransformer("all-mpnet-base-v2")
     scored = evaluate_dat_metrics(frame, model, load_dat_frequency_database(args.frequency_db), official)
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    scored.to_csv(args.output_dir / "dat_responses.csv", index=False)
+    manifest = dict(scorer=args.scorer, validation="dictionary" if official else "syntax_only",
+                    official_code=args.official_code,
+                    glove=args.glove, dictionary=args.dictionary, frequency_db=args.frequency_db,
+                    source_files=frame.Source_File.unique().tolist())
+    (args.output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, default=str) + "\n")
+    unused = ["Protocol", "Source_File", "Validation"]
+    unused.append("DAT_MPNet_Proxy" if official is not None else "DAT_GloVe_Score")
+    if args.frequency_db is None:
+        unused.extend(["Rarity_Score", "Frequency_Coverage"])
+    scored.drop(columns=unused, errors="ignore").to_csv(
+        args.output_dir / "dat_responses.csv", index=False)
     column = "DAT_GloVe_Score" if official is not None else "DAT_MPNet_Proxy"
     descriptive_plot(scored, {column: column, "Rarity_Score": "Lexical rarity (missing if unavailable)"}, args.output_dir / "dat_results.png")
     print(f"Saved {len(scored)} responses, {scored['Scorable'].sum()} scorable; {args.output_dir}")

@@ -35,12 +35,12 @@ ARTIFACT="$RUN_DIR/aut_l${LAYER}.pt"
 echo "Model=$MODEL layer=$LAYER alpha=$ALPHA scope=$SCOPE"
 echo "Artifacts/responses: $RUN_DIR; analysis: $ANALYSIS_DIR"
 
-srun "$PYTHON" -u scripts/activation_steer.py extract \
+srun "$PYTHON" -u scripts/run_residual.py extract \
     --model "$MODEL" --artifact "$ARTIFACT" --layer "$LAYER" \
     --tasks 'Alternative Uses Task' --items brick rope bottle spoon \
     --paraphrases 1 --baseline Standard
 
-srun "$PYTHON" -u scripts/activation_steer.py generate \
+srun "$PYTHON" -u scripts/run_residual.py generate \
     --model "$MODEL" --artifact "$ARTIFACT" --task 'Alternative Uses Task' \
     --items book fork paperclip towel can --paraphrases 0 --split validation \
     --alphas "$ALPHA" --repeats "${REPEATS:-3}" \

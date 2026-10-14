@@ -173,7 +173,8 @@ def score_responses(task, frame, parsed, anchors, lookup, pool):
 def save_results(args, frame, result, baseline_rows, texts, vectors, pool_words):
     """Save score CSVs, calibration, source hashes, CDAT gates and descriptive plots."""
     args.output_dir.mkdir(parents=True)
-    result.to_csv(args.output_dir/f'{args.task}_responses.csv', index=False)
+    result.drop(columns=['Protocol', 'Source_File'], errors='ignore').to_csv(
+        args.output_dir/f'{args.task}_responses.csv', index=False)
     if baseline_rows:
         baseline = pd.DataFrame(baseline_rows)
         baseline.to_csv(args.output_dir/'random_baseline.csv', index=False)
