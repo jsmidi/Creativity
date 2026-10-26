@@ -1,0 +1,2 @@
+# Add to the existing project environment; preserves its Torch/CUDA stack.
+peft==0.21.2

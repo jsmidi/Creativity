@@ -29,7 +29,7 @@ class GptOssEngine:
         torch.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
         stop = self.tokenizer.eos_token_id
-        kwargs = dict(max_new_tokens=max_tokens, do_sample=temperature > 0,
+        kwargs = dict(max_new_tokens=max_tokens,
                       eos_token_id=stop, pad_token_id=self.tokenizer.eos_token_id,
                       use_cache=True)
         kwargs.update(sampling_kwargs(temperature, top_p, top_k))

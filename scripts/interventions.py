@@ -205,29 +205,12 @@ class ActivationEngine:
 
         if section is None:
             def hook(_module, _args, output):
-                """Capture or replace activations for the enclosing hook operation.
-
-                Args:
-                    _module: Module invoking the hook; unused.
-                    _args: Positional block inputs; unused.
-                    output: Original decoder block tensor or tuple output.
-                Returns:
-                    None for capture hooks; a replacement output/input tuple for edit hooks.
-                    Uses the target and storage closed over by the enclosing function.
-                """
+                """Edit the residual while preserving tuple-style block outputs."""
                 return replace_hidden(output, transform(hidden_tensor(output)))
             handle = module.register_forward_hook(hook)
         else:
             def hook(_module, args):
-                """Capture or replace activations for the enclosing hook operation.
-
-                Args:
-                    _module: Module invoking the hook; unused.
-                    args: Projection positional inputs; args[0] is the activation tensor.
-                Returns:
-                    None for capture hooks; a replacement output/input tuple for edit hooks.
-                    Uses the target and storage closed over by the enclosing function.
-                """
+                """Edit head coordinates before the output projection mixes them."""
                 return (transform(args[0]), *args[1:])
             handle = module.register_forward_pre_hook(hook)
         try:
@@ -312,7 +295,7 @@ class ActivationEngine:
         torch.manual_seed(seed)
         if torch.cuda.is_available():
             torch.cuda.manual_seed_all(seed)
-        kwargs = dict(max_new_tokens=max_tokens, do_sample=temperature > 0,
+        kwargs = dict(max_new_tokens=max_tokens,
                       use_cache=True, pad_token_id=self.tokenizer.eos_token_id)
         kwargs.update(sampling_kwargs(temperature, top_p, top_k))
         if repetition_penalty is not None:

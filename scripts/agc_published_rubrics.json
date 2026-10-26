@@ -1,0 +1,37 @@
+{
+  "repository": "agcbench-2026/AGC-Bench",
+  "revision": "30918045d5c1cf318e698c73469400de2251b9e6",
+  "license": "CC-BY-4.0 (release data outputs)",
+  "rubrics": {
+    "aut": {
+      "text": "Rate how creative the following response is as an alternative use for the named object. A creative response should be novel (unusual, original, surprising) and effective (appropriate, feasible, clever). Scale: 10-50, where 10 = not at all creative and 50 = extremely creative.",
+      "source": "https://huggingface.co/datasets/agcbench-2026/AGC-Bench/resolve/30918045d5c1cf318e698c73469400de2251b9e6/audit/judge_prompts/agc_human/style_flip_counterfactual__task_rubrics%5B%27aut%27%5D.md",
+      "minimum": 10,
+      "maximum": 50
+    },
+    "writing_creativity": {
+      "text": "Evaluate the CREATIVITY of the generated short story.\nConsider the overall creative quality, including inventive use of the cue words,\nnovel imagery, and whether the story feels fresh rather than formulaic.\n\nScore 1: Completely conventional or formulaic story\nScore 2: Mostly conventional with little imaginative use of the cue words\nScore 3: Some creative elements and acceptable use of the cue words\nScore 4: Genuinely creative story with strong imaginative use of the cue words\nScore 5: Highly creative, novel, and memorable story with especially inventive cue-word use",
+      "source": "https://huggingface.co/datasets/agcbench-2026/AGC-Bench/resolve/30918045d5c1cf318e698c73469400de2251b9e6/audit/judge_prompts/scoring/cue_word_story___rubric_llm_judge_creativity.md",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "writing_originality": {
+      "text": "Evaluate the ORIGINALITY of the generated short story.\nConsider how unique, fresh, and unconventional the story concept is.\n\nScore 1: Highly derivative or clichéd; the cue words are used in the most obvious way\nScore 2: Mostly familiar ideas with only a small twist\nScore 3: Some original elements, but the story is still largely conventional\nScore 4: Notably original and uncommon use of the cue words\nScore 5: Exceptionally original, fresh, and unconventional story concept",
+      "source": "https://huggingface.co/datasets/agcbench-2026/AGC-Bench/resolve/30918045d5c1cf318e698c73469400de2251b9e6/audit/judge_prompts/scoring/cue_word_story___rubric_llm_judge_originality.md",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "writing_effectiveness": {
+      "text": "Evaluate the EFFECTIVENESS of the generated short story.\nConsider whether the story is coherent, easy to follow, and enjoyable to read.\n\nScore 1: Hard to follow, dull, or fails to work as a story\nScore 2: Weakly effective with awkward flow or low engagement\nScore 3: Adequately effective but not especially engaging\nScore 4: Well-structured, coherent, and enjoyable\nScore 5: Highly effective story that is both coherent and engaging",
+      "source": "https://huggingface.co/datasets/agcbench-2026/AGC-Bench/resolve/30918045d5c1cf318e698c73469400de2251b9e6/audit/judge_prompts/scoring/cue_word_story___rubric_llm_judge_effectiveness.md",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "writing_surprise": {
+      "text": "Evaluate the SURPRISE of the generated short story.\nConsider how unexpected the story is, including twists, reversals, and unusual\ntransitions between ideas.\n\nScore 1: Completely predictable; no unexpected turns\nScore 2: Mostly predictable with almost no surprise\nScore 3: Some mildly unexpected ideas or transitions\nScore 4: Clearly surprising with at least one strong twist or reversal\nScore 5: Highly surprising and inventive with memorable unexpected turns",
+      "source": "https://huggingface.co/datasets/agcbench-2026/AGC-Bench/resolve/30918045d5c1cf318e698c73469400de2251b9e6/audit/judge_prompts/scoring/cue_word_story___rubric_llm_judge_surprise.md",
+      "minimum": 1,
+      "maximum": 5
+    }
+  }
+}

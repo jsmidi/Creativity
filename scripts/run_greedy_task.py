@@ -6,9 +6,8 @@ from pathlib import Path
 import subprocess
 import sys
 import pandas as pd
-import numpy as np
 from task_config import get_task_config
-from analyze_effects import paired_effect
+from analyze_effects import intervention_effects
 
 SCRIPTS = Path(__file__).resolve().parent
 NAMES = dict(aut='Alternative Uses Task', dat='Divergent Association Task',
@@ -46,25 +45,9 @@ def summarize(task, scored_root, output):
     for path in sorted(scored_root.rglob(f'{task}_responses.csv')):
         frame = pd.read_csv(path, keep_default_na=False)
         candidate = str(path.parent.relative_to(scored_root))
-        pairs = [('Creative', control) for control in ['Standard', 'Effective', 'Conventional', 'Boring']]
-        if 'Standard_add_1' in set(frame.Condition):
-            pairs += [('Standard_add_1', 'Standard'), ('Creative_subtract_1', 'Creative'),
-                      ('Creative_suppress', 'Creative'), ('Standard_suppress', 'Standard'),
-                      ('Standard_patch_creative', 'Standard'), ('Creative_patch_standard', 'Creative')]
-            for index in range(2):
-                pairs += [(f'Standard_random{index}_1', 'Standard'),
-                          (f'Creative_random_suppress{index}', 'Creative'),
-                          ('Standard_add_1', f'Standard_random{index}_1'),
-                          ('Creative_suppress', f'Creative_random_suppress{index}')]
-        for treatment, control in pairs:
-            base = dict(Candidate=candidate, Treatment=treatment, Control=control)
-            try:
-                effects.append(dict(base, **{k:v for k,v in paired_effect(frame, metric, treatment, control).items()
-                                              if k not in ('Treatment', 'Control')}, Analysis_Status='ok'))
-            except ValueError as exc:
-                if str(exc) != 'No complete scored pairs for requested contrast.':
-                    raise
-                effects.append(dict(base, Metric=metric, Mean_Difference=np.nan, Analysis_Status=str(exc)))
+        comparisons = intervention_effects(frame, metric)
+        comparisons.insert(0, "Candidate", candidate)
+        effects.extend(comparisons.to_dict("records"))
         for (item, condition), group in frame.groupby(['Item', 'Condition'], dropna=False):
             valid = group[group.Status == 'ok']
             audit.append(dict(Candidate=candidate, Item=item, Condition=condition, Requests=len(group),
@@ -119,7 +102,7 @@ def build_plan(args):
 
 def generate_behavioral(args, task):
     """Generate and score unsteered greedy condition baselines."""
-    run('run_tasks.py', '--task', task, '--model', args.model, '--provider', 'local',
+    run('run_tasks.py', '--prompt-protocol', 'legacy', '--task', task, '--model', args.model, '--provider', 'local',
         '--repeats', args.repeats, '--temperature', 0, '--top-p', 1, '--top-k', 0,
         '--paraphrases', 0, '--randomize', '--output-root', args.run_dir/'behavioral')
     score(args.task, args.run_dir/'behavioral', args.analysis_dir/'behavioral')

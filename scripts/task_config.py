@@ -62,3 +62,217 @@ def get_task_config(task_name=None):
         return tasks
     return tasks.get(task_name)
 
+
+TASK_TEMPLATES = {
+    "Alternative Uses Task": (
+        "List exactly 10 highly {style} uses for the object {item} "
+        "other than its primary use. {criterion} "
+        "Every use must be physically possible. "
+        "Provide only a numbered list (1-10), "
+        "with one use per line and no explanations."
+    ),
+
+    "Scientific Hypothesis Generation": (
+        "Generate a highly {style} scientific hypothesis "
+        "(1-2 sentences) to explain the following observation: "
+        "{item}. {criterion} "
+        "The hypothesis must be scientifically testable."
+    ),
+
+    "Metaphor Generation": (
+        "Generate a highly {style} metaphor (1-2 sentences) "
+        "to describe the following concept or experience: "
+        "{item}. {criterion} "
+        "The metaphor must communicate the intended concept."
+    ),
+
+    "Conditional Divergent Association Task": (
+        "List exactly 10 highly {style} associations with the "
+        "cue {item}, using distinct single English nouns. "
+        "{criterion} "
+        "Every noun must meaningfully relate to the cue. "
+        "Provide only a numbered list (1-10), "
+        "without explanations."
+    ),
+
+    "Divergent Remote Association Test": (
+        "List exactly 10 highly {style} single English nouns "
+        "that each relate, literally or metaphorically, "
+        "to all these anchors: {item}. "
+        "{criterion} "
+        "Every noun must connect to every anchor. "
+        "Provide only a numbered list (1-10), "
+        "without explanations."
+    ),
+
+    "Divergent Association Task": (
+        "Generate exactly 10 distinct single English nouns "
+        "using a highly {style} approach. "
+        "{criterion} "
+        "Provide only a numbered list (1-10), "
+        "without explanations."
+    )
+}
+
+
+TASK_CONDITIONS = {
+    "Alternative Uses Task": {
+        "creative": (
+            "Look for unexpected applications that exploit "
+            "the object's properties in unusual ways."
+        ),
+        "effective": (
+            "Look for practical applications that exploit "
+            "the object's properties in useful ways."
+        ),
+        "conventional": (
+            "Look for familiar applications that exploit "
+            "the object's properties in established ways."
+        ),
+        "boring": (
+            "Look for obvious applications that exploit "
+            "the object's properties in predictable ways."
+        )
+    },
+
+    "Scientific Hypothesis Generation": {
+        "creative": (
+            "Favor unexpected explanatory mechanisms "
+            "that reveal surprising connections."
+        ),
+        "effective": (
+            "Favor plausible explanatory mechanisms "
+            "that provide useful predictions."
+        ),
+        "conventional": (
+            "Favor established explanatory mechanisms "
+            "that follow familiar principles."
+        ),
+        "boring": (
+            "Favor obvious explanatory mechanisms "
+            "that provide unsurprising explanations."
+        )
+    },
+
+    "Metaphor Generation": {
+        "creative": (
+            "Connect conceptually distant ideas through "
+            "surprising and imaginative comparisons."
+        ),
+        "effective": (
+            "Connect clearly relevant ideas through "
+            "useful and informative comparisons."
+        ),
+        "conventional": (
+            "Connect commonly associated ideas through "
+            "familiar and established comparisons."
+        ),
+        "boring": (
+            "Connect obviously related ideas through "
+            "simple and predictable comparisons."
+        )
+    },
+
+    "Conditional Divergent Association Task": {
+        "creative": (
+            "Explore distant and unexpected connections "
+            "while maximizing differences between nouns."
+        ),
+        "effective": (
+            "Explore relevant and useful connections "
+            "while maintaining practical relationships between nouns."
+        ),
+        "conventional": (
+            "Explore familiar and typical connections "
+            "while maintaining common relationships between nouns."
+        ),
+        "boring": (
+            "Explore obvious and predictable connections "
+            "while minimizing differences between nouns."
+        )
+    },
+
+    "Divergent Remote Association Test": {
+        "creative": (
+            "Favor surprising and remote connections "
+            "that differ substantially between nouns."
+        ),
+        "effective": (
+            "Favor useful and meaningful connections "
+            "that work consistently across anchors."
+        ),
+        "conventional": (
+            "Favor familiar and established connections "
+            "that follow common associative patterns."
+        ),
+        "boring": (
+            "Favor obvious and predictable connections "
+            "that require little associative imagination."
+        )
+    },
+
+    "Divergent Association Task": {
+        "creative": (
+            "Choose words from distant semantic domains, "
+            "maximizing unusual and unexpected differences."
+        ),
+        "effective": (
+            "Choose words from useful everyday contexts, "
+            "prioritizing practical and relevant associations."
+        ),
+        "conventional": (
+            "Choose words from familiar semantic categories, "
+            "prioritizing typical and established associations."
+        ),
+        "boring": (
+            "Choose words from closely related categories, "
+            "minimizing unusual and unexpected differences."
+        )
+    }
+}
+
+
+def build_prompt(task_name, item, condition="standard"):
+    config = get_task_config(task_name)
+    if config is None:
+        raise ValueError(f"Unknown task: {task_name}")
+    condition = condition.lower()
+    if condition == "neutral":
+        condition = "standard"
+    if condition not in ("standard", "creative", "effective", "conventional", "boring"):
+        raise ValueError(f"Unknown condition: {condition}")
+    if condition == "standard":
+        # Retain existing standard instructions
+        return config["instruction"].format(
+            item=item
+        )
+
+    template = TASK_TEMPLATES[task_name]
+    criterion = TASK_CONDITIONS[task_name][condition]
+
+    return template.format(
+        item=item,
+        style=condition,
+        criterion=criterion
+    )
+
+
+def get_all_experiments():
+    experiments = []
+
+    for task_name, config in get_task_config().items():
+        for item in config["items"]:
+            for condition in [
+                "standard", "creative", "effective",
+                "conventional", "boring"
+            ]:
+                experiments.append({
+                    "task": task_name,
+                    "item": item,
+                    "condition": condition,
+                    "prompt": build_prompt(
+                        task_name, item, condition
+                    )
+                })
+
+    return experiments

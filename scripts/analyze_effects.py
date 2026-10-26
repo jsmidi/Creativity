@@ -6,6 +6,16 @@ import pandas as pd
 from experiment import canonical_item
 
 
+def holm(pvalues):
+    """Adjust finite p-values together; retain missing values in their positions."""
+    values = np.asarray(pvalues, dtype=float)
+    result = np.full(len(values), np.nan)
+    indices = np.flatnonzero(np.isfinite(values))
+    order = indices[np.argsort(values[indices])]
+    result[order] = np.minimum(1, np.maximum.accumulate(values[order] * np.arange(len(order), 0, -1)))
+    return result
+
+
 def paired_effect(frame, metric, treatment, control, draws=2000, seed=42):
     """Estimate a response-level treatment effect with an item/block bootstrap.
 
@@ -65,6 +75,36 @@ def paired_effect(frame, metric, treatment, control, draws=2000, seed=42):
                 Incomplete_Pairs=len(table) - len(complete), Items=len(grouped),
                 Scope="greedy decoding; descriptive only, no sampling CI" if greedy else ("within-item sampling only" if len(grouped) == 1 else "item and paired-generation bootstrap"),
                 Bootstrap_Draws=0 if greedy else draws, Bootstrap_Seed=seed)
+
+
+def intervention_effects(frame, metric):
+    """Estimate the prespecified instruction and intervention comparisons from complete paired blocks."""
+    pairs = [('Creative', c) for c in ("Standard", "Effective", "Conventional", "Boring")]
+    if 'Standard_add_1' not in set(frame.Condition):
+        return contrast_table(frame, metric, pairs)
+    pairs += [('Standard_add_1', 'Standard'), ('Creative_subtract_1', 'Creative'),
+              ('Creative_suppress', 'Creative'), ('Standard_suppress', 'Standard'),
+              ('Standard_patch_creative', 'Standard'), ('Creative_patch_standard', 'Creative')]
+    for index in range(2):
+        pairs += [(f'Standard_random{index}_1', 'Standard'),
+                  (f'Creative_random_suppress{index}', 'Creative'),
+                  ('Standard_add_1', f'Standard_random{index}_1'),
+                  ('Creative_suppress', f'Creative_random_suppress{index}')]
+    return contrast_table(frame, metric, pairs)
+
+
+def contrast_table(frame, metric, pairs):
+    """Retain unscored comparisons as missing; propagate invalid pairing errors."""
+    rows = []
+    for treatment, control in pairs:
+        try:
+            rows.append(dict(**paired_effect(frame, metric, treatment, control), Analysis_Status='ok'))
+        except ValueError as exc:
+            if str(exc) != 'No complete scored pairs for requested contrast.':
+                raise
+            rows.append(dict(Metric=metric, Treatment=treatment, Control=control,
+                             Mean_Difference=np.nan, Analysis_Status=str(exc)))
+    return pd.DataFrame(rows)
 
 
 def main():

@@ -37,7 +37,7 @@ def validate_holdout(artifact, task, items, paraphrases, split):
 
 
 def provenance(engine, args):
-    """Record model revision, library versions and tokenizer template identity."""
+    """Record the model revision and execution library versions."""
     return dict(model=args.model, requested_revision=args.revision or "main",
                 resolved_revision=getattr(engine.model.config, "_commit_hash", None),
                 torch=importlib.metadata.version("torch"),
@@ -212,14 +212,9 @@ def generate(args):
 
 
 def main():
-    """Parse the extract/generate CLI, validate settings, and dispatch the command.
+    """Validate settings and dispatch extraction or generation.
 
-    Args:
-        None. Reads arguments from sys.argv; use --help or a subcommand's --help.
-    Returns:
-        None. Parser errors terminate with a nonzero exit status. Final-test
-        generation accepts only one alpha, but prior tuning is not tracked.
-    """
+    Final-test generation accepts one alpha; prior tuning is not tracked."""
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     for command in ["extract", "generate"]:

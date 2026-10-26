@@ -60,6 +60,47 @@ class BehavioralOrchestrationTests(unittest.TestCase):
             self.assertEqual(effect['Complete_Pairs'], 1)
             self.assertEqual(effect['Incomplete_Pairs'], 1)
 
+    def test_battery_loads_backend_once_and_keeps_task_pairing(self):
+        """One shared model must still produce independently scorable task CSVs."""
+        result = dict(Response="1. Example", Error="", Generated_Tokens=2, Prompt_Tokens=8)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "battery"
+            argv = ["run_tasks", "--tasks", "aut", "dat", "drat", "cdat",
+                    "--provider", "together", "--model", "fake-model", "--repeats", "1",
+                    "--conditions", "standard", "creative", "--randomize",
+                    "--output-root", str(root)]
+            with patch.object(sys, "argv", argv), contextlib.redirect_stdout(io.StringIO()), \
+                    patch.object(run_tasks, "load_backend", return_value=(None, object())) as load, \
+                    patch.object(run_tasks, "query_model", return_value=result):
+                run_tasks.main()
+            load.assert_called_once()
+            run_ids = set()
+            for key in ("aut", "dat", "drat", "cdat"):
+                path = next((root / key).rglob("results_*.csv"))
+                task = run_tasks.TASK_NAMES[key]
+                frame = load_responses([path], task)
+                self.assertEqual(len(frame), 2 * len(run_tasks.get_task_config(task)["items"]))
+                self.assertEqual(set(frame.Task), {task})
+                self.assertTrue(frame.groupby("Block_ID").Condition.nunique().eq(2).all())
+                self.assertTrue(frame.groupby("Block_ID").Generation_Seed.nunique().eq(1).all())
+                run_ids.update(frame.Run_ID)
+            self.assertEqual(len(run_ids), 4)
+            # A repeated submission must fail before loading a backend or writing CSVs.
+            with patch.object(sys, "argv", argv), contextlib.redirect_stdout(io.StringIO()), \
+                    patch.object(run_tasks, "load_backend") as load, self.assertRaises(FileExistsError):
+                run_tasks.main()
+            load.assert_not_called()
+
+    def test_battery_dry_run_has_no_side_effects(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "preview"
+            argv = ["run_tasks", "--tasks", "aut", "dat", "--dry-run", "--output-root", str(root)]
+            with patch.object(sys, "argv", argv), contextlib.redirect_stdout(io.StringIO()), \
+                    patch.object(run_tasks, "load_backend") as load:
+                run_tasks.main()
+            load.assert_not_called()
+            self.assertFalse(root.exists())
+
     def test_local_backend_rejects_api_overrides_before_loading_weights(self):
         """Invalid local settings must fail before initializing a model."""
         from argparse import Namespace

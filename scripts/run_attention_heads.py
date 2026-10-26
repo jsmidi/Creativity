@@ -21,20 +21,10 @@ UPSTREAM_COMMIT = 'dcbcd0ef16d8a6c1af8b0a2378b7717a9ba66c42'
 CONCEPTS = ('Creative', 'Conventional', 'Effective')
 
 
-
 def stimuli(items, paraphrases, conditions=CONCEPTS, task="Alternative Uses Task"):
-    """Build a balanced task discovery grid across objects, wording, and format.
+    """Build an item/wording/condition grid in numbered and bulleted formats.
 
-    Args:
-        items: Objects, cues or anchor sets to insert into the task instruction.
-        task: Supported task name; defaults to AUT.
-        paraphrases: Indices into CONDITION_TEXT suffix variants (0, 1, or 2).
-        conditions: Instruction-condition names; defaults to Creative,
-            Conventional, and Effective. Standard is used separately for centering.
-    Returns:
-        List of records containing Item, Paraphrase, Format, Condition, and Prompt.
-        Each input combination appears in both numbered and bulleted formats.
-    """
+    Standard prompts are collected separately for the suppression center."""
     template = get_task_config(task)["instruction"]
     formats = dict(numbered=template, bullets=template.replace("a numbered list (1-10)", "a bulleted list"))
     if formats["numbered"] == formats["bullets"]:
@@ -95,14 +85,9 @@ def collect_residual_center(engine, examples, layer):
 
 
 def centered_ranks(values):
-    """Convert last-axis values into centered, unit-length average ranks.
+    """Return centered unit ranks along the last axis, averaging ties.
 
-    Args:
-        values: Numeric array; independent rank vectors occupy its last axis.
-    Returns:
-        Float array of the same shape. Ties receive average ranks; constant vectors
-        become zeros. Dot products of nonconstant outputs equal Spearman rho.
-    """
+    Constant vectors become zeros. Other vectors' dot products equal Spearman rho."""
     ranks = rankdata(values, axis=-1, method='average')
     ranks -= ranks.mean(axis=-1, keepdims=True)
     norms = np.linalg.norm(ranks, axis=-1, keepdims=True)
@@ -152,19 +137,11 @@ def rsa_features(activations, examples, cross_only=True, cross_wording=True):
 
 
 def rsa_scores(features, labels, i, j):
-    """Correlate head similarity ranks with a same-label binary design.
+    """Correlate each head's similarity ranks with a same-label design.
 
-    Args:
-        features: Centered unit rank vectors [heads, pairs] from rsa_features.
-        labels: One concept/format label per prompt.
-        i: First prompt indices for the retained pairs.
-        j: Second prompt indices for the retained pairs, aligned with i.
-    Returns:
-        One Spearman correlation per head. Constant heads produce zero here;
-        callers must use the validity mask to mark them undefined.
-    Raises:
-        ValueError: If all retained pairs are same-label or all are different-label.
-    """
+    features is [heads, pairs]; i/j index prompt pairs and labels names each
+    prompt's condition. Constant heads return zero; callers apply the validity
+    mask. Both same-label and different-label pairs must be present."""
     labels = np.asarray(labels)
     target = (labels[i] == labels[j]).astype(float)
     if np.unique(target).size != 2:
@@ -223,20 +200,12 @@ def rank_heads(activations, examples, permutations=199, seed=42):
 
 @torch.inference_mode()
 def project_heads(engine, head_values, selected):
-    """Sum selected heads' contributions after mapping to residual coordinates.
+    """Map selected heads to residual coordinates and sum their contributions.
 
-    Args:
-        engine: Loaded model providing each layer's o_proj weight matrix.
-        head_values: Mean activations [layers, heads, head_dim].
-        selected: Nonempty list of dictionaries with zero-based Layer and Head.
-    Returns:
-        CPU float32 vector [hidden_size], summing W_O[:, head_slice] @ head_value.
-    Notes:
-        Does not add projection bias per head or normalize the sum. Raw head slices
-        from different layers are never summed directly.
-    Raises:
-        ValueError: If no heads are selected.
-    """
+    head_values is [layers, heads, head_dim]; selected contains Layer/Head
+    records. Returns CPU float32 [hidden_size]. Each contribution is
+    W_O[:, head_slice] @ head_value, without bias or normalization.
+    Raw head coordinates from different layers cannot be added directly."""
     contributions = []
     for row in selected:
         layer, head = row['Layer'], row['Head']
@@ -250,14 +219,7 @@ def project_heads(engine, head_values, selected):
 
 
 def write_csv(path, rows):
-    """Write a nonempty, consistently keyed sequence of records to CSV.
-
-    Args:
-        path: Destination pathlib.Path; its parent must already exist.
-        rows: Nonempty record sequence; first-record keys define column order.
-    Returns:
-        None. Overwrites path using UTF-8 and CSV newline handling.
-    """
+    """Write nonempty records to UTF-8 CSV, using the first row for column order."""
     with path.open('w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0]))
         writer.writeheader()

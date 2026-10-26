@@ -1,5 +1,6 @@
 scripts/*.env
 scripts/*.env
+scripts/tests/
 outputs/
 outputs_old/
 databases/*.txt
@@ -11,3 +12,4 @@ jobs/
 data/
 analysis/
 results_small_models/
+writing/

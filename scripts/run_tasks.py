@@ -1,5 +1,6 @@
-"""Repeated, logged behavioral API or local generations with optional randomization."""
+"""Generate paired task responses, loading one backend for a single task or battery."""
 import argparse
+from copy import copy
 import csv
 from datetime import datetime, timezone
 import json
@@ -7,9 +8,23 @@ import os
 from pathlib import Path
 import time
 import uuid
-from experiment import CONDITION_TEXT, build_prompt, trial_schedule
-from task_config import get_task_config, TASK_NAMES
+from experiment import CONDITION_TEXT, build_prompt as build_legacy_prompt, trial_schedule
+from task_config import get_task_config, TASK_NAMES, build_prompt
 from sampling import sampling_kwargs
+
+
+def normalize_condition(value):
+    """Accept attachment names while preserving existing CSV condition labels."""
+    return "Standard" if value.lower() in ("neutral", "standard") else value.capitalize()
+
+
+def trial_prompt(args, config, trial):
+    """Use the selected protocol consistently for previews and model requests."""
+    if getattr(args, "prompt_protocol", "task-specific") == "legacy":
+        return build_legacy_prompt(config["instruction"], trial["Item"], trial["Condition"], trial["Paraphrase"])
+    if trial["Paraphrase"] != 0:
+        raise ValueError("Task-specific prompts only support paraphrase 0.")
+    return build_prompt(args.task, trial["Item"], trial["Condition"])
 
 
 def query_model(client, prompt, model_id, provider="together", max_retries=5,
@@ -41,14 +56,20 @@ def query_model(client, prompt, model_id, provider="together", max_retries=5,
 
 
 def parse_args():
-    """Parse and validate decoding options; build the paired trial schedule."""
+    """Parse task selection and validate decoding options."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", default="models/Llama-3.1-8B-Instruct")
-    parser.add_argument("--task", type=lambda name: TASK_NAMES.get(name.lower(), name), choices=list(get_task_config()), default="Alternative Uses Task")
+    tasks = parser.add_mutually_exclusive_group()
+    tasks.add_argument("--task", type=lambda name: TASK_NAMES.get(name.lower(), name), choices=list(get_task_config()), default="Alternative Uses Task")
+    tasks.add_argument("--tasks", nargs="+", type=lambda name: TASK_NAMES.get(name.lower(), name),
+                       choices=list(get_task_config()),
+                       help="Run multiple tasks with one backend; save each in its own task folder")
     parser.add_argument("--provider", choices=["together", "groq", "openrouter", "local"], default="local")
     parser.add_argument("--repeats", type=int, default=10, help="Pilot setting, not a power calculation")
-    parser.add_argument("--conditions", nargs="+", choices=list(CONDITION_TEXT), default=list(CONDITION_TEXT))
+    parser.add_argument("--conditions", nargs="+", type=normalize_condition, choices=list(CONDITION_TEXT), default=list(CONDITION_TEXT))
     parser.add_argument("--randomize", action="store_true", help="Shuffle requests instead of using the fixed condition order")
+    parser.add_argument("--prompt-protocol", choices=["task-specific", "legacy"], default="task-specific",
+                        help="Task-specific instructions (default), or the previous generic condition suffixes")
     parser.add_argument("--paraphrases", nargs="+", type=int, choices=range(3), default=[0])
     parser.add_argument("--items", nargs="+", help="Override pilot objects/items")
     parser.add_argument("--seed", type=int, default=42, help="Schedule randomization seed")
@@ -74,13 +95,28 @@ def parse_args():
         parser.error("--top-k is local-only; API providers have no portable top-k parameter.")
     if set(args.extra_body) & {"temperature", "top_p", "top_k", "seed", "max_tokens"}:
         parser.error("Sampling overrides in --extra-body are not allowed; use explicit CLI settings.")
-    config = get_task_config(args.task)
-    try:
+    if args.prompt_protocol == "task-specific" and args.paraphrases != [0]:
+        parser.error("Task-specific prompts have one wording; use --paraphrases 0, or --prompt-protocol legacy for older paraphrases.")
+    if args.tasks and len(set(args.tasks)) != len(args.tasks):
+        parser.error("--tasks must not contain duplicate tasks.")
+    return args
+
+
+def plan_tasks(args):
+    """Validate every task schedule before loading a model or creating files."""
+    plans = []
+    for task in args.tasks or [args.task]:
+        task_args = copy(args)
+        task_args.task = task
+        if args.tasks:
+            key = next((key for key, name in TASK_NAMES.items() if name == task),
+                       task.lower().replace(" ", "_"))
+            task_args.output_root = args.output_root / key
+        config = get_task_config(task)
         trials = trial_schedule(args.items or config["items"], args.conditions,
                                 args.repeats, args.paraphrases, args.seed, randomize=args.randomize)
-    except ValueError as exc:
-        parser.error(str(exc))
-    return args, config, trials
+        plans.append((task_args, config, trials))
+    return plans
 
 
 def load_backend(args):
@@ -115,7 +151,7 @@ def prepare_output(args):
 
 def response_row(args, config, trial, run_id, order, engine, client):
     """Generate one response and save its prompt, settings and token counts."""
-    prompt = build_prompt(config["instruction"], trial["Item"], trial["Condition"], trial["Paraphrase"])
+    prompt = trial_prompt(args, config, trial)
     timestamp = datetime.now(timezone.utc).isoformat()
     if args.provider == "local":
         result = engine.generate(prompt, seed=trial["Generation_Seed"],
@@ -164,18 +200,29 @@ def write_responses(args, config, trials, run_id, path, engine, client):
 
 
 def main():
-    """Plan a behavioral run, initialize its backend, then stream logged responses."""
-    args, config, trials = parse_args()
-    print(f"{len(trials)} requests planned for {args.model}.")
+    """Plan all tasks, load one backend, then stream a separate CSV for each task."""
+    args = parse_args()
+    try:
+        plans = plan_tasks(args)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+    for task_args, config, trials in plans:
+        print(f"{len(trials)} requests planned for {args.model}: {task_args.task}.")
+        if args.dry_run:
+            print(trial_prompt(task_args, config, trials[0]))
     if args.dry_run:
-        print(build_prompt(config["instruction"], trials[0]["Item"], trials[0]["Condition"], trials[0]["Paraphrase"]))
         return
+
+    # Reserve the battery root so resubmissions cannot mix separate experiments.
+    if args.tasks:
+        args.output_root.mkdir(parents=True, exist_ok=False)
     try:
         engine, client = load_backend(args)
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc
-    run_id, path = prepare_output(args)
-    write_responses(args, config, trials, run_id, path, engine, client)
+    for task_args, config, trials in plans:
+        run_id, path = prepare_output(task_args)
+        write_responses(task_args, config, trials, run_id, path, engine, client)
 
 
 if __name__ == "__main__":

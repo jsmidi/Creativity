@@ -1,0 +1,2 @@
+# Additional dependency for evaluate_writing_dsi.py; uses the existing Torch/Transformers environment.
+nltk>=3.9,<4

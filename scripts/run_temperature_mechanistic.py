@@ -6,35 +6,12 @@ from pathlib import Path
 import pandas as pd
 from run_greedy_task import NAMES, DISCOVERY, AUDIT, METRICS, run, score
 from task_config import get_task_config
-from analyze_effects import paired_effect
+from analyze_effects import intervention_effects
 from plot_tasks import effect_plot
 
 CANDIDATES = ['residual', 'concept_mean', 'concept_contrast', 'concept_head']
 TEMPERATURES = [0, 0.7, 1]
 CONTROLS = ['Standard', 'Effective', 'Conventional', 'Boring']
-
-
-def contrasts(frame, metric):
-    """Estimate the prespecified instruction and intervention comparisons from complete paired blocks."""
-    pairs = [('Creative', c) for c in CONTROLS]
-    pairs += [('Standard_add_1', 'Standard'), ('Creative_subtract_1', 'Creative'),
-              ('Creative_suppress', 'Creative'), ('Standard_suppress', 'Standard'),
-              ('Standard_patch_creative', 'Standard'), ('Creative_patch_standard', 'Creative')]
-    for index in range(2):
-        pairs += [(f'Standard_random{index}_1', 'Standard'),
-                  (f'Creative_random_suppress{index}', 'Creative'),
-                  ('Standard_add_1', f'Standard_random{index}_1'),
-                  ('Creative_suppress', f'Creative_random_suppress{index}')]
-    rows = []
-    for treatment, control in pairs:
-        try:
-            rows.append(dict(**paired_effect(frame, metric, treatment, control), Analysis_Status='ok'))
-        except ValueError as exc:
-            if str(exc) != 'No complete scored pairs for requested contrast.':
-                raise
-            rows.append(dict(Metric=metric, Treatment=treatment, Control=control,
-                             Analysis_Status=str(exc)))
-    return pd.DataFrame(rows)
 
 
 def parse_args():
@@ -141,7 +118,7 @@ def run_intervention(args):
         '--output-dir', raw)
     score(task, raw, output)
     frame = pd.read_csv(output/f'{task}_responses.csv', keep_default_na=False)
-    effects = contrasts(frame, METRICS[task])
+    effects = intervention_effects(frame, METRICS[task])
     effects.insert(0, 'Model', args.model)
     effects.insert(1, 'Task', NAMES[task])
     effects.insert(2, 'Temperature', temperature)
