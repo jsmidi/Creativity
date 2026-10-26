@@ -13,7 +13,14 @@ def get_task_config(task_name=None):
                 "fork",
                 "paperclip",
                 "towel",
-                "can"
+                "tin can",
+                "boot",
+                "envelope",
+                "bench",
+                "screwdriver",
+                "ladder",
+                "drawer",
+                "stand"
             ]
         },
         "Scientific Hypothesis Generation": {

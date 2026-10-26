@@ -455,3 +455,14 @@ sbatch --time=00:30:00 --export=ALL,AGC_ALLOW_SUBSET=1 \
            outputs/qwen7b_new_prompts_20261024T165914/seed_42 \
   --paired-repeats-per-item 1
 ```
+
+### Plot AGC condition scores
+
+```bash
+.venv/bin/python scripts/plot_agc_results.py analysis/agc_new_prompts_210_20261026
+```
+
+Writes `plots/agc_condition_means.png` and `.pdf`. Each task keeps its original
+score scale. Points show condition means and whiskers show one response-score
+sample SD, not confidence intervals. Groups with one scored response (DAT in
+the paired sample) have no SD whiskers. Pass `--output PATH_STEM` to save elsewhere.

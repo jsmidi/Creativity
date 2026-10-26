@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
+import re
 from experiment import canonical_item
 from scoring_common import load_responses, parse_numbered_list, descriptive_plot
 
@@ -60,6 +61,29 @@ def add_cluster_novelty(frame, ideas, cluster_eps):
     return frame
 
 
+def clean_aut_idea(idea: str, item_key: str) -> str:
+  """Strip target object echoes and boilerplate prefixes so MPNet embeds only the core concept."""
+  text = str(idea).strip().lower().rstrip(".")
+  item_pattern = re.escape(item_key.lower())
+  # 1. Strip leading patterns like "a book as a ", "use a can as a ", "using books as ", "employ a can as a "
+  prefix_regex = rf"^(?:use|using|utilize|utilizing|employ|employing|convert|converting|transform|transforming|repurpose|repurposing|make|making|create|creating)?\s*(?:a|an|the)?\s*{item_pattern}s?\s+(?:as|for|into|to\s+make|to\s+create)\s+(?:a|an|the)?\s*"
+  text = re.sub(prefix_regex, "", text)
+  # 2. Strip leading "as a " or "using as a " (when item was omitted)
+  text = re.sub(
+      r"^(?:use\s+|using\s+)?(?:as|for)\s+(?:a|an|the)?\s*", "", text
+  )
+  # 3. Strip standalone occurrences of the target item word so it doesn't inflate similarity to Item_Key
+  text = re.sub(rf"\b{item_pattern}s?\b", "", text)
+  # 4. Strip generic AUT filler adjectives that cause artificial clustering across ideas
+  text = re.sub(
+      r"\b(?:diy|makeshift|homemade|impromptu|improvised|temporary|emergency|unique|custom|customized)\b",
+      "",
+      text,
+  )
+  text = re.sub(r"\s+", " ", text).strip(" ,;-")
+  return text if text else str(idea).strip().lower()
+
+
 def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps=0.35):
     """Score ideas by item distance, within-response pairwise distance and rarity.
 
@@ -75,8 +99,15 @@ def evaluate_aut_metrics(eval_df, emb_model, aut_db, threshold=0.75, cluster_eps
     frame["Item_Key"] = frame["Item"].map(canonical_item)
     items = normalize(emb_model.encode(frame["Item_Key"].tolist()))
     ideas = normalize(emb_model.encode(frame["Parsed_Ideas"].tolist()))
-    formatted = [f"use {item} as {idea.lower()}" for item, idea in zip(frame["Item_Key"], frame["Parsed_Ideas"])]
-    formatted_emb = normalize(emb_model.encode(formatted))
+    cleaned_ideas = [
+        clean_aut_idea(idea, item)
+        for item, idea in zip(frame["Item_Key"], frame["Parsed_Ideas"])
+    ]
+    frame["Cleaned_Ideas"] = cleaned_ideas
+    items = normalize(emb_model.encode(frame["Item_Key"].tolist()))
+    ideas = normalize(emb_model.encode(cleaned_ideas))
+    # Match how aut_quality_scored_all.csv stores final_response (usually raw cleaned concept):
+    formatted_emb = ideas
     frame["Semantic_Distance_Proxy"] = 1 - np.sum(items * ideas, axis=1)
     frame["Pairwise_Semantic_Distance_Proxy"] = np.nan
     for _, group in frame.groupby("Response_ID"):

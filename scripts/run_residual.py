@@ -229,7 +229,7 @@ def main():
             sub.add_argument("--tasks", nargs="+", choices=list(get_task_config()), default=["Alternative Uses Task"])
             sub.add_argument("--layer", type=int, required=True)
             sub.add_argument("--head", type=int, help="Query head index; omitted means full residual stream")
-            sub.add_argument("--baseline", choices=["Standard", "Conventional"], default="Standard")
+            sub.add_argument("--baseline", choices=["Standard", "Conventional", "Boring"], default="Conventional")
         else:
             sub.add_argument("--task", choices=list(get_task_config()), default="Alternative Uses Task")
             sub.add_argument("--split", choices=["pilot", "validation", "test"], default="validation")
