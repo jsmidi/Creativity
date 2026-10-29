@@ -20,7 +20,7 @@ MODEL_LABELS = {'Llama-3.1-8B-Instruct': 'Llama 3.1 8B',
                 'Qwen2.5-7B-Instruct': 'Qwen 2.5 7B'}
 
 
-def plot_results(source, output=None):
+def plot_results(source, output=None, model_filter=None):
     source = source / 'condition_summary.csv' if source.is_dir() else source
     frame = pd.read_csv(source)
     required = {'Model', 'Task', 'Condition', 'AGC_Mean', 'AGC_SD', 'Scored',
@@ -30,6 +30,12 @@ def plot_results(source, output=None):
     if 'Metric' in frame:
         frame = frame[frame.Metric.eq('AGC_Score')].copy()
     frame = frame[frame.Task.isin(TASKS)].copy()
+    if model_filter:
+        requested = {Path(model).name for model in model_filter}
+        available = {Path(model).name for model in frame.Model}
+        if requested - available:
+            raise ValueError(f'Unknown models: {sorted(requested - available)}')
+        frame = frame[frame.Model.map(lambda model: Path(model).name in requested)].copy()
     if frame.empty:
         raise ValueError('No psychometric AGC scores found')
     if frame.duplicated(['Model', 'Task', 'Condition']).any():
@@ -59,7 +65,10 @@ def plot_results(source, output=None):
             group = data[data.Model.eq(model)].set_index('Condition').reindex(CONDITIONS)
             x = np.arange(len(CONDITIONS)) + offsets[index]
             valid = group.AGC_Mean.notna() & group.Scored.gt(0)
-            color, marker = colors[index % len(colors)], markers[index % len(markers)]
+            styles = {'Llama-3.1-8B-Instruct': ('#2563eb', 'o'),
+                      'Qwen2.5-7B-Instruct': ('#d97706', 's')}
+            color, marker = styles.get(Path(model).name,
+                (colors[index % len(colors)], markers[index % len(markers)]))
             points, = ax.plot(x[valid], group.loc[valid, 'AGC_Mean'], linestyle='none',
                 marker=marker, markersize=7, color=color, zorder=3)
             has_sd = valid & group.Scored.gt(1) & group.AGC_SD.notna()
@@ -115,9 +124,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('input', type=Path, help='AGC output directory or condition_summary.csv')
     parser.add_argument('--output', type=Path, help='Output filename stem; writes PNG and PDF')
+    parser.add_argument('--models', nargs='+', help='Model IDs or directory basenames to include')
     args = parser.parse_args()
     try:
-        plot_results(args.input, args.output)
+        plot_results(args.input, args.output, args.models)
     except ValueError as error:
         parser.error(str(error))
 

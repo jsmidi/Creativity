@@ -466,3 +466,22 @@ Writes `plots/agc_condition_means.png` and `.pdf`. Each task keeps its original
 score scale. Points show condition means and whiskers show one response-score
 sample SD, not confidence intervals. Groups with one scored response (DAT in
 the paired sample) have no SD whiskers. Pass `--output PATH_STEM` to save elsewhere.
+
+## Plot scored psychometric runs
+
+```bash
+.venv/bin/python scripts/plot.py analysis/psychometric_prompt_comparison_20261026T143116
+```
+
+Pass a parent analysis folder or individual model/prompt folders. The script
+finds all numeric `seed_*` folders, regenerates individual-seed task plots,
+and **always** writes `seed_average.png`, `seed_average.pdf`, `seed_means.csv`,
+and `seed_average.csv` in each model/prompt folder. Use `--averages-only` to
+keep existing individual-seed plots. It requires at least two seeds and complete
+scored AUT, DAT, DRAT and CDAT folders for every discovered seed; it does not
+select a partial set of available seeds.
+
+Means weight items equally within seeds and seeds equally within each model/prompt
+version. Whiskers show one sample SD across seed means, not confidence intervals.
+CDAT novelty is descriptive before appropriateness gating; gate counts accompany
+the plot. Missing scores are excluded and coverage is exported.

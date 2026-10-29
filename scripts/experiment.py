@@ -10,6 +10,7 @@ CONDITION_TEXT = {
     "Effective": ("Be effective.", "Provide effective ideas.", "Focus on effectiveness."),
     "Boring": ("Be boring.", "Provide boring ideas.", "Keep your ideas dull."),
     "Creative": ("Be creative.", "Provide original ideas.", "Think inventively."),
+    "Non_creative": ("Be non-creative.", "Provide conventional ideas.", "Choose typical responses."),
 }
 
 
