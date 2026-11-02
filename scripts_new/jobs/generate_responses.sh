@@ -16,4 +16,4 @@ export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
 export OPENBLAS_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
 PYTHON="${PYTHON:-.venv/bin/python}"
 
-srun "$PYTHON" -u scripts_new/generation/generate_responses.py "$@"
+srun "$PYTHON" -u -m scripts_new.generation.generate_responses "$@"

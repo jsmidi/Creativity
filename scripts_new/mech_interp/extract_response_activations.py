@@ -8,8 +8,10 @@ import torch
 
 try:
     from .activation_engine import ActivationEngine
+    from .activation_grouping import activation_metadata_from_row
 except ImportError:  # Also support running this file directly.
     from activation_engine import ActivationEngine
+    from activation_grouping import activation_metadata_from_row
 
 
 def parse_args():
@@ -75,11 +77,9 @@ def main():
                 positions=args.positions, prompt_token_ids=prompt_token_ids,
             )
             output_rows.append({
-                "metadata": {
-                    key: row.get(key, "") for key in
-                    ("RUN_ID", "RESPONSE_ID", "Model", "Task", "Condition", "Item", "Repeat", "Seed")
-                } | {"Response": response, "Token_Source": token_source,
-                     "Prompt_Token_Source": prompt_token_source},
+                "metadata": activation_metadata_from_row(row) | {
+                    "Response": response, "Token_Source": token_source,
+                    "Prompt_Token_Source": prompt_token_source},
                 "activations": activations,
             })
             print(f"{index}/{len(rows)} captured {row.get('Task')} · {row.get('Condition')} · {row.get('Item')!r}",
