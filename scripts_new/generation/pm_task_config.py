@@ -89,11 +89,11 @@ TASK_PROMPTS = {
     },
     "Divergent Remote Association Test": {
         "standard": "List 10 distinct single English nouns that can each relate, literally or metaphorically, to all of these anchors: {item}. Make the nouns as different in meaning from one another as possible. Return only a numbered list (1-10), without explanations.",
-        "creative": "List 10 unusual and creative English nouns that are as semantically unrelated as possible from each other and each of which could be metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
-        "effective": "List 10 useful and effective English nouns each of which could be metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
-        "conventional": "List 10 familiar and conventional English nouns each of which could be metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
-        "boring": "List 10 obvious and boring English nouns each of which could be metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
-        "non_creative": "List 10 common English nouns that are as semantically related as possible to each other and each of which could be metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations."
+        "creative": "List 10 unusual and creative single English nouns that are as semantically unrelated as possible from each other and each of which could be literally or metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
+        "effective": "List 10 useful and effective single English nouns each of which could be literally or metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
+        "conventional": "List 10 familiar and conventional single English nouns each of which could be literally or metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
+        "boring": "List 10 obvious and boring single English nouns each of which could be literally or metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations.",
+        "non_creative": "List 10 common single English nouns that are as semantically related as possible to each other and each of which could be literally or metaphorically applied to all of these anchors: {item}. Return only a numbered list (1-10), without explanations."
     },
     "Divergent Association Task": {
         "standard": "List 10 distinct single English nouns that are as semantically unrelated and distant from each other as possible. Provide only a numbered list (1-10) of single words with no explanations, sentences, or categories.",

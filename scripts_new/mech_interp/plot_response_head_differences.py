@@ -11,6 +11,11 @@ import pandas as pd
 import torch
 
 try:
+    from .plot_colors import BLUE_TO_RED, SIGNED_BLUE_RED
+except ImportError:
+    from plot_colors import BLUE_TO_RED, SIGNED_BLUE_RED
+
+try:
     from .activation_grouping import response_unit_key
 except ImportError:
     from activation_grouping import response_unit_key
@@ -87,7 +92,7 @@ def save_task_plots(task, item_differences, relative_shifts, items, position,
     if limit == 0:
         limit = 1.0
     fig, ax = plt.subplots(figsize=(12, max(7, min(18, n_layers * 0.45))), constrained_layout=True)
-    image = ax.imshow(flattened, origin="lower", aspect="auto", cmap="coolwarm",
+    image = ax.imshow(flattened, origin="lower", aspect="auto", cmap=SIGNED_BLUE_RED,
                       vmin=-limit, vmax=limit)
     for layer in range(1, n_layers):
         ax.axhline(layer * n_heads - 0.5, color="black", linewidth=0.35, alpha=0.6)
@@ -105,7 +110,8 @@ def save_task_plots(task, item_differences, relative_shifts, items, position,
     norms = np.linalg.norm(values, axis=-1)
     fig, ax = plt.subplots(figsize=(max(8, n_layers * 0.28), max(5, n_heads * 0.18)),
                            constrained_layout=True)
-    image = ax.imshow(norms.T, origin="lower", aspect="auto", cmap="viridis")
+    image = ax.imshow(norms.T, origin="lower", aspect="auto", cmap=BLUE_TO_RED,
+                      vmin=0, vmax=max(float(norms.max()), 1e-12))
     ax.set_xlabel("Layer (zero based)")
     ax.set_ylabel("Attention head (zero based)")
     ax.set_title(f"{task}: ||{creative} − {non_creative}|| by layer/head ({len(items)} matched units)")
@@ -128,7 +134,8 @@ def save_task_plots(task, item_differences, relative_shifts, items, position,
     sd_per_item_norm = per_item_norms.std(axis=0, ddof=1) if len(items) > 1 else np.zeros_like(mean_per_item_norm)
     fig, ax = plt.subplots(figsize=(max(8, n_layers * 0.28), max(5, n_heads * 0.18)),
                            constrained_layout=True)
-    image = ax.imshow(mean_per_item_norm.T, origin="lower", aspect="auto", cmap="viridis")
+    image = ax.imshow(mean_per_item_norm.T, origin="lower", aspect="auto", cmap=BLUE_TO_RED,
+                      vmin=0, vmax=max(float(mean_per_item_norm.max()), 1e-12))
     ax.set_xlabel("Layer (zero based)")
     ax.set_ylabel("Attention head (zero based)")
     ax.set_title(f"{task}: mean per-unit ||{creative} − {non_creative}|| ({len(items)} matched units)")
@@ -149,7 +156,8 @@ def save_task_plots(task, item_differences, relative_shifts, items, position,
     mean_relative = np.nanmean(relative_values, axis=0)
     fig, ax = plt.subplots(figsize=(max(8, n_layers * 0.28), max(5, n_heads * 0.18)),
                            constrained_layout=True)
-    image = ax.imshow(mean_relative.T, origin="lower", aspect="auto", cmap="magma", vmin=0)
+    image = ax.imshow(mean_relative.T, origin="lower", aspect="auto", cmap=BLUE_TO_RED,
+                      vmin=0, vmax=max(float(np.nanmax(mean_relative)), 1e-12))
     ax.set_xlabel("Layer (zero based)")
     ax.set_ylabel("Attention head (zero based)")
     ax.set_title(f"{task}: mean per-item relative shift ({len(items)} matched units)")

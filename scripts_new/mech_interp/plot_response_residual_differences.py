@@ -11,6 +11,11 @@ import pandas as pd
 import torch
 
 try:
+    from .plot_colors import BLUE_TO_RED, SIGNED_BLUE_RED
+except ImportError:
+    from plot_colors import BLUE_TO_RED, SIGNED_BLUE_RED
+
+try:
     from .activation_grouping import response_unit_key
 except ImportError:
     from activation_grouping import response_unit_key
@@ -79,7 +84,8 @@ def save_task_plot(task, item_differences, relative_shifts, items, position,
     if limit == 0:
         limit = 1.0
     fig, ax = plt.subplots(figsize=(12, max(5, values.shape[0] * 0.22)), constrained_layout=True)
-    image = ax.imshow(values, origin="lower", aspect="auto", cmap="coolwarm", vmin=-limit, vmax=limit)
+    image = ax.imshow(values, origin="lower", aspect="auto", cmap=SIGNED_BLUE_RED,
+                      vmin=-limit, vmax=limit)
     ax.set_xlabel("Residual-stream dimension")
     ax.set_ylabel("Layer (zero based)")
     ax.set_title(f"{task}: {creative} − {non_creative} {position} residual ({len(items)} matched units)")
@@ -91,11 +97,15 @@ def save_task_plot(task, item_differences, relative_shifts, items, position,
 
     layer_norms = np.linalg.norm(values, axis=1)
     fig, ax = plt.subplots(figsize=(9, 5), constrained_layout=True)
-    ax.plot(np.arange(len(layer_norms)), layer_norms, marker="o")
+    norm_limit = max(float(layer_norms.max()), 1e-12)
+    ax.plot(np.arange(len(layer_norms)), layer_norms, color="#777777", linewidth=1)
+    points = ax.scatter(np.arange(len(layer_norms)), layer_norms, c=layer_norms,
+                        cmap=BLUE_TO_RED, vmin=0, vmax=norm_limit, zorder=3)
     ax.set_xlabel("Layer (zero based)")
     ax.set_ylabel("L2 norm of mean difference vector")
     ax.set_title(f"{task}: {creative} − {non_creative} {position} residual ({len(items)} matched units)")
     ax.grid(True, alpha=0.3)
+    fig.colorbar(points, ax=ax, label="L2 norm of mean difference vector")
     norm_stem = f"residual_difference_norm_{position}"
     fig.savefig(output_dir / f"{norm_stem}.png", dpi=180)
     fig.savefig(output_dir / f"{norm_stem}.pdf", dpi=180)
@@ -113,13 +123,17 @@ def save_task_plot(task, item_differences, relative_shifts, items, position,
     relative_stem = f"residual_difference_relative_norm_{position}"
     fig, ax = plt.subplots(figsize=(9, 5), constrained_layout=True)
     layers = np.arange(len(mean_relative))
-    ax.plot(layers, mean_relative, marker="o")
+    relative_limit = max(float(np.nanmax(mean_relative)), 1e-12)
+    ax.plot(layers, mean_relative, color="#777777", linewidth=1)
+    points = ax.scatter(layers, mean_relative, c=mean_relative, cmap=BLUE_TO_RED,
+                        vmin=0, vmax=relative_limit, zorder=3)
     ax.fill_between(layers, np.maximum(0, mean_relative - sd_relative),
                     mean_relative + sd_relative, alpha=0.2)
     ax.set_xlabel("Layer (zero based)")
     ax.set_ylabel("Mean per-item relative L2 shift")
     ax.set_title(f"{task}: relative {creative} − {non_creative} shift ({len(items)} matched units)")
     ax.grid(True, alpha=0.3)
+    fig.colorbar(points, ax=ax, label="Mean per-item relative L2 shift")
     fig.savefig(output_dir / f"{relative_stem}.png", dpi=180)
     fig.savefig(output_dir / f"{relative_stem}.pdf", dpi=180)
     plt.close(fig)
