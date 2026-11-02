@@ -3,6 +3,7 @@ import argparse
 import csv
 from datetime import datetime, timezone
 import hashlib
+import json
 from pathlib import Path
 import uuid
 
@@ -59,7 +60,8 @@ def create_runs(args):
                 for condition in args.conditions:
                     prompt = build_prompt(task, item, condition)
                     runs.append({"Task": task, "Condition": condition, "Item": item,
-                                 "Repeat": repeat, "Seed": seed, "Prompt": prompt})
+                                 "Repeat": repeat, "Seed": seed, "Model_Seed": args.seed,
+                                 "Temperature": args.temperature, "Prompt": prompt})
     if not runs:
         raise ValueError("No prompts were created; check the selected tasks and items.")
     return runs
@@ -74,9 +76,10 @@ def prepare_outputs(output_path):
 
 def write_responses(args, runs, engine, run_id, output_path):
     """Generate each response, record failures and stream rows to CSV."""
-    fields = ["RUN_ID", "RESPONSE_ID", "Model", "Seed", "Task", "Condition",
-              "Item", "Repeat", "Prompt", "Response", "Generated_Tokens",
-              "Prompt_Tokens", "Error"]
+    fields = ["RUN_ID", "RESPONSE_ID", "Model", "Model_Revision", "Model_Fingerprint",
+              "Seed", "Model_Seed", "Task", "Condition", "Item", "Repeat", "Temperature",
+              "Top_P", "Max_New_Tokens", "Do_Sample", "Prompt", "Response", "Generated_Tokens",
+              "Prompt_Tokens", "Prompt_Token_IDs", "Response_Token_IDs", "Finish_Reason", "Error"]
     failures = 0
     with output_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -89,16 +92,25 @@ def write_responses(args, runs, engine, run_id, output_path):
                     temperature=args.temperature, top_p=args.top_p,
                 )
             except Exception as exc:
-                result = {"Response": "", "Generated_Tokens": "", "Prompt_Tokens": ""}
+                result = {"Response": "", "Generated_Tokens": "", "Prompt_Tokens": "",
+                          "Prompt_Token_IDs": [], "Response_Token_IDs": [], "Finish_Reason": ""}
                 error = str(exc)
             writer.writerow({
                 "RUN_ID": run_id,
                 "RESPONSE_ID": f"{run_id}:{index}",
                 "Model": args.model,
+                "Model_Revision": engine.model_revision,
+                "Model_Fingerprint": engine.model_fingerprint,
                 **run,
+                "Top_P": args.top_p,
+                "Max_New_Tokens": args.max_tokens,
+                "Do_Sample": args.temperature > 0,
                 "Response": result["Response"],
                 "Generated_Tokens": result["Generated_Tokens"],
                 "Prompt_Tokens": result["Prompt_Tokens"],
+                "Prompt_Token_IDs": json.dumps(result["Prompt_Token_IDs"]),
+                "Response_Token_IDs": json.dumps(result["Response_Token_IDs"]),
+                "Finish_Reason": result["Finish_Reason"],
                 "Error": error,
             })
             handle.flush()

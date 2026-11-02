@@ -9,6 +9,8 @@ logs/
 *__pycache__/
 temp/
 jobs/
+!scripts_new/jobs/
+!scripts_new/jobs/**
 data/
 analysis/
 results_small_models/
