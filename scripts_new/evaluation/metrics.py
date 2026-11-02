@@ -19,7 +19,9 @@ def parse_nouns(text, limit=10):
     """Return unique single-word entries among the first ``limit`` list items."""
     words = []
     for entry in parse_numbered_list(text)[:limit]:
-        word = entry.strip().lower()
+        # Ignore common wrapping punctuation (e.g. "**Apple,**", "apple.")
+        # while retaining internal hyphens in valid single-word responses.
+        word = entry.strip().lower().strip(" \t\r\n.,;:!?*\"'`()[]{}")
         if re.fullmatch(r"[a-z]+(?:-[a-z]+)*", word) and word not in words:
             words.append(word)
     return words
@@ -139,7 +141,9 @@ def clean_aut_idea(entry, item):
 def score_aut(response, item, embed):
     """Score one AUT response for within-list diversity and distance from its item."""
     entries, words = _response_audit(response)
-    ideas = [clean_aut_idea(entry, item) for entry in entries if entry.strip()]
+    # Keep scoring aligned with the task's requested ten ideas. Extra numbered
+    # lines still count toward Format_Valid/List_Count, but cannot affect scores.
+    ideas = [clean_aut_idea(entry, item) for entry in entries[:10] if entry.strip()]
     ideas = [idea for idea in ideas if idea]
     result = {"List_Count": len(entries), "Valid_Word_Count": len(words),
               "Format_Valid": len(entries) == 10}
